@@ -13,6 +13,8 @@
 * **E04:** MMS-Amharic vocabulary is 29 Latin symbols with no punctuation; `tok("qase, baqase.")` == `tok("qase baqase")`. Fix: split at `። ፣ ፦ ፤`, synthesise chunks, insert 0.25–0.55 s silences.
 * **E09:** the first ducking test changed attack *and* release, giving "faster = shallower", which was nonsense. One variable at a time: attack 80 ms alone → 8.8 dB duck; release 800 ms alone → 4.8 dB. They cancelled. Chose attack 80 / release 1500.
 * **E02:** Amharic narration ran at 1.2–1.5 words/s, not the 2–2.5 of the brief's English rule. Rate 0.85 → 96 s film (too long). Kept natural rate 1.0 and trimmed s01/s02 → 85 s.
+* **E07/E08b, the metric misled me twice:** colour similarity rewarded copying the reference; speech-band energy picked a score with a steady 3–4 kHz tone. Both were caught by looking (grid, spectrogram).
+* **F08:** CLIP's 77-token limit silently cut the style block off 6 of 12 prompts; now enforced before generation.
 * **E13:** uroman maps Tigrinya `ዓ` and `ኣ` both to `aa`, so the pharyngeal contrast is lost before the model sees it. A front-end failure.
 
 ## Failures to be able to describe
@@ -25,4 +27,4 @@
 * Test 2 (near-final): ______ → changed ______
 
 ## Numbers to remember
-Film 85 s · 12 shots · Amharic · −14 LUFS / −1 dBTP · ~1.4 words/s · score seed 21 · duck 7–9 dB · $0 spent. Fill in the remaining numbers from COSTS.md: keyframe CPU time per image ___ s, total compute ___ min.
+Film 85.4 s · 12 shots · Amharic · −14.1 LUFS / −1.3 dBTP · ~1.4 words/s · MusicGen score seed 42 (E08b) · duck ~9 dB · keyframes 512 px, ~34 s each on CPU · full cold build 25 min, one-shot change ~3.5 min with 1 model call · 25 CPU-min total ≈ 3 T4-min ≈ $0.02 list price · $0 spent.
