@@ -147,7 +147,8 @@ def tts_gemini(text: str, lang: str, out: Path, item: str, ck: str, voice: dict 
     import requests
 
     voice = voice or {}
-    model = os.environ.get("GEMINI_TTS_MODEL") or voice.get("gemini_model") or GEMINI_MODEL
+    # the storyboard wins over the environment: a creative choice must travel with the contract (F18)
+    model = voice.get("gemini_model") or os.environ.get("GEMINI_TTS_MODEL") or GEMINI_MODEL
     name = voice.get("gemini_voice") or GEMINI_VOICE
     style = voice.get("style") or GEMINI_STYLE
     params = {"voice": name, "style": style}
@@ -319,7 +320,7 @@ def voice_settings(provider: str, voice: dict | None = None) -> dict:
     if provider == "local:mms-tts":
         return {"rate": MMS_RATE, "noise": MMS_NOISE, "seed": MMS_SEED, "pauses": PAUSES, "chunked": 1}
     v = voice or {}
-    return {"model": os.environ.get("GEMINI_TTS_MODEL") or v.get("gemini_model") or GEMINI_MODEL,
+    return {"model": v.get("gemini_model") or os.environ.get("GEMINI_TTS_MODEL") or GEMINI_MODEL,
             "voice": v.get("gemini_voice") or GEMINI_VOICE, "style": v.get("style") or GEMINI_STYLE}
 
 
@@ -364,7 +365,7 @@ def narration(sb: dict, only: set[str] | None = None, force: bool = False) -> di
         except ValueError as e:
             from .quota import remaining
 
-            model = os.environ.get("GEMINI_TTS_MODEL") or (sb.get("voice") or {}).get("gemini_model") or GEMINI_MODEL
+            model = (sb.get("voice") or {}).get("gemini_model") or os.environ.get("GEMINI_TTS_MODEL") or GEMINI_MODEL
             if remaining(model) < len(todo):  # F15: never let a fallback spend the quota it cannot finish with
                 raise RuntimeError(f"batch split failed ({e}) and only ~{remaining(model)} {model} requests remain "
                                    f"for {len(todo)} lines; the take is kept at {d / '_batch_take.wav'} for an offline split")

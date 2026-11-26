@@ -67,7 +67,7 @@ On a slow link, **model size, not compute, was the binding constraint**. That is
 | Stage | Provider / model | Calls for the film | Measured time | Free-tier resource used |
 |---|---|---|---|---|
 | Script draft | Gemini 3.8 Flash → 3.5 Flash-Lite | 0 accepted (16 attempts, all 503: F14) | — | Flash 9/20, Flash-Lite 8/500 (requests count even when they fail) |
-| Narration | Gemini 3.8 Flash-Lite TTS, voice Sulafat | 1 batch take (65.1 s, all 11 lines) + 7 per-line takes (F15) | batch ~20 s; per-line 4–13 s (46.7 s incl. a 35 s rate-limit wait) | **10/10 requests/day**, all used |
+| Narration | Gemini 3.8 Flash-Lite TTS, voice Sulafat | 1 batch take (65.1 s, all 11 lines) + 7 per-line takes (F15); runs.jsonl shows 2 batch lines because the E16 experiment batch also ran through the production function | batch ~20 s; per-line 4–13 s (46.7 s incl. a 35 s rate-limit wait) | **10/10 requests/day**, all used |
 | References + keyframes | Cloudflare FLUX.1 schnell, 1024 px | 16 + 7 retakes = 23 images | ~3–6 s per image | **~1,325 neurons** for the film (57.6 each) |
 | Score | ACE-Step 1.5 turbo + LM 1.7B on Kaggle T4 | 3 × 88 s candidates | 69.8–71.3 s per candidate; job 1,023 s incl. 485 s queue | ~9 T4-min of ~30 h/week |
 | Moving shots | Wan 2.2 TI2V-5B on Kaggle T4, 512 px, 49 frames, 25 steps, sequential offload | 5 clips generated, 3 passed QC, 2 used in the final cut (s04 re-staged after test 2) | **433–574 s per 2 s clip**; job 2,551 s GPU + 426 s queue (E27) | ~43 T4-min |

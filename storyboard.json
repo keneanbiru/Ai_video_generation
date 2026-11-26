@@ -13,7 +13,8 @@
   },
   "voice": {
     "style": "warm, emotionally expressive and reflective, natural and unhurried, never dramatic or formal; a young woman remembering the evening her mother told her a story",
-    "gemini_voice": "Sulafat"
+    "gemini_voice": "Sulafat",
+    "gemini_model": "gemini-3.8-flash-lite-tts"
   },
   "style": {
     "style_block": "cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",

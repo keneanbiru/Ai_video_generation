@@ -999,3 +999,22 @@ storyboard.json failed schema validation:
 20261126T180920-d1b12d [18:09:21]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
 20261126T180920-d1b12d [18:09:21]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
 20261126T180920-d1b12d [18:09:21]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:25]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T200025-17eca0 [20:00:26]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T200025-17eca0 [20:00:26]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T200025-17eca0 [20:00:26]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T200025-17eca0 [20:00:26]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T200025-17eca0 [20:00:26]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T200025-17eca0 [20:00:26]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T200025-17eca0 [20:00:26]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
