@@ -16,7 +16,8 @@ from PIL import Image, ImageDraw, ImageFont
 from .common import OUT, duration_s, ffmpeg, ffmpeg_bin, log, loudness, run, stage_paths
 from .shots import FPS, RATIOS
 
-TARGET_LUFS, TARGET_TP = -14.0, -1.0
+# TP target is -1.5 in the WAV so the AAC-encoded export stays under -1 dBTP (E10b: AAC added ~0.2 dB)
+TARGET_LUFS, TARGET_TP = -14.0, -1.5
 FONT_LATIN = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 FONT_ETHIOPIC = "/usr/share/fonts/truetype/noto/NotoSansEthiopic-Regular.ttf"
 

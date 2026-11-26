@@ -1,0 +1,43 @@
+# B2W0 AI-Content Generation: Report
+**Kenean Biru** · *ቀስ በቀስ / Slowly, Slowly* · repository: `<GitHub URL>`
+
+## 1. What I set out to make, and for whom
+An 85-second short in **Amharic** with English subtitles about a grandmother's buna ceremony and the proverb she repeated to an impatient child: *ቀስ በቀስ እንቁላል በእግሩ ይሄዳል* ("slowly, slowly, an egg will walk on its own legs"). Years later, alone in a fast city, the grown child roasts coffee and hears her voice.
+
+**Audience:** Ethiopians aged 18–35, at home and in the diaspora, who grew up around buna and now live fast city lives. They watch on a phone, vertical, often muted, often forwarded in a family Telegram group. **Intent:** at the end they should feel the warmth of being made to wait as a child, and want to slow down and call an elder this week. I wrote this brief (DESIGN.md §1, first commit) before generating anything. Every shot has a stated reason in `storyboard.json`.
+
+Grandmother "Emama" is a **composite character**, not a likeness of a real relative, and the voice is a generic synthetic voice. No real person's face or voice appears (ETHICS.md §1). The schema enforces a consent record for any `real_person: true`.
+
+The pipeline: one validated `storyboard.json` drives eight cached stages (narration → timeline → radio cut → reference sheet + keyframes → shots → score → assembly) with provider fallback chains. `make film` rebuilds both exports from a clean clone, with no GPU and no API keys.
+
+## 2. What I learned from my audience
+> **[TO FILL IN AFTER YOUR USER TESTS. Do not submit with this placeholder.]**
+> Test 1 (radio cut, n = __): who, what they said (quote 2–3 lines), and the storyboard change it caused (commit hash).
+> Test 2 (near-final cut, n = __): the same. Did the change from test 1 work? What changed this time?
+> Be specific: "two of three did not recognise the proverb from the subtitle alone, so I…".
+
+## 3. The hardest problem and how I solved it
+**Making Amharic narration work with an open model on a CPU, without being able to trust it by ear.** No Gemini key was available, so narration used Meta's MMS-TTS Amharic model. Three things went wrong, and each was found by measurement rather than by listening:
+1. **The model cannot read Amharic script (E01).** Its vocabulary is 29 Latin symbols. Raw Ge'ez text was 14–22 % readable (the spaces only); romanised with uroman it was 91–98 %.
+2. **Punctuation does nothing (E04).** The vocabulary has no punctuation, and the token ids for `"qase, baqase."` and `"qase baqase"` are identical. My first fix (mapping `።` to `.`) was a no-op. The real fix splits each line at Ethiopic punctuation, synthesises the pieces separately and inserts measured silences (0.25–0.55 s). That gave the proverb its beat.
+3. **The film came out at 96 s (E02).** Amharic ran at 1.2–1.5 words/s, about half the English rule of thumb in the brief, because Amharic words carry several morphemes each. Rather than speed up a small TTS model, I trimmed two lines in the storyboard and landed at 85 s.
+
+The other hard problem was the environment itself: **no GPU, no sudo, no ffmpeg, and a 200 KB/s link that stalled for two hours** (FAILURES F01–F03, F07). The answer was a provider chain per stage with a fallback that always finishes the film (Ken Burns motion; a procedural score while MusicGen was downloading), a resumable downloader, and a cache key that upgrades fallback outputs automatically when the better model arrives.
+
+## 4. Suggested practices, tested honestly
+**A practice that beat my instinct: change one thing at a time (E09).** My instinct was to try a "snappier" ducking setting: attack 80 ms *and* release 800 ms together. It gave a nonsense result: a faster attack seemed to duck *less* (5.8 dB vs 7.2 dB). Re-running one variable at a time showed the truth. Attack 80 ms alone deepens the duck to **8.8 dB**; release 800 ms alone flattens it to **4.8 dB**, because the music swells back inside the 0.25–0.55 s pauses between phrases. The two effects had cancelled out. I kept the fast attack and the long release. Without the discipline I would have discarded the better setting.
+
+**A practice that did not work as stated for me: the style block appended to every prompt (F08).** The idea is right, but with SD-Turbo's CLIP text encoder (77-token limit) a 38-token style block at the *end* of the prompt was silently truncated on 6 of 12 shots, which dropped exactly the words that keep the look consistent. The practice only works inside a token budget. I compressed the style block to 20 tokens and made the pipeline refuse to run if any prompt is over budget. Related: the **reference-sheet practice (E07)** helped close-ups but hurt wide shots. img2img on the reference pulled every shot toward the same portrait, and the automatic similarity metric scored that copy as the "best" result. I ended up with per-shot conditioning (`ref_strength`), using the reference only where the face carries the shot.
+
+## 5. Curiosity beyond the floor
+**More languages: where Amharic TTS tooling breaks for Tigrinya and Afaan Oromo (E13).** I rendered three lines in each with the MMS models and inspected what the model actually receives. uroman produces **identical output whatever language code it is given**, and maps Tigrinya's pharyngeal **ዓ** and glottal **ኣ** both to `aa`. So ዓባየይ ("my grandmother") reaches the model without the consonant that distinguishes it. That is a front-end failure no voice tuning can fix. Afaan Oromo needs no romanisation (Latin Qubee script, the apostrophe for the glottal stop survives) and ran fastest at ≈ 2 words/s. The translations and the audio still need a native-speaker check; the WAVs are in the repo.
+
+**A benchmark, hosted vs local (F05/E11).** A keyless "free FLUX" endpoint returned images whose EXIF says `sana`, with a watermark despite `nologo`. So it silently substituted the model. I rejected it for the film, and I now log the model a provider *reports* as well as the one I asked for.
+
+**Measurement of my own tools:** SD-Turbo duplicates objects above its 512 px training size (E05: three pans at 768 px, 2.3× slower). With a 4-step distilled model, img2img strengths 0.8 and 0.9 are pixel-identical (`int(4 × strength)` = 3 steps).
+
+## 6. What I would build next
+1. Run the prepared **Wan 2.2 Kaggle script** to replace Ken Burns with real motion on the 4–5 shots that need it (s04 smoke, s08 pour, s12 steam), and log GPU minutes into COSTS.md.
+2. A **character LoRA** trained on 15–20 curated Emama images, to decouple identity from composition (E07's trade-off), measured with a face-embedding similarity instead of the colour metric that misled me.
+3. **Gemini TTS vs MMS blind test** with five native speakers, using the same lines and a pronunciation-error count per line.
+4. A **family web form**: a relative types or records their story in Amharic and gets a storyboard draft back. The schema and cache make the rest automatic.
