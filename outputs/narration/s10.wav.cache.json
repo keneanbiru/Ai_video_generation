@@ -1,0 +1,20 @@
+{
+ "key": "0f9e8824370cd1fd",
+ "provider": "local:mms-tts",
+ "text": "ዛሬ ሩቅ ከተማ ውስጥ እኖራለሁ። ሁሉም ነገር ፈጣን ነው።",
+ "params": {
+  "speaking_rate": 1.0,
+  "noise_scale": 0.6,
+  "uroman": true,
+  "input_chars": 36,
+  "prepared": "zaaree ruqe katamaa wesete enoraalahu | hulume nagare fataane nawe",
+  "chunks": 2,
+  "pauses": {
+   "።": 0.55,
+   "?": 0.55,
+   "፦": 0.35,
+   "፣": 0.25,
+   "፤": 0.3
+  }
+ }
+}

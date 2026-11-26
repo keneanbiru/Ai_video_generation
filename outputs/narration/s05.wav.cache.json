@@ -1,0 +1,20 @@
+{
+ "key": "9d2e690591fe4cbc",
+ "provider": "local:mms-tts",
+ "text": "እኔ ግን ሁልጊዜ ቸኩዬ ነበር። «እማማ፣ መቼ ነው የሚደርሰው?»",
+ "params": {
+  "speaking_rate": 1.0,
+  "noise_scale": 0.6,
+  "uroman": true,
+  "input_chars": 40,
+  "prepared": "enee gene hulegizee chakuyee nabare | emaamaa | machee nawe yamidaresawe",
+  "chunks": 3,
+  "pauses": {
+   "።": 0.55,
+   "?": 0.55,
+   "፦": 0.35,
+   "፣": 0.25,
+   "፤": 0.3
+  }
+ }
+}

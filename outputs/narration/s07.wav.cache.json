@@ -1,0 +1,20 @@
+{
+ "key": "de321f59116e2599",
+ "provider": "local:mms-tts",
+ "text": "ቡናውን በሙቀጫ ይወቅጣሉ፤ ዕጣኑም ይጨሳል።",
+ "params": {
+  "speaking_rate": 1.0,
+  "noise_scale": 0.6,
+  "uroman": true,
+  "input_chars": 27,
+  "prepared": "bunaawene bamuqachaa yewaqetaalu | etaanume yechasaale",
+  "chunks": 2,
+  "pauses": {
+   "።": 0.55,
+   "?": 0.55,
+   "፦": 0.35,
+   "፣": 0.25,
+   "፤": 0.3
+  }
+ }
+}

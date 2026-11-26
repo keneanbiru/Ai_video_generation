@@ -1,0 +1,20 @@
+{
+ "key": "8494f2e9d214fea2",
+ "provider": "local:mms-tts",
+ "text": "ቡናው በምጣዱ ላይ ሲቆላ፣ ጭሱ ቤቱን በሙሉ ይሞላል።",
+ "params": {
+  "speaking_rate": 1.0,
+  "noise_scale": 0.6,
+  "uroman": true,
+  "input_chars": 33,
+  "prepared": "bunaawe bametaadu laaye siqolaa | chesu beetune bamulu yemolaale",
+  "chunks": 2,
+  "pauses": {
+   "።": 0.55,
+   "?": 0.55,
+   "፦": 0.35,
+   "፣": 0.25,
+   "፤": 0.3
+  }
+ }
+}

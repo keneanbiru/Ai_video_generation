@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import time
 from pathlib import Path
 
@@ -77,7 +78,36 @@ def gen_acestep_import(name: str, caption: str, seed: int, seconds: float, out: 
     return {"imported": True, **m.get("params", {})}
 
 
-IMPLS = {"acestep": gen_acestep_import, "local:musicgen-small": gen_musicgen}
+def gen_procedural(name: str, caption: str, seed: int, seconds: float, out: Path, ck: str) -> dict:
+    """Algorithmic fallback (not a model). Logged like a call so its latency is measured too."""
+    import soundfile as sf
+
+    from .procedural_score import SR, compose
+
+    t0 = time.time()
+    raw = out.with_suffix(".raw.wav")
+    sf.write(raw, compose(seconds, seed), SR)
+    ffmpeg("-i", str(raw), "-af", "loudnorm=I=-20:TP=-3:LRA=11", "-ar", "48000", "-ac", "2", str(out))
+    raw.unlink(missing_ok=True)
+    dt = time.time() - t0
+    params = {"seconds": seconds, "bpm": 63, "scale": "tizita major pentatonic", "note": "algorithmic, not AI"}
+    log_call(stage="music", item=f"seed{seed}", provider=name, model="procedural_score.py", params=params, seed=seed,
+             latency_s=round(dt, 2), device=device_name(), compute_s=round(dt, 2), list_price_usd=0.0,
+             cache_key=ck, output=str(out.relative_to(OUT.parent)), audio_s=round(duration_s(out), 2))
+    return params
+
+
+def gen_musicgen_checked(name: str, caption: str, seed: int, seconds: float, out: Path, ck: str) -> dict:
+    from .common import model_path
+
+    if model_path("facebook/musicgen-small") == "facebook/musicgen-small" and not os.environ.get("ALLOW_HF_DOWNLOAD"):
+        raise ProviderUnavailable("musicgen-small weights not downloaded yet (tools/fetch_models.sh); "
+                                  "set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB")
+    return gen_musicgen(name, caption, seed, seconds, out, ck)
+
+
+IMPLS = {"acestep": gen_acestep_import, "local:musicgen-small": gen_musicgen_checked,
+         "local:procedural": gen_procedural}
 
 
 def candidates(sb: dict, force: bool = False) -> dict[int, Path]:

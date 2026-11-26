@@ -1,0 +1,15 @@
+{
+ "duration_s": 83.968,
+ "loudness": {
+  "pass1": {
+   "input_i": "-17.97",
+   "input_tp": "-4.99",
+   "input_lra": "7.20"
+  },
+  "final": {
+   "integrated_lufs": -14.0,
+   "lra_lu": 6.8,
+   "true_peak_dbtp": -1.0
+  }
+ }
+}

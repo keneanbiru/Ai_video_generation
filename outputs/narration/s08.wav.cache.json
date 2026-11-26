@@ -1,0 +1,20 @@
+{
+ "key": "5ad50a3e46f1ebb5",
+ "provider": "local:mms-tts",
+ "text": "አቦል፣ ቶና፣ በረካ። ሶስት ዙር፣ ሶስት ጊዜ ትዕግስት።",
+ "params": {
+  "speaking_rate": 1.0,
+  "noise_scale": 0.6,
+  "uroman": true,
+  "input_chars": 35,
+  "prepared": "abole | tonaa | barakaa | sosete zure | sosete gizee teegesete",
+  "chunks": 5,
+  "pauses": {
+   "።": 0.55,
+   "?": 0.55,
+   "፦": 0.35,
+   "፣": 0.25,
+   "፤": 0.3
+  }
+ }
+}

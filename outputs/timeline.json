@@ -1,0 +1,106 @@
+{
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0.0,
+   "duration": 7.0,
+   "narration_start": 0.4,
+   "narration_s": 5.543,
+   "subtitle_en": "When I was a child, at my grandmother's house, mornings began with the smell of coffee."
+  },
+  {
+   "id": "s02",
+   "start": 7.0,
+   "duration": 6.5,
+   "narration_start": 7.4,
+   "narration_s": 3.617,
+   "subtitle_en": "Emama spread fresh grass and set out the jebena."
+  },
+  {
+   "id": "s03",
+   "start": 13.5,
+   "duration": 5.5,
+   "narration_start": 13.9,
+   "narration_s": 2.986,
+   "subtitle_en": "She washed the green beans slowly, by hand."
+  },
+  {
+   "id": "s04",
+   "start": 19.0,
+   "duration": 6.042,
+   "narration_start": 19.4,
+   "narration_s": 4.725,
+   "subtitle_en": "As the beans roasted in the pan, the smoke filled the whole house."
+  },
+  {
+   "id": "s05",
+   "start": 25.042,
+   "duration": 7.583,
+   "narration_start": 25.442,
+   "narration_s": 6.269,
+   "subtitle_en": "But I was always in a hurry. \"Emama, when will it be ready?\""
+  },
+  {
+   "id": "s06",
+   "start": 32.625,
+   "duration": 7.917,
+   "narration_start": 33.225,
+   "narration_s": 6.409,
+   "subtitle_en": "She would smile and answer: \"Slowly, slowly, an egg will walk on its own legs.\""
+  },
+  {
+   "id": "s07",
+   "start": 40.542,
+   "duration": 5.708,
+   "narration_start": 40.942,
+   "narration_s": 4.396,
+   "subtitle_en": "She pounded the beans in the mortar, and the incense smoked."
+  },
+  {
+   "id": "s08",
+   "start": 46.25,
+   "duration": 7.958,
+   "narration_start": 46.65,
+   "narration_s": 6.655,
+   "subtitle_en": "Abol, tona, bereka. Three rounds, three lessons in patience."
+  },
+  {
+   "id": "s09",
+   "start": 54.208,
+   "duration": 9.167,
+   "narration_start": 54.608,
+   "narration_s": 7.855,
+   "subtitle_en": "The neighbours gathered. News, laughter, blessings. No one was in a hurry."
+  },
+  {
+   "id": "s10",
+   "start": 63.375,
+   "duration": 6.0,
+   "narration_start": 63.775,
+   "narration_s": 4.576,
+   "subtitle_en": "Today I live in a faraway city. Everything is fast."
+  },
+  {
+   "id": "s11",
+   "start": 69.375,
+   "duration": 6.0,
+   "narration_start": 69.775,
+   "narration_s": 3.636,
+   "subtitle_en": "But when I roast coffee, I hear Emama's voice."
+  },
+  {
+   "id": "s12",
+   "start": 75.375,
+   "duration": 6.0,
+   "narration_start": 76.575,
+   "narration_s": 0.944,
+   "subtitle_en": "Slowly, slowly."
+  }
+ ],
+ "end_card": {
+  "start": 81.375,
+  "duration": 4
+ },
+ "total_s": 85.375,
+ "fps": 24
+}

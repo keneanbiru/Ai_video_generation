@@ -1,0 +1,254 @@
+{
+ "is_uroman": true,
+ "vocab_size": 29,
+ "vocab": " '<unk>_abcdefghijklmnopqrstuwxyz",
+ "rows": [
+  {
+   "id": "s01",
+   "raw_chars": 45,
+   "raw_in_vocab_pct": 17.8,
+   "prepared_in_vocab_pct": 96.6,
+   "oov_prepared": [
+    ",",
+    "."
+   ],
+   "prepared": "balejenatee, baayaatee beete, eyaanedaanedu tawaate yamijamerawe babunaa shetaa nabare.",
+   "oov_raw_sample": [
+    "ል",
+    "ሚ",
+    "ም",
+    "ረ",
+    "ር",
+    "ሽ",
+    "በ",
+    "ቡ"
+   ]
+  },
+  {
+   "id": "s02",
+   "raw_chars": 42,
+   "raw_in_vocab_pct": 16.7,
+   "prepared_in_vocab_pct": 96.2,
+   "oov_prepared": [
+    ",",
+    "."
+   ],
+   "prepared": "emaamaa tekuse saare gozeguzawe, kasale aqataatelawe, jabanaawene yaazagaajaalu.",
+   "oov_raw_sample": [
+    "ለ",
+    "ሉ",
+    "ል",
+    "ማ",
+    "ር",
+    "ሰ",
+    "ሳ",
+    "ስ"
+   ]
+  },
+  {
+   "id": "s03",
+   "raw_chars": 29,
+   "raw_in_vocab_pct": 17.2,
+   "prepared_in_vocab_pct": 98.3,
+   "oov_prepared": [
+    "."
+   ],
+   "prepared": "aranegwaadeewene bunaa baejaachawe qase belawe yaatebaalu.",
+   "oov_raw_sample": [
+    "ለ",
+    "ሉ",
+    "ረ",
+    "ስ",
+    "ቀ",
+    "በ",
+    "ቡ",
+    "ባ"
+   ]
+  },
+  {
+   "id": "s04",
+   "raw_chars": 33,
+   "raw_in_vocab_pct": 21.2,
+   "prepared_in_vocab_pct": 96.9,
+   "oov_prepared": [
+    ",",
+    "."
+   ],
+   "prepared": "bunaawe bametaadu laaye siqolaa, chesu beetune bamulu yemolaale.",
+   "oov_raw_sample": [
+    "ሉ",
+    "ላ",
+    "ል",
+    "ሙ",
+    "ም",
+    "ሞ",
+    "ሱ",
+    "ሲ"
+   ]
+  },
+  {
+   "id": "s05",
+   "raw_chars": 40,
+   "raw_in_vocab_pct": 20.0,
+   "prepared_in_vocab_pct": 95.8,
+   "oov_prepared": [
+    ",",
+    ".",
+    "?"
+   ],
+   "prepared": "enee gene hulegizee chakuyee nabare. emaamaa, machee nawe yamidaresawe?",
+   "oov_raw_sample": [
+    "?",
+    "«",
+    "»",
+    "ሁ",
+    "ል",
+    "መ",
+    "ሚ",
+    "ማ"
+   ]
+  },
+  {
+   "id": "s06",
+   "raw_chars": 47,
+   "raw_in_vocab_pct": 17.0,
+   "prepared_in_vocab_pct": 96.3,
+   "oov_prepared": [
+    ",",
+    ".",
+    ":"
+   ],
+   "prepared": "esaachaweme fagage belawe yemalesaalu: qase baqase, enequlaale baegeru yeheedaale.",
+   "oov_raw_sample": [
+    "«",
+    "»",
+    "ሄ",
+    "ለ",
+    "ሉ",
+    "ላ",
+    "ል",
+    "መ"
+   ]
+  },
+  {
+   "id": "s07",
+   "raw_chars": 27,
+   "raw_in_vocab_pct": 14.8,
+   "prepared_in_vocab_pct": 96.3,
+   "oov_prepared": [
+    ",",
+    "."
+   ],
+   "prepared": "bunaawene bamuqachaa yewaqetaalu, etaanume yechasaale.",
+   "oov_raw_sample": [
+    "ሉ",
+    "ል",
+    "ሙ",
+    "ም",
+    "ሳ",
+    "ቀ",
+    "ቅ",
+    "በ"
+   ]
+  },
+  {
+   "id": "s08",
+   "raw_chars": 35,
+   "raw_in_vocab_pct": 20.0,
+   "prepared_in_vocab_pct": 91.5,
+   "oov_prepared": [
+    ",",
+    "."
+   ],
+   "prepared": "abole, tonaa, barakaa. sosete zure, sosete gizee teegesete.",
+   "oov_raw_sample": [
+    "ል",
+    "ረ",
+    "ር",
+    "ስ",
+    "ሶ",
+    "በ",
+    "ቦ",
+    "ት"
+   ]
+  },
+  {
+   "id": "s09",
+   "raw_chars": 39,
+   "raw_in_vocab_pct": 15.4,
+   "prepared_in_vocab_pct": 93.2,
+   "oov_prepared": [
+    ",",
+    "."
+   ],
+   "prepared": "gorabeetoche yesabasabaalu. waree, saaqe, mereqaate. maaneme ayechakuleme.",
+   "oov_raw_sample": [
+    "ሉ",
+    "ል",
+    "ማ",
+    "ም",
+    "ረ",
+    "ሬ",
+    "ር",
+    "ሰ"
+   ]
+  },
+  {
+   "id": "s10",
+   "raw_chars": 36,
+   "raw_in_vocab_pct": 22.2,
+   "prepared_in_vocab_pct": 97.0,
+   "oov_prepared": [
+    "."
+   ],
+   "prepared": "zaaree ruqe katamaa wesete enoraalahu. hulume nagare fataane nawe.",
+   "oov_raw_sample": [
+    "ሁ",
+    "ለ",
+    "ሉ",
+    "ማ",
+    "ም",
+    "ሩ",
+    "ራ",
+    "ሬ"
+   ]
+  },
+  {
+   "id": "s11",
+   "raw_chars": 27,
+   "raw_in_vocab_pct": 18.5,
+   "prepared_in_vocab_pct": 96.1,
+   "oov_prepared": [
+    ",",
+    "."
+   ],
+   "prepared": "gene bunaa seqolaa, yaemaamaane demetze esamaalahu.",
+   "oov_raw_sample": [
+    "ሁ",
+    "ለ",
+    "ላ",
+    "ማ",
+    "ም",
+    "ሰ",
+    "ስ",
+    "ቆ"
+   ]
+  },
+  {
+   "id": "s12",
+   "raw_chars": 7,
+   "raw_in_vocab_pct": 14.3,
+   "prepared_in_vocab_pct": 91.7,
+   "oov_prepared": [
+    "."
+   ],
+   "prepared": "qase baqase.",
+   "oov_raw_sample": [
+    "ስ",
+    "ቀ",
+    "በ",
+    "።"
+   ]
+  }
+ ]
+}

@@ -51,6 +51,9 @@ def _sd_turbo(img2img: bool):
 
 
 def gen_local(name: str, prompt: str, seed: int, ref: Path | None, item: str, out: Path, ck: str) -> dict:
+    if model_path("stabilityai/sd-turbo") == "stabilityai/sd-turbo" and not os.environ.get("ALLOW_HF_DOWNLOAD"):
+        raise ProviderUnavailable("sd-turbo weights not downloaded yet (tools/fetch_models.sh); "
+                                  "set ALLOW_HF_DOWNLOAD=1 to let diffusers fetch 2.6 GB")
     import torch
 
     t0 = time.time()

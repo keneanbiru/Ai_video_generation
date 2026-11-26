@@ -23,7 +23,7 @@ from .common import (
 )
 from . import prices
 
-MMS_RATE = float(os.environ.get("MMS_SPEAKING_RATE", "0.85"))
+MMS_RATE = float(os.environ.get("MMS_SPEAKING_RATE", "1.0"))
 MMS_NOISE = float(os.environ.get("MMS_NOISE_SCALE", "0.6"))
 MMS_SEED = int(os.environ.get("MMS_SEED", "7"))
 GEMINI_MODEL = os.environ.get("GEMINI_TTS_MODEL", "gemini-2.5-flash-preview-tts")
@@ -31,6 +31,26 @@ GEMINI_VOICE = os.environ.get("GEMINI_TTS_VOICE", "Sulafat")
 GEMINI_STYLE = "Read slowly and warmly, like an adult remembering their grandmother, in Amharic:"
 
 _mms: dict = {}
+
+# Silence inserted after each Ethiopic punctuation mark (seconds). See EXPERIMENTS.md E04.
+PAUSES = {"።": 0.55, "?": 0.55, "፦": 0.35, "፣": 0.25, "፤": 0.3}
+
+
+def split_for_pauses(text: str) -> list[tuple[str, float]]:
+    """'a፣ b። c' -> [('a', .25), ('b', .55), ('c', 0)]. Quote marks are dropped."""
+    import re
+
+    out, buf = [], ""
+    for ch in text.replace("«", "").replace("»", ""):
+        if ch in PAUSES:
+            if buf.strip():
+                out.append((buf.strip(), PAUSES[ch]))
+            buf = ""
+        else:
+            buf += ch
+    if buf.strip():
+        out.append((buf.strip(), 0.0))
+    return [(re.sub(r"\s+", " ", c), p) for c, p in out]
 
 
 def _uromanize(text: str, lang: str) -> str:
@@ -66,17 +86,25 @@ def tts_mms(text: str, lang: str, out: Path, item: str, ck: str) -> dict:
         _mms[("m", lang)] = VitsModel.from_pretrained(model_path(model_id)).eval()
         _mms[("tok", lang)] = AutoTokenizer.from_pretrained(model_path(model_id))
     model, tok = _mms[("m", lang)], _mms[("tok", lang)]
-    prepared = mms_prepare(text, lang)
+    # E04: the MMS vocabulary has no punctuation, so "።" or "," is silently dropped and gives
+    # no pause. Split at Ethiopic punctuation, synthesise each chunk, insert explicit silences.
+    chunks = split_for_pauses(text)
+    prepared = " | ".join(mms_prepare(c, lang) for c, _ in chunks)
     params = {"speaking_rate": MMS_RATE, "noise_scale": MMS_NOISE, "uroman": bool(getattr(tok, "is_uroman", False)),
-              "input_chars": len(text), "prepared": prepared}
+              "input_chars": len(text), "prepared": prepared, "chunks": len(chunks), "pauses": PAUSES}
     t0 = time.time()
     try:
         model.speaking_rate = MMS_RATE
         model.noise_scale = MMS_NOISE
         torch.manual_seed(MMS_SEED)
-        inputs = tok(prepared, return_tensors="pt")
-        with torch.no_grad():
-            wav = model(**inputs).waveform[0].numpy()
+        sr = model.config.sampling_rate
+        parts = []
+        for chunk, pause in chunks:
+            inputs = tok(mms_prepare(chunk, lang), return_tensors="pt")
+            with torch.no_grad():
+                parts.append(model(**inputs).waveform[0].numpy())
+            parts.append(np.zeros(int(pause * sr), dtype=np.float32))
+        wav = np.concatenate(parts)
     except Exception as e:
         log_call(stage="narration", item=item, provider="local:mms-tts", model=model_id, params=params, seed=MMS_SEED,
                  latency_s=round(time.time() - t0, 2), device=device_name(), status="error", cache_key=ck, error=repr(e))
@@ -156,7 +184,7 @@ def pick_provider(chain: list[str]) -> str:
 
 def voice_settings(provider: str) -> dict:
     if provider == "local:mms-tts":
-        return {"rate": MMS_RATE, "noise": MMS_NOISE, "seed": MMS_SEED}
+        return {"rate": MMS_RATE, "noise": MMS_NOISE, "seed": MMS_SEED, "pauses": PAUSES, "chunked": 1}
     return {"model": GEMINI_MODEL, "voice": GEMINI_VOICE, "style": GEMINI_STYLE}
 
 

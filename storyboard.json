@@ -37,7 +37,7 @@
   "providers": {
     "keyframes": ["cloudflare:@cf/black-forest-labs/flux-1-schnell", "local:sd-turbo"],
     "shots": ["wan22:kaggle", "kenburns"],
-    "music": ["acestep:kaggle", "local:musicgen-small"],
+    "music": ["acestep:kaggle", "local:musicgen-small", "local:procedural"],
     "narration": ["gemini-tts", "local:mms-tts"]
   },
   "music": {
@@ -65,8 +65,8 @@
       "seed": 101,
       "motion_prompt": "slow push-in, mist drifting, smoke rising gently, fixed horizon",
       "kenburns": {"zoom_from": 1.0, "zoom_to": 1.15, "pan": "none"},
-      "narration": "በልጅነቴ፣ በአያቴ ቤት፣ እያንዳንዱ ጠዋት የሚጀምረው በቡና ሽታ ነበር።",
-      "subtitle_en": "When I was a child, at my grandmother's house, every morning began with the smell of coffee.",
+      "narration": "በልጅነቴ፣ በአያቴ ቤት፣ ጠዋት በቡና ሽታ ይጀምር ነበር።",
+      "subtitle_en": "When I was a child, at my grandmother's house, mornings began with the smell of coffee.",
       "min_duration_s": 7
     },
     {
@@ -78,8 +78,8 @@
       "seed": 102,
       "motion_prompt": "she slowly scatters grass with one hand, camera fixed",
       "kenburns": {"zoom_from": 1.1, "zoom_to": 1.0, "pan": "right"},
-      "narration": "እማማ ትኩስ ሳር ጎዝጉዘው፣ ከሰል አቀጣጥለው፣ ጀበናውን ያዘጋጃሉ።",
-      "subtitle_en": "Emama spread fresh grass, lit the charcoal and set out the jebena.",
+      "narration": "እማማ ሳር ጎዝጉዘው ጀበናውን ያዘጋጃሉ።",
+      "subtitle_en": "Emama spread fresh grass and set out the jebena.",
       "min_duration_s": 6.5
     },
     {
