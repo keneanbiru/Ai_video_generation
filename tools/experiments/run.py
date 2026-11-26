@@ -368,6 +368,115 @@ def e12_kenburns():
     save("e12_kenburns", res)
 
 
+
+
+# ---------------------------------------------------------------- E13 (ceiling) other languages
+E13_LINES = {
+    # Agent translations, NOT checked by native speakers (that check is part of the result).
+    "tir": {"s01": "ኣብ ቍልዕነተይ፣ ኣብ ገዛ ዓባየይ፣ ንግሆ ብሽታ ቡን ይጅምር ነይሩ።",
+            "s06": "ንሳ ፍሽኽ ኢላ ትምልስ፦ «ቀስ ብቐስ፣ እንቋቝሖ ብእግሩ ይኸይድ።»",
+            "s12": "ቀስ ብቐስ።"},
+    "orm": {"s01": "Yeroo ijoollummaa koo, mana akkoo koo keessatti, ganamni urgaa bunaatiin jalqaba ture.",
+            "s06": "Ishiin seeqxee deebifti: Suuta suutaan, hanqaaquun miilla isheetiin deemti.",
+            "s12": "Suuta suutaan."},
+}
+
+
+def e13_languages():
+    import soundfile as sf
+    import torch
+    import uroman as ur
+    from transformers import AutoTokenizer, VitsModel
+
+    sb = load_storyboard()
+    amh = {s["id"]: s["narration"] for s in sb["shots"]}
+    d = EXP / "e13_languages"
+    d.mkdir(parents=True, exist_ok=True)
+    u = ur.Uroman()
+    res = {}
+    for lang, lines in [("amh", {k: amh[k] for k in ("s01", "s06", "s12")}), *E13_LINES.items()]:
+        mid = f"facebook/mms-tts-{lang}"
+        if common.model_path(mid) == mid:
+            res[lang] = {"error": "weights not downloaded"}
+            continue
+        tok = AutoTokenizer.from_pretrained(common.model_path(mid))
+        model = VitsModel.from_pretrained(common.model_path(mid)).eval()
+        vocab = set(tok.get_vocab())
+        rows = {}
+        for sid, text in lines.items():
+            clean = re.sub(r"[።፣፤፦«»,.:]", " ", text)
+            prep = (u.romanize_string(clean, lcode=lang) if tok.is_uroman else clean).lower()
+            prep = re.sub(r"\s+", " ", prep).strip()
+            dropped = sorted({c for c in prep if c not in vocab and c != " "})
+            torch.manual_seed(7)
+            t0 = time.time()
+            with torch.no_grad():
+                w = model(**tok(prep, return_tensors="pt")).waveform[0].numpy()
+            dt = time.time() - t0
+            p = d / f"{lang}_{sid}.wav"
+            sf.write(p, w, model.config.sampling_rate)
+            log_call(stage="experiment", item=f"e13:{lang}:{sid}", provider="local:mms-tts", model=mid, seed=7,
+                     latency_s=round(dt, 2), device=common.device_name(), compute_s=round(dt, 2),
+                     output=str(p.relative_to(ROOT)))
+            secs = len(w) / model.config.sampling_rate
+            rows[sid] = {"text": text, "model_input": prep, "chars_dropped_by_tokenizer": dropped,
+                         "audio_s": round(secs, 2), "words_per_s": round(len(text.split()) / secs, 2),
+                         "latency_s": round(dt, 2)}
+        res[lang] = {"is_uroman": bool(tok.is_uroman), "vocab": "".join(sorted(vocab)), "lines": rows}
+    # How does uroman treat Tigrinya-only letters under each language code?
+    probe = "ቐ ቑ ኸ ዀ ዓ ኣ ቍ ቋ"
+    res["uroman_probe"] = {code: u.romanize_string(probe, lcode=code) for code in ("amh", "tir", None)}
+    save("e13_languages", res)
+
+# ---------------------------------------------------------------- E11 hosted vs local
+def e11_hosted_vs_local():
+    """Same 3 shot prompts + seeds: keyless hosted endpoint vs local SD-Turbo. Latency, bytes, EXIF model."""
+    import urllib.parse
+
+    import requests
+    import torch
+    from PIL import Image
+
+    from pipeline import keyframes as kf
+
+    sb = load_storyboard()
+    d = EXP / "e11_hosted_vs_local"
+    d.mkdir(parents=True, exist_ok=True)
+    res = {}
+    for sid in ("s04", "s06", "s08"):
+        shot = next(s for s in sb["shots"] if s["id"] == sid)
+        prompt = common.expand_prompt(sb, shot)
+        url = ("https://image.pollinations.ai/prompt/" + urllib.parse.quote(prompt)
+               + f"?width=640&height=640&seed={shot['seed']}&nologo=true&model=flux")
+        t0 = time.time()
+        try:
+            r = requests.get(url, timeout=180)
+            r.raise_for_status()
+            hp = d / f"{sid}_hosted.jpg"
+            hp.write_bytes(r.content)
+            exif = Image.open(hp).getexif()
+            hosted = {"latency_s": round(time.time() - t0, 2), "bytes": len(r.content),
+                      "exif_make": str(exif.get(271)), "exif_model": str(exif.get(272))}
+            log_call(stage="experiment", item=f"e11:{sid}:hosted", provider="pollinations", model="flux (requested)",
+                     params={"size": 640, "reported_make": hosted["exif_make"]}, seed=shot["seed"],
+                     latency_s=hosted["latency_s"], device="hosted", output=str(hp.relative_to(ROOT)))
+        except Exception as e:
+            hosted = {"error": repr(e)[:200], "latency_s": round(time.time() - t0, 2)}
+        g = torch.Generator("cpu").manual_seed(shot["seed"])
+        t0 = time.time()
+        img = kf._sd_turbo(False)(prompt=prompt, num_inference_steps=4, guidance_scale=0.0, width=640, height=640,
+                                  generator=g).images[0]
+        lp = d / f"{sid}_local.png"
+        img.save(lp)
+        local = {"latency_s": round(time.time() - t0, 2)}
+        log_call(stage="experiment", item=f"e11:{sid}:local", provider="local:sd-turbo", model="stabilityai/sd-turbo",
+                 params={"size": 640, "steps": 4}, seed=shot["seed"], latency_s=local["latency_s"],
+                 device=common.device_name(), compute_s=local["latency_s"], output=str(lp.relative_to(ROOT)))
+        res[sid] = {"hosted": hosted, "local": local}
+    save("e11_hosted_vs_local", res)
+
+
+
 EXPERIMENTS = {k.split("_", 1)[0]: v for k, v in globals().items() if re.match(r"e\d\d_", k) and callable(v)}
 
 if __name__ == "__main__":

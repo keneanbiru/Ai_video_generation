@@ -53,7 +53,7 @@
       {"at_shot": "s10", "action": "dip", "note": "the city: thinner, lonelier"},
       {"at_shot": "s12", "action": "out", "note": "theme returns, then fade with the end card"}
     ],
-    "duck": {"threshold": 0.02, "ratio": 6, "attack_ms": 300, "release_ms": 1500, "bed_gain_db": -10}
+    "duck": {"threshold": 0.02, "ratio": 6, "attack_ms": 80, "release_ms": 1500, "bed_gain_db": -10}
   },
   "shots": [
     {
