@@ -103,3 +103,14 @@ def test_srt_two_lines_max(tmp_path):
         body = block.splitlines()[2:]
         assert len(body) <= 2
         assert all(len(l) <= 40 for l in body)
+
+
+def test_prompts_fit_clip_77_tokens():
+    """F08: longer prompts are silently truncated, dropping the style block at the end."""
+    from pipeline.common import model_path
+
+    if model_path("stabilityai/sd-turbo") == "stabilityai/sd-turbo":
+        pytest.skip("SD-Turbo tokenizer not downloaded")
+    from pipeline.keyframes import check_prompt_lengths
+
+    check_prompt_lengths(load_storyboard())

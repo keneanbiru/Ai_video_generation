@@ -1,9 +1,9 @@
 {
- "duration_s": 83.968,
+ "duration_s": 84.65,
  "loudness": {
   "pass1": {
    "input_i": "-17.97",
-   "input_tp": "-4.99",
+   "input_tp": "-5.00",
    "input_lra": "7.20"
   },
   "final": {

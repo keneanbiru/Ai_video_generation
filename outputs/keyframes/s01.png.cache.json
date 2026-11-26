@@ -1,0 +1,12 @@
+{
+ "key": "d3e188457598b474",
+ "provider": "local:sd-turbo",
+ "prompt": "extreme wide view of misty green Ethiopian highland hills at dawn, a small house with a tin roof among eucalyptus trees, thin smoke rising from the house, sun just rising, warm hand-painted gouache illustration, soft paper grain, golden morning light, earthy ochre, terracotta and deep green palette, gentle soft shadows, storybook painting, Ethiopian highland home",
+ "seed": 101,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

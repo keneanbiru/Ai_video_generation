@@ -79,3 +79,33 @@
 20261126T095715-789556 [09:58:21]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
 20261126T100431-12d7cc [10:04:31] === run 20261126T100431-12d7cc ===
 20261126T100431-12d7cc [10:04:31] [1/8] storyboard valid: 12 shots, language=amh
+20261126T100436-3a35e9 [10:04:36] === run 20261126T100436-3a35e9 ===
+20261126T100436-3a35e9 [10:04:36] [1/8] storyboard valid: 12 shots, language=amh
+20261126T100436-3a35e9 [10:04:36] [2/8] narration
+20261126T100436-3a35e9 [10:04:36]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
+20261126T100436-3a35e9 [10:04:36]   narration/s01: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s02: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s03: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s04: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s05: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s06: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s07: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s08: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s09: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s10: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s11: cached
+20261126T100436-3a35e9 [10:04:36]   narration/s12: cached
+20261126T100436-3a35e9 [10:04:36] [3/8] timeline
+20261126T100436-3a35e9 [10:04:37]   total 85.38s (target 78s)
+20261126T100436-3a35e9 [10:04:37] [4/8] radio cut
+20261126T100436-3a35e9 [10:04:48]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.7s, {'integrated_lufs': -14.0, 'lra_lu': 6.8, 'true_peak_dbtp': -1.0})
+20261126T100436-3a35e9 [10:04:48] [5/8] keyframes (reference sheet first)
+20261126T100436-3a35e9 [10:04:48]   references/emama: cached
+20261126T100436-3a35e9 [10:04:48]   references/child: cached
+20261126T100436-3a35e9 [10:04:48]   references/adult: cached
+20261126T100436-3a35e9 [10:04:48]   keyframes/s01: generating (txt2img)
+20261126T100436-3a35e9 [10:04:48]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100436-3a35e9 [10:05:21]   keyframes/s02: generating (txt2img)
+20261126T100436-3a35e9 [10:05:21]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100436-3a35e9 [10:05:47]   keyframes/s03: generating (txt2img)
+20261126T100436-3a35e9 [10:05:47]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set

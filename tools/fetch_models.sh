@@ -14,7 +14,7 @@ fetch_repo () {  # repo  regex-of-files-to-keep
    | while read -r f; do
        mkdir -p "$dir/$(dirname "$f")"
        echo "  $repo/$f"
-       until curl -sfL -C - --retry 20 --retry-delay 5 -o "$dir/$f" "https://huggingface.co/$repo/resolve/main/$f"; do
+       until curl -sfL -C - --retry 20 --retry-delay 5 --speed-limit 20000 --speed-time 60 -o "$dir/$f" "https://huggingface.co/$repo/resolve/main/$f"; do
          rc=$?; [ $rc -eq 33 ] && break; echo "  retry $f (curl $rc)"; sleep 5; done
      done
   touch "$dir/.complete"; echo "done $repo"

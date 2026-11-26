@@ -1,0 +1,45 @@
+.venv/bin/python -m pipeline.run
+[10:04:36] === run 20261126T100436-3a35e9 ===
+[10:04:36] [1/8] storyboard valid: 12 shots, language=amh
+[10:04:36] [2/8] narration
+[10:04:36]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
+[10:04:36]   narration/s01: cached
+[10:04:36]   narration/s02: cached
+[10:04:36]   narration/s03: cached
+[10:04:36]   narration/s04: cached
+[10:04:36]   narration/s05: cached
+[10:04:36]   narration/s06: cached
+[10:04:36]   narration/s07: cached
+[10:04:36]   narration/s08: cached
+[10:04:36]   narration/s09: cached
+[10:04:36]   narration/s10: cached
+[10:04:36]   narration/s11: cached
+[10:04:36]   narration/s12: cached
+[10:04:36] [3/8] timeline
+[10:04:37]   total 85.38s (target 78s)
+[10:04:37] [4/8] radio cut
+[10:04:48]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.7s, {'integrated_lufs': -14.0, 'lra_lu': 6.8, 'true_peak_dbtp': -1.0})
+[10:04:48] [5/8] keyframes (reference sheet first)
+[10:04:48]   references/emama: cached
+[10:04:48]   references/child: cached
+[10:04:48]   references/adult: cached
+[10:04:48]   keyframes/s01: generating (txt2img)
+[10:04:48]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+[transformers] `CLIPImageProcessor` requires torchvision (not installed); falling back to `CLIPImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `CLIPImageProcessorPil` directly to silence this warning.
+[transformers] `SiglipImageProcessor` requires torchvision (not installed); falling back to `SiglipImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `SiglipImageProcessorPil` directly to silence this warning.
+[transformers] `Siglip2ImageProcessor` requires torchvision (not installed); falling back to `Siglip2ImageProcessorPil` for backward compatibility. Install torchvision to use the default backend, or import `Siglip2ImageProcessorPil` directly to silence this warning.
+/home/kenean/heritage-short/.venv/lib/python3.11/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  60%|██████    | 3/5 [00:00<00:00, 19.23it/s]
+Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][A
+Loading weights:  66%|██████▌   | 246/372 [00:00<00:00, 2458.24it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 2540.78it/s]
+Loading pipeline components...: 100%|██████████| 5/5 [00:01<00:00,  3.32it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:01<00:00,  3.90it/s]
+You have disabled the safety checker for <class 'diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion.StableDiffusionPipeline'> by passing `safety_checker=None`. Ensure that you abide to the conditions of the Stable Diffusion license and do not expose unfiltered results in services or applications open to the public. Both the diffusers team and Hugging Face strongly recommend to keep the safety filter enabled in all public facing circumstances, disabling it only for use-cases that involve analyzing network behavior or auditing its results. For more information, please have a look at https://github.com/huggingface/diffusers/pull/254 .
+[10:05:21]   keyframes/s02: generating (txt2img)
+[10:05:21]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (101 > 77). Running this sequence through the model will result in indexing errors
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer CLIPTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', golden morning light , earthy ochre , terracotta and deep green palette , gentle soft shadows , storybook painting , ethiopian highland home']
+[10:05:47]   keyframes/s03: generating (txt2img)
+[10:05:47]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+make: *** [Makefile:14: film] Terminated

@@ -110,6 +110,22 @@ IMPLS = {"acestep": gen_acestep_import, "local:musicgen-small": gen_musicgen_che
          "local:procedural": gen_procedural}
 
 
+def best_available(chain: list[str], seed: int) -> str:
+    """First provider in the chain that can run right now. Part of the cache key, so an output made
+    by a fallback is regenerated automatically once a better provider becomes available (FAILURES F07)."""
+    from .common import model_path
+
+    for name in chain:
+        if name.startswith("acestep") and (OUT / "music_acestep" / f"seed{seed}.wav").exists():
+            return name
+        if name == "local:musicgen-small" and (model_path("facebook/musicgen-small") != "facebook/musicgen-small"
+                                               or os.environ.get("ALLOW_HF_DOWNLOAD")):
+            return name
+        if name == "local:procedural":
+            return name
+    return "none"
+
+
 def candidates(sb: dict, force: bool = False) -> dict[int, Path]:
     m = sb["music"]
     d = stage_paths("music")
@@ -119,7 +135,8 @@ def candidates(sb: dict, force: bool = False) -> dict[int, Path]:
         from .procedural_score import VERSION as proc_version
 
         ck = cache_key(stage="music", caption=m["caption"], seed=seed, seconds=m["segment_s"],
-                       chain=sb["providers"]["music"], procedural_version=proc_version)
+                       chain=sb["providers"]["music"], best=best_available(sb["providers"]["music"], seed),
+                       procedural_version=proc_version)
         out[seed] = path
         if not force and cache_hit(path, ck):
             log(f"  music/seed{seed}: cached")

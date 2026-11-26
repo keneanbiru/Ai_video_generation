@@ -35,3 +35,15 @@ Entries are in the order they happened. Times are EAT on 26 Nov 2026 (the build 
 
 ### F06: The brief's tool names had moved on
 * The brief names Gemini 3.8 Flash TTS, FLUX.2 klein and ACE-Step 1.5. With no keys and no GPU none of these could be called, so their current model ids and entry points could not be verified. Mitigations: the Gemini TTS model id is an env var (`GEMINI_TTS_MODEL`); `kaggle/acestep_score.py` isolates the model call in one `render()` function and documents the output contract the local stage checks, so an API rename touches one function.
+
+### F07: The download stalled for two hours, then the cache refused to use the better model
+* **Symptom 1 (07:36–09:51):** the SD-Turbo UNet download crawled from 675 to 803 MB in over two hours (measured 5 KB/s). `curl` was still alive, so `--retry` never fired: a connection that is slow but not dead never triggers a retry.
+* **Fix 1:** killed and restarted the downloader (`curl -C -` resumes from the byte offset). The new connection ran at **8.9 MB/s**; the remaining 1.1 GB took about two minutes, and MusicGen (2.4 GB) arrived right after. Next time: `curl --speed-limit 20000 --speed-time 60` so a stalled transfer aborts itself and the retry loop reconnects. (A side mistake: my first `pkill -f` pattern also matched the shell running it and killed it, exit 144.)
+* **Symptom 2:** with MusicGen finally on disk, the music stage would still have served the **procedural fallback** candidates from cache. Their key (caption, seed, length, chain) does not change when a better provider becomes available.
+* **Fix 2:** the music cache key now includes `best_available(chain, seed)`, the first provider that can actually run right now. A fallback output is automatically regenerated once a better provider shows up, and only then. Keyframes deliberately do **not** do this: an approved image should not change just because an API key was added.
+
+### F08: CLIP silently truncated the style block
+* **Symptom:** while the first full keyframe pass ran, the log said `The following part of your input was truncated because CLIP can only handle sequences up to 77 tokens: [', golden morning light, earthy ochre, terracotta and deep green palette…']`. SD-Turbo's text encoder reads at most 77 tokens. The style block is appended **at the end** of every prompt, so the longer prompts lost exactly the words that keep the film's look consistent.
+* **Measured:** style block alone = 38 tokens. 6 of 12 shot prompts were over the limit (s02 = 103, s09 = 100, s10 = 92, s06 = 91, s05 = 86), plus Emama's reference prompt (80). Consistency was being broken silently for half the film.
+* **Fix:** compressed the style block to 20 tokens and the character descriptions to 12–18 tokens (same meaning, fewer words: commit "F08"). Added `keyframes.check_prompt_lengths()`, which runs before any generation and fails the stage with the offending shot ids, plus a test. Every prompt now fits.
+* **Lesson:** a warning buried in library output can be the most important line of a run. The style-block practice from the brief is only as good as the token budget it lives in.

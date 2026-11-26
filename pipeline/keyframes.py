@@ -126,6 +126,25 @@ def gen_cloudflare(name: str, prompt: str, seed: int, ref: Path | None, item: st
 IMPLS = {"local:sd-turbo": gen_local, "cloudflare": gen_cloudflare}
 
 
+CLIP_MAX_TOKENS = 77  # SD-Turbo's text encoder silently truncates anything longer (FAILURES F08)
+
+
+def check_prompt_lengths(sb: dict) -> None:
+    """Fail before generating if any prompt would be truncated: the style block sits at the end,
+    so truncation would silently drop exactly the part that keeps the look consistent."""
+    from transformers import CLIPTokenizer
+
+    from .common import StoryboardError
+
+    tok = CLIPTokenizer.from_pretrained(model_path("stabilityai/sd-turbo"), subfolder="tokenizer")
+    prompts = {f"ref:{n}": f"{c['reference_prompt']}, {sb['style']['style_block']}" for n, c in sb["characters"].items()}
+    prompts.update({s["id"]: expand_prompt(sb, s) for s in sb["shots"]})
+    over = {k: len(tok(p).input_ids) for k, p in prompts.items() if len(tok(p).input_ids) > CLIP_MAX_TOKENS}
+    if over:
+        raise StoryboardError("prompts longer than 77 CLIP tokens (would be truncated): "
+                              + ", ".join(f"{k}={v}" for k, v in over.items()))
+
+
 def references(sb: dict, force: bool = False) -> dict[str, Path]:
     """Character reference sheet: one golden image per character, generated before any shot."""
     d = stage_paths("references")
@@ -147,6 +166,8 @@ def references(sb: dict, force: bool = False) -> dict[str, Path]:
 
 
 def keyframes(sb: dict, only: set[str] | None = None, force: bool = False) -> dict[str, Path]:
+    if any(p.startswith("local:sd-turbo") for p in sb["providers"]["keyframes"]):
+        check_prompt_lengths(sb)
     refs = references(sb)
     d = stage_paths("keyframes")
     out = {}

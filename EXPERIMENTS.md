@@ -92,3 +92,34 @@ Every number here comes from `outputs/experiments/<name>/results.json`, produced
   3. Tigrinya-specific letters that *are* kept distinct: `ቐ`→`qh`, `ኸ`→`kx`, `ቍ`→`qwe`. Those contrasts survive.
   4. Afaan Oromo needs no romanisation. The vocabulary keeps `'` (hudhaa, the glottal stop) and the Qubee digraphs are plain Latin letters, so the model sees the text as written. It also spoke fastest (≈1.8–2.1 words/s, closer to the English rule of thumb, because Qubee words map to sounds almost one-to-one).
 * **What this means for the film:** a Tigrinya version is one storyboard field (`"language": "tir"`) plus translated lines, but **expect `ዓ`/`ሐ`-heavy words to sound wrong**. The audio is in `outputs/experiments/e13_languages/*.wav` for a native speaker to judge. The fix to try next is a custom pre-romanisation that maps `ዓ`-series letters to a distinct symbol, if the model's training data used one (unknown; needs the MMS training romaniser).
+
+### E05: Keyframe size and steps (SD-Turbo on CPU)
+* **Hypothesis:** a larger render (640–768 px) gives more detail for the Ken Burns zoom. 4 steps beats 1.
+* **Change:** shot s04 (the roast), seed 104, at 512/640/768 px and 1/4 steps.
+
+| size, steps | CPU latency (s) | what it looks like |
+|---|---|---|
+| 512, 1 | 19.8 | coherent, softer |
+| **512, 4** | **29.4** | **one pan, painterly texture, a hand entering frame** |
+| 640, 1 | 26.4 | composition starts to repeat |
+| 640, 4 | 42.6 | two overlapping pans |
+| 768, 4 | 66.6 | three or more pans tiled across the frame |
+
+* **Result:** bigger is **worse**, not better. SD-Turbo was distilled at 512 px. Above that it fills the extra canvas by **repeating the subject** (the classic "duplication" failure of diffusion models off their training resolution), and it costs 1.4–2.3× more CPU time.
+* **Decision:** `KEYFRAME_SIZE=512`, 4 steps. Detail for 720p output comes from Lanczos upscaling inside the Ken Burns stage, which suits a painted look. I had defaulted to 640 in the code before testing; the measurement reversed that choice.
+
+### E07: Keeping Emama the same person (reference conditioning)
+* **Hypothesis:** img2img from the golden reference (`outputs/references/emama.png`) keeps her identity across s02, s06 and s09. Higher similarity to the reference = better.
+* **Change:** for each shot: txt2img (style block + identical character text only), or img2img on the reference at strength 0.6 / 0.8 / 0.9, same seed. Metric: HSV colour-histogram intersection with the reference. Then I looked at the 3×3 grid.
+
+| shot | txt2img | img2img 0.6 | img2img 0.8 | img2img 0.9 |
+|---|---|---|---|---|
+| s02 (medium, working) | 0.47 | 0.75 | 0.67 | 0.67 |
+| s06 (close-up, the proverb) | 0.64 | **0.75** | 0.58 | 0.58 |
+| s09 (wide, neighbours) | 0.41 | 0.68 | 0.47 | 0.47 |
+
+* **Result 1, the metric lied.** img2img 0.6 scored highest everywhere because it **copied the reference portrait**: s02 ("spreading grass") and s09 ("wide room of neighbours") both came out as the same head-and-shoulders portrait. The colour metric rewarded the exact failure I needed to avoid. Prompt adherence is invisible to it.
+* **Result 2, a hidden step quantisation.** 0.8 and 0.9 are **pixel-identical**: with 4 steps diffusers runs `int(4 × strength)` = 3 denoising steps for both. With 4-step distilled models only strengths 0.5 / 0.75 / 1.0 actually differ.
+* **Result 3, a trade-off by shot size.** txt2img follows the composition (s02 shows her working, s09 shows the room) but her face changes. img2img keeps the face but pulls every shot toward a portrait.
+* **Decision:** a per-shot `ref_strength` field in the contract. **s06** (the close-up where her face carries the film) uses the reference at 0.8. **s02, s09** (her face is small, composition matters) use txt2img with the identical character text. The child and adult (seen from behind / in silhouette) use txt2img. *User test 2 asks whether she reads as one person.*
+* **Next step:** a LoRA trained on 10–20 curated reference images would decouple identity from composition. That needs a GPU (see report → what I would build next).
