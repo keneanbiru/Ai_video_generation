@@ -43,3 +43,31 @@
 20261126T055125-a0cfdb [05:51:42] [4/8] radio cut
 20261126T055125-a0cfdb [05:51:50]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.0s, {'integrated_lufs': -14.0, 'lra_lu': 6.8, 'true_peak_dbtp': -1.0})
 20261126T055125-a0cfdb [05:51:50] === done in 25.0s; model calls this run: 12 {"narration/s01": "ok", "narration/s02": "ok", "narration/s03": "ok", "narration/s04": "ok", "narration/s05": "ok", "narration/s06": "ok", "narration/s07": "ok", "narration/s08": "ok", "narration/s09": "ok", "narration/s10": "ok", "narration/s11": "ok", "narration/s12": "ok"} ===
+20261126T055214-17e879 [05:52:14]   music/seed7: generating 26s
+20261126T055214-17e879 [05:52:14]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed7.wav not found (render it with kaggle/acestep_score.py)
+20261126T055214-17e879 [05:52:14]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
+20261126T055214-17e879 [05:52:16]   music/seed21: generating 26s
+20261126T055214-17e879 [05:52:16]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed21.wav not found (render it with kaggle/acestep_score.py)
+20261126T055214-17e879 [05:52:16]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
+20261126T055214-17e879 [05:52:17]   music/seed42: generating 26s
+20261126T055214-17e879 [05:52:17]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed42.wav not found (render it with kaggle/acestep_score.py)
+20261126T055214-17e879 [05:52:17]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
+20261126T055219-11d2f6 [05:52:19]   music/seed7: cached
+20261126T055219-11d2f6 [05:52:19]   music/seed21: cached
+20261126T055219-11d2f6 [05:52:19]   music/seed42: cached
+20261126T055252-90f5f5 [05:52:52]   music/seed7: generating 26s
+20261126T055252-90f5f5 [05:52:52]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed7.wav not found (render it with kaggle/acestep_score.py)
+20261126T055252-90f5f5 [05:52:52]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
+20261126T055252-90f5f5 [05:52:54]   music/seed21: generating 26s
+20261126T055252-90f5f5 [05:52:54]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed21.wav not found (render it with kaggle/acestep_score.py)
+20261126T055252-90f5f5 [05:52:54]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
+20261126T055252-90f5f5 [05:52:55]   music/seed42: generating 26s
+20261126T055252-90f5f5 [05:52:55]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed42.wav not found (render it with kaggle/acestep_score.py)
+20261126T055252-90f5f5 [05:52:55]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
+20261126T055306-481a43 [05:53:06]   music/seed7: cached
+20261126T055306-481a43 [05:53:06]   music/seed21: cached
+20261126T055306-481a43 [05:53:06]   music/seed42: cached
+20261126T055306-481a43 [05:53:06]   music/bed: built from seed 21 (4 loops, 85.4s)
+20261126T055307-31c8a4 [05:53:07]   music/seed7: cached
+20261126T055307-31c8a4 [05:53:07]   music/seed21: cached
+20261126T055307-31c8a4 [05:53:07]   music/seed42: cached

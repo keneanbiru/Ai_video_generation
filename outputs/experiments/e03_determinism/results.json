@@ -1,0 +1,31 @@
+{
+ "runs": {
+  "a": {
+   "seed": 7,
+   "sha": "09cd422f4695",
+   "dur": 6.96
+  },
+  "b": {
+   "seed": 7,
+   "sha": "09cd422f4695",
+   "dur": 6.96
+  },
+  "c": {
+   "seed": 8,
+   "sha": "e32dc83c117d",
+   "dur": 6.752
+  },
+  "d": {
+   "seed": 9,
+   "sha": "e0e6914c24ad",
+   "dur": 6.624
+  },
+  "e": {
+   "seed": 10,
+   "sha": "664f6d0490f4",
+   "dur": 6.448
+  }
+ },
+ "same_seed_identical": true,
+ "duration_spread_s": 0.512
+}

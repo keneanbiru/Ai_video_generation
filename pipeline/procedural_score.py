@@ -12,6 +12,7 @@ import numpy as np
 from scipy.signal import lfilter
 
 SR = 48000
+VERSION = 2  # bump when the composer changes, so cached candidates are invalidated
 TIZITA = [0, 2, 4, 7, 9]  # semitones of the tizita major pentatonic
 
 
@@ -51,7 +52,7 @@ def compose(seconds: float, seed: int, bpm: float = 63, root_midi: int = 57) -> 
     # drone: root + fifth, slowly breathing
     t = np.arange(L.size) / SR
     drone = (np.sin(2 * np.pi * _hz(root_midi - 12) * t) + 0.5 * np.sin(2 * np.pi * _hz(root_midi - 5) * t))
-    drone *= 0.05 * (0.75 + 0.25 * np.sin(2 * np.pi * t / 11))
+    drone *= 0.03 * (0.75 + 0.25 * np.sin(2 * np.pi * t / 11))
     L += drone; R += drone
     # lyre: a sparse arpeggio over a 4-bar progression on scale degrees
     prog = rng.permutation([0, 3, 4, 1])
@@ -67,8 +68,8 @@ def compose(seconds: float, seed: int, bpm: float = 63, root_midi: int = 57) -> 
                 i = int((pos + k * beat + rng.normal(0, 0.012)) * SR)
                 if 0 <= i < n:
                     pan = rng.uniform(0.3, 0.7)
-                    L[i:i + note.size] += note[: L.size - i] * 0.35 * (1 - pan)
-                    R[i:i + note.size] += note[: R.size - i] * 0.35 * pan
+                    L[i:i + note.size] += note[: L.size - i] * 0.9 * (1 - pan)
+                    R[i:i + note.size] += note[: R.size - i] * 0.9 * pan
         pos += beat * 4
     # flute: one long phrase every 8 bars, a motif that returns
     motif = [TIZITA[i] for i in rng.choice(5, 4)]
@@ -76,8 +77,8 @@ def compose(seconds: float, seed: int, bpm: float = 63, root_midi: int = 57) -> 
         for j, deg in enumerate(motif):
             tone = flute(_hz(root_midi + 12 + deg), beat * 2.2, rng)
             i = int((start + j * beat * 2) * SR)
-            L[i:i + tone.size] += tone[: L.size - i] * 0.9
-            R[i:i + tone.size] += tone[: R.size - i]
+            L[i:i + tone.size] += tone[: L.size - i] * 0.3
+            R[i:i + tone.size] += tone[: R.size - i] * 0.33
     st = np.stack([L[:n], R[:n]], axis=1)
     # a touch of room: two short feedback-free echoes
     for dly, g in ((0.031, 0.25), (0.067, 0.15)):

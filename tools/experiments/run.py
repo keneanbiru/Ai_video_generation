@@ -275,6 +275,7 @@ def e09_duck():
     sb = load_storyboard()
     tl = json.loads((OUT / "timeline.json").read_text())
     nar = OUT / "final" / "narration.wav"
+    nar = nar if nar.exists() else OUT / "radio_cut" / "narration.wav"
     bed = OUT / "music" / "bed.wav"
     d = EXP / "e09_duck"
     d.mkdir(parents=True, exist_ok=True)
@@ -284,6 +285,8 @@ def e09_duck():
         "none_bed-10": None,
         "brief_default": {"threshold": 0.02, "ratio": 6, "attack_ms": 300, "release_ms": 1500, "bed_gain_db": -10},
         "faster_attack": {"threshold": 0.02, "ratio": 6, "attack_ms": 80, "release_ms": 800, "bed_gain_db": -10},
+        "attack80_only": {"threshold": 0.02, "ratio": 6, "attack_ms": 80, "release_ms": 1500, "bed_gain_db": -10},
+        "release800_only": {"threshold": 0.02, "ratio": 6, "attack_ms": 300, "release_ms": 800, "bed_gain_db": -10},
         "hard": {"threshold": 0.01, "ratio": 12, "attack_ms": 80, "release_ms": 1500, "bed_gain_db": -10},
     }
     res = {}
@@ -315,6 +318,7 @@ def e10_loudnorm():
     pre = EXP / "e10_loudnorm"
     pre.mkdir(parents=True, exist_ok=True)
     src = OUT / "final" / "mix.wav"
+    src = src if src.exists() else OUT / "radio_cut" / "mix.wav"
     one = pre / "one_pass.wav"
     ffmpeg("-i", str(src), "-af", "volume=-6dB,loudnorm=I=-14:TP=-1:LRA=11", "-ar", "48000", str(one))
     quiet = pre / "quiet_input.wav"

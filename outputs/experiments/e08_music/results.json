@@ -1,0 +1,26 @@
+{
+ "seed7": {
+  "provider": "local:procedural",
+  "onsets_per_min": 78.5,
+  "spectral_flatness": 0.0046,
+  "centroid_hz": 794.0,
+  "speech_band_energy_share": 0.583,
+  "loudness_range_db": 9.0
+ },
+ "seed21": {
+  "provider": "local:procedural",
+  "onsets_per_min": 64.6,
+  "spectral_flatness": 0.0051,
+  "centroid_hz": 623.0,
+  "speech_band_energy_share": 0.566,
+  "loudness_range_db": 10.4
+ },
+ "seed42": {
+  "provider": "local:procedural",
+  "onsets_per_min": 62.3,
+  "spectral_flatness": 0.0053,
+  "centroid_hz": 696.0,
+  "speech_band_energy_share": 0.622,
+  "loudness_range_db": 11.9
+ }
+}

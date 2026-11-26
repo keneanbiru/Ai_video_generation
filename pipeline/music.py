@@ -116,8 +116,10 @@ def candidates(sb: dict, force: bool = False) -> dict[int, Path]:
     out = {}
     for seed in m["candidates"]:
         path = d / f"candidate_seed{seed}.wav"
+        from .procedural_score import VERSION as proc_version
+
         ck = cache_key(stage="music", caption=m["caption"], seed=seed, seconds=m["segment_s"],
-                       chain=sb["providers"]["music"])
+                       chain=sb["providers"]["music"], procedural_version=proc_version)
         out[seed] = path
         if not force and cache_hit(path, ck):
             log(f"  music/seed{seed}: cached")

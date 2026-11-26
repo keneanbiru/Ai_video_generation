@@ -1,0 +1,12 @@
+{
+ "key": "9b86bcf504ef2790",
+ "provider": "local:procedural",
+ "caption": "gentle slow Ethiopian-inspired instrumental underscore, soft plucked lyre strings, warm breathy bamboo flute, quiet low drone, calm nostalgic tender mood, sparse, no drums, no vocals",
+ "seed": 21,
+ "params": {
+  "seconds": 26,
+  "bpm": 63,
+  "scale": "tizita major pentatonic",
+  "note": "algorithmic, not AI"
+ }
+}
