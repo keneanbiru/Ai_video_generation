@@ -1,0 +1,9 @@
+{
+ "ffmpeg": "ok (0.0s)",
+ "gemini-tts": "unavailable: GEMINI_API_KEY not set",
+ "local:mms-tts": "ok (8.8s)",
+ "cloudflare": "unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set",
+ "local:sd-turbo": "ok (44.7s)",
+ "local:musicgen-small": "ok (27.9s)",
+ "kaggle-gpu (wan22/acestep)": "unavailable: runs only inside a Kaggle notebook; see kaggle/README.md"
+}

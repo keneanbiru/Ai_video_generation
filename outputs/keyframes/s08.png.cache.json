@@ -1,0 +1,12 @@
+{
+ "key": "32e4f5ed81d85d5e",
+ "provider": "local:sd-turbo",
+ "prompt": "close-up of coffee being poured from a black clay jebena in a thin stream into small white handleless cups on a wooden tray, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
+ "seed": 108,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

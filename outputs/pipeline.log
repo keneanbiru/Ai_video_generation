@@ -109,3 +109,229 @@
 20261126T100436-3a35e9 [10:05:21]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
 20261126T100436-3a35e9 [10:05:47]   keyframes/s03: generating (txt2img)
 20261126T100436-3a35e9 [10:05:47]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:06:20] === run 20261126T100620-c2fd65 ===
+20261126T100620-c2fd65 [10:06:20] [1/8] storyboard valid: 12 shots, language=amh
+20261126T100620-c2fd65 [10:06:20] [2/8] narration
+20261126T100620-c2fd65 [10:06:20]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
+20261126T100620-c2fd65 [10:06:20]   narration/s01: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s02: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s03: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s04: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s05: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s06: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s07: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s08: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s09: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s10: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s11: cached
+20261126T100620-c2fd65 [10:06:20]   narration/s12: cached
+20261126T100620-c2fd65 [10:06:20] [3/8] timeline
+20261126T100620-c2fd65 [10:06:20]   total 85.38s (target 78s)
+20261126T100620-c2fd65 [10:06:20] [4/8] radio cut
+20261126T100620-c2fd65 [10:06:32]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.4s, {'integrated_lufs': -14.0, 'lra_lu': 6.8, 'true_peak_dbtp': -1.0})
+20261126T100620-c2fd65 [10:06:32] [5/8] keyframes (reference sheet first)
+20261126T100620-c2fd65 [10:06:33]   references/emama: generating
+20261126T100620-c2fd65 [10:06:33]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:07:04]   references/child: generating
+20261126T100620-c2fd65 [10:07:04]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:07:29]   references/adult: generating
+20261126T100620-c2fd65 [10:07:29]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:07:55]   keyframes/s01: generating (txt2img)
+20261126T100620-c2fd65 [10:07:55]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:08:25]   keyframes/s02: generating (txt2img)
+20261126T100620-c2fd65 [10:08:25]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:08:50]   keyframes/s03: generating (txt2img)
+20261126T100620-c2fd65 [10:08:50]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:09:15]   keyframes/s04: generating (txt2img)
+20261126T100620-c2fd65 [10:09:15]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:09:44]   keyframes/s05: generating (txt2img)
+20261126T100620-c2fd65 [10:09:44]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:10:25]   keyframes/s06: generating (img2img on emama.png)
+20261126T100620-c2fd65 [10:10:25]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:11:08]   keyframes/s07: generating (txt2img)
+20261126T100620-c2fd65 [10:11:08]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:11:47]   keyframes/s08: generating (txt2img)
+20261126T100620-c2fd65 [10:11:47]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:12:32]   keyframes/s09: generating (txt2img)
+20261126T100620-c2fd65 [10:12:32]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:13:10]   keyframes/s10: generating (txt2img)
+20261126T100620-c2fd65 [10:13:10]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:13:48]   keyframes/s11: generating (txt2img)
+20261126T100620-c2fd65 [10:13:48]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:14:26]   keyframes/s12: generating (txt2img)
+20261126T100620-c2fd65 [10:14:26]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100620-c2fd65 [10:15:04] [6/8] shots
+20261126T100620-c2fd65 [10:15:04]   [shots] provider wan22:kaggle unavailable: no Wan clip for s01 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:15:10]   shots/16x9/s01: rendered with kenburns (7.00s)
+20261126T100620-c2fd65 [10:15:10]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:15:16]   shots/16x9/s02: rendered with kenburns (6.50s)
+20261126T100620-c2fd65 [10:15:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:15:20]   shots/16x9/s03: rendered with kenburns (5.50s)
+20261126T100620-c2fd65 [10:15:20]   [shots] provider wan22:kaggle unavailable: no Wan clip for s04 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:15:25]   shots/16x9/s04: rendered with kenburns (6.04s)
+20261126T100620-c2fd65 [10:15:25]   [shots] provider wan22:kaggle unavailable: no Wan clip for s05 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:15:33]   shots/16x9/s05: rendered with kenburns (7.58s)
+20261126T100620-c2fd65 [10:15:33]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:15:40]   shots/16x9/s06: rendered with kenburns (7.92s)
+20261126T100620-c2fd65 [10:15:40]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:15:45]   shots/16x9/s07: rendered with kenburns (5.71s)
+20261126T100620-c2fd65 [10:15:45]   [shots] provider wan22:kaggle unavailable: no Wan clip for s08 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:15:53]   shots/16x9/s08: rendered with kenburns (7.96s)
+20261126T100620-c2fd65 [10:15:53]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:01]   shots/16x9/s09: rendered with kenburns (9.17s)
+20261126T100620-c2fd65 [10:16:01]   [shots] provider wan22:kaggle unavailable: no Wan clip for s10 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:06]   shots/16x9/s10: rendered with kenburns (6.00s)
+20261126T100620-c2fd65 [10:16:06]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:12]   shots/16x9/s11: rendered with kenburns (6.00s)
+20261126T100620-c2fd65 [10:16:12]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:16]   shots/16x9/s12: rendered with kenburns (6.00s)
+20261126T100620-c2fd65 [10:16:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s01 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:23]   shots/9x16/s01: rendered with kenburns (7.00s)
+20261126T100620-c2fd65 [10:16:23]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:28]   shots/9x16/s02: rendered with kenburns (6.50s)
+20261126T100620-c2fd65 [10:16:28]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:33]   shots/9x16/s03: rendered with kenburns (5.50s)
+20261126T100620-c2fd65 [10:16:33]   [shots] provider wan22:kaggle unavailable: no Wan clip for s04 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:37]   shots/9x16/s04: rendered with kenburns (6.04s)
+20261126T100620-c2fd65 [10:16:37]   [shots] provider wan22:kaggle unavailable: no Wan clip for s05 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:46]   shots/9x16/s05: rendered with kenburns (7.58s)
+20261126T100620-c2fd65 [10:16:46]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:52]   shots/9x16/s06: rendered with kenburns (7.92s)
+20261126T100620-c2fd65 [10:16:52]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:16:57]   shots/9x16/s07: rendered with kenburns (5.71s)
+20261126T100620-c2fd65 [10:16:57]   [shots] provider wan22:kaggle unavailable: no Wan clip for s08 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:17:07]   shots/9x16/s08: rendered with kenburns (7.96s)
+20261126T100620-c2fd65 [10:17:07]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:17:16]   shots/9x16/s09: rendered with kenburns (9.17s)
+20261126T100620-c2fd65 [10:17:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s10 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:17:21]   shots/9x16/s10: rendered with kenburns (6.00s)
+20261126T100620-c2fd65 [10:17:21]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:17:27]   shots/9x16/s11: rendered with kenburns (6.00s)
+20261126T100620-c2fd65 [10:17:27]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T100620-c2fd65 [10:17:32]   shots/9x16/s12: rendered with kenburns (6.00s)
+20261126T100620-c2fd65 [10:17:32] [7/8] music
+20261126T100620-c2fd65 [10:17:32]   music/seed7: generating 26s
+20261126T100620-c2fd65 [10:17:32]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed7.wav not found (render it with kaggle/acestep_score.py)
+20261126T100620-c2fd65 [10:21:29]   music/seed21: generating 26s
+20261126T100620-c2fd65 [10:21:29]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed21.wav not found (render it with kaggle/acestep_score.py)
+20261126T100620-c2fd65 [10:25:32]   music/seed42: generating 26s
+20261126T100620-c2fd65 [10:25:32]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed42.wav not found (render it with kaggle/acestep_score.py)
+20261126T100620-c2fd65 [10:29:19]   music/bed: built from seed 21 (4 loops, 85.4s)
+20261126T100620-c2fd65 [10:29:19] [8/8] assemble
+20261126T100620-c2fd65 [10:30:31]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.8, 'true_peak_dbtp': -0.8}, 'size_mb': 60.17}
+20261126T100620-c2fd65 [10:31:34]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.8, 'true_peak_dbtp': -0.8}, 'size_mb': 59.63}
+20261126T100620-c2fd65 [10:31:34] === done in 1513.5s; model calls this run: 18 {"keyframes/ref:emama": "ok", "keyframes/ref:child": "ok", "keyframes/ref:adult": "ok", "keyframes/s01": "ok", "keyframes/s02": "ok", "keyframes/s03": "ok", "keyframes/s04": "ok", "keyframes/s05": "ok", "keyframes/s06": "ok", "keyframes/s07": "ok", "keyframes/s08": "ok", "keyframes/s09": "ok", "keyframes/s10": "ok", "keyframes/s11": "ok", "keyframes/s12": "ok", "music/seed7": "ok", "music/seed21": "ok", "music/seed42": "ok"} ===
+20261126T103143-b83092 [10:31:44]   music/seed7: cached
+20261126T103143-b83092 [10:31:44]   music/seed21: cached
+20261126T103143-b83092 [10:31:44]   music/seed42: cached
+20261126T103229-915658 [10:32:29] === run 20261126T103229-915658 ===
+20261126T103229-915658 [10:32:29] [1/8] storyboard valid: 12 shots, language=amh
+20261126T103229-0a60b5 [10:32:29] === run 20261126T103229-0a60b5 ===
+20261126T103229-0a60b5 [10:32:29] [1/8] storyboard valid: 12 shots, language=amh
+20261126T103229-0a60b5 [10:32:29] [2/8] narration
+20261126T103229-0a60b5 [10:32:29]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
+20261126T103229-0a60b5 [10:32:29]   narration/s01: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s02: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s03: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s04: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s05: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s06: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s07: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s08: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s09: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s10: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s11: cached
+20261126T103229-0a60b5 [10:32:29]   narration/s12: cached
+20261126T103229-0a60b5 [10:32:29] [3/8] timeline
+20261126T103229-0a60b5 [10:32:30]   total 85.38s (target 78s)
+20261126T103229-0a60b5 [10:32:30] [4/8] radio cut
+20261126T103229-0a60b5 [10:32:44]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.5s, {'integrated_lufs': -14.0, 'lra_lu': 6.4, 'true_peak_dbtp': -1.5})
+20261126T103229-0a60b5 [10:32:44] [5/8] keyframes (reference sheet first)
+20261126T103229-0a60b5 [10:32:45]   references/emama: cached
+20261126T103229-0a60b5 [10:32:45]   references/child: cached
+20261126T103229-0a60b5 [10:32:45]   references/adult: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s01: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s02: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s03: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s04: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s05: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s06: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s07: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s08: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s09: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s10: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s11: cached
+20261126T103229-0a60b5 [10:32:45]   keyframes/s12: generating (txt2img)
+20261126T103229-0a60b5 [10:32:45]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T103229-0a60b5 [10:33:29] [6/8] shots
+20261126T103229-0a60b5 [10:33:29]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T103229-0a60b5 [10:33:34]   shots/16x9/s12: rendered with kenburns (6.00s)
+20261126T103229-0a60b5 [10:33:34]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T103229-0a60b5 [10:33:39]   shots/9x16/s12: rendered with kenburns (6.00s)
+20261126T103229-0a60b5 [10:33:39] [7/8] music
+20261126T103229-0a60b5 [10:33:39]   music/seed7: cached
+20261126T103229-0a60b5 [10:33:39]   music/seed21: cached
+20261126T103229-0a60b5 [10:33:39]   music/seed42: cached
+20261126T103229-0a60b5 [10:33:39]   music/bed: built from seed 42 (4 loops, 85.4s)
+20261126T103229-0a60b5 [10:33:39] [8/8] assemble
+20261126T103229-0a60b5 [10:34:55]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.0, 'true_peak_dbtp': -1.3}, 'size_mb': 60.22}
+20261126T103229-0a60b5 [10:35:59]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.0, 'true_peak_dbtp': -1.3}, 'size_mb': 59.63}
+20261126T103229-0a60b5 [10:35:59] === done in 209.6s; model calls this run: 1 {"keyframes/s12": "ok"} ===
+20261126T103936-213489 [10:39:36] === run 20261126T103936-213489 ===
+20261126T103936-213489 [10:39:36] [1/8] storyboard valid: 12 shots, language=amh
+20261126T103936-213489 [10:39:36] [2/8] narration
+20261126T103936-213489 [10:39:36]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
+20261126T103936-213489 [10:39:36]   narration/s01: cached
+20261126T103936-213489 [10:39:36]   narration/s02: cached
+20261126T103936-213489 [10:39:36]   narration/s03: cached
+20261126T103936-213489 [10:39:36]   narration/s04: cached
+20261126T103936-213489 [10:39:36]   narration/s05: cached
+20261126T103936-213489 [10:39:36]   narration/s06: cached
+20261126T103936-213489 [10:39:36]   narration/s07: cached
+20261126T103936-213489 [10:39:36]   narration/s08: cached
+20261126T103936-213489 [10:39:36]   narration/s09: cached
+20261126T103936-213489 [10:39:36]   narration/s10: cached
+20261126T103936-213489 [10:39:36]   narration/s11: cached
+20261126T103936-213489 [10:39:36]   narration/s12: cached
+20261126T103936-213489 [10:39:36] [3/8] timeline
+20261126T103936-213489 [10:39:36]   total 85.38s (target 78s)
+20261126T103936-213489 [10:39:36] [4/8] radio cut
+20261126T103936-213489 [10:39:52]   radio cut: outputs/radio_cut/radio_cut.mp4 (85.4s, {'integrated_lufs': -14.0, 'lra_lu': 6.4, 'true_peak_dbtp': -1.5})
+20261126T103936-213489 [10:39:52] [5/8] keyframes (reference sheet first)
+20261126T103936-213489 [10:39:53]   references/emama: cached
+20261126T103936-213489 [10:39:53]   references/child: cached
+20261126T103936-213489 [10:39:53]   references/adult: cached
+20261126T103936-213489 [10:39:53]   keyframes/s01: cached
+20261126T103936-213489 [10:39:53]   keyframes/s02: cached
+20261126T103936-213489 [10:39:53]   keyframes/s03: cached
+20261126T103936-213489 [10:39:53]   keyframes/s04: cached
+20261126T103936-213489 [10:39:53]   keyframes/s05: cached
+20261126T103936-213489 [10:39:53]   keyframes/s06: cached
+20261126T103936-213489 [10:39:53]   keyframes/s07: cached
+20261126T103936-213489 [10:39:53]   keyframes/s08: cached
+20261126T103936-213489 [10:39:53]   keyframes/s09: cached
+20261126T103936-213489 [10:39:53]   keyframes/s10: cached
+20261126T103936-213489 [10:39:53]   keyframes/s11: cached
+20261126T103936-213489 [10:39:53]   keyframes/s12: generating (txt2img)
+20261126T103936-213489 [10:39:53]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T103936-213489 [10:40:38] [6/8] shots
+20261126T103936-213489 [10:40:38]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T103936-213489 [10:40:45]   shots/16x9/s12: rendered with kenburns (6.00s)
+20261126T103936-213489 [10:40:45]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T103936-213489 [10:40:53]   shots/9x16/s12: rendered with kenburns (6.00s)
+20261126T103936-213489 [10:40:53] [7/8] music
+20261126T103936-213489 [10:40:53]   music/seed7: cached
+20261126T103936-213489 [10:40:53]   music/seed21: cached
+20261126T103936-213489 [10:40:53]   music/seed42: cached
+20261126T103936-213489 [10:40:53]   music/bed: cached
+20261126T103936-213489 [10:40:53] [8/8] assemble
+20261126T103936-213489 [10:42:16]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.1, 'true_peak_dbtp': -1.3}, 'size_mb': 61.58}
+20261126T103936-213489 [10:43:29]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.1, 'true_peak_dbtp': -1.3}, 'size_mb': 60.79}
+20261126T103936-213489 [10:43:29] === done in 232.7s; model calls this run: 1 {"keyframes/s12": "ok"} ===
+20261126T104339-faef03 [10:45:00]   ffmpeg                       ok (0.0s)
+20261126T104339-faef03 [10:45:00]   gemini-tts                   unavailable: GEMINI_API_KEY not set
+20261126T104339-faef03 [10:45:00]   local:mms-tts                ok (8.8s)
+20261126T104339-faef03 [10:45:00]   cloudflare                   unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T104339-faef03 [10:45:00]   local:sd-turbo               ok (44.7s)
+20261126T104339-faef03 [10:45:00]   local:musicgen-small         ok (27.9s)
+20261126T104339-faef03 [10:45:00]   kaggle-gpu (wan22/acestep)   unavailable: runs only inside a Kaggle notebook; see kaggle/README.md

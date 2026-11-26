@@ -1,0 +1,33 @@
+{
+ "s04": {
+  "hosted": {
+   "latency_s": 7.34,
+   "bytes": 74440,
+   "exif_make": "sana",
+   "exif_model": "None"
+  },
+  "local": {
+   "latency_s": 81.75
+  }
+ },
+ "s06": {
+  "hosted": {
+   "latency_s": 6.18,
+   "bytes": 58748,
+   "exif_make": "sana",
+   "exif_model": "None"
+  },
+  "local": {
+   "latency_s": 66.03
+  }
+ },
+ "s08": {
+  "hosted": {
+   "error": "HTTPError('503 Server Error: Service Unavailable for url: https://image.pollinations.ai/prompt/close-up%20of%20coffee%20being%20poured%20from%20a%20black%20clay%20jebena%20in%20a%20thin%20stream%20int",
+   "latency_s": 3.55
+  },
+  "local": {
+   "latency_s": 75.36
+  }
+ }
+}

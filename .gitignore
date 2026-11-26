@@ -16,3 +16,14 @@ outputs/final/*.txt
 outputs/radio_cut/*.wav
 outputs/final/*.wav
 outputs/experiments/**/*.mp4
+
+# final exports are uploaded for assignment 2 (60 MB each); regenerate with `make film`
+outputs/film_*.mp4
+outputs/final/endcard_*.mp4
+outputs/smoke/
+outputs/experiments/e02_rate/*.wav
+outputs/experiments/e05_size_steps/*.png
+outputs/experiments/e09_duck/*.wav
+outputs/experiments/e10_loudnorm/*.wav
+outputs/music/bed.wav
+outputs/radio_cut/*.mp4

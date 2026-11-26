@@ -27,8 +27,8 @@
 | Component | Used for | Licence | What it means for this film |
 |---|---|---|---|
 | `stabilityai/sd-turbo` | reference sheet + keyframes (local) | Stability AI Community License (July 2024): free for research, non-commercial, and commercial use under US$1M annual revenue | OK for a personal film. Attribution kept here |
-| `facebook/mms-tts-amh` (+ `-tir`, `-orm`, `-som` in experiments) | Amharic narration (local) | **CC-BY-NC 4.0** | **Non-commercial.** The film must not be monetised (no ads revenue, no sponsorship) while this narration is used. Attribution: Meta MMS |
-| `facebook/musicgen-small` | score (local) | **CC-BY-NC 4.0** (weights) | Same: non-commercial. Attribution: Meta AudioCraft |
+| `facebook/mms-tts-amh` (+ `-tir`, `-orm` in experiment E13) | Amharic narration (local) | **CC-BY-NC 4.0** | **Non-commercial.** The film must not be monetised (no ads revenue, no sponsorship) while this narration is used. Attribution: Meta MMS |
+| `facebook/musicgen-small` | **score in the final film** (local, seed 42) | **CC-BY-NC 4.0** (weights) | Same: non-commercial. Attribution: Meta AudioCraft |
 | uroman 1.3 | romanising Ge'ez script for MMS | MIT-style. Requires acknowledgement: *"This project uses the universal romanizer software 'uroman' written by Ulf Hermjakob, USC Information Sciences Institute (2015-2020)"* | acknowledged here and in README |
 | Wan 2.2 TI2V-5B (Kaggle path, optional) | image-to-video | Apache 2.0 | permissive |
 | ACE-Step 1.5 (Kaggle path, optional) | score | MIT; outputs usable commercially (per its card) | would remove the NC restriction on the music if used |
@@ -38,6 +38,8 @@
 | Noto Sans Ethiopic, DejaVu Sans | end card, subtitles | SIL OFL 1.1, Bitstream Vera/DejaVu licence | free to embed in video |
 
 **Net effect:** as built (local fallback providers), the film is **non-commercial** because of the CC-BY-NC narration and music weights. Swapping in Gemini TTS and ACE-Step through the provider chain would make it commercially usable. One edit to `providers` in the storyboard.
+
+**Representation:** in E11 a hosted model given "an old Ethiopian grandmother with a kind wrinkled face" drew a younger, lighter-skinned woman. That is one reason the film uses the local model, and why every keyframe was reviewed by eye before use.
 
 **Style:** prompts describe qualities ("warm hand-painted gouache, soft paper grain, earthy ochre…") and name no living artist.
 

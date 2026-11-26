@@ -1,0 +1,12 @@
+{
+ "key": "64c927651023941a",
+ "provider": "local:sd-turbo",
+ "prompt": "a small Ethiopian child in a faded yellow sweater, seen from behind, fidgeting and leaning toward an old woman roasting coffee in the background, grass-covered floor, morning light through a small window, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
+ "seed": 105,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

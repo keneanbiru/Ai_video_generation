@@ -1,0 +1,12 @@
+{
+ "key": "91a1f1b84f1f0ff6",
+ "provider": "local:sd-turbo",
+ "prompt": "close-up of coffee beans turning dark brown in a flat iron roasting pan over glowing charcoal, curling white smoke, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
+ "seed": 104,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

@@ -40,7 +40,7 @@ Every number here comes from `outputs/experiments/<name>/results.json`, produced
 * **Change 2:** split each line at Ethiopic punctuation, synthesise the chunks separately, and insert explicit silence: `።`/`?` 0.55 s, `፦` 0.35 s, `፤` 0.30 s, `፣` 0.25 s (`narration.split_for_pauses`).
 * **Decision:** adopted. The proverb now has a real beat: "…ይመልሳሉ፦ [0.35 s] ቀስ በቀስ፣ [0.25 s] እንቁላል በእግሩ ይሄዳል።" *Listener check needed: do the pauses sound natural or chopped?*
 
-### E08: Choosing the score candidate
+### E08: Choosing the score candidate (procedural fallback; the choice was superseded by E08b)
 * **Hypothesis:** the least busy candidate sits best under narration: fewest onsets, least energy in the speech band (300–3400 Hz).
 * **Change:** three seeds (7, 21, 42) of the same composer, measured after a first balancing fix (see note).
 
@@ -123,3 +123,46 @@ Every number here comes from `outputs/experiments/<name>/results.json`, produced
 * **Result 3, a trade-off by shot size.** txt2img follows the composition (s02 shows her working, s09 shows the room) but her face changes. img2img keeps the face but pulls every shot toward a portrait.
 * **Decision:** a per-shot `ref_strength` field in the contract. **s06** (the close-up where her face carries the film) uses the reference at 0.8. **s02, s09** (her face is small, composition matters) use txt2img with the identical character text. The child and adult (seen from behind / in silhouette) use txt2img. *User test 2 asks whether she reads as one person.*
 * **Next step:** a LoRA trained on 10–20 curated reference images would decouple identity from composition. That needs a GPU (see report → what I would build next).
+
+### E08b: Re-choosing the score once MusicGen arrived (supersedes E08's choice)
+* **Hypothesis:** the E08 rule (pick the lowest speech-band energy share) still picks the best candidate for MusicGen output.
+* **Change:** same caption, same seeds (7, 21, 42), now rendered by MusicGen-small. Same metrics, then spectrograms (0–12 kHz) of all three.
+
+| seed | onsets/min | flatness | centroid (Hz) | speech-band share | loudness range (dB) |
+|---|---|---|---|---|---|
+| 7 | 81.0 | 0.076 | 1726 | 0.786 | **44.5** |
+| 21 | 120.3 | 0.034 | **2660** | **0.180** | 14.3 |
+| **42** | 118.0 | **0.018** | 764 | 0.701 | 22.0 |
+
+* **Result:** the rule would have picked **seed 21**, and the spectrogram shows why that is wrong: a **sustained tone around 3–4 kHz** plus a broadband noise floor. 3–4 kHz is where consonants carry intelligibility, so a steady tone there masks the narrator all film long. "Speech-band share" scored it well only because most of its energy sits *above* 3.4 kHz. Seed 7 has dark gaps where the music drops out mid-track (the 44.5 dB loudness range). **Seed 42** is the most tonal (lowest flatness), with clear note events below 1.5 kHz and a clean 2–4 kHz band. Ducking handles low-mid overlap well; it does not fix a constant tone in the consonant band.
+* **Decision:** `music.chosen = 42` with this reason in the storyboard. The metric design is fixed in hindsight: intelligibility is about **2–4 kHz specifically**, not 300–3400 Hz overall. *Listener check in user test 2.*
+* **Meta-lesson (twice now, see E07):** an automatic score picked the failure case. Every automatic choice in this project is now confirmed by looking at the output.
+
+### E10b: True peak after AAC encoding
+* **Observation:** the mixed WAV measured −1.0 dBTP, but the encoded MP4 measured **−0.8 dBTP**, over the −1 dBTP ceiling. AAC's lossy encoding adds inter-sample overshoot.
+* **Change:** loudnorm true-peak target −1.0 → **−1.5** in `assemble.py` (integrated target unchanged).
+* **Result:** both exports now measure **−14.1 LUFS, −1.3 dBTP** (`outputs/qc.json`). The QC step that measures the *final file*, not the intermediate WAV, is what caught this.
+
+### E11: Hosted (keyless) vs local images, same prompts and seeds
+* **Change:** s04, s06, s08 at 640 px through `image.pollinations.ai` (`model=flux`) and through local SD-Turbo.
+
+| shot | hosted latency | hosted model reported (EXIF) | local SD-Turbo latency |
+|---|---|---|---|
+| s04 | 7.3 s | `sana` | 81.8 s |
+| s06 | 6.2 s | `sana` | 66.0 s |
+| s08 | **503 error** | — | 75.4 s |
+
+* **Result:** hosted is about **10× faster**, but (1) it reported `sana`, not the FLUX requested; (2) it failed 1 of 3 calls; (3) it carries a watermark; (4) for s06 it ignored the character text ("an old Ethiopian grandmother with a kind wrinkled face…") and drew a **younger, lighter-skinned woman**, and it ignored the gouache style block. Local SD-Turbo kept the character. (Local latencies here are at 640 px and with CPU contention; production is 512 px, ~34 s.)
+* **Decision:** local for the film. Speed does not help if the identity of the main character and the reproducibility of the run are lost.
+
+### E12: Ken Burns jitter, with and without a 3× pre-upscale
+* **Hypothesis:** FFmpeg's `zoompan` rounds the crop window to whole pixels, which makes slow zooms on a small image jitter. Upscaling first reduces it.
+* **Change:** s06, 96 frames, zoom 1.0→1.18, rendered from the 512 px keyframe with no upscale vs 3× Lanczos upscale before `zoompan`. Measured the mean absolute difference between consecutive frames (centre crop), and its coefficient of variation (CV; a smooth zoom has evenly sized steps).
+* **Result:** no upscale: mean diff 2.63, **CV 0.271**. 3× upscale: mean diff 1.13, **CV 0.136**. Steps are half as uneven, and the extra render cost is 0.3 s per shot.
+* **Decision:** keep the 3× upscale in `shots.kenburns`.
+
+### E14: Fixing the final shot (s12) within three attempts
+* **Problem:** the closing image ("a single small white cup of coffee steaming on a windowsill…") came out as a **tall wooden cylinder** (seed 112). Attempt 2 (a reworded prompt, same seed) gave the same cylinder.
+* **Change (attempt 3):** a concrete close-up prompt ("close-up of a tiny white porcelain coffee cup without a handle, full of black coffee with steam…"), 4 seeds explored (`outputs/experiments/e14_s12_seeds/`).
+* **Result:** all 4 seeds gave a recognisable cup. Seed 312 had steam, the sill, city rooftops and hills beyond, which matches the intent. But **"without a handle" produced a handle in 4 of 4 seeds**. SD-Turbo runs at guidance 0, so it ignores negative prompts, and a negated word in the positive prompt still pulls the concept in.
+* **Decision:** s12 = seed 312. Regenerating through the pipeline reproduced the explored image **byte-for-byte** (`cmp` identical), which confirms the seed + prompt + settings in the storyboard fully determine the keyframe. The brief's "three attempts per shot, then fall back" rule held: attempt 3 worked.

@@ -1,26 +1,26 @@
 {
  "seed7": {
-  "provider": "local:procedural",
-  "onsets_per_min": 78.5,
-  "spectral_flatness": 0.0046,
-  "centroid_hz": 794.0,
-  "speech_band_energy_share": 0.583,
-  "loudness_range_db": 9.0
+  "provider": "local:musicgen-small",
+  "onsets_per_min": 81.0,
+  "spectral_flatness": 0.076,
+  "centroid_hz": 1726.0,
+  "speech_band_energy_share": 0.786,
+  "loudness_range_db": 44.5
  },
  "seed21": {
-  "provider": "local:procedural",
-  "onsets_per_min": 64.6,
-  "spectral_flatness": 0.0051,
-  "centroid_hz": 623.0,
-  "speech_band_energy_share": 0.566,
-  "loudness_range_db": 10.4
+  "provider": "local:musicgen-small",
+  "onsets_per_min": 120.3,
+  "spectral_flatness": 0.034,
+  "centroid_hz": 2660.0,
+  "speech_band_energy_share": 0.18,
+  "loudness_range_db": 14.3
  },
  "seed42": {
-  "provider": "local:procedural",
-  "onsets_per_min": 62.3,
-  "spectral_flatness": 0.0053,
-  "centroid_hz": 696.0,
-  "speech_band_energy_share": 0.622,
-  "loudness_range_db": 11.9
+  "provider": "local:musicgen-small",
+  "onsets_per_min": 118.0,
+  "spectral_flatness": 0.0177,
+  "centroid_hz": 764.0,
+  "speech_band_energy_share": 0.701,
+  "loudness_range_db": 22.0
  }
 }

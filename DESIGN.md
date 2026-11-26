@@ -14,6 +14,7 @@
 
 ### Why this story and these choices
 * **A composite grandmother, not a portrait of a real person.** The buna ritual and the proverb are shared across many Ethiopian families. Emama is a composite character, not a likeness of any real person, and the voice is a synthetic TTS voice that clones nobody. That keeps the consent gate simple (see ETHICS.md) and keeps private family details out of free endpoints. **If you replace Emama with a real relative, record their consent in ETHICS.md first. The pipeline refuses to run until you do (`real_person: true` requires a `consent_ref`).**
+* **Reference conditioning only where the face carries the shot.** s06 (her close-up) is generated from the golden reference; wide and action shots use the same character text without the reference, because conditioning pulled every shot into a portrait (EXPERIMENTS.md E07).
 * **One visible face.** Only Emama's face is shown (s02, s06, s09). The child is seen from behind (s05) and the adult only by silhouette and hands (s10, s11). Fewer faces means fewer identity-drift problems, which matters with a small image model (see EXPERIMENTS.md).
 * **An illustrated, gouache look, not photoreal.** It is forgiving of small-model artefacts, it reads as memory rather than documentary, and it avoids anything that looks like a real person.
 * **Narration in Amharic, subtitles in English.** Amharic is the language of the memory. English subtitles reach diaspora cousins who understand spoken Amharic only partly, and viewers watching muted.
@@ -35,7 +36,7 @@ Every shot's reason is also stored in `storyboard.json` (`shots[].reason`) so it
 | s09 | wide | neighbours gathered, laughing | the reward for waiting is togetherness; music swells |
 | s10 | wide | adult alone in a city flat at night | time jump; cool and solitary against the warm room before |
 | s11 | close-up | young hands roasting on a gas stove | match to s04: the habit was inherited |
-| s12 | close-up | one steaming cup at sunrise | the echo "slowly, slowly"; the theme returns |
+| s12 | close-up | one steaming cup on a windowsill, city and hills beyond (3 attempts, E14) | the echo "slowly, slowly"; the theme returns |
 | end | card | "Made with AI" + credits | required disclosure |
 
 Shot sizes vary on purpose (wide → medium → close → insert → wide) so a phone viewer always knows where they are.

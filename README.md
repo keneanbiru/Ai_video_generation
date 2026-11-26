@@ -72,4 +72,4 @@ Actual spend **$0**. Everything ran on an 8-core laptop CPU. Measured latency pe
 | `ETHICS.md` | consent, licences, labelling |
 
 ## Credits and licences
-Story and direction: Kenean Biru. Images: SD-Turbo (Stability AI Community License). Narration: Meta MMS-TTS (CC-BY-NC 4.0). Score: see ETHICS.md. Because of the CC-BY-NC weights, **the film is non-commercial**. This project uses the universal romanizer software 'uroman' written by Ulf Hermjakob, USC Information Sciences Institute (2015-2020).
+Story and direction: Kenean Biru. Images: SD-Turbo (Stability AI Community License). Narration: Meta MMS-TTS (CC-BY-NC 4.0). Score: Meta MusicGen-small (CC-BY-NC 4.0). Because of the CC-BY-NC weights, **the film is non-commercial**. This project uses the universal romanizer software 'uroman' written by Ulf Hermjakob, USC Information Sciences Institute (2015-2020).

@@ -1,0 +1,12 @@
+{
+ "upscale_1x": {
+  "render_s": 2.57,
+  "mean_frame_diff": 2.63,
+  "frame_diff_cv": 0.271
+ },
+ "upscale_3x": {
+  "render_s": 2.87,
+  "mean_frame_diff": 1.13,
+  "frame_diff_cv": 0.136
+ }
+}

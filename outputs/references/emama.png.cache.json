@@ -1,7 +1,7 @@
 {
- "key": "1ca699df10f98029",
+ "key": "d3a82cbb818cb96a",
  "provider": "local:sd-turbo",
- "prompt": "character sheet, portrait of an elderly Ethiopian grandmother with warm dark brown skin, kind wrinkled face, grey hair under a white cotton netela shawl with a thin coloured border, gentle smile, plain warm background, warm hand-painted gouache illustration, soft paper grain, golden morning light, earthy ochre, terracotta and deep green palette, gentle soft shadows, storybook painting, Ethiopian highland home",
+ "prompt": "portrait of an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair, gentle smile, plain warm background, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
  "seed": 1101,
  "params": {
   "steps": 4,

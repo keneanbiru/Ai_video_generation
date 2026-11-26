@@ -15,7 +15,8 @@ def summarise() -> list[dict]:
     rows = [json.loads(l) for l in RUNS.read_text(encoding="utf-8").splitlines() if l.strip()]
     g: dict = defaultdict(lambda: {"calls": 0, "ok": 0, "errors": 0, "latency": [], "compute_s": 0.0, "list": 0.0})
     for r in rows:
-        if r["stage"] in ("smoke", "experiment"):
+        # Experiment calls that went through production code are tagged "eNN:..." in `item`.
+        if r["stage"] in ("smoke", "experiment") or str(r.get("item") or "").startswith(("e0", "e1", "smoke")):
             continue
         k = (r["stage"], r.get("provider"), r.get("model"))
         s = g[k]
