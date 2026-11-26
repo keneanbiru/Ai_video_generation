@@ -37,7 +37,7 @@ outputs/remote/datasets/
 outputs/remote/kernels/
 outputs/remote/results/**/*.mp4
 outputs/remote/results/**/*.wav
-outputs/music_acestep/*.wav
+# outputs/music_acestep/*.wav  (committed: the score must be reproducible from a clean clone)
 outputs/music/*.wav
 outputs/prototype_v1/**/*.mp4
 outputs/prototype_v1/**/*.wav
