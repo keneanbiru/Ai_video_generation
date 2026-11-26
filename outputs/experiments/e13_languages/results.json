@@ -1,0 +1,97 @@
+{
+ "amh": {
+  "is_uroman": true,
+  "vocab": " '<unk>_abcdefghijklmnopqrstuwxyz",
+  "lines": {
+   "s01": {
+    "text": "በልጅነቴ፣ በአያቴ ቤት፣ ጠዋት በቡና ሽታ ይጀምር ነበር።",
+    "model_input": "balejenatee baayaatee beete tawaate babunaa shetaa yejamere nabare",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 4.38,
+    "words_per_s": 1.82,
+    "latency_s": 0.83
+   },
+   "s06": {
+    "text": "እሳቸውም ፈገግ ብለው ይመልሳሉ፦ «ቀስ በቀስ፣ እንቁላል በእግሩ ይሄዳል።»",
+    "model_input": "esaachaweme fagage belawe yemalesaalu qase baqase enequlaale baegeru yeheedaale",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 6.27,
+    "words_per_s": 1.43,
+    "latency_s": 1.2
+   },
+   "s12": {
+    "text": "ቀስ በቀስ።",
+    "model_input": "qase baqase",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 1.33,
+    "words_per_s": 1.51,
+    "latency_s": 0.25
+   }
+  }
+ },
+ "tir": {
+  "is_uroman": true,
+  "vocab": " -<unk>abcdefghijklmnopqrstuwxyz",
+  "lines": {
+   "s01": {
+    "text": "ኣብ ቍልዕነተይ፣ ኣብ ገዛ ዓባየይ፣ ንግሆ ብሽታ ቡን ይጅምር ነይሩ።",
+    "model_input": "aabe qweleenataye aabe gazaa aabaayaye negeho beshetaa bune yejemere nayeru",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 5.09,
+    "words_per_s": 1.97,
+    "latency_s": 0.93
+   },
+   "s06": {
+    "text": "ንሳ ፍሽኽ ኢላ ትምልስ፦ «ቀስ ብቐስ፣ እንቋቝሖ ብእግሩ ይኸይድ።»",
+    "model_input": "nesaa feshekxe ilaa temelese qase beqhase eneqwaaqhwehho beegeru yekxayede",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 5.09,
+    "words_per_s": 1.77,
+    "latency_s": 0.87
+   },
+   "s12": {
+    "text": "ቀስ ብቐስ።",
+    "model_input": "qase beqhase",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 1.17,
+    "words_per_s": 1.71,
+    "latency_s": 0.23
+   }
+  }
+ },
+ "orm": {
+  "is_uroman": false,
+  "vocab": " '-<unk>_abcdefghijklmnopqrstuwxyz",
+  "lines": {
+   "s01": {
+    "text": "Yeroo ijoollummaa koo, mana akkoo koo keessatti, ganamni urgaa bunaatiin jalqaba ture.",
+    "model_input": "yeroo ijoollummaa koo mana akkoo koo keessatti ganamni urgaa bunaatiin jalqaba ture",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 5.66,
+    "words_per_s": 2.12,
+    "latency_s": 1.12
+   },
+   "s06": {
+    "text": "Ishiin seeqxee deebifti: Suuta suutaan, hanqaaquun miilla isheetiin deemti.",
+    "model_input": "ishiin seeqxee deebifti suuta suutaan hanqaaquun miilla isheetiin deemti",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 4.94,
+    "words_per_s": 1.82,
+    "latency_s": 1.01
+   },
+   "s12": {
+    "text": "Suuta suutaan.",
+    "model_input": "suuta suutaan",
+    "chars_dropped_by_tokenizer": [],
+    "audio_s": 1.09,
+    "words_per_s": 1.84,
+    "latency_s": 0.21
+   }
+  }
+ },
+ "uroman_probe": {
+  "amh": "qha qhu kxa kxwa aa aa qwe qwaa",
+  "tir": "qha qhu kxa kxwa aa aa qwe qwaa",
+  "null": "qha qhu kxa kxwa aa aa qwe qwaa"
+ }
+}

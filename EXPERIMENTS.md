@@ -75,3 +75,20 @@ Every number here comes from `outputs/experiments/<name>/results.json`, produced
 * **Change:** the same mix pushed 6 dB quieter (−20.0 LUFS in), normalised both ways.
 * **Result:** one-pass → **−13.8 LUFS**, −1.0 dBTP, LRA 6.5. Two-pass → **−14.0 LUFS**, −1.0 dBTP, LRA 6.8 (input LRA 6.8 preserved).
 * **Decision:** two-pass in `assemble.mix`. It is exact, and linear mode keeps the dynamics instead of compressing them (LRA 6.5 vs 6.8). The difference is small but free.
+
+### E13 (ceiling): Does the same pipeline work for Tigrinya and Afaan Oromo?
+* **Hypothesis:** MMS-TTS has models for Tigrinya (`tir`) and Afaan Oromo (`orm`). Swapping `film.language` should be all it takes.
+* **Change:** three narration lines (s01, s06 the proverb, s12) translated by the agent into Tigrinya and Afaan Oromo. **The translations are not native-checked; that check is part of the open result.** Rendered with each language's MMS model, seed 7. Measured tokenizer coverage, speech rate, and how uroman romanises letters that only Tigrinya uses.
+
+| lang | script → model input | chars dropped | words/s (s01 / s06 / s12) |
+|---|---|---|---|
+| amh | Ge'ez → uroman | none | 1.82 / 1.43 / 1.51 |
+| tir | Ge'ez → uroman | none | 1.97 / 1.77 / 1.71 |
+| orm | Latin (Qubee), **no uroman** (`is_uroman=False`) | none | 2.12 / 1.82 / 1.84 |
+
+* **Results:**
+  1. **uroman has no language-specific rules for these codes.** `romanize_string("ቐ ቑ ኸ ዀ ዓ ኣ ቍ ቋ", lcode=…)` gives exactly the same string for `amh`, `tir` and no code: `qha qhu kxa kxwa aa aa qwe qwaa`.
+  2. **The Tigrinya pharyngeal is lost.** `ዓ` (ʿayn, a pharyngeal consonant Tigrinya keeps distinct) and `ኣ` (glottal a) both become `aa`. So `ዓባየይ` (my grandmother) reaches the model as `aabaayaye`, the same as if it began with `ኣ`. The model cannot pronounce a contrast its input does not contain. This is a **front-end failure, not a model failure**, and no amount of prompt or voice tuning fixes it.
+  3. Tigrinya-specific letters that *are* kept distinct: `ቐ`→`qh`, `ኸ`→`kx`, `ቍ`→`qwe`. Those contrasts survive.
+  4. Afaan Oromo needs no romanisation. The vocabulary keeps `'` (hudhaa, the glottal stop) and the Qubee digraphs are plain Latin letters, so the model sees the text as written. It also spoke fastest (≈1.8–2.1 words/s, closer to the English rule of thumb, because Qubee words map to sounds almost one-to-one).
+* **What this means for the film:** a Tigrinya version is one storyboard field (`"language": "tir"`) plus translated lines, but **expect `ዓ`/`ሐ`-heavy words to sound wrong**. The audio is in `outputs/experiments/e13_languages/*.wav` for a native speaker to judge. The fix to try next is a custom pre-romanisation that maps `ዓ`-series letters to a distinct symbol, if the model's training data used one (unknown; needs the MMS training romaniser).
