@@ -1,0 +1,11 @@
+{
+ "key": "09c6480ffed2b850",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "portrait of an Ethiopian mother in her fifties with dark brown skin, kind eyes, a white cotton shash scarf over her hair and a simple green dress, gentle expression, warm lamp light, plain background, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 2102,
+ "params": {
+  "steps": 4,
+  "neurons": 57.6,
+  "note": ""
+ }
+}

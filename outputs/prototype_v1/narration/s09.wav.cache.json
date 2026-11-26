@@ -1,0 +1,20 @@
+{
+ "key": "a70f3fad0989b0b4",
+ "provider": "local:mms-tts",
+ "text": "ጎረቤቶች ይሰበሰባሉ። ወሬ፣ ሳቅ፣ ምርቃት። ማንም አይቸኩልም።",
+ "params": {
+  "speaking_rate": 1.0,
+  "noise_scale": 0.6,
+  "uroman": true,
+  "input_chars": 39,
+  "prepared": "gorabeetoche yesabasabaalu | waree | saaqe | mereqaate | maaneme ayechakuleme",
+  "chunks": 5,
+  "pauses": {
+   "።": 0.55,
+   "?": 0.55,
+   "፦": 0.35,
+   "፣": 0.25,
+   "፤": 0.3
+  }
+ }
+}

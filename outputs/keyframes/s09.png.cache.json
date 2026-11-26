@@ -1,12 +1,11 @@
 {
- "key": "db662ad0a4188048",
- "provider": "local:sd-turbo",
- "prompt": "wide view of a warm mud-walled room, neighbours sitting on low stools around a coffee ceremony, laughing together, an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair at the centre pouring coffee, golden light, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 109,
+ "key": "ff661aa5910e9d29",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "close-up of a middle-aged Ethiopian king with dark brown skin, a short greying beard, a white gold-embroidered robe, a deep red cape and a simple gold circlet, wearing only a thin simple gold circlet (no large crown), lit by warm torchlight, a quiet expression of dawning realisation, eyes slightly widened and glistening, a cloth bandage wrapped around his hand, dark background, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 2091,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

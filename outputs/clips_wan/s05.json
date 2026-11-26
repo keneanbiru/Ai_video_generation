@@ -1,0 +1,16 @@
+{
+ "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+ "keyframe_sha16": "6d74a7a7996ddbf7",
+ "motion_prompt": "dust settles slowly, the horse shakes its head, camera fixed",
+ "seed": 205,
+ "params": {
+  "size": 512,
+  "frames": 49,
+  "steps": 25,
+  "cfg": 5.0
+ },
+ "dtype": "torch.float16",
+ "latency_s": 433.3,
+ "device": "Tesla T4",
+ "peak_vram_gb": 2.26
+}

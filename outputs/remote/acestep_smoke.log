@@ -1,0 +1,29 @@
+[12:25:13]   [remote] pushing private kernel keneanbiru/heritage-acestep (T4 x2)
+[12:25:49]   [remote] running after 36s in queue
+[12:25:49]   [remote]  "KernelWorkerStatus.RUNNING"
+[12:26:22]   [remote] acestep: FAILED in 69s (queue 36s); output -> outputs/remote/results/acestep
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/kenean/heritage-short-v2/pipeline/remote.py", line 193, in <module>
+    main()
+  File "/home/kenean/heritage-short-v2/pipeline/remote.py", line 186, in main
+    acestep()
+  File "/home/kenean/heritage-short-v2/pipeline/remote.py", line 161, in acestep
+    out = run_kernel("acestep", JOBS / "acestep_score.py", ds)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/heritage-short-v2/pipeline/remote.py", line 118, in run_kernel
+    raise RuntimeError(f"Kaggle job {job} failed: {status.strip()}\n{tail}")
+RuntimeError: Kaggle job acestep failed: keneanbiru/heritage-acestep has status "KernelWorkerStatus.ERROR"
+":"stderr","time":13.448738621,"data":"    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":13.448742113,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 578, in run\n"}
+,{"stream_name":"stderr","time":13.448758658,"data":"    raise CalledProcessError(retcode, process.args,\n"}
+,{"stream_name":"stderr","time":13.448762847,"data":"                             output=stdout, stderr=stderr)\n"}
+,{"stream_name":"stderr","time":13.448767028,"data":"subprocess.CalledProcessError: Command '['/usr/bin/python3', '-m', 'pip', 'install', '-q', '-e', '/kaggle/temp/ACE-Step-1.5']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stderr","time":16.100907794,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":16.100942976,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":16.548103732,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":16.548133914,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":17.798743153,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":19.233405975,"data":"[NbConvertApp] Writing 289838 bytes to __results__.html\n"}
+]

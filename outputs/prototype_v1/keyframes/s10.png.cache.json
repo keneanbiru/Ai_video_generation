@@ -1,0 +1,12 @@
+{
+ "key": "f94059ddb0e756ca",
+ "provider": "local:sd-turbo",
+ "prompt": "a young Ethiopian adult in a grey hoodie, face in shadow sitting alone by the window of a small city apartment at night, phone glowing in hand, city lights outside, cool blue light mixed with one warm lamp, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
+ "seed": 110,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

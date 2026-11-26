@@ -49,10 +49,11 @@ def test_unknown_character_rejected(tmp_path):
 
 def test_real_person_requires_consent(tmp_path):
     d = sb()
-    d["characters"]["emama"]["real_person"] = True  # no consent_ref -> schema error
+    name = next(iter(d["characters"]))  # story-agnostic: any character
+    d["characters"][name]["real_person"] = True  # no consent_ref -> schema error
     with pytest.raises(StoryboardError):
         load_storyboard(write(tmp_path, d))
-    d["characters"]["emama"]["consent_ref"] = "consent-does-not-exist-xyz"
+    d["characters"][name]["consent_ref"] = "consent-does-not-exist-xyz"
     with pytest.raises(StoryboardError, match="consent"):
         load_storyboard(write(tmp_path, d))
 
@@ -111,6 +112,8 @@ def test_prompts_fit_clip_77_tokens():
 
     if model_path("stabilityai/sd-turbo") == "stabilityai/sd-turbo":
         pytest.skip("SD-Turbo tokenizer not downloaded")
+    if not load_storyboard()["providers"]["keyframes"][0].startswith("local:sd-turbo"):
+        pytest.skip("SD-Turbo is only the fallback here; FLUX reads 512 tokens (the stage warns instead)")
     from pipeline.keyframes import check_prompt_lengths
 
     check_prompt_lengths(load_storyboard())

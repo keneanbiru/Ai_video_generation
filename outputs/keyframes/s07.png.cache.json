@@ -1,12 +1,11 @@
 {
- "key": "0a23a209af0368b5",
- "provider": "local:sd-turbo",
- "prompt": "close-up of a wooden mortar and iron pestle crushing roasted coffee beans, a small clay incense burner with fragrant smoke beside it on fresh grass, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 107,
+ "key": "a7be1186ac462fea",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "high angle looking down into a deep earthen pit, a lean young Ethiopian servant with dark brown skin, a shaved head, an off-white cotton gabi wrapped over a plain tunic, barefoot at the bottom looking up toward the light, steep rocky walls, a shaft of evening light, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 207,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

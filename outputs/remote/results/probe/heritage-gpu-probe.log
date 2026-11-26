@@ -1,0 +1,87 @@
+[{"stream_name":"stderr","time":39.269437152,"data":"Disabling torchao because diffusers requires `torchao\u003e=0.15.0` but found version 0.10.0. Upgrade it with `pip install -U 'torchao\u003e=0.15.0'`.\n"}
+,{"stream_name":"stdout","time":57.339593926,"data":"{\n"}
+,{"stream_name":"stdout","time":57.339619358,"data":" \"nvidia_smi\": \"name, memory.total [MiB], driver_version\\nTesla T4, 15360 MiB, 580.178.04\\nTesla T4, 15360 MiB, 580.178.04\\n\",\n"}
+,{"stream_name":"stdout","time":57.339624417,"data":" \"torch\": \"2.11.0+cu130\",\n"}
+,{"stream_name":"stdout","time":57.339628095,"data":" \"cuda\": \"13.0\",\n"}
+,{"stream_name":"stdout","time":57.339631716,"data":" \"gpus\": [\n"}
+,{"stream_name":"stdout","time":57.339635185,"data":"  \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":57.339638776,"data":"  \"Tesla T4\"\n"}
+,{"stream_name":"stdout","time":57.33964194,"data":" ],\n"}
+,{"stream_name":"stdout","time":57.339645076,"data":" \"capability\": [\n"}
+,{"stream_name":"stdout","time":57.339648285,"data":"  [\n"}
+,{"stream_name":"stdout","time":57.339651545,"data":"   7,\n"}
+,{"stream_name":"stdout","time":57.339654961,"data":"   5\n"}
+,{"stream_name":"stdout","time":57.339658155,"data":"  ],\n"}
+,{"stream_name":"stdout","time":57.339661253,"data":"  [\n"}
+,{"stream_name":"stdout","time":57.3396868,"data":"   7,\n"}
+,{"stream_name":"stdout","time":57.339691622,"data":"   5\n"}
+,{"stream_name":"stdout","time":57.339699191,"data":"  ]\n"}
+,{"stream_name":"stdout","time":57.339702431,"data":" ],\n"}
+,{"stream_name":"stdout","time":57.33970599,"data":" \"bf16_supported\": true,\n"}
+,{"stream_name":"stdout","time":57.339709596,"data":" \"matmul_ms_4096\": {\n"}
+,{"stream_name":"stdout","time":57.3397129,"data":"  \"fp16\": 14.5,\n"}
+,{"stream_name":"stdout","time":57.339716443,"data":"  \"bf16\": 53.42,\n"}
+,{"stream_name":"stdout","time":57.339720459,"data":"  \"fp32\": 31.62\n"}
+,{"stream_name":"stdout","time":57.339723955,"data":" },\n"}
+,{"stream_name":"stdout","time":57.339727252,"data":" \"pip_diffusers_main_s\": 19.1,\n"}
+,{"stream_name":"stdout","time":57.339730877,"data":" \"pip_tail\": \"\",\n"}
+,{"stream_name":"stdout","time":57.339734384,"data":" \"diffusers\": \"0.44.0.dev0\",\n"}
+,{"stream_name":"stdout","time":57.33975835,"data":" \"WanPipeline_call_params\": [\n"}
+,{"stream_name":"stdout","time":57.339762648,"data":"  \"self\",\n"}
+,{"stream_name":"stdout","time":57.339765932,"data":"  \"prompt\",\n"}
+,{"stream_name":"stdout","time":57.339769396,"data":"  \"negative_prompt\",\n"}
+,{"stream_name":"stdout","time":57.339773389,"data":"  \"height\",\n"}
+,{"stream_name":"stdout","time":57.339776753,"data":"  \"width\",\n"}
+,{"stream_name":"stdout","time":57.339780368,"data":"  \"num_frames\",\n"}
+,{"stream_name":"stdout","time":57.339784725,"data":"  \"num_inference_steps\",\n"}
+,{"stream_name":"stdout","time":57.339787831,"data":"  \"guidance_scale\",\n"}
+,{"stream_name":"stdout","time":57.339791011,"data":"  \"guidance_scale_2\",\n"}
+,{"stream_name":"stdout","time":57.339794303,"data":"  \"num_videos_per_prompt\",\n"}
+,{"stream_name":"stdout","time":57.339798126,"data":"  \"generator\",\n"}
+,{"stream_name":"stdout","time":57.339801841,"data":"  \"latents\",\n"}
+,{"stream_name":"stdout","time":57.339805531,"data":"  \"prompt_embeds\",\n"}
+,{"stream_name":"stdout","time":57.339809265,"data":"  \"negative_prompt_embeds\",\n"}
+,{"stream_name":"stdout","time":57.339812942,"data":"  \"output_type\",\n"}
+,{"stream_name":"stdout","time":57.339817023,"data":"  \"return_dict\",\n"}
+,{"stream_name":"stdout","time":57.339831056,"data":"  \"attention_kwargs\",\n"}
+,{"stream_name":"stdout","time":57.339834751,"data":"  \"callback_on_step_end\",\n"}
+,{"stream_name":"stdout","time":57.339838123,"data":"  \"callback_on_step_end_tensor_inputs\",\n"}
+,{"stream_name":"stdout","time":57.339841487,"data":"  \"max_sequence_length\"\n"}
+,{"stream_name":"stdout","time":57.339844743,"data":" ],\n"}
+,{"stream_name":"stdout","time":57.339848031,"data":" \"WanImageToVideoPipeline_call_params\": [\n"}
+,{"stream_name":"stdout","time":57.339851547,"data":"  \"self\",\n"}
+,{"stream_name":"stdout","time":57.339854796,"data":"  \"image\",\n"}
+,{"stream_name":"stdout","time":57.339858094,"data":"  \"prompt\",\n"}
+,{"stream_name":"stdout","time":57.339861695,"data":"  \"negative_prompt\",\n"}
+,{"stream_name":"stdout","time":57.339865709,"data":"  \"height\",\n"}
+,{"stream_name":"stdout","time":57.339869012,"data":"  \"width\",\n"}
+,{"stream_name":"stdout","time":57.339872151,"data":"  \"num_frames\",\n"}
+,{"stream_name":"stdout","time":57.339875351,"data":"  \"num_inference_steps\",\n"}
+,{"stream_name":"stdout","time":57.339878566,"data":"  \"guidance_scale\",\n"}
+,{"stream_name":"stdout","time":57.339882156,"data":"  \"guidance_scale_2\",\n"}
+,{"stream_name":"stdout","time":57.339886013,"data":"  \"num_videos_per_prompt\",\n"}
+,{"stream_name":"stdout","time":57.339889864,"data":"  \"generator\",\n"}
+,{"stream_name":"stdout","time":57.339893592,"data":"  \"latents\",\n"}
+,{"stream_name":"stdout","time":57.339897091,"data":"  \"prompt_embeds\",\n"}
+,{"stream_name":"stdout","time":57.339900177,"data":"  \"negative_prompt_embeds\",\n"}
+,{"stream_name":"stdout","time":57.339903605,"data":"  \"image_embeds\",\n"}
+,{"stream_name":"stdout","time":57.339907332,"data":"  \"last_image\",\n"}
+,{"stream_name":"stdout","time":57.339911242,"data":"  \"output_type\",\n"}
+,{"stream_name":"stdout","time":57.339914766,"data":"  \"return_dict\",\n"}
+,{"stream_name":"stdout","time":57.339918606,"data":"  \"attention_kwargs\",\n"}
+,{"stream_name":"stdout","time":57.339922452,"data":"  \"callback_on_step_end\",\n"}
+,{"stream_name":"stdout","time":57.339925798,"data":"  \"callback_on_step_end_tensor_inputs\",\n"}
+,{"stream_name":"stdout","time":57.339929066,"data":"  \"max_sequence_length\"\n"}
+,{"stream_name":"stdout","time":57.339932262,"data":" ],\n"}
+,{"stream_name":"stdout","time":57.339935319,"data":" \"disk_free_gb\": 20.9,\n"}
+,{"stream_name":"stdout","time":57.339938763,"data":" \"ram_gb\": 33.7,\n"}
+,{"stream_name":"stdout","time":57.339942047,"data":" \"python\": \"3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]\",\n"}
+,{"stream_name":"stdout","time":57.339945559,"data":" \"elapsed_s\": 56.2\n"}
+,{"stream_name":"stdout","time":57.339949162,"data":"}\n"}
+,{"stream_name":"stderr","time":63.093999487,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":63.094029272,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":63.392913053,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":63.392946936,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":64.150314923,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":65.110351576,"data":"[NbConvertApp] Writing 286475 bytes to __results__.html\n"}
+]

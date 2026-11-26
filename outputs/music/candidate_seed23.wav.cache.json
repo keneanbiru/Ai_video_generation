@@ -1,0 +1,14 @@
+{
+ "key": "fab7b1dd4e3a0290",
+ "provider": "acestep:kaggle",
+ "caption": "cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme",
+ "seed": 23,
+ "params": {
+  "imported": true,
+  "trim": "trailing silence",
+  "duration": 88,
+  "instrumental": true,
+  "shift": 3.0,
+  "seed": 23
+ }
+}

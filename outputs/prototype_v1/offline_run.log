@@ -1,0 +1,47 @@
+.venv/bin/python -m pipeline.run
+[12:25:24] === run 20261126T122524-15d9b6 ===
+[12:25:24] [1/8] storyboard valid: 12 shots, language=amh
+[12:25:24] [2/8] narration
+[12:25:24]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
+[12:25:24]   narration/s01: cached
+[12:25:24]   narration/s02: cached
+[12:25:24]   narration/s03: cached
+[12:25:24]   narration/s04: cached
+[12:25:24]   narration/s05: cached
+[12:25:24]   narration/s06: cached
+[12:25:24]   narration/s07: cached
+[12:25:24]   narration/s08: cached
+[12:25:24]   narration/s09: cached
+[12:25:24]   narration/s10: cached
+[12:25:24]   narration/s11: cached
+[12:25:24]   narration/s12: cached
+[12:25:24] [3/8] timeline
+[12:25:24]   total 85.38s (target 78s)
+[12:25:24] [4/8] radio cut
+[12:25:39]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.3s, {'integrated_lufs': -14.0, 'lra_lu': 6.4, 'true_peak_dbtp': -1.5})
+[12:25:39] [5/8] keyframes (reference sheet first)
+[12:25:40]   references/emama: cached
+[12:25:40]   references/child: cached
+[12:25:40]   references/adult: cached
+[12:25:40]   keyframes/s01: cached
+[12:25:40]   keyframes/s02: cached
+[12:25:40]   keyframes/s03: cached
+[12:25:40]   keyframes/s04: cached
+[12:25:40]   keyframes/s05: cached
+[12:25:40]   keyframes/s06: cached
+[12:25:40]   keyframes/s07: cached
+[12:25:40]   keyframes/s08: cached
+[12:25:40]   keyframes/s09: cached
+[12:25:40]   keyframes/s10: cached
+[12:25:40]   keyframes/s11: cached
+[12:25:40]   keyframes/s12: cached
+[12:25:40] [6/8] shots
+[12:25:40] [7/8] music
+[12:25:41]   music/seed7: cached
+[12:25:41]   music/seed21: cached
+[12:25:41]   music/seed42: cached
+[12:25:41]   music/bed: built from seed 42 (4 loops, 85.4s)
+[12:25:41] [8/8] assemble
+[12:26:27]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.1, 'true_peak_dbtp': -1.3}, 'size_mb': 61.57}
+[12:27:05]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.1, 'true_peak_dbtp': -1.3}, 'size_mb': 60.78}
+[12:27:05] === done in 101.4s; model calls this run: 0 (everything came from cache) ===

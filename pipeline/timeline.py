@@ -15,10 +15,11 @@ TAIL_S = 0.9  # breath after each line before the cut
 def build(sb: dict, narr: dict[str, Path]) -> dict:
     t = 0.0
     shots = []
+    tail = sb["film"].get("line_tail_s", TAIL_S)
     for s in sb["shots"]:
         delay = s.get("narration_delay_s", 0.4)
         nd = duration_s(narr[s["id"]]) if s["id"] in narr else 0.0
-        d = max(s["min_duration_s"], delay + nd + TAIL_S) if nd else s["min_duration_s"]
+        d = max(s["min_duration_s"], delay + nd + tail) if nd else s["min_duration_s"]
         d = round(d * 24) / 24  # whole frames at 24 fps
         shots.append({"id": s["id"], "start": round(t, 3), "duration": round(d, 3),
                       "narration_start": round(t + delay, 3) if nd else None,

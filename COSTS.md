@@ -58,3 +58,27 @@ No frontier model (Omni Flash, Nano Banana, Lyria) was available. The only hoste
 | SD-Turbo fp16 (UNet + text encoder + VAE) | 2.58 GB | ~4 h (stalled), then ~3 min after a reconnect |
 | MusicGen-small | 2.36 GB | ~5 min after the reconnect |
 On a slow link, **model size, not compute, was the binding constraint**. That is why fp16 variants were chosen and a procedural score fallback exists.
+
+---
+## v2 film (ሁሉም ለበጎ ነው): measured with the recommended providers
+
+**Actual spend: $0.00.** All hosted providers were used on their free tiers. Each number below is measured from `runs.jsonl`, the Kaggle job logs or the provider's own timing; estimates are marked.
+
+| Stage | Provider / model | Calls for the film | Measured time | Free-tier resource used |
+|---|---|---|---|---|
+| Script draft | Gemini 3.8 Flash → 3.5 Flash-Lite | 0 accepted (16 attempts, all 503: F14) | — | Flash 9/20, Flash-Lite 8/500 (requests count even when they fail) |
+| Narration | Gemini 3.8 Flash-Lite TTS, voice Sulafat | 1 batch take (65.1 s, all 11 lines) + 7 per-line takes (F15) | batch ~20 s; per-line 4–13 s (46.7 s incl. a 35 s rate-limit wait) | **10/10 requests/day**, all used |
+| References + keyframes | Cloudflare FLUX.1 schnell, 1024 px | 16 + 7 retakes = 23 images | ~3–6 s per image | **~1,325 neurons** for the film (57.6 each) |
+| Score | ACE-Step 1.5 turbo + LM 1.7B on Kaggle T4 | 3 × 88 s candidates | 69.8–71.3 s per candidate; job 1,023 s incl. 485 s queue | ~9 T4-min of ~30 h/week |
+| Moving shots | Wan 2.2 TI2V-5B on Kaggle T4, 512 px, 49 frames, 25 steps, sequential offload | 5 clips generated, 3 passed QC, 2 used in the final cut (s04 re-staged after test 2) | **433–574 s per 2 s clip**; job 2,551 s GPU + 426 s queue (E27) | ~43 T4-min |
+| Assembly | FFmpeg (local) | — | full film, both ratios: 330 s cold (24 shot renders + 2 exports) | CPU only |
+
+### List-price equivalent (hosted, if the free tiers did not exist)
+* Cloudflare: 1,268 neurons × $0.011 / 1,000 = **$0.014**.
+* Kaggle T4 time at an assumed $0.35/h on-demand rate (assumption, `pipeline/prices.py`): ACE-Step ~17 min incl. setup ≈ $0.10; Wan film job 2,551 s ≈ 0.71 h ≈ **$0.25**; all Wan work incl. failed attempts ~76 GPU-min ≈ $0.44.
+* Gemini: free tier. The paid-tier price was not used; the binding constraint was the **10 requests/day** limit, not money.
+
+### What actually limited us
+1. **Request quotas, not compute.** Gemini TTS 10/day per model, spent on an experiment (F09) and on a fallback (F15).
+2. **GPU queueing.** Kaggle queue waits of 35 s to 18.5 min per job, and a cap on concurrent sessions (F17).
+3. **T4 memory.** Wan 2.2 needs sequential offload, and that trades speed for fitting into 2.25 GB of active VRAM.

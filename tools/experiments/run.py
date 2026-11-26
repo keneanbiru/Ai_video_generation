@@ -477,6 +477,64 @@ def e11_hosted_vs_local():
 
 
 
+# ---------------------------------------------------------------- E15 Gemini TTS vs MMS (development lines)
+def e15_gemini_tts():
+    import hashlib
+    import random
+
+    from pipeline import narration
+    from pipeline.common import file_hash
+
+    sb = load_storyboard()
+    d = EXP / "e15_gemini_vs_mms"
+    d.mkdir(parents=True, exist_ok=True)
+    words = lambda t: len(t.split())  # noqa: E731
+    res = {"lines": {}, "voices": {}, "determinism": {}}
+    style = "calm, warm, unhurried; an adult remembering their grandmother"
+    for s in sb["shots"]:
+        sid, text = s["id"], s["narration"]
+        g = d / f"{sid}_gemini.wav"
+        narration.tts_gemini(text, "amh", g, f"e15:{sid}", "experiment", {"style": style, "gemini_voice": "Sulafat"})
+        m = OUT / "narration" / f"{sid}.wav"  # the MMS line already in the film
+        res["lines"][sid] = {"words": words(text),
+                             "gemini_s": round(duration_s(g), 2), "mms_s": round(duration_s(m), 2),
+                             "gemini_pauses": len(_silences(g, "-35dB", 0.15)), "mms_pauses": len(_silences(m, "-35dB", 0.15)),
+                             "punct": len(re.findall(r"[።፣፤፦?]", text))}
+    rows = [json.loads(l) for l in common.RUNS.read_text().splitlines() if '"e15:s' in l and '"ok"' in l]
+    res["gemini_latency_s"] = {"mean": round(sum(r["latency_s"] for r in rows) / len(rows), 2),
+                               "max": max(r["latency_s"] for r in rows)}
+    tot_g = sum(v["gemini_s"] for v in res["lines"].values())
+    tot_m = sum(v["mms_s"] for v in res["lines"].values())
+    tw = sum(v["words"] for v in res["lines"].values())
+    res["totals"] = {"gemini_speech_s": round(tot_g, 1), "mms_speech_s": round(tot_m, 1),
+                     "gemini_words_per_s": round(tw / tot_g, 2), "mms_words_per_s": round(tw / tot_m, 2)}
+    # determinism: same request twice
+    text = sb["shots"][5]["narration"]
+    for tag in ("a", "b"):
+        p = d / f"det_{tag}.wav"
+        narration.tts_gemini(text, "amh", p, f"e15:det{tag}", "experiment", {"style": style, "gemini_voice": "Sulafat"})
+        res["determinism"][tag] = {"sha": file_hash(p), "dur": round(duration_s(p), 3)}
+    res["determinism"]["identical"] = res["determinism"]["a"]["sha"] == res["determinism"]["b"]["sha"]
+    # three voices on the proverb line
+    for v in ("Sulafat", "Kore", "Charon"):
+        p = d / f"voice_{v}.wav"
+        narration.tts_gemini(text, "amh", p, f"e15:voice{v}", "experiment", {"style": style, "gemini_voice": v})
+        res["voices"][v] = {"dur": round(duration_s(p), 2)}
+    # blind A/B pairs for a native listener: X/Y order randomised, key kept separately
+    rng = random.Random(15)
+    ab = d / "blind_ab"
+    ab.mkdir(exist_ok=True)
+    key = {}
+    for sid in ("s01", "s05", "s06", "s08", "s09"):
+        pair = [("gemini", d / f"{sid}_gemini.wav"), ("mms", OUT / "narration" / f"{sid}.wav")]
+        rng.shuffle(pair)
+        for lab, (name, src) in zip("XY", pair):
+            ffmpeg("-i", str(src), "-ar", "48000", str(ab / f"{sid}_{lab}.wav"))
+            key[f"{sid}_{lab}"] = name
+    (d / "blind_ab_KEY_do_not_open_before_listening.json").write_text(json.dumps(key, indent=1))
+    save("e15_gemini_tts", res)
+
+
 EXPERIMENTS = {k.split("_", 1)[0]: v for k, v in globals().items() if re.match(r"e\d\d_", k) and callable(v)}
 
 if __name__ == "__main__":

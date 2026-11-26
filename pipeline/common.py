@@ -177,6 +177,13 @@ class ProviderUnavailable(RuntimeError):
     """Raised when a provider cannot run at all here (no key, no GPU output). Not retried."""
 
 
+def require_online(provider: str) -> None:
+    """HERITAGE_OFFLINE=1 makes every hosted provider unavailable: tests the fallback chain and the
+    cache without spending any quota."""
+    if os.environ.get("HERITAGE_OFFLINE") == "1":
+        raise ProviderUnavailable(f"{provider}: HERITAGE_OFFLINE=1")
+
+
 def retry(times: int = 3, base_delay: float = 2.0, retry_on: tuple = (Exception,)):
     """Exponential backoff. ProviderUnavailable is never retried: it falls through to the next provider."""
 

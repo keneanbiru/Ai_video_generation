@@ -1,5 +1,95 @@
 # DESIGN.md: audience, intent, user tests
 
+> **Two films live in this history.** v1, *ቀስ በቀስ / Slowly, Slowly*, was the development prototype that built and tested the studio (sections below "Prototype film"). **The submitted film is v2, *ሁሉም ለበጎ ነው / Everything Is for the Good*** (this first part). v2's brief was written on 26 Nov 2026 before any of its assets were generated.
+
+# Film: ሁሉም ለበጎ ነው — Everything Is for the Good
+
+## 1. Brief (written before generating anything for this film)
+| | |
+|---|---|
+| **Source** | A personal memory of the director's. After failing an exam they had been sure they would pass, they came home close to tears, and their mother comforted them by telling a traditional Ethiopian folktale: a king, his servant, a fall from a horse, a pit, and a group that would sacrifice only a person without blemish. |
+| **Why it matters** | It is not an invented motivational story. It records how a mother used oral storytelling to change her child's perspective at a hard moment, and it preserves that way of passing wisdom between generations. |
+| **Primary audience** | Ethiopian students and young adults facing academic failure, disappointment or another setback. |
+| **Secondary audience** | Ethiopian families who know the tradition of parents passing wisdom to children through stories. |
+| **Where they watch** | On a phone, vertical, in a feed or forwarded in a family Telegram group; often muted, so the English subtitles must carry the story alone. |
+| **Central message** | Do not lose hope the moment something goes wrong; we cannot yet see what it will lead to. Recurring line: **ሁሉም ለበጎ ነው**. |
+| **Define (how might we…)** | How might we help a student who just failed feel, within 90 seconds, that this setback may not be the end of the story, the way a mother's folktale once did? |
+
+### Intended emotional arc
+| Beat | The viewer should feel | Carried by |
+|---|---|---|
+| Opening: the student comes home | sadness, empathy | slow, quiet, cool light, a held face |
+| The mother begins | curiosity | warm light, music shifts, her first words |
+| The king's fall; the servant in the pit | tension | low angles, fast cut, music darkens |
+| Capture by the worshippers | tension at its peak | torches, shadows, no violence shown |
+| Released because of his wounds | surprise | the music breaks; the king's realisation |
+| The servant's answer | a second realisation | the line lands, then a silence |
+| Return to the student | comfort, hope, relief | warm morning light, the line one last time |
+
+### Design decisions (with reasons)
+* **First-person narrator (the grown student remembering).** It makes the frame story personal and lets the folktale be heard the way it was first heard: through the mother's words.
+* **Two visual worlds.** Present day: realistic, warm interior, contemporary clothing. Folktale: highland landscape at golden hour, earth tones, traditional dress, more painterly light. The transition happens on the mother's first words, so the viewer always knows when we are "inside the story".
+* **The ritual group is invented.** Hooded earth-coloured cloaks, torches, no symbols, so it points to no existing religion or ethnic community. Danger comes from shadow and faces, never from violence or blood.
+* **Fictionalised faces and a synthetic voice.** Neither the director nor their mother is depicted or voiced (see ETHICS.md).
+* **Fewer shots than sentences.** The folktale has seven events. The film shows each once, lets the narration bridge the gaps, and spends the extra seconds on faces at the two realisations.
+
+### Shot list and the reason for each shot
+Generated from the final `storyboard.json` (film length 87.2 s incl. a 4 s AI end card):
+
+| Shot | Time | Size | Reason | Motion |
+|---|---|---|---|---|
+| s01 | 0.0s | medium | Opens on the feeling the audience knows: coming home after failing. Sadness and empathy before any story. | **Wan 2.2** |
+| s02 | 6.8s | medium | The mother notices and asks; her care turns sadness toward curiosity, and she begins the story. | Ken Burns |
+| s03 | 15.2s | close-up | A five-second, music-only bridge: the mother's face as she starts to remember carries us from the living room into the tale (the cinematic transition between the two worlds). | Ken Burns; dissolves in (0.8 s) |
+| s04 | 20.2s | extreme-wide | Establishes the folktale world in one wide image: highland road, golden hour, king on horseback, servant on foot. | **Wan 2.2**; dissolves in (1.5 s) |
+| s05 | 26.2s | medium | The accident, shown after the fact so it stays non-graphic: dust in the air, the king on the ground holding his arm. | Ken Burns (Wan clip rejected: a glowing flame-like object materialises in the foreground from about frame 20) |
+| s06 | 32.4s | medium-close-up | First time the central line is spoken, by the calm servant: the film's thesis, before anyone understands it. | Ken Burns |
+| s07 | 37.2s | wide | The injustice: a high angle down into the pit makes the servant small and alone; tension rises. | Ken Burns |
+| s08 | 43.0s | wide | Peak tension: the king surrounded by an invented, hooded group with torches; danger through shadow, not violence. | **Wan 2.2** |
+| s09 | 49.2s | close-up | The surprise: the wound that hurt him saves him; the realisation lands on his face in torchlight. | Ken Burns |
+| s10 | 56.0s | medium | Reconciliation, shown in one symbolic close-up of clasped hands over the pit (two-person staging merged the characters in a first attempt); the line is spoken a second time. | Ken Burns (Wan clip rejected: sparkle noise from about frame 20, full colour melt by frame 48) |
+| s11 | 63.7s | medium-close-up | The second realisation, in one exchange: the pit saved the servant too. A quiet two-shot lets the answer land. | Ken Burns |
+| s12 | 72.7s | close-up | Back to the present in morning light: the result is the same, the student is not. The line a third time, now as their own. | Ken Burns; dissolves in (1.5 s) |
+
+## 2. User test 1 (radio cut of this film)
+**Prototype tested:** `outputs/radio_cut/radio_cut.mp4`, 87 s: Amharic narration (Gemini 3.8 Flash-Lite TTS, voice Sulafat, one continuous take) over temporary music on black, with English subtitles. Run by the director on 26 Nov 2026, after the storyboard was approved.
+
+**What the participants said** (as reported by the director; record each person's exact words and details below):
+* All three responded positively.
+* One participant said the narration was **slightly slow**.
+
+| # | Who (role, age, where) | What they said |
+|---|---|---|
+| P1 | _to be added by the director_ | _positive (director's summary)_ |
+| P2 | _to be added by the director_ | _positive (director's summary)_ |
+| P3 | _to be added by the director_ | _positive; "narration slightly slow" (director's summary)_ |
+
+**Discussion and decision:** the director discussed the pacing comment with the participant, and they agreed that the deliberate pace suits a reflective memory of a mother's story and gives viewers time to absorb each turn (both twists land after a pause). **Decision: keep the narration unchanged.** Evidence that the pace is natural rather than slowed: the take was not time-stretched; Gemini's own delivery runs at 2.06 words/s, faster than the 1.2–1.5 words/s measured for MMS and per-line Gemini (EXPERIMENTS E02, E15, E22). The extra seconds are holds on the transition and emotional beats (s03, s09, s11, s12), not slower speech.
+**What changed because of test 1:** nothing in the narration. The test confirmed the story, the order of the two reveals, and the pacing choice. Visual production (Phase 2) started from the approved radio cut. *For test 2 we will ask specifically about pace with pictures, since images change how pacing feels.*
+
+## 3. User test 2 (near-final cut of this film)
+**Prototype tested:** `outputs/cuts/wan_*.mp4` and `kenburns_v2_*.mp4` (87.2 s, both aspect ratios), run by the director with three friends on 26 Nov 2026.
+
+**What they said** (as reported by the director; individual wording to be added):
+* Two of three participants independently noticed: **(1) the mother looks like a different person in s02 and s03**; **(2) in s04 the king is not riding the horse**, which contradicts the story (he rides the white horse, the servant walks beside him).
+* The director agreed with both observations.
+
+| # | Who | What they said |
+|---|---|---|
+| P1 | _to be added by the director_ | _(director's summary above)_ |
+| P2 | _to be added by the director_ | _(director's summary above)_ |
+| P3 | _to be added by the director_ | _(director's summary above)_ |
+
+**Insights → changes** (before/after evidence in `outputs/review/`):
+1. *Consistency:* s03 is no longer generated separately. It is built **from s02's own keyframe** (`keyframe_from: "s02"`) as a slow push-in onto the mother's face, so it is the same woman by construction. It also makes the transition into the tale continuous: living room → her eyes → dissolve to the road.
+2. *Story accuracy:* s04 regenerated with explicit staging (the king **mounted on a white horse**, the servant walking beside it). Its Wan clip was made from the old keyframe and is now stale, so s04 uses Ken Burns (no time for a new Wan run before the deadline).
+3. *Framing (director's request):* every shot now has a **focus point** (`focus: {x, y}`), and the 9:16 and 16:9 crops are centred on the subject instead of the middle of the image.
+* **Lesson:** both issues were invisible in the radio cut and were caught only when people watched pictures. One is a consistency failure across *separately generated* images, the other a prompt the model satisfied only partly (king and horse present, but not riding). Neither shows up in an automatic metric.
+
+---
+
+# Prototype film (v1 development): ቀስ በቀስ — Slowly, Slowly
+
 ## 1. Brief (written before anything was generated)
 
 | | |

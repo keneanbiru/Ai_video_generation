@@ -1,12 +1,11 @@
 {
- "key": "21d2ab16225b1a56",
- "provider": "local:sd-turbo",
- "prompt": "an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair sitting on a low wooden stool, spreading fresh green grass on the floor, a black clay jebena coffee pot beside a small charcoal stove, inside a simple mud-walled room, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 102,
+ "key": "ccf5fa6905e3754d",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "an Ethiopian mother in her fifties with dark brown skin, kind eyes, a white cotton shash scarf over her hair and a simple green dress sitting on a sofa in a warm lamp-lit living room, looking up with concern toward someone off frame; on the low table a traditional Ethiopian jebena: a round black clay coffee pot with a long narrow neck and a straw stopper, beside small white cups, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 202,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

@@ -1,0 +1,12 @@
+{
+ "key": "0a23a209af0368b5",
+ "provider": "local:sd-turbo",
+ "prompt": "close-up of a wooden mortar and iron pestle crushing roasted coffee beans, a small clay incense burner with fragrant smoke beside it on fresh grass, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
+ "seed": 107,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

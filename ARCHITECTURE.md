@@ -106,3 +106,33 @@ tools/fetch_models.sh  resumable weight downloader (slow link)
 tools/experiments/     scripts behind EXPERIMENTS.md
 tests/                 contract, cache and subtitle tests (no models needed)
 ```
+
+---
+## v2 additions (recommended providers)
+
+```
+story/story.md ──[0] script (Gemini text: 3.8 Flash → 3.5 Flash-Lite)──▶ storyboard.draft.json
+                     validated against the schema; errors sent back for ≤2 repair rounds
+                     human reads/edits → `python -m pipeline.script accept` → storyboard.json
+storyboard.json ──[2] narration: Gemini TTS, ONE request per film (batch split, E16) │ fallback MMS
+                ──[5] keyframes: Cloudflare FLUX.2 klein-4b (reference image) / FLUX.1 schnell │ SD-Turbo
+                ──[6] shots:  `python -m pipeline.remote wan` → private Kaggle kernel (T4 ×2) → clips_wan/
+                ──[7] music:  `python -m pipeline.remote acestep` → private Kaggle kernel → music_acestep/
+```
+
+### Remote GPU runner (`pipeline/remote.py`)
+Kaggle work is one local command. No notebook clicking, no manual downloads:
+1. **Diff:** only shots whose clip is missing or stale (keyframe hash, motion prompt or size changed) are sent. With nothing changed, no GPU job is submitted at all.
+2. **Package:** the storyboard + needed keyframes go into a **private** Kaggle dataset (`kaggle datasets create/version`).
+3. **Run:** a **private** kernel is pushed with `--accelerator NvidiaTeslaT4` and a timeout. The job script installs its own dependencies, uses **both T4s** (one worker per GPU, alternate shots), and saves each clip with its JSON sidecar as soon as it finishes.
+4. **Poll and pull:** status is polled every 30 s, outputs are downloaded, and the clips are copied to `outputs/clips_wan/`. Queue time and wall time go into `runs.jsonl` (stage `remote`). Per-clip GPU latency, dtype and peak VRAM go in via the shots stage's import.
+5. **Fallback:** if the job fails or times out, the shots stage still finishes with Ken Burns, and the error and log tail are recorded.
+
+### Quotas as a first-class constraint (`pipeline/quota.py`)
+Free tiers are the binding constraint, so they are enforced in code before every hosted call:
+* **Gemini:** a ledger per model per **US-Pacific quota day** (resets 11:00 EAT), with limits confirmed on the AI Studio dashboard (Flash TTS 10, Flash-Lite TTS 10, Flash 20, Flash-Lite 500/day). It counts the way the dashboard does (503 counts, 429 does not). **Experiments are refused** below a reserve kept for the film.
+* **Cloudflare:** a neuron ledger per UTC day (10,000 free), with per-image cost computed from the published tile/step rates. Experiments are refused below `CF_NEURON_RESERVE`.
+* `python -m pipeline.quota` prints both.
+
+### Provider choice is data, not code
+Everything that differs between films lives in `storyboard.json`: providers, voice/style (`voice`), per-shot `animate` (Wan or Ken Burns) and `ref_strength`, music caption/seeds/cues. A new film needs a new storyboard, not a code change.

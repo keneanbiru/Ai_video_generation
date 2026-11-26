@@ -1,0 +1,6 @@
+[12:27:50]   [remote] pushing private kernel keneanbiru/heritage-acestep (T4 x2)
+[12:28:45]   [remote] running after 55s in queue
+[12:28:45]   [remote]  "KernelWorkerStatus.RUNNING"
+[12:34:20]   [remote] acestep: complete in 390s (queue 55s); output -> outputs/remote/results/acestep
+[12:34:20]   [remote] acestep: imported 3/3 candidates
+EXIT 0

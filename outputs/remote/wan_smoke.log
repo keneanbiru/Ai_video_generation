@@ -1,0 +1,94 @@
+[12:23:31]   references/emama: cached
+[12:23:31]   references/child: cached
+[12:23:31]   references/adult: cached
+[12:23:31]   keyframes/s01: cached
+[12:23:31]   keyframes/s02: cached
+[12:23:31]   keyframes/s03: cached
+[12:23:31]   keyframes/s04: cached
+[12:23:31]   keyframes/s05: cached
+[12:23:31]   keyframes/s06: cached
+[12:23:31]   keyframes/s07: cached
+[12:23:31]   keyframes/s08: cached
+[12:23:31]   keyframes/s09: cached
+[12:23:31]   keyframes/s10: cached
+[12:23:31]   keyframes/s11: cached
+[12:23:31]   keyframes/s12: cached
+[12:23:44]   [remote] pushing private kernel keneanbiru/heritage-wan (T4 x2)
+[12:24:18]   [remote] running after 35s in queue
+[12:24:18]   [remote]  "KernelWorkerStatus.RUNNING"
+[13:38:57]   [remote] Traceback (most recent call last):
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/socket.py", line 974, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/connectionpool.py", line 494, in _make_request
+    raise new_e
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/connectionpool.py", line 470, in _make_request
+    self._validate_conn(conn)
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1125, in _validate_conn
+    conn.connect()
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/connection.py", line 827, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/connection.py", line 246, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='api.kaggle.com', port=443): Failed to resolve 'api.kaggle.com' ([Errno -3] Temporary failure in name resolution)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/urllib3/util/retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.kaggle.com', port=443): Max retries exceeded with url: /v1/security.OAuthService/IntrospectToken (Caused by NameResolutionError("HTTPSConnection(host='api.kaggle.com', port=443): Failed to resolve 'api.kaggle.com' ([Errno -3] Temporary failure in name resolution)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kenean/heritage-short-v2/.venv/bin/kaggle", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kenean/heritage-short-v2/.venv/lib/python3.11/site-packages/kaggle/cli.py", line 83, in main
+    api.authenticate()
+  File "/home/kenean/heritage-short-v2/.venv/lib/python3.11/site-packages/kaggle/api/kaggle_api_extended.py", line 1496, in authenticate
+    if self._authenticate_with_access_token():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/heritage-short-v2/.venv/lib/python3.11/site-packages/kaggle/api/kaggle_api_extended.py", line 1567, in _authenticate_with_access_token
+    username = self._introspect_token(access_token)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/heritage-short-v2/.venv/lib/python3.11/site-packages/kaggle/api/kaggle_api_extended.py", line 1609, in _introspect_token
+    response = kaggle.security.oauth_client.introspect_token(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/heritage-short-v2/.venv/lib/python3.11/site-packages/kagglesdk/security/services/oauth_service.py", line 44, in introspect_token
+    return self._client.call("security.OAuthService", "IntrospectToken", request, IntrospectTokenResponse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/heritage-short-v2/.venv/lib/python3.11/site-packages/kagglesdk/kaggle_http_client.py", line 104, in call
+    http_response = self._session.send(http_request, **settings)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/site-packages/requests/adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.kaggle.com', port=443): Max retries exceeded with url: /v1/security.OAuthService/IntrospectToken (Caused by NameResolutionError("HTTPSConnection(host='api.kaggle.com', port=443): Failed to resolve 'api.kaggle.com' ([Errno -3] Temporary failure in name resolution)"))
+[13:39:32]   [remote] wan: complete in 4548s (queue 35s); output -> outputs/remote/results/wan
+[13:39:32]   [remote] wan: imported 0/2 clips into outputs/clips_wan/

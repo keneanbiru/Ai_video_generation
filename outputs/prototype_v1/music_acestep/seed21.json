@@ -1,0 +1,24 @@
+{
+ "caption": "gentle slow Ethiopian-inspired instrumental underscore, soft plucked lyre strings, warm breathy bamboo flute, quiet low drone, calm nostalgic tender mood, sparse, no drums, no vocals",
+ "model": "ACE-Step-1.5 acestep-v15-turbo + lm-1.7B",
+ "params": {
+  "duration": 26,
+  "instrumental": true,
+  "shift": 3.0,
+  "seed": 21
+ },
+ "latency_s": 27.1,
+ "device": "Tesla T4",
+ "time_costs": {
+  "lm_phase1_time": 8.038980484008789,
+  "lm_phase2_time": 15.57987928390503,
+  "lm_total_time": 23.61885976791382,
+  "dit_encoder_time_cost": 0.03379106521606445,
+  "dit_diffusion_time_cost": 0.8693873882293701,
+  "dit_diffusion_per_step_time_cost": 0.10867342352867126,
+  "dit_total_time_cost": 2.3964507579803467,
+  "dit_offload_time_cost": 0.0,
+  "dit_vae_decode_time_cost": 1.493272304534912,
+  "pipeline_total_time": 26.015310525894165
+ }
+}

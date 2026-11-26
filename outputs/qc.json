@@ -1,36 +1,36 @@
 {
  "loudness": {
   "pass1": {
-   "input_i": "-18.32",
-   "input_tp": "-4.91",
-   "input_lra": "8.90"
+   "input_i": "-19.38",
+   "input_tp": "-4.84",
+   "input_lra": "9.50"
   },
   "final": {
    "integrated_lufs": -14.1,
-   "lra_lu": 6.1,
+   "lra_lu": 6.9,
    "true_peak_dbtp": -1.5
   }
  },
  "exports": {
   "16x9": {
    "file": "film_16x9.mp4",
-   "duration_s": 85.375,
+   "duration_s": 87.208,
    "loudness": {
     "integrated_lufs": -14.1,
-    "lra_lu": 6.1,
-    "true_peak_dbtp": -1.3
+    "lra_lu": 6.9,
+    "true_peak_dbtp": -1.1
    },
-   "size_mb": 61.58
+   "size_mb": 56.35
   },
   "9x16": {
    "file": "film_9x16.mp4",
-   "duration_s": 85.375,
+   "duration_s": 87.208,
    "loudness": {
     "integrated_lufs": -14.1,
-    "lra_lu": 6.1,
-    "true_peak_dbtp": -1.3
+    "lra_lu": 6.9,
+    "true_peak_dbtp": -1.1
    },
-   "size_mb": 60.79
+   "size_mb": 53.54
   }
  }
 }

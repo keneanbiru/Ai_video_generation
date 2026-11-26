@@ -1,0 +1,699 @@
+[{"stream_name":"stderr","time":0.76356554,"data":"Cloning into '/kaggle/temp/ACE-Step-1.5'...\n"}
+,{"stream_name":"stderr","time":8.066903732,"data":"Using CPython 3.12.3 interpreter at: /usr/bin/python3.12\n"}
+,{"stream_name":"stderr","time":8.066949029,"data":"Creating virtual environment at: .venv\n"}
+,{"stream_name":"stderr","time":21.014865133,"data":"Resolved 176 packages in 12.94s\n"}
+,{"stream_name":"stderr","time":21.065351404,"data":"   Building nano-vllm @ file:///kaggle/temp/ACE-Step-1.5/acestep/third_parts/nano-vllm\n"}
+,{"stream_name":"stderr","time":21.066811897,"data":"   Building ace-step @ file:///kaggle/temp/ACE-Step-1.5\n"}
+,{"stream_name":"stderr","time":21.093425469,"data":"Downloading torchvision (7.7MiB)\n"}
+,{"stream_name":"stderr","time":21.102359309,"data":"Downloading torch (874.4MiB)\n"}
+,{"stream_name":"stderr","time":21.196762971,"data":"Downloading sympy (6.0MiB)\n"}
+,{"stream_name":"stderr","time":21.197052435,"data":"Downloading soundfile (1.3MiB)\n"}
+,{"stream_name":"stderr","time":21.280710074,"data":"Downloading numba (3.6MiB)\n"}
+,{"stream_name":"stderr","time":21.280732251,"data":"Downloading pydantic-core (2.0MiB)\n"}
+,{"stream_name":"stderr","time":21.280738922,"data":"Downloading uvloop (4.2MiB)\n"}
+,{"stream_name":"stderr","time":21.280826719,"data":"Downloading torchao (3.0MiB)\n"}
+,{"stream_name":"stderr","time":21.281139724,"data":"Downloading pandas (11.8MiB)\n"}
+,{"stream_name":"stderr","time":21.281396785,"data":"Downloading hf-xet (3.2MiB)\n"}
+,{"stream_name":"stderr","time":21.28165772,"data":"Downloading modelscope (5.8MiB)\n"}
+,{"stream_name":"stderr","time":21.28190799,"data":"Downloading nvidia-cufile-cu12 (1.1MiB)\n"}
+,{"stream_name":"stderr","time":21.282176463,"data":"Downloading kiwisolver (1.4MiB)\n"}
+,{"stream_name":"stderr","time":21.282417517,"data":"Downloading gradio (21.9MiB)\n"}
+,{"stream_name":"stderr","time":21.282719719,"data":"Downloading aiohttp (1.7MiB)\n"}
+,{"stream_name":"stderr","time":21.283022749,"data":"Downloading nvidia-cufft-cu12 (184.2MiB)\n"}
+,{"stream_name":"stderr","time":21.283294309,"data":"Downloading nvidia-cuda-cupti-cu12 (9.8MiB)\n"}
+,{"stream_name":"stderr","time":21.283529629,"data":"Downloading fonttools (4.7MiB)\n"}
+,{"stream_name":"stderr","time":21.283785819,"data":"Downloading networkx (2.0MiB)\n"}
+,{"stream_name":"stderr","time":21.28405101,"data":"Downloading grpcio (6.4MiB)\n"}
+,{"stream_name":"stderr","time":21.28431359,"data":"Downloading torchcodec (2.0MiB)\n"}
+,{"stream_name":"stderr","time":21.284565454,"data":"Downloading nvidia-nvjitlink-cu12 (37.4MiB)\n"}
+,{"stream_name":"stderr","time":21.284893515,"data":"Downloading transformers (11.4MiB)\n"}
+,{"stream_name":"stderr","time":21.2852891,"data":"Downloading nvidia-cublas-cu12 (566.8MiB)\n"}
+,{"stream_name":"stderr","time":21.285549969,"data":"Downloading numpy (15.8MiB)\n"}
+,{"stream_name":"stderr","time":21.285915864,"data":"Downloading scipy (33.4MiB)\n"}
+,{"stream_name":"stderr","time":21.286172624,"data":"Downloading nvidia-cudnn-cu12 (674.0MiB)\n"}
+,{"stream_name":"stderr","time":21.287048502,"data":"Downloading nvidia-curand-cu12 (60.7MiB)\n"}
+,{"stream_name":"stderr","time":21.287331077,"data":"Downloading setuptools (2.2MiB)\n"}
+,{"stream_name":"stderr","time":21.287655895,"data":"Downloading pillow (6.7MiB)\n"}
+,{"stream_name":"stderr","time":21.287959827,"data":"Downloading nvidia-cusparselt-cu12 (273.9MiB)\n"}
+,{"stream_name":"stderr","time":21.288277384,"data":"Downloading tokenizers (3.1MiB)\n"}
+,{"stream_name":"stderr","time":21.288624268,"data":"Downloading nvidia-cusolver-cu12 (255.1MiB)\n"}
+,{"stream_name":"stderr","time":21.288967885,"data":"Downloading pygments (1.2MiB)\n"}
+,{"stream_name":"stderr","time":21.289289104,"data":"Downloading triton (179.5MiB)\n"}
+,{"stream_name":"stderr","time":21.289606163,"data":"Downloading matplotlib (8.3MiB)\n"}
+,{"stream_name":"stderr","time":21.289898681,"data":"Downloading cuda-bindings (11.6MiB)\n"}
+,{"stream_name":"stderr","time":21.290225391,"data":"Downloading nvidia-cusparse-cu12 (274.9MiB)\n"}
+,{"stream_name":"stderr","time":21.290604252,"data":"Downloading nvidia-nccl-cu12 (307.4MiB)\n"}
+,{"stream_name":"stderr","time":21.290901307,"data":"Downloading brotli (1.4MiB)\n"}
+,{"stream_name":"stderr","time":21.291248837,"data":"Downloading nvidia-nvshmem-cu12 (132.7MiB)\n"}
+,{"stream_name":"stderr","time":21.291568252,"data":"Downloading tensorboard (5.3MiB)\n"}
+,{"stream_name":"stderr","time":21.291944896,"data":"Downloading llvmlite (53.7MiB)\n"}
+,{"stream_name":"stderr","time":21.292272983,"data":"Downloading diffusers (4.8MiB)\n"}
+,{"stream_name":"stderr","time":21.292608006,"data":"Downloading tensorboard-data-server (6.3MiB)\n"}
+,{"stream_name":"stderr","time":21.293080681,"data":"Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)\n"}
+,{"stream_name":"stderr","time":21.293346803,"data":"Downloading pywavelets (4.3MiB)\n"}
+,{"stream_name":"stderr","time":21.293575477,"data":" Downloaded torchvision\n"}
+,{"stream_name":"stderr","time":21.298464286,"data":"Downloading torchaudio (1.8MiB)\n"}
+,{"stream_name":"stderr","time":21.346404718,"data":" Downloaded torchaudio\n"}
+,{"stream_name":"stderr","time":22.408384846,"data":" Downloaded nvidia-cufile-cu12\n"}
+,{"stream_name":"stderr","time":22.417927317,"data":" Downloaded pygments\n"}
+,{"stream_name":"stderr","time":22.417947869,"data":" Downloaded soundfile\n"}
+,{"stream_name":"stderr","time":22.526527017,"data":" Downloaded brotli\n"}
+,{"stream_name":"stderr","time":22.582968655,"data":" Downloaded kiwisolver\n"}
+,{"stream_name":"stderr","time":22.737080748,"data":" Downloaded aiohttp\n"}
+,{"stream_name":"stderr","time":23.04750898,"data":" Downloaded networkx\n"}
+,{"stream_name":"stderr","time":23.047550632,"data":" Downloaded pydantic-core\n"}
+,{"stream_name":"stderr","time":23.051276186,"data":" Downloaded torchcodec\n"}
+,{"stream_name":"stderr","time":23.333362124,"data":" Downloaded setuptools\n"}
+,{"stream_name":"stderr","time":24.197255745,"data":" Downloaded torchao\n"}
+,{"stream_name":"stderr","time":24.197327621,"data":" Downloaded hf-xet\n"}
+,{"stream_name":"stderr","time":24.20543512,"data":" Downloaded tokenizers\n"}
+,{"stream_name":"stderr","time":24.466522961,"data":" Downloaded numba\n"}
+,{"stream_name":"stderr","time":24.841143353,"data":" Downloaded uvloop\n"}
+,{"stream_name":"stderr","time":24.963937636,"data":" Downloaded pywavelets\n"}
+,{"stream_name":"stderr","time":25.13314962,"data":" Downloaded fonttools\n"}
+,{"stream_name":"stderr","time":25.194804206,"data":" Downloaded diffusers\n"}
+,{"stream_name":"stderr","time":25.431537746,"data":" Downloaded tensorboard\n"}
+,{"stream_name":"stderr","time":25.687323576,"data":" Downloaded modelscope\n"}
+,{"stream_name":"stderr","time":25.823224836,"data":" Downloaded sympy\n"}
+,{"stream_name":"stderr","time":25.917220016,"data":" Downloaded tensorboard-data-server\n"}
+,{"stream_name":"stderr","time":26.011234305,"data":" Downloaded grpcio\n"}
+,{"stream_name":"stderr","time":26.143686803,"data":" Downloaded pillow\n"}
+,{"stream_name":"stderr","time":26.74515504,"data":" Downloaded matplotlib\n"}
+,{"stream_name":"stderr","time":27.160887685,"data":"      Built ace-step @ file:///kaggle/temp/ACE-Step-1.5\n"}
+,{"stream_name":"stderr","time":27.301180403,"data":" Downloaded nvidia-cuda-cupti-cu12\n"}
+,{"stream_name":"stderr","time":27.573674386,"data":"      Built nano-vllm @ file:///kaggle/temp/ACE-Step-1.5/acestep/third_parts/nano-vllm\n"}
+,{"stream_name":"stderr","time":27.832691279,"data":" Downloaded transformers\n"}
+,{"stream_name":"stderr","time":27.878819723,"data":" Downloaded pandas\n"}
+,{"stream_name":"stderr","time":27.912018773,"data":" Downloaded cuda-bindings\n"}
+,{"stream_name":"stderr","time":29.049800673,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":30.481856846,"data":" Downloaded gradio\n"}
+,{"stream_name":"stderr","time":33.572335865,"data":" Downloaded scipy\n"}
+,{"stream_name":"stderr","time":34.437821883,"data":" Downloaded nvidia-nvjitlink-cu12\n"}
+,{"stream_name":"stderr","time":40.009096472,"data":" Downloaded llvmlite\n"}
+,{"stream_name":"stderr","time":45.044917133,"data":" Downloaded nvidia-curand-cu12\n"}
+,{"stream_name":"stderr","time":48.896114241,"data":" Downloaded nvidia-cuda-nvrtc-cu12\n"}
+,{"stream_name":"stderr","time":50.668013382,"data":" Downloaded torch\n"}
+,{"stream_name":"stderr","time":54.344212577,"data":" Downloaded nvidia-nvshmem-cu12\n"}
+,{"stream_name":"stderr","time":58.269223576,"data":" Downloaded triton\n"}
+,{"stream_name":"stderr","time":58.700629319,"data":" Downloaded nvidia-cufft-cu12\n"}
+,{"stream_name":"stderr","time":65.129574472,"data":" Downloaded nvidia-cusolver-cu12\n"}
+,{"stream_name":"stderr","time":66.041587048,"data":" Downloaded nvidia-cusparselt-cu12\n"}
+,{"stream_name":"stderr","time":66.121290044,"data":" Downloaded nvidia-cusparse-cu12\n"}
+,{"stream_name":"stderr","time":67.310186227,"data":" Downloaded nvidia-nccl-cu12\n"}
+,{"stream_name":"stderr","time":75.216390605,"data":" Downloaded nvidia-cublas-cu12\n"}
+,{"stream_name":"stderr","time":78.562368945,"data":" Downloaded nvidia-cudnn-cu12\n"}
+,{"stream_name":"stderr","time":78.562843815,"data":"Prepared 141 packages in 57.54s\n"}
+,{"stream_name":"stderr","time":123.146820333,"data":"Installed 141 packages in 44.58s\n"}
+,{"stream_name":"stderr","time":123.147016615,"data":" + absl-py==2.4.0\n"}
+,{"stream_name":"stderr","time":123.147056602,"data":" + accelerate==1.12.0\n"}
+,{"stream_name":"stderr","time":123.147191215,"data":" + ace-step==1.5.0 (from file:///kaggle/temp/ACE-Step-1.5)\n"}
+,{"stream_name":"stderr","time":123.147227071,"data":" + aiofiles==24.1.0\n"}
+,{"stream_name":"stderr","time":123.14728744,"data":" + aiohappyeyeballs==2.6.1\n"}
+,{"stream_name":"stderr","time":123.147343842,"data":" + aiohttp==3.13.3\n"}
+,{"stream_name":"stderr","time":123.147397635,"data":" + aiosignal==1.4.0\n"}
+,{"stream_name":"stderr","time":123.147470339,"data":" + annotated-doc==0.0.4\n"}
+,{"stream_name":"stderr","time":123.147535546,"data":" + annotated-types==0.7.0\n"}
+,{"stream_name":"stderr","time":123.147650765,"data":" + anyio==4.12.1\n"}
+,{"stream_name":"stderr","time":123.148711178,"data":" + attrs==25.4.0\n"}
+,{"stream_name":"stderr","time":123.148726197,"data":" + brotli==1.2.0\n"}
+,{"stream_name":"stderr","time":123.148736201,"data":" + certifi==2026.1.4\n"}
+,{"stream_name":"stderr","time":123.148740778,"data":" + cffi==2.0.0\n"}
+,{"stream_name":"stderr","time":123.148757938,"data":" + charset-normalizer==3.4.4\n"}
+,{"stream_name":"stderr","time":123.148763747,"data":" + click==8.3.1\n"}
+,{"stream_name":"stderr","time":123.148769228,"data":" + contourpy==1.3.3\n"}
+,{"stream_name":"stderr","time":123.148802416,"data":" + cuda-bindings==12.9.4\n"}
+,{"stream_name":"stderr","time":123.148807101,"data":" + cuda-pathfinder==1.3.3\n"}
+,{"stream_name":"stderr","time":123.148811404,"data":" + cycler==0.12.1\n"}
+,{"stream_name":"stderr","time":123.148816194,"data":" + diffusers==0.37.1\n"}
+,{"stream_name":"stderr","time":123.148820628,"data":" + diskcache==5.6.3\n"}
+,{"stream_name":"stderr","time":123.148824964,"data":" + einops==0.8.2\n"}
+,{"stream_name":"stderr","time":123.148829204,"data":" + einx==0.3.0\n"}
+,{"stream_name":"stderr","time":123.148833506,"data":" + fastapi==0.128.0\n"}
+,{"stream_name":"stderr","time":123.14883791,"data":" + ffmpy==1.0.0\n"}
+,{"stream_name":"stderr","time":123.148843289,"data":" + filelock==3.20.3\n"}
+,{"stream_name":"stderr","time":123.148847634,"data":" + fonttools==4.61.1\n"}
+,{"stream_name":"stderr","time":123.148852001,"data":" + frozendict==2.4.7\n"}
+,{"stream_name":"stderr","time":123.148856622,"data":" + frozenlist==1.8.0\n"}
+,{"stream_name":"stderr","time":123.148861041,"data":" + fsspec==2026.1.0\n"}
+,{"stream_name":"stderr","time":123.148865277,"data":" + gradio==6.2.0\n"}
+,{"stream_name":"stderr","time":123.148869514,"data":" + gradio-client==2.0.2\n"}
+,{"stream_name":"stderr","time":123.14887379,"data":" + groovy==0.1.2\n"}
+,{"stream_name":"stderr","time":123.148878074,"data":" + grpcio==1.78.0\n"}
+,{"stream_name":"stderr","time":123.148888196,"data":" + h11==0.16.0\n"}
+,{"stream_name":"stderr","time":123.148892654,"data":" + hf-xet==1.2.0\n"}
+,{"stream_name":"stderr","time":123.148898185,"data":" + httpcore==1.0.9\n"}
+,{"stream_name":"stderr","time":123.148902338,"data":" + httptools==0.7.1\n"}
+,{"stream_name":"stderr","time":123.148906672,"data":" + httpx==0.28.1\n"}
+,{"stream_name":"stderr","time":123.149676336,"data":" + huggingface-hub==0.36.0\n"}
+,{"stream_name":"stderr","time":123.149692222,"data":" + idna==3.11\n"}
+,{"stream_name":"stderr","time":123.149697246,"data":" + importlib-metadata==8.7.1\n"}
+,{"stream_name":"stderr","time":123.149715139,"data":" + jinja2==3.1.6\n"}
+,{"stream_name":"stderr","time":123.149719065,"data":" + kiwisolver==1.4.9\n"}
+,{"stream_name":"stderr","time":123.149722962,"data":" + lightning==2.6.1\n"}
+,{"stream_name":"stderr","time":123.149727002,"data":" + lightning-utilities==0.15.2\n"}
+,{"stream_name":"stderr","time":123.149730676,"data":" + llvmlite==0.46.0\n"}
+,{"stream_name":"stderr","time":123.149734701,"data":" + loguru==0.7.3\n"}
+,{"stream_name":"stderr","time":123.149738866,"data":" + lycoris-lora==3.4.0\n"}
+,{"stream_name":"stderr","time":123.149743102,"data":" + markdown==3.10.1\n"}
+,{"stream_name":"stderr","time":123.149747307,"data":" + markdown-it-py==4.0.0\n"}
+,{"stream_name":"stderr","time":123.149751594,"data":" + markupsafe==3.0.3\n"}
+,{"stream_name":"stderr","time":123.149755956,"data":" + matplotlib==3.10.8\n"}
+,{"stream_name":"stderr","time":123.149760224,"data":" + mdurl==0.1.2\n"}
+,{"stream_name":"stderr","time":123.149764282,"data":" + modelscope==1.34.0\n"}
+,{"stream_name":"stderr","time":123.149768351,"data":" + mpmath==1.3.0\n"}
+,{"stream_name":"stderr","time":123.149785739,"data":" + multidict==6.7.1\n"}
+,{"stream_name":"stderr","time":123.149790561,"data":" + nano-vllm==0.2.0 (from file:///kaggle/temp/ACE-Step-1.5/acestep/third_parts/nano-vllm)\n"}
+,{"stream_name":"stderr","time":123.149857436,"data":" + networkx==3.6.1\n"}
+,{"stream_name":"stderr","time":123.149912055,"data":" + numba==0.63.1\n"}
+,{"stream_name":"stderr","time":123.151701705,"data":" + numpy==2.3.5\n"}
+,{"stream_name":"stderr","time":123.151719456,"data":" + nvidia-cublas-cu12==12.8.4.1\n"}
+,{"stream_name":"stderr","time":123.151723294,"data":" + nvidia-cuda-cupti-cu12==12.8.90\n"}
+,{"stream_name":"stderr","time":123.151730671,"data":" + nvidia-cuda-nvrtc-cu12==12.8.93\n"}
+,{"stream_name":"stderr","time":123.151733766,"data":" + nvidia-cuda-runtime-cu12==12.8.90\n"}
+,{"stream_name":"stderr","time":123.151746559,"data":" + nvidia-cudnn-cu12==9.10.2.21\n"}
+,{"stream_name":"stderr","time":123.151750623,"data":" + nvidia-cufft-cu12==11.3.3.83\n"}
+,{"stream_name":"stderr","time":123.151754193,"data":" + nvidia-cufile-cu12==1.13.1.3\n"}
+,{"stream_name":"stderr","time":123.151757552,"data":" + nvidia-curand-cu12==10.3.9.90\n"}
+,{"stream_name":"stderr","time":123.151761537,"data":" + nvidia-cusolver-cu12==11.7.3.90\n"}
+,{"stream_name":"stderr","time":123.15176494,"data":" + nvidia-cusparse-cu12==12.5.8.93\n"}
+,{"stream_name":"stderr","time":123.151768713,"data":" + nvidia-cusparselt-cu12==0.7.1\n"}
+,{"stream_name":"stderr","time":123.151772509,"data":" + nvidia-nccl-cu12==2.27.5\n"}
+,{"stream_name":"stderr","time":123.151776638,"data":" + nvidia-nvjitlink-cu12==12.8.93\n"}
+,{"stream_name":"stderr","time":123.151782674,"data":" + nvidia-nvshmem-cu12==3.4.5\n"}
+,{"stream_name":"stderr","time":123.151786161,"data":" + nvidia-nvtx-cu12==12.8.90\n"}
+,{"stream_name":"stderr","time":123.151789387,"data":" + orjson==3.11.5\n"}
+,{"stream_name":"stderr","time":123.151792606,"data":" + packaging==26.0\n"}
+,{"stream_name":"stderr","time":123.151795777,"data":" + pandas==2.3.3\n"}
+,{"stream_name":"stderr","time":123.151799027,"data":" + peft==0.18.1\n"}
+,{"stream_name":"stderr","time":123.151802238,"data":" + pillow==12.1.0\n"}
+,{"stream_name":"stderr","time":123.151805473,"data":" + propcache==0.4.1\n"}
+,{"stream_name":"stderr","time":123.151808768,"data":" + protobuf==6.33.5\n"}
+,{"stream_name":"stderr","time":123.151811978,"data":" + psutil==7.2.1\n"}
+,{"stream_name":"stderr","time":123.151815169,"data":" + pycparser==3.0\n"}
+,{"stream_name":"stderr","time":123.151818313,"data":" + pydantic==2.12.5\n"}
+,{"stream_name":"stderr","time":123.151821546,"data":" + pydantic-core==2.41.5\n"}
+,{"stream_name":"stderr","time":123.151824798,"data":" + pydub==0.25.1\n"}
+,{"stream_name":"stderr","time":123.15184008,"data":" + pygments==2.19.2\n"}
+,{"stream_name":"stderr","time":123.151844091,"data":" + pyparsing==3.3.2\n"}
+,{"stream_name":"stderr","time":123.151847849,"data":" + python-dateutil==2.9.0.post0\n"}
+,{"stream_name":"stderr","time":123.151851671,"data":" + python-dotenv==1.2.1\n"}
+,{"stream_name":"stderr","time":123.151855391,"data":" + python-multipart==0.0.22\n"}
+,{"stream_name":"stderr","time":123.151859082,"data":" + pytorch-lightning==2.6.1\n"}
+,{"stream_name":"stderr","time":123.151862428,"data":" + pytorch-wavelets==1.3.0\n"}
+,{"stream_name":"stderr","time":123.15186638,"data":" + pytz==2025.2\n"}
+,{"stream_name":"stderr","time":123.151869606,"data":" + pywavelets==1.9.0\n"}
+,{"stream_name":"stderr","time":123.151872812,"data":" + pyyaml==6.0.3\n"}
+,{"stream_name":"stderr","time":123.151875975,"data":" + regex==2026.1.15\n"}
+,{"stream_name":"stderr","time":123.151879213,"data":" + requests==2.32.5\n"}
+,{"stream_name":"stderr","time":123.151882443,"data":" + rich==14.3.1\n"}
+,{"stream_name":"stderr","time":123.151885601,"data":" + safehttpx==0.1.7\n"}
+,{"stream_name":"stderr","time":123.151888848,"data":" + safetensors==0.7.0\n"}
+,{"stream_name":"stderr","time":123.151891981,"data":" + scipy==1.17.0\n"}
+,{"stream_name":"stderr","time":123.151899585,"data":" + semantic-version==2.10.0\n"}
+,{"stream_name":"stderr","time":123.15190292,"data":" + setuptools==71.1.0\n"}
+,{"stream_name":"stderr","time":123.151914727,"data":" + shellingham==1.5.4\n"}
+,{"stream_name":"stderr","time":123.151918048,"data":" + six==1.17.0\n"}
+,{"stream_name":"stderr","time":123.151921395,"data":" + soundfile==0.13.1\n"}
+,{"stream_name":"stderr","time":123.151972015,"data":" + starlette==0.50.0\n"}
+,{"stream_name":"stderr","time":123.152032406,"data":" + sympy==1.14.0\n"}
+,{"stream_name":"stderr","time":123.152128781,"data":" + tensorboard==2.20.0\n"}
+,{"stream_name":"stderr","time":123.152195987,"data":" + tensorboard-data-server==0.7.2\n"}
+,{"stream_name":"stderr","time":123.152258592,"data":" + tokenizers==0.22.2\n"}
+,{"stream_name":"stderr","time":123.152322795,"data":" + toml==0.10.2\n"}
+,{"stream_name":"stderr","time":123.152388322,"data":" + tomlkit==0.13.3\n"}
+,{"stream_name":"stderr","time":123.152478296,"data":" + torch==2.10.0+cu128\n"}
+,{"stream_name":"stderr","time":123.15255032499999,"data":" + torchao==0.16.0\n"}
+,{"stream_name":"stderr","time":123.152604544,"data":" + torchaudio==2.10.0+cu128\n"}
+,{"stream_name":"stderr","time":123.152695661,"data":" + torchcodec==0.10.0\n"}
+,{"stream_name":"stderr","time":123.152795266,"data":" + torchmetrics==1.8.2\n"}
+,{"stream_name":"stderr","time":123.152826444,"data":" + torchvision==0.25.0+cu128\n"}
+,{"stream_name":"stderr","time":123.152923217,"data":" + tqdm==4.67.1\n"}
+,{"stream_name":"stderr","time":123.152934954,"data":" + transformers==4.57.6\n"}
+,{"stream_name":"stderr","time":123.152996939,"data":" + triton==3.6.0\n"}
+,{"stream_name":"stderr","time":123.15307999,"data":" + typer==0.21.1\n"}
+,{"stream_name":"stderr","time":123.153139231,"data":" + typer-slim==0.21.2\n"}
+,{"stream_name":"stderr","time":123.153231953,"data":" + typing-extensions==4.15.0\n"}
+,{"stream_name":"stderr","time":123.153288977,"data":" + typing-inspection==0.4.2\n"}
+,{"stream_name":"stderr","time":123.15335125,"data":" + tzdata==2025.3\n"}
+,{"stream_name":"stderr","time":123.153429263,"data":" + urllib3==2.6.3\n"}
+,{"stream_name":"stderr","time":123.153537712,"data":" + uvicorn==0.40.0\n"}
+,{"stream_name":"stderr","time":123.153628943,"data":" + uvloop==0.22.1\n"}
+,{"stream_name":"stderr","time":123.153682138,"data":" + vector-quantize-pytorch==1.27.20\n"}
+,{"stream_name":"stderr","time":123.153751737,"data":" + watchfiles==1.1.1\n"}
+,{"stream_name":"stderr","time":123.153826139,"data":" + websockets==16.0\n"}
+,{"stream_name":"stderr","time":123.153911122,"data":" + werkzeug==3.1.5\n"}
+,{"stream_name":"stderr","time":123.154007879,"data":" + xxhash==3.6.0\n"}
+,{"stream_name":"stderr","time":123.154057832,"data":" + yarl==1.22.0\n"}
+,{"stream_name":"stderr","time":123.154140459,"data":" + zipp==3.23.0\n"}
+,{"stream_name":"stdout","time":123.179685924,"data":"uv sync done in 122s\n"}
+,{"stream_name":"stderr","time":127.447805102,"data":"2026-11-26 12:21:08.601 | DEBUG    | acestep.core.generation.handler.init_service_memory_basic:_apply_malloc_mmap_threshold:50 - [memory] Set M_MMAP_THRESHOLD=131072 for immediate OS reclaim of large frees\n"}
+,{"stream_name":"stderr","time":137.105820319,"data":"/kaggle/temp/ACE-Step-1.5/.venv/lib/python3.12/site-packages/torchao/quantization/quant_api.py:1811: SyntaxWarning: invalid escape sequence '\\.'\n"}
+,{"stream_name":"stderr","time":137.105850748,"data":"  \"\"\"Configuration class for applying different quantization configs to modules or parameters based on their fully qualified names (FQNs).\n"}
+,{"stream_name":"stderr","time":141.489482652,"data":"2026-11-26 12:21:22.642 | WARNING  | acestep.training.trainer:\u003cmodule\u003e:40 - bitsandbytes not installed. Using standard AdamW.\n"}
+,{"stream_name":"stderr","time":179.476344302,"data":"\rFetching 28 files:   0%|          | 0/28 [00:00\u003c?, ?it/s]\rFetching 28 files:   4%|▎         | 1/28 [00:00\u003c00:12,  2.20it/s]\rFetching 28 files:  21%|██▏       | 6/28 [00:37\u003c02:22,  6.49s/it]\rFetching 28 files:  82%|████████▏ | 23/28 [00:37\u003c00:06,  1.26s/it]\rFetching 28 files: 100%|██████████| 28/28 [00:37\u003c00:00,  1.34s/it]\n"}
+,{"stream_name":"stdout","time":179.477438898,"data":"checkpoints ready in 38s\n"}
+,{"stream_name":"stderr","time":179.528766669,"data":"2026-11-26 12:22:00.682 | INFO     | acestep.gpu_config:get_gpu_memory_gb:578 - CUDA GPU detected: Tesla T4 (14.6 GB)\n"}
+,{"stream_name":"stderr","time":179.529140145,"data":"2026-11-26 12:22:00.682 | INFO     | acestep.core.generation.handler.init_service_orchestrator:initialize_service:96 - [initialize_service] Pre-Ampere CUDA detected: using float16 instead of bfloat16.\n"}
+,{"stream_name":"stderr","time":179.537543502,"data":"2026-11-26 12:22:00.690 | WARNING  | acestep.core.generation.handler.init_service_downloads:_sync_model_code_if_needed:71 - [initialize_service] Model code mismatch detected for 'acestep-v15-turbo': ['modeling_acestep_v15_turbo.py', 'configuration_acestep_v15.py']. Auto-syncing from acestep/models/...\n"}
+,{"stream_name":"stderr","time":179.538322041,"data":"2026-11-26 12:22:00.691 | DEBUG    | acestep.model_downloader:_sync_model_code_files:131 - [Model Sync] Synced modeling_acestep_v15_turbo.py -\u003e /kaggle/temp/ACE-Step-1.5/checkpoints/acestep-v15-turbo/modeling_acestep_v15_turbo.py\n"}
+,{"stream_name":"stderr","time":179.53968747,"data":"2026-11-26 12:22:00.693 | DEBUG    | acestep.model_downloader:_sync_model_code_files:131 - [Model Sync] Synced configuration_acestep_v15.py -\u003e /kaggle/temp/ACE-Step-1.5/checkpoints/acestep-v15-turbo/configuration_acestep_v15.py\n"}
+,{"stream_name":"stderr","time":179.539924785,"data":"2026-11-26 12:22:00.693 | INFO     | acestep.core.generation.handler.init_service_downloads:_sync_model_code_if_needed:76 - [initialize_service] Model code files synced successfully.\n"}
+,{"stream_name":"stderr","time":182.679553541,"data":"2026-11-26 12:22:03.832 | INFO     | acestep.core.generation.handler.init_service_loader:_load_main_model_from_checkpoint:151 - [initialize_service] Pre-Ampere CUDA detected: using eager attention for float16 numerical stability.\n"}
+,{"stream_name":"stderr","time":182.67957925,"data":"2026-11-26 12:22:03.832 | INFO     | acestep.core.generation.handler.init_service_loader:_load_main_model_from_checkpoint:174 - [initialize_service] Attempting to load model with attention implementation: eager\n"}
+,{"stream_name":"stderr","time":204.597670463,"data":"2026-11-26 12:22:25.750 | INFO     | acestep.llm_inference:initialize:609 - loading 5Hz LM tokenizer... it may take 80~90s\n"}
+,{"stream_name":"stderr","time":239.416880766,"data":"2026-11-26 12:23:00.570 | INFO     | acestep.llm_inference:initialize:613 - 5Hz LM tokenizer loaded successfully in 34.82 seconds\n"}
+,{"stream_name":"stderr","time":239.416918498,"data":"2026-11-26 12:23:00.570 | INFO     | acestep.llm_inference:initialize:618 - Initializing constrained decoding processor...\n"}
+,{"stream_name":"stderr","time":239.417014286,"data":"2026-11-26 12:23:00.570 | INFO     | acestep.llm_inference:initialize:624 - Setting constrained decoding max_duration to 480s based on GPU config (tier: tier5)\n"}
+,{"stream_name":"stderr","time":240.980664673,"data":"2026-11-26 12:23:02.133 | DEBUG    | acestep.constrained_logits_processor:_precompute_audio_code_tokens:577 - Found 1535 audio code tokens with values outside valid range [0, 63999]\n"}
+,{"stream_name":"stderr","time":244.826782172,"data":"2026-11-26 12:23:05.980 | INFO     | acestep.llm_inference:initialize:632 - Constrained processor initialized in 5.41 seconds\n"}
+,{"stream_name":"stderr","time":244.827173248,"data":"2026-11-26 12:23:05.980 | INFO     | acestep.llm_inference:initialize:659 - flash_attn not installed: disabling CUDA graph capture for nano-vllm (SDPA fallback uses .item() calls in paged-cache decode that are incompatible with CUDA graph capture)\n"}
+,{"stream_name":"stderr","time":251.92637273,"data":"2026-11-26 12:23:13.079 | INFO     | acestep.llm_inference:_load_pytorch_model:412 - 5Hz LM initialized successfully using PyTorch backend on cuda\n"}
+,{"stream_name":"stdout","time":251.926381746,"data":"models ready in 110s\n"}
+,{"stream_name":"stderr","time":251.926706425,"data":"2026-11-26 12:23:13.080 | INFO     | acestep.inference:generate_music:662 - [generate_music] LLM usage decision: thinking=True, use_cot_caption=True, use_cot_language=True, use_cot_metas=True, need_lm_for_cot=True, llm_initialized=True, use_lm=True\n"}
+,{"stream_name":"stderr","time":251.926785129,"data":"2026-11-26 12:23:13.080 | INFO     | acestep.inference:generate_music:720 - LM chunk 1/1 (infer_type=llm_dit) (size: 1, seeds: [11])\n"}
+,{"stream_name":"stderr","time":251.926903809,"data":"2026-11-26 12:23:13.080 | INFO     | acestep.llm_inference:generate_with_stop_condition:1371 - Phase 1: Generating CoT metadata...\n"}
+,{"stream_name":"stderr","time":251.956424203,"data":"2026-11-26 12:23:13.109 | INFO     | acestep.llm_inference:generate_with_stop_condition:1377 - generate_with_stop_condition: formatted_prompt=\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":251.956444769,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":251.956449126,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":251.956452653,"data":"\n"}
+,{"stream_name":"stderr","time":251.956455878,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":251.956459189,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":251.956462508,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":251.956467321,"data":"cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme\n"}
+,{"stream_name":"stderr","time":251.956476191,"data":"\n"}
+,{"stream_name":"stderr","time":251.956479306,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":251.956497878,"data":"[Instrumental]\n"}
+,{"stream_name":"stderr","time":251.956501708,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":251.956505541,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":251.956509241,"data":"\n"}
+,{"stream_name":"stderr","time":260.50104173,"data":"2026-11-26 12:23:21.654 | DEBUG    | acestep.llm_inference:parse_lm_output:2813 - Debug output text: \u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":260.501077531,"data":"bpm: 91\n"}
+,{"stream_name":"stderr","time":260.501083119,"data":"caption: An emotional and cinematic instrumental piece led by an expressive solo violin\n"}
+,{"stream_name":"stderr","time":260.501088303,"data":"  with heavy vibrato and mournful slides. The track opens with the poignant string\n"}
+,{"stream_name":"stderr","time":260.501092067,"data":"  melody before being joined by a steady, downtempo trip-hop beat featuring a solid\n"}
+,{"stream_name":"stderr","time":260.501095871,"data":"  kick-snare pattern and subtle hi-hats. A breathy flute or duduk-like woodwind instrument\n"}
+,{"stream_name":"stderr","time":260.501099935,"data":"  enters for a contrasting melodic section towards the end, adding another layer of\n"}
+,{"stream_name":"stderr","time":260.501116339,"data":"  texture over atmospheric pads. The arrangement blends classical strings with modern\n"}
+,{"stream_name":"stderr","time":260.501119946,"data":"  electronic production to create a deeply melancholic and introspective soundscape\n"}
+,{"stream_name":"stderr","time":260.501123435,"data":"  that builds dynamically throughout its runtime before fading out on ambient textures.\n"}
+,{"stream_name":"stderr","time":260.501128512,"data":"duration: 88\n"}
+,{"stream_name":"stderr","time":260.50113647,"data":"keyscale: E minor\n"}
+,{"stream_name":"stderr","time":260.501138731,"data":"language: unknown\n"}
+,{"stream_name":"stderr","time":260.501140888,"data":"timesignature: 4\n"}
+,{"stream_name":"stderr","time":260.501143045,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":260.501437622,"data":"2026-11-26 12:23:21.654 | INFO     | acestep.llm_inference:generate_with_stop_condition:1422 - Phase 1 completed in 8.57s. Generated metadata: ['bpm', 'caption', 'duration', 'keyscale', 'language', 'timesignature']\n"}
+,{"stream_name":"stderr","time":260.501706585,"data":"2026-11-26 12:23:21.655 | INFO     | acestep.llm_inference:generate_with_stop_condition:1482 - Phase 2: Generating audio codes...\n"}
+,{"stream_name":"stderr","time":260.50589698,"data":"2026-11-26 12:23:21.659 | INFO     | acestep.llm_inference:generate_with_stop_condition:1490 - generate_with_stop_condition: formatted_prompt_with_cot=\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":260.505915111,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":260.505919576,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":260.505923131,"data":"\n"}
+,{"stream_name":"stderr","time":260.505926301,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":260.505929543,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":260.505932851,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":260.505936652,"data":"cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme\n"}
+,{"stream_name":"stderr","time":260.505941139,"data":"\n"}
+,{"stream_name":"stderr","time":260.505944688,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":260.505947974,"data":"[Instrumental]\n"}
+,{"stream_name":"stderr","time":260.505951955,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":260.505955418,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":260.505958794,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":260.505962102,"data":"bpm: 91\n"}
+,{"stream_name":"stderr","time":260.505965282,"data":"caption: An emotional and cinematic instrumental piece led by an expressive solo violin\n"}
+,{"stream_name":"stderr","time":260.505968855,"data":"  with heavy vibrato and mournful slides. The track opens with the poignant string\n"}
+,{"stream_name":"stderr","time":260.505972212,"data":"  melody before being joined by a steady, downtempo trip-hop beat featuring a solid\n"}
+,{"stream_name":"stderr","time":260.505975622,"data":"  kick-snare pattern and subtle hi-hats. A breathy flute or duduk-like woodwind instrument\n"}
+,{"stream_name":"stderr","time":260.505978907,"data":"  enters for a contrasting melodic section towards the end, adding another layer of\n"}
+,{"stream_name":"stderr","time":260.505982252,"data":"  texture over atmospheric pads. The arrangement blends classical strings with modern\n"}
+,{"stream_name":"stderr","time":260.505993816,"data":"  electronic production to create a deeply melancholic and introspective soundscape\n"}
+,{"stream_name":"stderr","time":260.505997391,"data":"  that builds dynamically throughout its runtime before fading out on ambient textures.\n"}
+,{"stream_name":"stderr","time":260.506000617,"data":"duration: 88\n"}
+,{"stream_name":"stderr","time":260.506005272,"data":"keyscale: E minor\n"}
+,{"stream_name":"stderr","time":260.506013432,"data":"language: unknown\n"}
+,{"stream_name":"stderr","time":260.506015923,"data":"timesignature: 4\n"}
+,{"stream_name":"stderr","time":260.506018051,"data":"\u003c/think\u003e\n"}
+,{"stream_name":"stderr","time":260.506020328,"data":"\n"}
+,{"stream_name":"stderr","time":260.506022408,"data":"\n"}
+,{"stream_name":"stderr","time":260.510738409,"data":"2026-11-26 12:23:21.664 | INFO     | acestep.llm_inference:_build_unconditional_prompt:395 - CFG unconditional prompt (phase=codes, is_batch=False, negative_prompt='NO USER INPUT'):\n"}
+,{"stream_name":"stderr","time":260.510752254,"data":"\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":260.510756305,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":260.510759548,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":260.510762984,"data":"\n"}
+,{"stream_name":"stderr","time":260.510776411,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":260.510779684,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":260.51078469,"data":"NO USER INPUT\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":260.510788148,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":260.51079192,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":260.510795726,"data":"\n"}
+,{"stream_name":"stderr","time":260.510799514,"data":"\u003c/think\u003e\n"}
+,{"stream_name":"stderr","time":260.510802987,"data":"\n"}
+,{"stream_name":"stderr","time":260.510806635,"data":"\n"}
+,{"stream_name":"stderr","time":312.731113972,"data":"2026-11-26 12:24:13.884 | DEBUG    | acestep.llm_inference:parse_lm_output:2813 - Debug output text: \u003c|audio_code_4920|\u003e\u003c|audio_code_7560|\u003e\u003c|audio_code_26624|\u003e\u003c|audio_code_53376|\u003e\u003c|audio_code_2351|\u003e\u003c|audio_code_7415|\u003e\u003c|audio_code_119|\u003e\u003c|audio_code_26751|\u003e\u003c|audio_code_24335|\u003e\u003c|audio_code_63815|\u003e\u003c|audio_code_38608|\u003e\u003c|audio_code_12880|\u003e\u003c|audio_code_15880|\u003e\u003c|audio_code_520|\u003e\u003c|audio_code_26632|\u003e\u003c|audio_code_15677|\u003e\u003c|audio_code_36557|\u003e\u003c|audio_code_26168|\u003e\u003c|audio_code_27177|\u003e\u003c|audio_code_24122|\u003e\u003c|audio_code_2066|\u003e\u003c|audio_code_17456|\u003e\u003c|audio_code_40901|\u003e\u003c|audio_code_40411|\u003e\u003c|audio_code_13000|\u003e\u003c|audio_code_62832|\u003e\u003c|audio_code_63928|\u003e\u003c|audio_code_7440|\u003e\u003c|audio_code_20113|\u003e\u003c|audio_code_25152|\u003e\u003c|audio_code_7478|\u003e\u003c|audio_code_53566|\u003e\u003c|audio_code_2175|\u003e\u003c|audio_code_18591|\u003e\u003c|audio_code_25191|\u003e\u003c|audio_code_38223|\u003e\u003c|audio_code_58206|\u003e\u003c|audio_code_26288|\u003e\u003c|audio_code_39424|\u003e\u003c|audio_code_41984|\u003e\u003c|audio_code_39936|\u003e\u003c|audio_code_26624|\u003e\u003c|audio_code_60767|\u003e\u003c|audio_code_15048|\u003e\u003c|audio_code_22528|\u003e\u003c|audio_code_50233|\u003e\u003c|audio_code_10274|\u003e\u003c|audio_code_5122|\u003e\u003c|audio_code_15997|\u003e\u003c|audio_code_20815|\u003e\u003c|audio_code_51576|\u003e\u003c|audio_code_58240|\u003e\u003c|audio_code_61352|\u003e\u003c|audio_code_32648|\u003e\u003c|audio_code_26352|\u003e\u003c|audio_code_18391|\u003e\u003c|audio_code_1871|\u003e\u003c|audio_code_29759|\u003e\u003c|audio_code_11285|\u003e\u003c|audio_code_1040|\u003e\u003c|audio_code_11288|\u003e\u003c|audio_code_48656|\u003e\u003c|audio_code_53804|\u003e\u003c|audio_code_4671|\u003e\u003c|audio_code_50862|\u003e\u003c|audio_code_14309|\u003e\u003c|audio_code_63431|\u003e\u003c|audio_code_63182|\u003e\u003c|audio_code_7710|\u003e\u003c|audio_code_60943|\u003e\u003c|audio_code_49925|\u003e\u003c|audio_code_56287|\u003e\u003c|audio_code_4376|\u003e\u003c|audio_code_53456|\u003e\u003c|audio_code_28360|\u003e\u003c|audio_code_44105|\u003e\u003c|audio_code_17467|\u003e\u003c|audio_code_47783|\u003e\u003c|audio_code_119|\u003e\u003c|audio_code_44119|\u003e\u003c|audio_code_58271|\u003e\u003c|audio_code_2383|\u003e\u003c|audio_code_12343|\u003e\u003c|audio_code_45590|\u003e\u003c|audio_code_47619|\u003e\u003c|audio_code_5501|\u003e\u003c|audio_code_20861|\u003e\u003c|audio_code_23422|\u003e\u003c|audio_code_10622|\u003e\u003c|audio_code_8062|\u003e\u003c|audio_code_23478|\u003e\u003c|audio_code_23422|\u003e\u003c|audio_code_20926|\u003e\u003c|audio_code_2059|\u003e\u003c|audio_code_32305|\u003e\u003c|audio_code_28103|\u003e\u003c|audio_code_50134|\u003e\u003c|audio_code_5611|\u003e\u003c|audio_code_2434|\u003e\u003c|audio_code_53144|\u003e\u003c|audio_code_45400|\u003e\u003c|audio_code_16672|\u003e\u003c|audio_code_26368|\u003e\u003c|audio_code_7600|\u003e\u003c|audio_code_24520|\u003e\u003c|audio_code_898|\u003e\u003c|audio_code_59891|\u003e\u003c|audio_code_12216|\u003e\u003c|audio_code_24864|\u003e\u003c|audio_code_21560|\u003e\u003c|audio_code_23700|\u003e\u003c|audio_code_11485|\u003e\u003c|audio_code_31447|\u003e\u003c|audio_code_37599|\u003e\u003c|audio_code_36519|\u003e\u003c|audio_code_22743|\u003e\u003c|audio_code_2294|\u003e\u003c|audio_code_5672|\u003e\u003c|audio_code_2584|\u003e\u003c|audio_code_16|\u003e\u003c|audio_code_0|\u003e\u003c|audio_code_36432|\u003e\u003c|audio_code_36455|\u003e\u003c|audio_code_50841|\u003e\u003c|audio_code_50696|\u003e\u003c|audio_code_23088|\u003e\u003c|audio_code_1550|\u003e\u003c|audio_code_48698|\u003e\u003c|audio_code_52518|\u003e\u003c|audio_code_44739|\u003e\u003c|audio_code_53664|\u003e\u003c|audio_code_27480|\u003e\u003c|audio_code_28944|\u003e\u003c|audio_code_2937|\u003e\u003c|audio_code_63416|\u003e\u003c|audio_code_3160|\u003e\u003c|audio_code_28704|\u003e\u003c|audio_code_49893|\u003e\u003c|audio_code_10606|\u003e\u003c|audio_code_35991|\u003e\u003c|audio_code_10775|\u003e\u003c|audio_code_3263|\u003e\u003c|audio_code_2183|\u003e\u003c|audio_code_30404|\u003e\u003c|audio_code_35328|\u003e\u003c|audio_code_35384|\u003e\u003c|audio_code_20024|\u003e\u003c|audio_code_16896|\u003e\u003c|audio_code_18627|\u003e\u003c|audio_code_63614|\u003e\u003c|audio_code_4096|\u003e\u003c|audio_code_9272|\u003e\u003c|audio_code_52232|\u003e\u003c|audio_code_33830|\u003e\u003c|audio_code_2055|\u003e\u003c|audio_code_12605|\u003e\u003c|audio_code_62841|\u003e\u003c|audio_code_45912|\u003e\u003c|audio_code_29008|\u003e\u003c|audio_code_26424|\u003e\u003c|audio_code_9656|\u003e\u003c|audio_code_12208|\u003e\u003c|audio_code_62708|\u003e\u003c|audio_code_7846|\u003e\u003c|audio_code_29247|\u003e\u003c|audio_code_27648|\u003e\u003c|audio_code_25096|\u003e\u003c|audio_code_22016|\u003e\u003c|audio_code_10357|\u003e\u003c|audio_code_21046|\u003e\u003c|audio_code_10695|\u003e\u003c|audio_code_12687|\u003e\u003c|audio_code_62734|\u003e\u003c|audio_code_49148|\u003e\u003c|audio_code_44013|\u003e\u003c|audio_code_52261|\u003e\u003c|audio_code_39463|\u003e\u003c|audio_code_31205|\u003e\u003c|audio_code_26579|\u003e\u003c|audio_code_21304|\u003e\u003c|audio_code_61368|\u003e\u003c|audio_code_24488|\u003e\u003c|audio_code_11960|\u003e\u003c|audio_code_17663|\u003e\u003c|audio_code_50415|\u003e\u003c|audio_code_14983|\u003e\u003c|audio_code_8879|\u003e\u003c|audio_code_7079|\u003e\u003c|audio_code_10159|\u003e\u003c|audio_code_19079|\u003e\u003c|audio_code_6186|\u003e\u003c|audio_code_54330|\u003e\u003c|audio_code_10166|\u003e\u003c|audio_code_10174|\u003e\u003c|audio_code_10238|\u003e\u003c|audio_code_10174|\u003e\u003c|audio_code_12285|\u003e\u003c|audio_code_10239|\u003e\u003c|audio_code_10167|\u003e\u003c|audio_code_8183|\u003e\u003c|audio_code_35393|\u003e\u003c|audio_code_26682|\u003e\u003c|audio_code_30663|\u003e\u003c|audio_code_50642|\u003e\u003c|audio_code_58630|\u003e\u003c|audio_code_56304|\u003e\u003c|audio_code_9632|\u003e\u003c|audio_code_40272|\u003e\u003c|audio_code_15624|\u003e\u003c|audio_code_39288|\u003e\u003c|audio_code_10232|\u003e\u003c|audio_code_21960|\u003e\u003c|audio_code_15347|\u003e\u003c|audio_code_57281|\u003e\u003c|audio_code_10096|\u003e\u003c|audio_code_0|\u003e\u003c|audio_code_13320|\u003e\u003c|audio_code_17175|\u003e\u003c|audio_code_10151|\u003e\u003c|audio_code_3791|\u003e\u003c|audio_code_1711|\u003e\u003c|audio_code_5831|\u003e\u003c|audio_code_10031|\u003e\u003c|audio_code_10173|\u003e\u003c|audio_code_25192|\u003e\u003c|audio_code_25192|\u003e\u003c|audio_code_12400|\u003e\u003c|audio_code_25128|\u003e\u003c|audio_code_63926|\u003e\u003c|audio_code_4311|\u003e\u003c|audio_code_7192|\u003e\u003c|audio_code_24680|\u003e\u003c|audio_code_10769|\u003e\u003c|audio_code_56322|\u003e\u003c|audio_code_40507|\u003e\u003c|audio_code_12663|\u003e\u003c|audio_code_53127|\u003e\u003c|audio_code_13672|\u003e\u003c|audio_code_7992|\u003e\u003c|audio_code_40824|\u003e\u003c|audio_code_12720|\u003e\u003c|audio_code_24456|\u003e\u003c|audio_code_39440|\u003e\u003c|audio_code_18627|\u003e\u003c|audio_code_21190|\u003e\u003c|audio_code_15047|\u003e\u003c|audio_code_31895|\u003e\u003c|audio_code_48895|\u003e\u003c|audio_code_3007|\u003e\u003c|audio_code_2415|\u003e\u003c|audio_code_53520|\u003e\u003c|audio_code_22568|\u003e\u003c|audio_code_22568|\u003e\u003c|audio_code_9968|\u003e\u003c|audio_code_7720|\u003e\u003c|audio_code_33215|\u003e\u003c|audio_code_13446|\u003e\u003c|audio_code_25200|\u003e\u003c|audio_code_25321|\u003e\u003c|audio_code_13361|\u003e\u003c|audio_code_7698|\u003e\u003c|audio_code_39994|\u003e\u003c|audio_code_28111|\u003e\u003c|audio_code_61900|\u003e\u003c|audio_code_15224|\u003e\u003c|audio_code_61872|\u003e\u003c|audio_code_63920|\u003e\u003c|audio_code_27408|\u003e\u003c|audio_code_6492|\u003e\u003c|audio_code_31220|\u003e\u003c|audio_code_45575|\u003e\u003c|audio_code_543|\u003e\u003c|audio_code_9216|\u003e\u003c|audio_code_21560|\u003e\u003c|audio_code_23608|\u003e\u003c|audio_code_52261|\u003e\u003c|audio_code_1070|\u003e\u003c|audio_code_27991|\u003e\u003c|audio_code_15047|\u003e\u003c|audio_code_45558|\u003e\u003c|audio_code_42438|\u003e\u003c|audio_code_1934|\u003e\u003c|audio_code_30258|\u003e\u003c|audio_code_12295|\u003e\u003c|audio_code_44979|\u003e\u003c|audio_code_56216|\u003e\u003c|audio_code_6928|\u003e\u003c|audio_code_40280|\u003e\u003c|audio_code_58084|\u003e\u003c|audio_code_9259|\u003e\u003c|audio_code_2295|\u003e\u003c|audio_code_21183|\u003e\u003c|audio_code_63207|\u003e\u003c|audio_code_10111|\u003e\u003c|audio_code_7455|\u003e\u003c|audio_code_18639|\u003e\u003c|audio_code_11439|\u003e\u003c|audio_code_51234|\u003e\u003c|audio_code_23293|\u003e\u003c|audio_code_20918|\u003e\u003c|audio_code_20854|\u003e\u003c|audio_code_10677|\u003e\u003c|audio_code_8126|\u003e\u003c|audio_code_12799|\u003e\u003c|audio_code_22975|\u003e\u003c|audio_code_23038|\u003e\u003c|audio_code_11644|\u003e\u003c|audio_code_5121|\u003e\u003c|audio_code_16254|\u003e\u003c|audio_code_43463|\u003e\u003c|audio_code_33248|\u003e\u003c|audio_code_24023|\u003e\u003c|audio_code_11192|\u003e\u003c|audio_code_63984|\u003e\u003c|audio_code_58256|\u003e\u003c|audio_code_27016|\u003e\u003c|audio_code_24496|\u003e\u003c|audio_code_7665|\u003e\u003c|audio_code_26576|\u003e\u003c|audio_code_15811|\u003e\u003c|audio_code_63456|\u003e\u003c|audio_code_15825|\u003e\u003c|audio_code_22208|\u003e\u003c|audio_code_18836|\u003e\u003c|audio_code_50661|\u003e\u003c|audio_code_53686|\u003e\u003c|audio_code_4415|\u003e\u003c|audio_code_54645|\u003e\u003c|audio_code_42462|\u003e\u003c|audio_code_48116|\u003e\u003c|audio_code_48928|\u003e\u003c|audio_code_9089|\u003e\u003c|audio_code_34785|\u003e\u003c|audio_code_10700|\u003e\u003c|audio_code_48618|\u003e\u003c|audio_code_25860|\u003e\u003c|audio_code_59850|\u003e\u003c|audio_code_51040|\u003e\u003c|audio_code_60683|\u003e\u003c|audio_code_20702|\u003e\u003c|audio_code_52748|\u003e\u003c|audio_code_19387|\u003e\u003c|audio_code_36803|\u003e\u003c|audio_code_13771|\u003e\u003c|audio_code_35320|\u003e\u003c|audio_code_36827|\u003e\u003c|audio_code_53186|\u003e\u003c|audio_code_20440|\u003e\u003c|audio_code_57244|\u003e\u003c|audio_code_27921|\u003e\u003c|audio_code_56124|\u003e\u003c|audio_code_1411|\u003e\u003c|audio_code_3390|\u003e\u003c|audio_code_3333|\u003e\u003c|audio_code_436|\u003e\u003c|audio_code_53692|\u003e\u003c|audio_code_322|\u003e\u003c|audio_code_54568|\u003e\u003c|audio_code_44499|\u003e\u003c|audio_code_61905|\u003e\u003c|audio_code_25032|\u003e\u003c|audio_code_24539|\u003e\u003c|audio_code_37283|\u003e\u003c|audio_code_50976|\u003e\u003c|audio_code_38209|\u003e\u003c|audio_code_18219|\u003e\u003c|audio_code_1027|\u003e\u003c|audio_code_46456|\u003e\u003c|audio_code_17895|\u003e\u003c|audio_code_1017|\u003e\u003c|audio_code_952|\u003e\u003c|audio_code_25081|\u003e\u003c|audio_code_56770|\u003e\u003c|audio_code_63946|\u003e\u003c|audio_code_28112|\u003e\u003c|audio_code_25559|\u003e\u003c|audio_code_1349|\u003e\u003c|audio_code_43261|\u003e\u003c|audio_code_51155|\u003e\u003c|audio_code_25408|\u003e\u003c|audio_code_24569|\u003e\u003c|audio_code_4603|\u003e\u003c|audio_code_16573|\u003e\u003c|audio_code_42436|\u003e\u003c|audio_code_54251|\u003e\u003c|audio_code_40898|\u003e\u003c|audio_code_53185|\u003e\u003c|audio_code_54770|\u003e\u003c|audio_code_51607|\u003e\u003c|audio_code_13675|\u003e\u003c|audio_code_49473|\u003e\u003c|audio_code_60369|\u003e\u003c|audio_code_17368|\u003e\u003c|audio_code_13272|\u003e\u003c|audio_code_28099|\u003e\u003c|audio_code_39156|\u003e\u003c|audio_code_10570|\u003e\u003c|audio_code_45029|\u003e\u003c|audio_code_12791|\u003e\u003c|audio_code_28997|\u003e\u003c|audio_code_40405|\u003e\u003c|audio_code_14300|\u003e\u003c|audio_code_60919|\u003e\u003c|audio_code_29909|\u003e\u003c|audio_code_35131|\u003e\u003c|audio_code_10235|\u003e\u003c|audio_code_8698|\u003e\u003c|audio_code_56818|\u003e\u003c|audio_code_41959|\u003e\u003c|audio_code_36747|\u003e\u003c|audio_code_50113|\u003e\u003c|audio_code_11226|\u003e\u003c|audio_code_8603|\u003e\u003c|audio_code_58771|\u003e\u003c|audio_code_28090|\u003e\u003c|audio_code_48580|\u003e\u003c|audio_code_62947|\u003e\u003c|audio_code_54225|\u003e\u003c|audio_code_40394|\u003e\u003c|audio_code_456|\u003e\u003c|audio_code_49656|\u003e\u003c|audio_code_58825|\u003e\u003c|audio_code_22854|\u003e\u003c|audio_code_35855|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_37127|\u003e\u003c|audio_code_35855|\u003e\u003c|audio_code_35847|\u003e\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":312.731439741,"data":"2026-11-26 12:24:13.884 | INFO     | acestep.llm_inference:generate_with_stop_condition:1650 - Phase 2 completed in 52.23s. Generated 440 audio codes\n"}
+,{"stream_name":"stderr","time":312.731924344,"data":"2026-11-26 12:24:13.885 | INFO     | acestep.core.generation.handler.generate_music:generate_music:313 - [generate_music] Turbo model detected: overriding guidance_scale 7.0 -\u003e 1.0 (turbo does not use CFG).\n"}
+,{"stream_name":"stderr","time":312.731941521,"data":"2026-11-26 12:24:13.885 | INFO     | acestep.core.generation.handler.generate_music:generate_music:329 - [generate_music] Starting generation...\n"}
+,{"stream_name":"stderr","time":312.73203426,"data":"2026-11-26 12:24:13.885 | INFO     | acestep.core.generation.handler.generate_music:generate_music:332 - [generate_music] Preparing inputs...\n"}
+,{"stream_name":"stderr","time":312.737978084,"data":"2026-11-26 12:24:13.891 | INFO     | acestep.core.generation.handler.generate_music_request:_prepare_reference_and_source_audio:204 - [generate_music] cover task: no src_audio but audio codes provided, proceeding with codes\n"}
+,{"stream_name":"stderr","time":313.165309688,"data":"2026-11-26 12:24:14.318 | INFO     | acestep.core.generation.handler.generate_music:_vram_preflight_check:157 - [generate_music] VRAM pre-flight: 5.08 GB free, ~0.94 GB needed (batch=1, duration=88s, mode=turbo).\n"}
+,{"stream_name":"stderr","time":313.16534709,"data":"2026-11-26 12:24:14.318 | INFO     | acestep.core.generation.handler.progress:_start_diffusion_progress_estimator:179 - [progress] No timing history — using fallback estimate (2.5s/step for batch_size=1).  This will self-calibrate after the first generation.\n"}
+,{"stream_name":"stderr","time":313.188589455,"data":"2026-11-26 12:24:14.341 | INFO     | acestep.core.generation.handler.conditioning_target:_prepare_target_latents_and_wavs:78 - [generate_music] Decoding audio codes for item 0...\n"}
+,{"stream_name":"stderr","time":313.764078455,"data":"2026-11-26 12:24:14.917 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_precomputed_lm_hints:31 - [generate_music] Decoding audio codes for LM hints for item 0...\n"}
+,{"stream_name":"stderr","time":313.770577813,"data":"2026-11-26 12:24:14.924 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:119 - \n"}
+,{"stream_name":"stderr","time":313.77059093,"data":"======================================================================\n"}
+,{"stream_name":"stderr","time":313.770681762,"data":"2026-11-26 12:24:14.924 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:120 - 🔍 [DEBUG] DiT TEXT ENCODER INPUT (Inference)\n"}
+,{"stream_name":"stderr","time":313.770723846,"data":"2026-11-26 12:24:14.924 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:121 - ======================================================================\n"}
+,{"stream_name":"stderr","time":313.770868952,"data":"2026-11-26 12:24:14.924 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:122 - text_prompt:\n"}
+,{"stream_name":"stderr","time":313.770880276,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":313.770884108,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":313.770887662,"data":"\n"}
+,{"stream_name":"stderr","time":313.770891303,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":313.770898029,"data":"An emotional and cinematic instrumental piece led by an expressive solo violin with heavy vibrato and mournful slides. The track opens with the poignant string melody before being joined by a steady, downtempo trip-hop beat featuring a solid kick-snare pattern and subtle hi-hats. A breathy flute or duduk-like woodwind instrument enters for a contrasting melodic section towards the end, adding another layer of texture over atmospheric pads. The arrangement blends classical strings with modern electronic production to create a deeply melancholic and introspective soundscape that builds dynamically throughout its runtime before fading out on ambient textures.\n"}
+,{"stream_name":"stderr","time":313.770904758,"data":"\n"}
+,{"stream_name":"stderr","time":313.770908309,"data":"# Metas\n"}
+,{"stream_name":"stderr","time":313.770911896,"data":"- bpm: 91\n"}
+,{"stream_name":"stderr","time":313.770915201,"data":"- timesignature: 4\n"}
+,{"stream_name":"stderr","time":313.770937588,"data":"- keyscale: E minor\n"}
+,{"stream_name":"stderr","time":313.770942059,"data":"- duration: 88 seconds\n"}
+,{"stream_name":"stderr","time":313.770945505,"data":"\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stderr","time":313.770949354,"data":"\n"}
+,{"stream_name":"stderr","time":313.770963536,"data":"2026-11-26 12:24:14.924 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:123 - ======================================================================\n"}
+,{"stream_name":"stderr","time":313.771000589,"data":"2026-11-26 12:24:14.924 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:124 - lyrics_text:\n"}
+,{"stream_name":"stderr","time":313.771006514,"data":"# Languages\n"}
+,{"stream_name":"stderr","time":313.771009876,"data":"unknown\n"}
+,{"stream_name":"stderr","time":313.771012873,"data":"\n"}
+,{"stream_name":"stderr","time":313.771015813,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":313.771018635,"data":"[Instrumental]\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stderr","time":313.771063611,"data":"2026-11-26 12:24:14.924 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:125 - ======================================================================\n"}
+,{"stream_name":"stderr","time":313.771070585,"data":"\n"}
+,{"stream_name":"stderr","time":313.800463285,"data":"2026-11-26 12:24:14.953 | INFO     | acestep.core.generation.handler.conditioning_embed:preprocess_batch:110 - [preprocess_batch] Inferring prompt embeddings...\n"}
+,{"stream_name":"stderr","time":313.848033246,"data":"2026-11-26 12:24:15.001 | INFO     | acestep.core.generation.handler.conditioning_embed:preprocess_batch:113 - [preprocess_batch] Inferring lyric embeddings...\n"}
+,{"stream_name":"stderr","time":313.849182871,"data":"2026-11-26 12:24:15.002 | INFO     | acestep.core.generation.handler.service_generate_execute:_execute_service_generate_diffusion:173 - [service_generate] Generating audio... (DiT backend: PyTorch (cuda))\n"}
+,{"stream_name":"stderr","time":313.913307223,"data":"2026-11-26 12:24:15.066 | INFO     | acestep.core.generation.handler.service_generate_execute:_execute_service_generate_diffusion:276 - [service_generate] DiT diffusion via PyTorch (cuda)...\n"}
+,{"stream_name":"stderr","time":313.953703145,"data":"2026-11-26 12:24:15.106 | INFO     | acestep.models.common.dcw_correction:__init__:98 - [DCW] Active — mode=double, scaler=0.0500, high_scaler=0.0200, wavelet='haar'\n"}
+,{"stream_name":"stderr","time":315.088193322,"data":"2026-11-26 12:24:16.241 | INFO     | acestep.models.common.dcw_loader:get:84 - [DCW] Built DWT1D for wavelet='haar' (low-pass filter taps=2, device=cuda:0, dtype=torch.float16).\n"}
+,{"stream_name":"stderr","time":317.52735738,"data":"2026-11-26 12:24:18.680 | INFO     | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:42 - [generate_music] Model generation completed. Decoding latents...\n"}
+,{"stream_name":"stderr","time":317.528009269,"data":"2026-11-26 12:24:18.681 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:64 - [generate_music] pred_latents: torch.Size([1, 2200, 64]), dtype=torch.float16\n"}
+,{"stream_name":"stderr","time":317.528027519,"data":"2026-11-26 12:24:18.681 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:65 - [generate_music] time_costs: {'encoder_time_cost': 0.03183174133300781, 'diffusion_time_cost': 3.5812416076660156, 'diffusion_per_step_time_cost': 0.44765520095825195, 'total_time_cost': 3.6130733489990234, 'offload_time_cost': 0.0}\n"}
+,{"stream_name":"stderr","time":317.672662495,"data":"2026-11-26 12:24:18.826 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:127 - [generate_music] Decoding latents with VAE...\n"}
+,{"stream_name":"stderr","time":317.675836986,"data":"2026-11-26 12:24:18.829 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:136 - [generate_music] Before VAE decode: allocated=9.37GB, max=13.63GB\n"}
+,{"stream_name":"stderr","time":317.676342376,"data":"2026-11-26 12:24:18.829 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:154 - [generate_music] Effective free VRAM before VAE decode: 5.05 GB\n"}
+,{"stream_name":"stderr","time":317.676353925,"data":"2026-11-26 12:24:18.829 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:172 - [generate_music] Using tiled VAE decode to reduce VRAM usage...\n"}
+,{"stream_name":"stderr","time":317.676901688,"data":"2026-11-26 12:24:18.830 | DEBUG    | acestep.core.generation.handler.memory_utils:_get_auto_decode_chunk_size:108 - [_get_auto_decode_chunk_size] Effective free VRAM: 5.05 GB\n"}
+,{"stream_name":"stderr","time":317.677365562,"data":"2026-11-26 12:24:18.830 | DEBUG    | acestep.core.generation.handler.memory_utils:_should_offload_wav_to_cpu:131 - [_should_offload_wav_to_cpu] Effective free VRAM: 5.05 GB\n"}
+,{"stream_name":"stderr","time":317.677413888,"data":"2026-11-26 12:24:18.830 | INFO     | acestep.core.generation.handler.vae_decode:tiled_decode:56 - [tiled_decode] chunk_size=128, offload_wav_to_cpu=True, latents_shape=torch.Size([1, 64, 2200])\n"}
+,{"stream_name":"stderr","time":317.677511699,"data":"2026-11-26 12:24:18.831 | WARNING  | acestep.core.generation.handler.vae_decode_chunks:_tiled_decode_inner:39 - [tiled_decode] Reduced overlap from 64 to 32 for chunk_size=128\n"}
+,{"stream_name":"stderr","time":321.542478778,"data":"2026-11-26 12:24:22.695 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:193 - [generate_music] After VAE decode: allocated=9.53GB, max=13.63GB\n"}
+,{"stream_name":"stderr","time":321.994795422,"data":"2026-11-26 12:24:23.148 | INFO     | acestep.core.generation.handler.generate_music_payload:_build_generate_music_success_payload:38 - [generate_music] VAE decode completed. Preparing audio tensors...\n"}
+,{"stream_name":"stderr","time":321.995753554,"data":"2026-11-26 12:24:23.148 | INFO     | acestep.core.generation.handler.generate_music_payload:_build_generate_music_success_payload:50 - [generate_music] Done! Generated 1 audio tensors.\n"}
+,{"stream_name":"stderr","time":322.434556791,"data":"2026-11-26 12:24:23.587 | INFO     | acestep.inference:generate_music:1002 - [Normalization] Audio 0 BEFORE: Peak=1.0000, Target=-1.0dB\n"}
+,{"stream_name":"stderr","time":322.491370437,"data":"2026-11-26 12:24:23.644 | INFO     | acestep.inference:generate_music:1007 - [Normalization] Audio 0 AFTER: Peak=0.8913\n"}
+,{"stream_name":"stderr","time":323.22056109,"data":"2026-11-26 12:24:24.373 | DEBUG    | acestep.audio_utils:save_audio:319 - [AudioSaver] Saved audio to /kaggle/working/tmp/87f529af-5fb9-20a2-46c9-42fc3589d6e0.wav (wav, 48000Hz)\n"}
+,{"stream_name":"stdout","time":323.227898817,"data":"Using precomputed LM hints\n"}
+,{"stream_name":"stdout","time":323.227915095,"data":"Using precomputed LM hints\n"}
+,{"stream_name":"stdout","time":323.227919291,"data":"seed 11: 71.3s\n"}
+,{"stream_name":"stderr","time":323.228110652,"data":"2026-11-26 12:24:24.381 | INFO     | acestep.inference:generate_music:662 - [generate_music] LLM usage decision: thinking=True, use_cot_caption=True, use_cot_language=True, use_cot_metas=True, need_lm_for_cot=True, llm_initialized=True, use_lm=True\n"}
+,{"stream_name":"stderr","time":323.228168454,"data":"2026-11-26 12:24:24.381 | INFO     | acestep.inference:generate_music:720 - LM chunk 1/1 (infer_type=llm_dit) (size: 1, seeds: [23])\n"}
+,{"stream_name":"stderr","time":323.228279027,"data":"2026-11-26 12:24:24.381 | INFO     | acestep.llm_inference:generate_with_stop_condition:1371 - Phase 1: Generating CoT metadata...\n"}
+,{"stream_name":"stderr","time":323.231797287,"data":"2026-11-26 12:24:24.385 | INFO     | acestep.llm_inference:generate_with_stop_condition:1377 - generate_with_stop_condition: formatted_prompt=\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":323.231809685,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":323.231818845,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":323.231821598,"data":"\n"}
+,{"stream_name":"stderr","time":323.231823748,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":323.2318261,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":323.231828304,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":323.23183063,"data":"cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme\n"}
+,{"stream_name":"stderr","time":323.231833149,"data":"\n"}
+,{"stream_name":"stderr","time":323.231835538,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":323.231837678,"data":"[Instrumental]\n"}
+,{"stream_name":"stderr","time":323.231839807,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":323.231842046,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":323.231844371,"data":"\n"}
+,{"stream_name":"stderr","time":330.31765556,"data":"2026-11-26 12:24:31.470 | DEBUG    | acestep.llm_inference:parse_lm_output:2813 - Debug output text: \u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":330.317698727,"data":"bpm: 77\n"}
+,{"stream_name":"stderr","time":330.317704205,"data":"caption: An emotional and cinematic instrumental piece begins with a delicate, arpeggiated\n"}
+,{"stream_name":"stderr","time":330.317708739,"data":"  piano melody. A breathy and expressive flute enters, carrying the main theme with\n"}
+,{"stream_name":"stderr","time":330.317713035,"data":"  poignant phrasing. The arrangement gradually builds as a lush string section swells\n"}
+,{"stream_name":"stderr","time":330.317717133,"data":"  in the background, adding harmonic depth and dramatic tension. The piece reaches\n"}
+,{"stream_name":"stderr","time":330.317721177,"data":"  an emotional peak with soaring flute lines and powerful, sustained chords before\n"}
+,{"stream_name":"stderr","time":330.317724693,"data":"  transitioning into a more reflective section. The track concludes with a gentle\n"}
+,{"stream_name":"stderr","time":330.317728283,"data":"  decrescendo, fading out with the lingering sounds of the flute and piano, leaving\n"}
+,{"stream_name":"stderr","time":330.317731756,"data":"  a feeling of wistful resolution.\n"}
+,{"stream_name":"stderr","time":330.317735006,"data":"duration: 88\n"}
+,{"stream_name":"stderr","time":330.317738195,"data":"keyscale: E minor\n"}
+,{"stream_name":"stderr","time":330.317741886,"data":"language: unknown\n"}
+,{"stream_name":"stderr","time":330.317745274,"data":"timesignature: 3\n"}
+,{"stream_name":"stderr","time":330.317749965,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":330.317757807,"data":"2026-11-26 12:24:31.471 | INFO     | acestep.llm_inference:generate_with_stop_condition:1422 - Phase 1 completed in 7.09s. Generated metadata: ['bpm', 'caption', 'duration', 'keyscale', 'language', 'timesignature']\n"}
+,{"stream_name":"stderr","time":330.317809146,"data":"2026-11-26 12:24:31.471 | INFO     | acestep.llm_inference:generate_with_stop_condition:1482 - Phase 2: Generating audio codes...\n"}
+,{"stream_name":"stderr","time":330.32245842,"data":"2026-11-26 12:24:31.475 | INFO     | acestep.llm_inference:generate_with_stop_condition:1490 - generate_with_stop_condition: formatted_prompt_with_cot=\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":330.32248172,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":330.322484557,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":330.322486938,"data":"\n"}
+,{"stream_name":"stderr","time":330.32248917,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":330.322491413,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":330.322493655,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":330.322495935,"data":"cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme\n"}
+,{"stream_name":"stderr","time":330.322498505,"data":"\n"}
+,{"stream_name":"stderr","time":330.322500595,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":330.322502716,"data":"[Instrumental]\n"}
+,{"stream_name":"stderr","time":330.322504927,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":330.322507142,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":330.322509362,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":330.322511547,"data":"bpm: 77\n"}
+,{"stream_name":"stderr","time":330.322513904,"data":"caption: An emotional and cinematic instrumental piece begins with a delicate, arpeggiated\n"}
+,{"stream_name":"stderr","time":330.322535698,"data":"  piano melody. A breathy and expressive flute enters, carrying the main theme with\n"}
+,{"stream_name":"stderr","time":330.322539642,"data":"  poignant phrasing. The arrangement gradually builds as a lush string section swells\n"}
+,{"stream_name":"stderr","time":330.322543675,"data":"  in the background, adding harmonic depth and dramatic tension. The piece reaches\n"}
+,{"stream_name":"stderr","time":330.322547797,"data":"  an emotional peak with soaring flute lines and powerful, sustained chords before\n"}
+,{"stream_name":"stderr","time":330.322551725,"data":"  transitioning into a more reflective section. The track concludes with a gentle\n"}
+,{"stream_name":"stderr","time":330.322555267,"data":"  decrescendo, fading out with the lingering sounds of the flute and piano, leaving\n"}
+,{"stream_name":"stderr","time":330.322558752,"data":"  a feeling of wistful resolution.\n"}
+,{"stream_name":"stderr","time":330.322562135,"data":"duration: 88\n"}
+,{"stream_name":"stderr","time":330.3225653,"data":"keyscale: E minor\n"}
+,{"stream_name":"stderr","time":330.322568503,"data":"language: unknown\n"}
+,{"stream_name":"stderr","time":330.322571737,"data":"timesignature: 3\n"}
+,{"stream_name":"stderr","time":330.322574932,"data":"\u003c/think\u003e\n"}
+,{"stream_name":"stderr","time":330.322579742,"data":"\n"}
+,{"stream_name":"stderr","time":330.3225867,"data":"\n"}
+,{"stream_name":"stderr","time":330.326891847,"data":"2026-11-26 12:24:31.480 | INFO     | acestep.llm_inference:_build_unconditional_prompt:395 - CFG unconditional prompt (phase=codes, is_batch=False, negative_prompt='NO USER INPUT'):\n"}
+,{"stream_name":"stderr","time":330.326904025,"data":"\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":330.326907758,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":330.326925402,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":330.326928056,"data":"\n"}
+,{"stream_name":"stderr","time":330.32693019,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":330.32693238,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":330.326934594,"data":"NO USER INPUT\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":330.326937569,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":330.326939917,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":330.326942113,"data":"\n"}
+,{"stream_name":"stderr","time":330.326944243,"data":"\u003c/think\u003e\n"}
+,{"stream_name":"stderr","time":330.326946498,"data":"\n"}
+,{"stream_name":"stderr","time":330.326948583,"data":"\n"}
+,{"stream_name":"stderr","time":385.024943625,"data":"2026-11-26 12:25:26.178 | DEBUG    | acestep.llm_inference:parse_lm_output:2813 - Debug output text: \u003c|audio_code_58496|\u003e\u003c|audio_code_61680|\u003e\u003c|audio_code_52472|\u003e\u003c|audio_code_16696|\u003e\u003c|audio_code_32383|\u003e\u003c|audio_code_47806|\u003e\u003c|audio_code_3385|\u003e\u003c|audio_code_33145|\u003e\u003c|audio_code_50916|\u003e\u003c|audio_code_5372|\u003e\u003c|audio_code_42266|\u003e\u003c|audio_code_32169|\u003e\u003c|audio_code_39976|\u003e\u003c|audio_code_27256|\u003e\u003c|audio_code_45768|\u003e\u003c|audio_code_25856|\u003e\u003c|audio_code_50767|\u003e\u003c|audio_code_50886|\u003e\u003c|audio_code_50962|\u003e\u003c|audio_code_23385|\u003e\u003c|audio_code_49372|\u003e\u003c|audio_code_12604|\u003e\u003c|audio_code_54081|\u003e\u003c|audio_code_25498|\u003e\u003c|audio_code_21056|\u003e\u003c|audio_code_56649|\u003e\u003c|audio_code_3844|\u003e\u003c|audio_code_30700|\u003e\u003c|audio_code_50831|\u003e\u003c|audio_code_48799|\u003e\u003c|audio_code_18631|\u003e\u003c|audio_code_48990|\u003e\u003c|audio_code_2302|\u003e\u003c|audio_code_54566|\u003e\u003c|audio_code_21767|\u003e\u003c|audio_code_42332|\u003e\u003c|audio_code_12480|\u003e\u003c|audio_code_41889|\u003e\u003c|audio_code_25476|\u003e\u003c|audio_code_41899|\u003e\u003c|audio_code_38282|\u003e\u003c|audio_code_6010|\u003e\u003c|audio_code_26480|\u003e\u003c|audio_code_37688|\u003e\u003c|audio_code_10272|\u003e\u003c|audio_code_32824|\u003e\u003c|audio_code_25733|\u003e\u003c|audio_code_15166|\u003e\u003c|audio_code_5191|\u003e\u003c|audio_code_30327|\u003e\u003c|audio_code_35919|\u003e\u003c|audio_code_14855|\u003e\u003c|audio_code_31799|\u003e\u003c|audio_code_14463|\u003e\u003c|audio_code_42343|\u003e\u003c|audio_code_198|\u003e\u003c|audio_code_4343|\u003e\u003c|audio_code_4101|\u003e\u003c|audio_code_59917|\u003e\u003c|audio_code_2170|\u003e\u003c|audio_code_45275|\u003e\u003c|audio_code_2299|\u003e\u003c|audio_code_26378|\u003e\u003c|audio_code_61251|\u003e\u003c|audio_code_41874|\u003e\u003c|audio_code_25481|\u003e\u003c|audio_code_32008|\u003e\u003c|audio_code_88|\u003e\u003c|audio_code_26656|\u003e\u003c|audio_code_63795|\u003e\u003c|audio_code_4860|\u003e\u003c|audio_code_41645|\u003e\u003c|audio_code_38071|\u003e\u003c|audio_code_59471|\u003e\u003c|audio_code_15|\u003e\u003c|audio_code_33415|\u003e\u003c|audio_code_38111|\u003e\u003c|audio_code_36549|\u003e\u003c|audio_code_36206|\u003e\u003c|audio_code_37567|\u003e\u003c|audio_code_48791|\u003e\u003c|audio_code_17467|\u003e\u003c|audio_code_59939|\u003e\u003c|audio_code_27825|\u003e\u003c|audio_code_16608|\u003e\u003c|audio_code_30440|\u003e\u003c|audio_code_27432|\u003e\u003c|audio_code_39168|\u003e\u003c|audio_code_31560|\u003e\u003c|audio_code_46368|\u003e\u003c|audio_code_18736|\u003e\u003c|audio_code_44392|\u003e\u003c|audio_code_37816|\u003e\u003c|audio_code_3328|\u003e\u003c|audio_code_40736|\u003e\u003c|audio_code_18438|\u003e\u003c|audio_code_63526|\u003e\u003c|audio_code_23103|\u003e\u003c|audio_code_53287|\u003e\u003c|audio_code_25135|\u003e\u003c|audio_code_44063|\u003e\u003c|audio_code_12549|\u003e\u003c|audio_code_41895|\u003e\u003c|audio_code_15168|\u003e\u003c|audio_code_32120|\u003e\u003c|audio_code_25413|\u003e\u003c|audio_code_42372|\u003e\u003c|audio_code_1282|\u003e\u003c|audio_code_43824|\u003e\u003c|audio_code_40824|\u003e\u003c|audio_code_18192|\u003e\u003c|audio_code_27936|\u003e\u003c|audio_code_9000|\u003e\u003c|audio_code_51088|\u003e\u003c|audio_code_9992|\u003e\u003c|audio_code_27969|\u003e\u003c|audio_code_1865|\u003e\u003c|audio_code_27904|\u003e\u003c|audio_code_15184|\u003e\u003c|audio_code_28580|\u003e\u003c|audio_code_25478|\u003e\u003c|audio_code_16374|\u003e\u003c|audio_code_51182|\u003e\u003c|audio_code_7558|\u003e\u003c|audio_code_38361|\u003e\u003c|audio_code_3392|\u003e\u003c|audio_code_42081|\u003e\u003c|audio_code_12290|\u003e\u003c|audio_code_20542|\u003e\u003c|audio_code_2063|\u003e\u003c|audio_code_43141|\u003e\u003c|audio_code_2307|\u003e\u003c|audio_code_16074|\u003e\u003c|audio_code_50524|\u003e\u003c|audio_code_15212|\u003e\u003c|audio_code_4900|\u003e\u003c|audio_code_30547|\u003e\u003c|audio_code_39213|\u003e\u003c|audio_code_35691|\u003e\u003c|audio_code_25451|\u003e\u003c|audio_code_13201|\u003e\u003c|audio_code_2370|\u003e\u003c|audio_code_27920|\u003e\u003c|audio_code_27992|\u003e\u003c|audio_code_17752|\u003e\u003c|audio_code_30568|\u003e\u003c|audio_code_15856|\u003e\u003c|audio_code_41969|\u003e\u003c|audio_code_31096|\u003e\u003c|audio_code_25968|\u003e\u003c|audio_code_18592|\u003e\u003c|audio_code_15424|\u003e\u003c|audio_code_17092|\u003e\u003c|audio_code_12182|\u003e\u003c|audio_code_1335|\u003e\u003c|audio_code_14143|\u003e\u003c|audio_code_39847|\u003e\u003c|audio_code_25462|\u003e\u003c|audio_code_32059|\u003e\u003c|audio_code_51115|\u003e\u003c|audio_code_41964|\u003e\u003c|audio_code_33266|\u003e\u003c|audio_code_16631|\u003e\u003c|audio_code_50982|\u003e\u003c|audio_code_7746|\u003e\u003c|audio_code_25290|\u003e\u003c|audio_code_17683|\u003e\u003c|audio_code_25568|\u003e\u003c|audio_code_25498|\u003e\u003c|audio_code_12609|\u003e\u003c|audio_code_63867|\u003e\u003c|audio_code_61252|\u003e\u003c|audio_code_40177|\u003e\u003c|audio_code_49593|\u003e\u003c|audio_code_59232|\u003e\u003c|audio_code_11464|\u003e\u003c|audio_code_63441|\u003e\u003c|audio_code_25029|\u003e\u003c|audio_code_41702|\u003e\u003c|audio_code_17214|\u003e\u003c|audio_code_59765|\u003e\u003c|audio_code_12099|\u003e\u003c|audio_code_55138|\u003e\u003c|audio_code_25577|\u003e\u003c|audio_code_15778|\u003e\u003c|audio_code_25571|\u003e\u003c|audio_code_19204|\u003e\u003c|audio_code_50972|\u003e\u003c|audio_code_21066|\u003e\u003c|audio_code_36105|\u003e\u003c|audio_code_31024|\u003e\u003c|audio_code_31608|\u003e\u003c|audio_code_46456|\u003e\u003c|audio_code_8064|\u003e\u003c|audio_code_39265|\u003e\u003c|audio_code_6528|\u003e\u003c|audio_code_28584|\u003e\u003c|audio_code_17392|\u003e\u003c|audio_code_28000|\u003e\u003c|audio_code_41768|\u003e\u003c|audio_code_13488|\u003e\u003c|audio_code_35626|\u003e\u003c|audio_code_63556|\u003e\u003c|audio_code_19644|\u003e\u003c|audio_code_45188|\u003e\u003c|audio_code_25598|\u003e\u003c|audio_code_39406|\u003e\u003c|audio_code_1859|\u003e\u003c|audio_code_57266|\u003e\u003c|audio_code_12648|\u003e\u003c|audio_code_54688|\u003e\u003c|audio_code_59352|\u003e\u003c|audio_code_5592|\u003e\u003c|audio_code_63960|\u003e\u003c|audio_code_2320|\u003e\u003c|audio_code_17872|\u003e\u003c|audio_code_1737|\u003e\u003c|audio_code_41773|\u003e\u003c|audio_code_2310|\u003e\u003c|audio_code_57076|\u003e\u003c|audio_code_25485|\u003e\u003c|audio_code_55629|\u003e\u003c|audio_code_63443|\u003e\u003c|audio_code_1878|\u003e\u003c|audio_code_49978|\u003e\u003c|audio_code_29064|\u003e\u003c|audio_code_44976|\u003e\u003c|audio_code_47416|\u003e\u003c|audio_code_34224|\u003e\u003c|audio_code_45049|\u003e\u003c|audio_code_60856|\u003e\u003c|audio_code_62401|\u003e\u003c|audio_code_55168|\u003e\u003c|audio_code_17777|\u003e\u003c|audio_code_10487|\u003e\u003c|audio_code_14646|\u003e\u003c|audio_code_15110|\u003e\u003c|audio_code_40616|\u003e\u003c|audio_code_39984|\u003e\u003c|audio_code_27656|\u003e\u003c|audio_code_17408|\u003e\u003c|audio_code_50288|\u003e\u003c|audio_code_2104|\u003e\u003c|audio_code_41736|\u003e\u003c|audio_code_28480|\u003e\u003c|audio_code_20686|\u003e\u003c|audio_code_33943|\u003e\u003c|audio_code_38174|\u003e\u003c|audio_code_32526|\u003e\u003c|audio_code_39013|\u003e\u003c|audio_code_14879|\u003e\u003c|audio_code_5646|\u003e\u003c|audio_code_574|\u003e\u003c|audio_code_52398|\u003e\u003c|audio_code_11318|\u003e\u003c|audio_code_18816|\u003e\u003c|audio_code_14296|\u003e\u003c|audio_code_27255|\u003e\u003c|audio_code_36583|\u003e\u003c|audio_code_41318|\u003e\u003c|audio_code_13581|\u003e\u003c|audio_code_12296|\u003e\u003c|audio_code_2560|\u003e\u003c|audio_code_1236|\u003e\u003c|audio_code_9542|\u003e\u003c|audio_code_52975|\u003e\u003c|audio_code_37967|\u003e\u003c|audio_code_38443|\u003e\u003c|audio_code_12859|\u003e\u003c|audio_code_32439|\u003e\u003c|audio_code_12367|\u003e\u003c|audio_code_8748|\u003e\u003c|audio_code_38457|\u003e\u003c|audio_code_20728|\u003e\u003c|audio_code_30560|\u003e\u003c|audio_code_15040|\u003e\u003c|audio_code_13216|\u003e\u003c|audio_code_2312|\u003e\u003c|audio_code_41896|\u003e\u003c|audio_code_12608|\u003e\u003c|audio_code_16258|\u003e\u003c|audio_code_38379|\u003e\u003c|audio_code_3841|\u003e\u003c|audio_code_38304|\u003e\u003c|audio_code_1408|\u003e\u003c|audio_code_49090|\u003e\u003c|audio_code_2493|\u003e\u003c|audio_code_13638|\u003e\u003c|audio_code_15030|\u003e\u003c|audio_code_18950|\u003e\u003c|audio_code_40502|\u003e\u003c|audio_code_21510|\u003e\u003c|audio_code_51125|\u003e\u003c|audio_code_12733|\u003e\u003c|audio_code_29613|\u003e\u003c|audio_code_25526|\u003e\u003c|audio_code_28040|\u003e\u003c|audio_code_15168|\u003e\u003c|audio_code_27992|\u003e\u003c|audio_code_15720|\u003e\u003c|audio_code_27886|\u003e\u003c|audio_code_32447|\u003e\u003c|audio_code_30399|\u003e\u003c|audio_code_34943|\u003e\u003c|audio_code_136|\u003e\u003c|audio_code_7168|\u003e\u003c|audio_code_4608|\u003e\u003c|audio_code_2560|\u003e\u003c|audio_code_42249|\u003e\u003c|audio_code_47979|\u003e\u003c|audio_code_18291|\u003e\u003c|audio_code_28540|\u003e\u003c|audio_code_33142|\u003e\u003c|audio_code_20854|\u003e\u003c|audio_code_30647|\u003e\u003c|audio_code_15214|\u003e\u003c|audio_code_23460|\u003e\u003c|audio_code_28069|\u003e\u003c|audio_code_15221|\u003e\u003c|audio_code_10158|\u003e\u003c|audio_code_28532|\u003e\u003c|audio_code_36212|\u003e\u003c|audio_code_59660|\u003e\u003c|audio_code_45946|\u003e\u003c|audio_code_18868|\u003e\u003c|audio_code_57289|\u003e\u003c|audio_code_45560|\u003e\u003c|audio_code_31720|\u003e\u003c|audio_code_37623|\u003e\u003c|audio_code_23695|\u003e\u003c|audio_code_25478|\u003e\u003c|audio_code_23878|\u003e\u003c|audio_code_51366|\u003e\u003c|audio_code_17087|\u003e\u003c|audio_code_30327|\u003e\u003c|audio_code_35983|\u003e\u003c|audio_code_35926|\u003e\u003c|audio_code_12815|\u003e\u003c|audio_code_25647|\u003e\u003c|audio_code_15375|\u003e\u003c|audio_code_29743|\u003e\u003c|audio_code_30263|\u003e\u003c|audio_code_34895|\u003e\u003c|audio_code_48823|\u003e\u003c|audio_code_37999|\u003e\u003c|audio_code_8271|\u003e\u003c|audio_code_30895|\u003e\u003c|audio_code_22199|\u003e\u003c|audio_code_29998|\u003e\u003c|audio_code_38701|\u003e\u003c|audio_code_28584|\u003e\u003c|audio_code_15784|\u003e\u003c|audio_code_30557|\u003e\u003c|audio_code_7791|\u003e\u003c|audio_code_43199|\u003e\u003c|audio_code_31494|\u003e\u003c|audio_code_26422|\u003e\u003c|audio_code_39214|\u003e\u003c|audio_code_13448|\u003e\u003c|audio_code_49752|\u003e\u003c|audio_code_53352|\u003e\u003c|audio_code_2560|\u003e\u003c|audio_code_18440|\u003e\u003c|audio_code_24080|\u003e\u003c|audio_code_36896|\u003e\u003c|audio_code_39984|\u003e\u003c|audio_code_53304|\u003e\u003c|audio_code_4608|\u003e\u003c|audio_code_17936|\u003e\u003c|audio_code_21520|\u003e\u003c|audio_code_49696|\u003e\u003c|audio_code_53288|\u003e\u003c|audio_code_4664|\u003e\u003c|audio_code_55864|\u003e\u003c|audio_code_45104|\u003e\u003c|audio_code_27144|\u003e\u003c|audio_code_27144|\u003e\u003c|audio_code_26624|\u003e\u003c|audio_code_1024|\u003e\u003c|audio_code_12344|\u003e\u003c|audio_code_11776|\u003e\u003c|audio_code_7736|\u003e\u003c|audio_code_9784|\u003e\u003c|audio_code_60984|\u003e\u003c|audio_code_50744|\u003e\u003c|audio_code_53304|\u003e\u003c|audio_code_63024|\u003e\u003c|audio_code_63016|\u003e\u003c|audio_code_11280|\u003e\u003c|audio_code_11280|\u003e\u003c|audio_code_11272|\u003e\u003c|audio_code_59928|\u003e\u003c|audio_code_34320|\u003e\u003c|audio_code_47120|\u003e\u003c|audio_code_47120|\u003e\u003c|audio_code_49744|\u003e\u003c|audio_code_49752|\u003e\u003c|audio_code_23136|\u003e\u003c|audio_code_61600|\u003e\u003c|audio_code_7840|\u003e\u003c|audio_code_7848|\u003e\u003c|audio_code_7848|\u003e\u003c|audio_code_7840|\u003e\u003c|audio_code_7848|\u003e\u003c|audio_code_7848|\u003e\u003c|audio_code_7840|\u003e\u003c|audio_code_7840|\u003e\u003c|audio_code_7840|\u003e\u003c|audio_code_7840|\u003e\u003c|audio_code_21152|\u003e\u003c|audio_code_32919|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_62151|\u003e\u003c|audio_code_33807|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":385.025746217,"data":"2026-11-26 12:25:26.178 | INFO     | acestep.llm_inference:generate_with_stop_condition:1650 - Phase 2 completed in 54.71s. Generated 440 audio codes\n"}
+,{"stream_name":"stderr","time":385.025930753,"data":"2026-11-26 12:25:26.179 | INFO     | acestep.core.generation.handler.generate_music:generate_music:313 - [generate_music] Turbo model detected: overriding guidance_scale 7.0 -\u003e 1.0 (turbo does not use CFG).\n"}
+,{"stream_name":"stderr","time":385.025941463,"data":"2026-11-26 12:25:26.179 | INFO     | acestep.core.generation.handler.generate_music:generate_music:329 - [generate_music] Starting generation...\n"}
+,{"stream_name":"stderr","time":385.025946046,"data":"2026-11-26 12:25:26.179 | INFO     | acestep.core.generation.handler.generate_music:generate_music:332 - [generate_music] Preparing inputs...\n"}
+,{"stream_name":"stderr","time":385.031448501,"data":"2026-11-26 12:25:26.184 | INFO     | acestep.core.generation.handler.generate_music_request:_prepare_reference_and_source_audio:204 - [generate_music] cover task: no src_audio but audio codes provided, proceeding with codes\n"}
+,{"stream_name":"stderr","time":385.482505352,"data":"2026-11-26 12:25:26.635 | INFO     | acestep.core.generation.handler.generate_music:_vram_preflight_check:157 - [generate_music] VRAM pre-flight: 4.90 GB free, ~0.94 GB needed (batch=1, duration=88s, mode=turbo).\n"}
+,{"stream_name":"stderr","time":385.50607817,"data":"2026-11-26 12:25:26.659 | INFO     | acestep.core.generation.handler.conditioning_target:_prepare_target_latents_and_wavs:78 - [generate_music] Decoding audio codes for item 0...\n"}
+,{"stream_name":"stderr","time":385.540708033,"data":"2026-11-26 12:25:26.694 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_precomputed_lm_hints:31 - [generate_music] Decoding audio codes for LM hints for item 0...\n"}
+,{"stream_name":"stderr","time":385.547133946,"data":"2026-11-26 12:25:26.700 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:119 - \n"}
+,{"stream_name":"stderr","time":385.54715642,"data":"======================================================================\n"}
+,{"stream_name":"stderr","time":385.547757069,"data":"2026-11-26 12:25:26.700 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:120 - 🔍 [DEBUG] DiT TEXT ENCODER INPUT (Inference)\n"}
+,{"stream_name":"stderr","time":385.547779754,"data":"2026-11-26 12:25:26.700 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:121 - ======================================================================\n"}
+,{"stream_name":"stderr","time":385.547785839,"data":"2026-11-26 12:25:26.700 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:122 - text_prompt:\n"}
+,{"stream_name":"stderr","time":385.547790555,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":385.547795057,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":385.547798359,"data":"\n"}
+,{"stream_name":"stderr","time":385.547801635,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":385.547807497,"data":"An emotional and cinematic instrumental piece begins with a delicate, arpeggiated piano melody. A breathy and expressive flute enters, carrying the main theme with poignant phrasing. The arrangement gradually builds as a lush string section swells in the background, adding harmonic depth and dramatic tension. The piece reaches an emotional peak with soaring flute lines and powerful, sustained chords before transitioning into a more reflective section. The track concludes with a gentle decrescendo, fading out with the lingering sounds of the flute and piano, leaving a feeling of wistful resolution.\n"}
+,{"stream_name":"stderr","time":385.547814619,"data":"\n"}
+,{"stream_name":"stderr","time":385.547817986,"data":"# Metas\n"}
+,{"stream_name":"stderr","time":385.547821333,"data":"- bpm: 77\n"}
+,{"stream_name":"stderr","time":385.5478247,"data":"- timesignature: 3\n"}
+,{"stream_name":"stderr","time":385.547828149,"data":"- keyscale: E minor\n"}
+,{"stream_name":"stderr","time":385.54783145,"data":"- duration: 88 seconds\n"}
+,{"stream_name":"stderr","time":385.547834831,"data":"\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stderr","time":385.547838606,"data":"\n"}
+,{"stream_name":"stderr","time":385.547841895,"data":"2026-11-26 12:25:26.700 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:123 - ======================================================================\n"}
+,{"stream_name":"stderr","time":385.547853193,"data":"2026-11-26 12:25:26.700 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:124 - lyrics_text:\n"}
+,{"stream_name":"stderr","time":385.547856929,"data":"# Languages\n"}
+,{"stream_name":"stderr","time":385.547860215,"data":"unknown\n"}
+,{"stream_name":"stderr","time":385.547863497,"data":"\n"}
+,{"stream_name":"stderr","time":385.547866757,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":385.547870007,"data":"[Instrumental]\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stderr","time":385.54787353,"data":"2026-11-26 12:25:26.701 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:125 - ======================================================================\n"}
+,{"stream_name":"stderr","time":385.54787753,"data":"\n"}
+,{"stream_name":"stderr","time":385.575414994,"data":"2026-11-26 12:25:26.728 | INFO     | acestep.core.generation.handler.conditioning_embed:preprocess_batch:110 - [preprocess_batch] Inferring prompt embeddings...\n"}
+,{"stream_name":"stderr","time":385.625675332,"data":"2026-11-26 12:25:26.779 | INFO     | acestep.core.generation.handler.conditioning_embed:preprocess_batch:113 - [preprocess_batch] Inferring lyric embeddings...\n"}
+,{"stream_name":"stderr","time":385.625980247,"data":"2026-11-26 12:25:26.779 | INFO     | acestep.core.generation.handler.service_generate_execute:_execute_service_generate_diffusion:173 - [service_generate] Generating audio... (DiT backend: PyTorch (cuda))\n"}
+,{"stream_name":"stderr","time":385.659363941,"data":"2026-11-26 12:25:26.812 | INFO     | acestep.core.generation.handler.service_generate_execute:_execute_service_generate_diffusion:276 - [service_generate] DiT diffusion via PyTorch (cuda)...\n"}
+,{"stream_name":"stderr","time":385.694478431,"data":"2026-11-26 12:25:26.847 | INFO     | acestep.models.common.dcw_correction:__init__:98 - [DCW] Active — mode=double, scaler=0.0500, high_scaler=0.0200, wavelet='haar'\n"}
+,{"stream_name":"stderr","time":388.501976983,"data":"2026-11-26 12:25:29.655 | INFO     | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:42 - [generate_music] Model generation completed. Decoding latents...\n"}
+,{"stream_name":"stderr","time":388.502498826,"data":"2026-11-26 12:25:29.655 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:64 - [generate_music] pred_latents: torch.Size([1, 2200, 64]), dtype=torch.float16\n"}
+,{"stream_name":"stderr","time":388.502561091,"data":"2026-11-26 12:25:29.656 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:65 - [generate_music] time_costs: {'encoder_time_cost': 0.034700632095336914, 'diffusion_time_cost': 2.8072075843811035, 'diffusion_per_step_time_cost': 0.35090094804763794, 'total_time_cost': 2.8419082164764404, 'offload_time_cost': 0.0}\n"}
+,{"stream_name":"stderr","time":388.649057071,"data":"2026-11-26 12:25:29.802 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:127 - [generate_music] Decoding latents with VAE...\n"}
+,{"stream_name":"stderr","time":388.652110428,"data":"2026-11-26 12:25:29.805 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:136 - [generate_music] Before VAE decode: allocated=9.53GB, max=13.63GB\n"}
+,{"stream_name":"stderr","time":388.652554399,"data":"2026-11-26 12:25:29.806 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:154 - [generate_music] Effective free VRAM before VAE decode: 4.89 GB\n"}
+,{"stream_name":"stderr","time":388.652574962,"data":"2026-11-26 12:25:29.806 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:172 - [generate_music] Using tiled VAE decode to reduce VRAM usage...\n"}
+,{"stream_name":"stderr","time":388.653112497,"data":"2026-11-26 12:25:29.806 | DEBUG    | acestep.core.generation.handler.memory_utils:_get_auto_decode_chunk_size:108 - [_get_auto_decode_chunk_size] Effective free VRAM: 4.89 GB\n"}
+,{"stream_name":"stderr","time":388.653869979,"data":"2026-11-26 12:25:29.807 | DEBUG    | acestep.core.generation.handler.memory_utils:_should_offload_wav_to_cpu:131 - [_should_offload_wav_to_cpu] Effective free VRAM: 4.89 GB\n"}
+,{"stream_name":"stderr","time":388.653890908,"data":"2026-11-26 12:25:29.807 | INFO     | acestep.core.generation.handler.vae_decode:tiled_decode:56 - [tiled_decode] chunk_size=128, offload_wav_to_cpu=True, latents_shape=torch.Size([1, 64, 2200])\n"}
+,{"stream_name":"stderr","time":388.653960215,"data":"2026-11-26 12:25:29.807 | WARNING  | acestep.core.generation.handler.vae_decode_chunks:_tiled_decode_inner:39 - [tiled_decode] Reduced overlap from 64 to 32 for chunk_size=128\n"}
+,{"stream_name":"stderr","time":392.37846386,"data":"2026-11-26 12:25:33.531 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:193 - [generate_music] After VAE decode: allocated=9.53GB, max=13.63GB\n"}
+,{"stream_name":"stderr","time":392.820111525,"data":"2026-11-26 12:25:33.973 | INFO     | acestep.core.generation.handler.generate_music_payload:_build_generate_music_success_payload:38 - [generate_music] VAE decode completed. Preparing audio tensors...\n"}
+,{"stream_name":"stderr","time":392.82018373,"data":"2026-11-26 12:25:33.973 | INFO     | acestep.core.generation.handler.generate_music_payload:_build_generate_music_success_payload:50 - [generate_music] Done! Generated 1 audio tensors.\n"}
+,{"stream_name":"stderr","time":393.238283624,"data":"2026-11-26 12:25:34.391 | INFO     | acestep.inference:generate_music:1002 - [Normalization] Audio 0 BEFORE: Peak=1.0000, Target=-1.0dB\n"}
+,{"stream_name":"stderr","time":393.293728245,"data":"2026-11-26 12:25:34.447 | INFO     | acestep.inference:generate_music:1007 - [Normalization] Audio 0 AFTER: Peak=0.8913\n"}
+,{"stream_name":"stderr","time":393.334155718,"data":"2026-11-26 12:25:34.487 | DEBUG    | acestep.audio_utils:save_audio:319 - [AudioSaver] Saved audio to /kaggle/working/tmp/a9f5ea35-f3d2-9b12-ad93-29e616abdfe2.wav (wav, 48000Hz)\n"}
+,{"stream_name":"stdout","time":393.345294911,"data":"Using precomputed LM hints\n"}
+,{"stream_name":"stdout","time":393.345311586,"data":"Using precomputed LM hints\n"}
+,{"stream_name":"stdout","time":393.345315967,"data":"seed 23: 70.1s\n"}
+,{"stream_name":"stderr","time":393.345477182,"data":"2026-11-26 12:25:34.498 | INFO     | acestep.inference:generate_music:662 - [generate_music] LLM usage decision: thinking=True, use_cot_caption=True, use_cot_language=True, use_cot_metas=True, need_lm_for_cot=True, llm_initialized=True, use_lm=True\n"}
+,{"stream_name":"stderr","time":393.345631562,"data":"2026-11-26 12:25:34.499 | INFO     | acestep.inference:generate_music:720 - LM chunk 1/1 (infer_type=llm_dit) (size: 1, seeds: [47])\n"}
+,{"stream_name":"stderr","time":393.345697557,"data":"2026-11-26 12:25:34.499 | INFO     | acestep.llm_inference:generate_with_stop_condition:1371 - Phase 1: Generating CoT metadata...\n"}
+,{"stream_name":"stderr","time":393.349241104,"data":"2026-11-26 12:25:34.502 | INFO     | acestep.llm_inference:generate_with_stop_condition:1377 - generate_with_stop_condition: formatted_prompt=\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":393.349258021,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":393.349262194,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":393.349265709,"data":"\n"}
+,{"stream_name":"stderr","time":393.349268932,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":393.349272326,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":393.349275662,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":393.34927897,"data":"cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme\n"}
+,{"stream_name":"stderr","time":393.349283107,"data":"\n"}
+,{"stream_name":"stderr","time":393.349286968,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":393.349290937,"data":"[Instrumental]\n"}
+,{"stream_name":"stderr","time":393.349294747,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":393.349298599,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":393.34930217,"data":"\n"}
+,{"stream_name":"stderr","time":400.366214899,"data":"2026-11-26 12:25:41.519 | DEBUG    | acestep.llm_inference:parse_lm_output:2813 - Debug output text: \u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":400.366262062,"data":"bpm: 61\n"}
+,{"stream_name":"stderr","time":400.366267902,"data":"caption: A gentle and contemplative instrumental piece beginning with a soft, reverberant\n"}
+,{"stream_name":"stderr","time":400.36627229,"data":"  piano playing a delicate melody and arpeggios. A breathy, expressive flute enters,\n"}
+,{"stream_name":"stderr","time":400.366276266,"data":"  weaving a lyrical line over the piano's foundation. The arrangement gradually swells\n"}
+,{"stream_name":"stderr","time":400.366280107,"data":"  as a lush string section introduces sustained chords and soaring melodic phrases,\n"}
+,{"stream_name":"stderr","time":400.366283891,"data":"  building to a brief, cinematic and emotional peak. The piece then transitions into\n"}
+,{"stream_name":"stderr","time":400.366287577,"data":"  a more pensive section, featuring a simple piano motif before the flute returns\n"}
+,{"stream_name":"stderr","time":400.366291841,"data":"  for a final, reflective statement, bringing the short, atmospheric composition to\n"}
+,{"stream_name":"stderr","time":400.366295952,"data":"  a close.\n"}
+,{"stream_name":"stderr","time":400.366299262,"data":"duration: 88\n"}
+,{"stream_name":"stderr","time":400.366302504,"data":"keyscale: C major\n"}
+,{"stream_name":"stderr","time":400.366305934,"data":"language: unknown\n"}
+,{"stream_name":"stderr","time":400.366309187,"data":"timesignature: 3\n"}
+,{"stream_name":"stderr","time":400.366316519,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":400.366323641,"data":"2026-11-26 12:25:41.519 | INFO     | acestep.llm_inference:generate_with_stop_condition:1422 - Phase 1 completed in 7.02s. Generated metadata: ['bpm', 'caption', 'duration', 'keyscale', 'language', 'timesignature']\n"}
+,{"stream_name":"stderr","time":400.366535844,"data":"2026-11-26 12:25:41.519 | INFO     | acestep.llm_inference:generate_with_stop_condition:1482 - Phase 2: Generating audio codes...\n"}
+,{"stream_name":"stderr","time":400.370903016,"data":"2026-11-26 12:25:41.524 | INFO     | acestep.llm_inference:generate_with_stop_condition:1490 - generate_with_stop_condition: formatted_prompt_with_cot=\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":400.370918127,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":400.370922062,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":400.370925419,"data":"\n"}
+,{"stream_name":"stderr","time":400.370928485,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":400.370932366,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":400.370936036,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":400.370939981,"data":"cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme\n"}
+,{"stream_name":"stderr","time":400.370947726,"data":"\n"}
+,{"stream_name":"stderr","time":400.370951069,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":400.370954347,"data":"[Instrumental]\n"}
+,{"stream_name":"stderr","time":400.370957467,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":400.370960984,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":400.370964276,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":400.370967564,"data":"bpm: 61\n"}
+,{"stream_name":"stderr","time":400.370970874,"data":"caption: A gentle and contemplative instrumental piece beginning with a soft, reverberant\n"}
+,{"stream_name":"stderr","time":400.370985662,"data":"  piano playing a delicate melody and arpeggios. A breathy, expressive flute enters,\n"}
+,{"stream_name":"stderr","time":400.370988429,"data":"  weaving a lyrical line over the piano's foundation. The arrangement gradually swells\n"}
+,{"stream_name":"stderr","time":400.370990731,"data":"  as a lush string section introduces sustained chords and soaring melodic phrases,\n"}
+,{"stream_name":"stderr","time":400.370993017,"data":"  building to a brief, cinematic and emotional peak. The piece then transitions into\n"}
+,{"stream_name":"stderr","time":400.370995371,"data":"  a more pensive section, featuring a simple piano motif before the flute returns\n"}
+,{"stream_name":"stderr","time":400.370997635,"data":"  for a final, reflective statement, bringing the short, atmospheric composition to\n"}
+,{"stream_name":"stderr","time":400.371000011,"data":"  a close.\n"}
+,{"stream_name":"stderr","time":400.371002164,"data":"duration: 88\n"}
+,{"stream_name":"stderr","time":400.371004342,"data":"keyscale: C major\n"}
+,{"stream_name":"stderr","time":400.371006597,"data":"language: unknown\n"}
+,{"stream_name":"stderr","time":400.371008769,"data":"timesignature: 3\n"}
+,{"stream_name":"stderr","time":400.371010962,"data":"\u003c/think\u003e\n"}
+,{"stream_name":"stderr","time":400.371013253,"data":"\n"}
+,{"stream_name":"stderr","time":400.371015356,"data":"\n"}
+,{"stream_name":"stderr","time":400.375443586,"data":"2026-11-26 12:25:41.528 | INFO     | acestep.llm_inference:_build_unconditional_prompt:395 - CFG unconditional prompt (phase=codes, is_batch=False, negative_prompt='NO USER INPUT'):\n"}
+,{"stream_name":"stderr","time":400.375461133,"data":"\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stderr","time":400.375465703,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":400.375469175,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":400.375473089,"data":"\n"}
+,{"stream_name":"stderr","time":400.375476643,"data":"\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":400.375480693,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stderr","time":400.37548442,"data":"NO USER INPUT\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":400.375488099,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stderr","time":400.375491978,"data":"\u003cthink\u003e\n"}
+,{"stream_name":"stderr","time":400.375495304,"data":"\n"}
+,{"stream_name":"stderr","time":400.375498501,"data":"\u003c/think\u003e\n"}
+,{"stream_name":"stderr","time":400.375501819,"data":"\n"}
+,{"stream_name":"stderr","time":400.375504831,"data":"\n"}
+,{"stream_name":"stderr","time":454.799365644,"data":"2026-11-26 12:26:35.952 | DEBUG    | acestep.llm_inference:parse_lm_output:2813 - Debug output text: \u003c|audio_code_17916|\u003e\u003c|audio_code_35715|\u003e\u003c|audio_code_10716|\u003e\u003c|audio_code_1966|\u003e\u003c|audio_code_35322|\u003e\u003c|audio_code_8661|\u003e\u003c|audio_code_12374|\u003e\u003c|audio_code_29366|\u003e\u003c|audio_code_7877|\u003e\u003c|audio_code_12077|\u003e\u003c|audio_code_15315|\u003e\u003c|audio_code_23368|\u003e\u003c|audio_code_37752|\u003e\u003c|audio_code_37240|\u003e\u003c|audio_code_30585|\u003e\u003c|audio_code_30130|\u003e\u003c|audio_code_10621|\u003e\u003c|audio_code_3404|\u003e\u003c|audio_code_63939|\u003e\u003c|audio_code_1411|\u003e\u003c|audio_code_23972|\u003e\u003c|audio_code_7750|\u003e\u003c|audio_code_13934|\u003e\u003c|audio_code_58518|\u003e\u003c|audio_code_23701|\u003e\u003c|audio_code_58236|\u003e\u003c|audio_code_5409|\u003e\u003c|audio_code_7888|\u003e\u003c|audio_code_25376|\u003e\u003c|audio_code_25432|\u003e\u003c|audio_code_25345|\u003e\u003c|audio_code_27193|\u003e\u003c|audio_code_15034|\u003e\u003c|audio_code_40161|\u003e\u003c|audio_code_14128|\u003e\u003c|audio_code_35264|\u003e\u003c|audio_code_26464|\u003e\u003c|audio_code_29048|\u003e\u003c|audio_code_11192|\u003e\u003c|audio_code_10120|\u003e\u003c|audio_code_15843|\u003e\u003c|audio_code_13775|\u003e\u003c|audio_code_12548|\u003e\u003c|audio_code_63920|\u003e\u003c|audio_code_29154|\u003e\u003c|audio_code_27588|\u003e\u003c|audio_code_10109|\u003e\u003c|audio_code_44516|\u003e\u003c|audio_code_63997|\u003e\u003c|audio_code_42492|\u003e\u003c|audio_code_38316|\u003e\u003c|audio_code_133|\u003e\u003c|audio_code_15028|\u003e\u003c|audio_code_56453|\u003e\u003c|audio_code_13997|\u003e\u003c|audio_code_5323|\u003e\u003c|audio_code_26850|\u003e\u003c|audio_code_62225|\u003e\u003c|audio_code_37225|\u003e\u003c|audio_code_38209|\u003e\u003c|audio_code_24794|\u003e\u003c|audio_code_27137|\u003e\u003c|audio_code_37425|\u003e\u003c|audio_code_47753|\u003e\u003c|audio_code_21697|\u003e\u003c|audio_code_24976|\u003e\u003c|audio_code_28976|\u003e\u003c|audio_code_59896|\u003e\u003c|audio_code_12200|\u003e\u003c|audio_code_40856|\u003e\u003c|audio_code_55059|\u003e\u003c|audio_code_18936|\u003e\u003c|audio_code_12749|\u003e\u003c|audio_code_45574|\u003e\u003c|audio_code_63501|\u003e\u003c|audio_code_26734|\u003e\u003c|audio_code_12606|\u003e\u003c|audio_code_13614|\u003e\u003c|audio_code_50534|\u003e\u003c|audio_code_3909|\u003e\u003c|audio_code_48410|\u003e\u003c|audio_code_12665|\u003e\u003c|audio_code_33120|\u003e\u003c|audio_code_15161|\u003e\u003c|audio_code_29552|\u003e\u003c|audio_code_40890|\u003e\u003c|audio_code_27513|\u003e\u003c|audio_code_11161|\u003e\u003c|audio_code_914|\u003e\u003c|audio_code_28040|\u003e\u003c|audio_code_29459|\u003e\u003c|audio_code_188|\u003e\u003c|audio_code_24804|\u003e\u003c|audio_code_43146|\u003e\u003c|audio_code_699|\u003e\u003c|audio_code_12552|\u003e\u003c|audio_code_58664|\u003e\u003c|audio_code_54648|\u003e\u003c|audio_code_832|\u003e\u003c|audio_code_304|\u003e\u003c|audio_code_13102|\u003e\u003c|audio_code_31510|\u003e\u003c|audio_code_12661|\u003e\u003c|audio_code_29004|\u003e\u003c|audio_code_60836|\u003e\u003c|audio_code_12477|\u003e\u003c|audio_code_50391|\u003e\u003c|audio_code_28412|\u003e\u003c|audio_code_11688|\u003e\u003c|audio_code_4945|\u003e\u003c|audio_code_25532|\u003e\u003c|audio_code_12686|\u003e\u003c|audio_code_26484|\u003e\u003c|audio_code_28096|\u003e\u003c|audio_code_63442|\u003e\u003c|audio_code_20866|\u003e\u003c|audio_code_2436|\u003e\u003c|audio_code_50170|\u003e\u003c|audio_code_15840|\u003e\u003c|audio_code_57224|\u003e\u003c|audio_code_50629|\u003e\u003c|audio_code_21455|\u003e\u003c|audio_code_36806|\u003e\u003c|audio_code_33743|\u003e\u003c|audio_code_50629|\u003e\u003c|audio_code_22838|\u003e\u003c|audio_code_50119|\u003e\u003c|audio_code_15150|\u003e\u003c|audio_code_4415|\u003e\u003c|audio_code_23495|\u003e\u003c|audio_code_332|\u003e\u003c|audio_code_23760|\u003e\u003c|audio_code_37488|\u003e\u003c|audio_code_63016|\u003e\u003c|audio_code_40488|\u003e\u003c|audio_code_5308|\u003e\u003c|audio_code_37543|\u003e\u003c|audio_code_7759|\u003e\u003c|audio_code_27255|\u003e\u003c|audio_code_34951|\u003e\u003c|audio_code_50775|\u003e\u003c|audio_code_13359|\u003e\u003c|audio_code_55|\u003e\u003c|audio_code_34887|\u003e\u003c|audio_code_27743|\u003e\u003c|audio_code_5864|\u003e\u003c|audio_code_10832|\u003e\u003c|audio_code_29744|\u003e\u003c|audio_code_23568|\u003e\u003c|audio_code_17936|\u003e\u003c|audio_code_22579|\u003e\u003c|audio_code_12840|\u003e\u003c|audio_code_21514|\u003e\u003c|audio_code_21506|\u003e\u003c|audio_code_34338|\u003e\u003c|audio_code_47960|\u003e\u003c|audio_code_26344|\u003e\u003c|audio_code_23304|\u003e\u003c|audio_code_25480|\u003e\u003c|audio_code_15304|\u003e\u003c|audio_code_13766|\u003e\u003c|audio_code_2374|\u003e\u003c|audio_code_12708|\u003e\u003c|audio_code_12189|\u003e\u003c|audio_code_24516|\u003e\u003c|audio_code_12671|\u003e\u003c|audio_code_3383|\u003e\u003c|audio_code_2239|\u003e\u003c|audio_code_3335|\u003e\u003c|audio_code_27439|\u003e\u003c|audio_code_7831|\u003e\u003c|audio_code_27383|\u003e\u003c|audio_code_38095|\u003e\u003c|audio_code_10967|\u003e\u003c|audio_code_29950|\u003e\u003c|audio_code_246|\u003e\u003c|audio_code_2242|\u003e\u003c|audio_code_362|\u003e\u003c|audio_code_2377|\u003e\u003c|audio_code_15060|\u003e\u003c|audio_code_35370|\u003e\u003c|audio_code_55858|\u003e\u003c|audio_code_55851|\u003e\u003c|audio_code_51210|\u003e\u003c|audio_code_25721|\u003e\u003c|audio_code_16696|\u003e\u003c|audio_code_19256|\u003e\u003c|audio_code_1400|\u003e\u003c|audio_code_328|\u003e\u003c|audio_code_13299|\u003e\u003c|audio_code_13767|\u003e\u003c|audio_code_12612|\u003e\u003c|audio_code_53621|\u003e\u003c|audio_code_42894|\u003e\u003c|audio_code_36735|\u003e\u003c|audio_code_22847|\u003e\u003c|audio_code_5855|\u003e\u003c|audio_code_183|\u003e\u003c|audio_code_3327|\u003e\u003c|audio_code_51458|\u003e\u003c|audio_code_25736|\u003e\u003c|audio_code_23184|\u003e\u003c|audio_code_7752|\u003e\u003c|audio_code_31376|\u003e\u003c|audio_code_11074|\u003e\u003c|audio_code_38286|\u003e\u003c|audio_code_36252|\u003e\u003c|audio_code_25414|\u003e\u003c|audio_code_27628|\u003e\u003c|audio_code_56005|\u003e\u003c|audio_code_13871|\u003e\u003c|audio_code_19007|\u003e\u003c|audio_code_25647|\u003e\u003c|audio_code_18486|\u003e\u003c|audio_code_1728|\u003e\u003c|audio_code_2160|\u003e\u003c|audio_code_4728|\u003e\u003c|audio_code_28792|\u003e\u003c|audio_code_2168|\u003e\u003c|audio_code_48429|\u003e\u003c|audio_code_7359|\u003e\u003c|audio_code_43263|\u003e\u003c|audio_code_38191|\u003e\u003c|audio_code_7831|\u003e\u003c|audio_code_9991|\u003e\u003c|audio_code_27327|\u003e\u003c|audio_code_50487|\u003e\u003c|audio_code_4799|\u003e\u003c|audio_code_30399|\u003e\u003c|audio_code_24831|\u003e\u003c|audio_code_10895|\u003e\u003c|audio_code_3319|\u003e\u003c|audio_code_29879|\u003e\u003c|audio_code_10383|\u003e\u003c|audio_code_27967|\u003e\u003c|audio_code_7887|\u003e\u003c|audio_code_51525|\u003e\u003c|audio_code_292|\u003e\u003c|audio_code_28148|\u003e\u003c|audio_code_13255|\u003e\u003c|audio_code_10695|\u003e\u003c|audio_code_12734|\u003e\u003c|audio_code_12723|\u003e\u003c|audio_code_12717|\u003e\u003c|audio_code_12550|\u003e\u003c|audio_code_63346|\u003e\u003c|audio_code_31729|\u003e\u003c|audio_code_15852|\u003e\u003c|audio_code_12247|\u003e\u003c|audio_code_45575|\u003e\u003c|audio_code_10775|\u003e\u003c|audio_code_16438|\u003e\u003c|audio_code_32902|\u003e\u003c|audio_code_10387|\u003e\u003c|audio_code_2576|\u003e\u003c|audio_code_5136|\u003e\u003c|audio_code_53360|\u003e\u003c|audio_code_72|\u003e\u003c|audio_code_28611|\u003e\u003c|audio_code_13270|\u003e\u003c|audio_code_23503|\u003e\u003c|audio_code_12615|\u003e\u003c|audio_code_11526|\u003e\u003c|audio_code_50169|\u003e\u003c|audio_code_19962|\u003e\u003c|audio_code_29684|\u003e\u003c|audio_code_25546|\u003e\u003c|audio_code_16258|\u003e\u003c|audio_code_61723|\u003e\u003c|audio_code_186|\u003e\u003c|audio_code_51442|\u003e\u003c|audio_code_53546|\u003e\u003c|audio_code_56042|\u003e\u003c|audio_code_26802|\u003e\u003c|audio_code_27322|\u003e\u003c|audio_code_37618|\u003e\u003c|audio_code_35042|\u003e\u003c|audio_code_37106|\u003e\u003c|audio_code_34232|\u003e\u003c|audio_code_11704|\u003e\u003c|audio_code_63976|\u003e\u003c|audio_code_28128|\u003e\u003c|audio_code_26568|\u003e\u003c|audio_code_12661|\u003e\u003c|audio_code_29004|\u003e\u003c|audio_code_51174|\u003e\u003c|audio_code_3462|\u003e\u003c|audio_code_50086|\u003e\u003c|audio_code_12222|\u003e\u003c|audio_code_29597|\u003e\u003c|audio_code_63933|\u003e\u003c|audio_code_31644|\u003e\u003c|audio_code_12653|\u003e\u003c|audio_code_16707|\u003e\u003c|audio_code_63923|\u003e\u003c|audio_code_44426|\u003e\u003c|audio_code_25531|\u003e\u003c|audio_code_3987|\u003e\u003c|audio_code_23114|\u003e\u003c|audio_code_23178|\u003e\u003c|audio_code_20626|\u003e\u003c|audio_code_20626|\u003e\u003c|audio_code_8394|\u003e\u003c|audio_code_30552|\u003e\u003c|audio_code_28504|\u003e\u003c|audio_code_29056|\u003e\u003c|audio_code_10680|\u003e\u003c|audio_code_23538|\u003e\u003c|audio_code_13263|\u003e\u003c|audio_code_24015|\u003e\u003c|audio_code_12038|\u003e\u003c|audio_code_63346|\u003e\u003c|audio_code_46058|\u003e\u003c|audio_code_3454|\u003e\u003c|audio_code_51166|\u003e\u003c|audio_code_3390|\u003e\u003c|audio_code_38374|\u003e\u003c|audio_code_956|\u003e\u003c|audio_code_36264|\u003e\u003c|audio_code_23416|\u003e\u003c|audio_code_36264|\u003e\u003c|audio_code_25408|\u003e\u003c|audio_code_875|\u003e\u003c|audio_code_40954|\u003e\u003c|audio_code_27643|\u003e\u003c|audio_code_11162|\u003e\u003c|audio_code_2500|\u003e\u003c|audio_code_17637|\u003e\u003c|audio_code_22741|\u003e\u003c|audio_code_13453|\u003e\u003c|audio_code_2365|\u003e\u003c|audio_code_50541|\u003e\u003c|audio_code_26324|\u003e\u003c|audio_code_23869|\u003e\u003c|audio_code_61205|\u003e\u003c|audio_code_28940|\u003e\u003c|audio_code_12668|\u003e\u003c|audio_code_30196|\u003e\u003c|audio_code_10645|\u003e\u003c|audio_code_14846|\u003e\u003c|audio_code_49620|\u003e\u003c|audio_code_62451|\u003e\u003c|audio_code_15347|\u003e\u003c|audio_code_31171|\u003e\u003c|audio_code_49619|\u003e\u003c|audio_code_59851|\u003e\u003c|audio_code_30147|\u003e\u003c|audio_code_37826|\u003e\u003c|audio_code_24026|\u003e\u003c|audio_code_13258|\u003e\u003c|audio_code_15346|\u003e\u003c|audio_code_20970|\u003e\u003c|audio_code_59850|\u003e\u003c|audio_code_60403|\u003e\u003c|audio_code_27586|\u003e\u003c|audio_code_24017|\u003e\u003c|audio_code_419|\u003e\u003c|audio_code_20987|\u003e\u003c|audio_code_10703|\u003e\u003c|audio_code_32318|\u003e\u003c|audio_code_63495|\u003e\u003c|audio_code_13350|\u003e\u003c|audio_code_17936|\u003e\u003c|audio_code_35920|\u003e\u003c|audio_code_35920|\u003e\u003c|audio_code_20624|\u003e\u003c|audio_code_33552|\u003e\u003c|audio_code_18055|\u003e\u003c|audio_code_5327|\u003e\u003c|audio_code_17151|\u003e\u003c|audio_code_29495|\u003e\u003c|audio_code_37286|\u003e\u003c|audio_code_29000|\u003e\u003c|audio_code_13752|\u003e\u003c|audio_code_10168|\u003e\u003c|audio_code_61408|\u003e\u003c|audio_code_30168|\u003e\u003c|audio_code_29600|\u003e\u003c|audio_code_29064|\u003e\u003c|audio_code_18816|\u003e\u003c|audio_code_11704|\u003e\u003c|audio_code_63984|\u003e\u003c|audio_code_10220|\u003e\u003c|audio_code_62723|\u003e\u003c|audio_code_31731|\u003e\u003c|audio_code_2519|\u003e\u003c|audio_code_62789|\u003e\u003c|audio_code_57832|\u003e\u003c|audio_code_18413|\u003e\u003c|audio_code_25039|\u003e\u003c|audio_code_63363|\u003e\u003c|audio_code_31729|\u003e\u003c|audio_code_470|\u003e\u003c|audio_code_63428|\u003e\u003c|audio_code_60912|\u003e\u003c|audio_code_18931|\u003e\u003c|audio_code_23503|\u003e\u003c|audio_code_12749|\u003e\u003c|audio_code_60912|\u003e\u003c|audio_code_18417|\u003e\u003c|audio_code_470|\u003e\u003c|audio_code_38111|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_25351|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|audio_code_35847|\u003e\u003c|im_end|\u003e\n"}
+,{"stream_name":"stderr","time":454.799744633,"data":"2026-11-26 12:26:35.953 | INFO     | acestep.llm_inference:generate_with_stop_condition:1650 - Phase 2 completed in 54.43s. Generated 440 audio codes\n"}
+,{"stream_name":"stderr","time":454.800200138,"data":"2026-11-26 12:26:35.953 | INFO     | acestep.core.generation.handler.generate_music:generate_music:313 - [generate_music] Turbo model detected: overriding guidance_scale 7.0 -\u003e 1.0 (turbo does not use CFG).\n"}
+,{"stream_name":"stderr","time":454.800275062,"data":"2026-11-26 12:26:35.953 | INFO     | acestep.core.generation.handler.generate_music:generate_music:329 - [generate_music] Starting generation...\n"}
+,{"stream_name":"stderr","time":454.800360313,"data":"2026-11-26 12:26:35.953 | INFO     | acestep.core.generation.handler.generate_music:generate_music:332 - [generate_music] Preparing inputs...\n"}
+,{"stream_name":"stderr","time":454.804767861,"data":"2026-11-26 12:26:35.958 | INFO     | acestep.core.generation.handler.generate_music_request:_prepare_reference_and_source_audio:204 - [generate_music] cover task: no src_audio but audio codes provided, proceeding with codes\n"}
+,{"stream_name":"stderr","time":455.238423489,"data":"2026-11-26 12:26:36.391 | INFO     | acestep.core.generation.handler.generate_music:_vram_preflight_check:157 - [generate_music] VRAM pre-flight: 4.90 GB free, ~0.94 GB needed (batch=1, duration=88s, mode=turbo).\n"}
+,{"stream_name":"stderr","time":455.261227514,"data":"2026-11-26 12:26:36.414 | INFO     | acestep.core.generation.handler.conditioning_target:_prepare_target_latents_and_wavs:78 - [generate_music] Decoding audio codes for item 0...\n"}
+,{"stream_name":"stderr","time":455.295378807,"data":"2026-11-26 12:26:36.448 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_precomputed_lm_hints:31 - [generate_music] Decoding audio codes for LM hints for item 0...\n"}
+,{"stream_name":"stderr","time":455.301364288,"data":"2026-11-26 12:26:36.454 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:119 - \n"}
+,{"stream_name":"stderr","time":455.301377554,"data":"======================================================================\n"}
+,{"stream_name":"stderr","time":455.301442259,"data":"2026-11-26 12:26:36.454 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:120 - 🔍 [DEBUG] DiT TEXT ENCODER INPUT (Inference)\n"}
+,{"stream_name":"stderr","time":455.301637793,"data":"2026-11-26 12:26:36.455 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:121 - ======================================================================\n"}
+,{"stream_name":"stderr","time":455.301712218,"data":"2026-11-26 12:26:36.455 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:122 - text_prompt:\n"}
+,{"stream_name":"stderr","time":455.301728324,"data":"# Instruction\n"}
+,{"stream_name":"stderr","time":455.301732546,"data":"Generate audio semantic tokens based on the given conditions:\n"}
+,{"stream_name":"stderr","time":455.301736329,"data":"\n"}
+,{"stream_name":"stderr","time":455.301739642,"data":"# Caption\n"}
+,{"stream_name":"stderr","time":455.301743046,"data":"A gentle and contemplative instrumental piece beginning with a soft, reverberant piano playing a delicate melody and arpeggios. A breathy, expressive flute enters, weaving a lyrical line over the piano's foundation. The arrangement gradually swells as a lush string section introduces sustained chords and soaring melodic phrases, building to a brief, cinematic and emotional peak. The piece then transitions into a more pensive section, featuring a simple piano motif before the flute returns for a final, reflective statement, bringing the short, atmospheric composition to a close.\n"}
+,{"stream_name":"stderr","time":455.301764519,"data":"\n"}
+,{"stream_name":"stderr","time":455.301768208,"data":"# Metas\n"}
+,{"stream_name":"stderr","time":455.301772053,"data":"- bpm: 61\n"}
+,{"stream_name":"stderr","time":455.301775478,"data":"- timesignature: 3\n"}
+,{"stream_name":"stderr","time":455.301779334,"data":"- keyscale: C major\n"}
+,{"stream_name":"stderr","time":455.301782546,"data":"- duration: 88 seconds\n"}
+,{"stream_name":"stderr","time":455.301785831,"data":"\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stderr","time":455.301789793,"data":"\n"}
+,{"stream_name":"stderr","time":455.301803948,"data":"2026-11-26 12:26:36.455 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:123 - ======================================================================\n"}
+,{"stream_name":"stderr","time":455.301808539,"data":"2026-11-26 12:26:36.455 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:124 - lyrics_text:\n"}
+,{"stream_name":"stderr","time":455.301812664,"data":"# Languages\n"}
+,{"stream_name":"stderr","time":455.301815965,"data":"unknown\n"}
+,{"stream_name":"stderr","time":455.301819143,"data":"\n"}
+,{"stream_name":"stderr","time":455.301822309,"data":"# Lyric\n"}
+,{"stream_name":"stderr","time":455.301825652,"data":"[Instrumental]\u003c|endoftext|\u003e\n"}
+,{"stream_name":"stderr","time":455.301903746,"data":"2026-11-26 12:26:36.455 | INFO     | acestep.core.generation.handler.conditioning_text:_prepare_text_conditioning_inputs:125 - ======================================================================\n"}
+,{"stream_name":"stderr","time":455.301911303,"data":"\n"}
+,{"stream_name":"stderr","time":455.329796603,"data":"2026-11-26 12:26:36.483 | INFO     | acestep.core.generation.handler.conditioning_embed:preprocess_batch:110 - [preprocess_batch] Inferring prompt embeddings...\n"}
+,{"stream_name":"stderr","time":455.378237679,"data":"2026-11-26 12:26:36.531 | INFO     | acestep.core.generation.handler.conditioning_embed:preprocess_batch:113 - [preprocess_batch] Inferring lyric embeddings...\n"}
+,{"stream_name":"stderr","time":455.378518333,"data":"2026-11-26 12:26:36.531 | INFO     | acestep.core.generation.handler.service_generate_execute:_execute_service_generate_diffusion:173 - [service_generate] Generating audio... (DiT backend: PyTorch (cuda))\n"}
+,{"stream_name":"stderr","time":455.411731751,"data":"2026-11-26 12:26:36.565 | INFO     | acestep.core.generation.handler.service_generate_execute:_execute_service_generate_diffusion:276 - [service_generate] DiT diffusion via PyTorch (cuda)...\n"}
+,{"stream_name":"stderr","time":455.445272806,"data":"2026-11-26 12:26:36.598 | INFO     | acestep.models.common.dcw_correction:__init__:98 - [DCW] Active — mode=double, scaler=0.0500, high_scaler=0.0200, wavelet='haar'\n"}
+,{"stream_name":"stderr","time":458.271129411,"data":"2026-11-26 12:26:39.424 | INFO     | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:42 - [generate_music] Model generation completed. Decoding latents...\n"}
+,{"stream_name":"stderr","time":458.271730828,"data":"2026-11-26 12:26:39.425 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:64 - [generate_music] pred_latents: torch.Size([1, 2200, 64]), dtype=torch.float16\n"}
+,{"stream_name":"stderr","time":458.271835317,"data":"2026-11-26 12:26:39.425 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_prepare_generate_music_decode_state:65 - [generate_music] time_costs: {'encoder_time_cost': 0.033367156982421875, 'diffusion_time_cost': 2.8254072666168213, 'diffusion_per_step_time_cost': 0.35317590832710266, 'total_time_cost': 2.858774423599243, 'offload_time_cost': 0.0}\n"}
+,{"stream_name":"stderr","time":458.417864909,"data":"2026-11-26 12:26:39.571 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:127 - [generate_music] Decoding latents with VAE...\n"}
+,{"stream_name":"stderr","time":458.421026074,"data":"2026-11-26 12:26:39.574 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:136 - [generate_music] Before VAE decode: allocated=9.53GB, max=13.63GB\n"}
+,{"stream_name":"stderr","time":458.421506862,"data":"2026-11-26 12:26:39.575 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:154 - [generate_music] Effective free VRAM before VAE decode: 4.89 GB\n"}
+,{"stream_name":"stderr","time":458.421544423,"data":"2026-11-26 12:26:39.575 | INFO     | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:172 - [generate_music] Using tiled VAE decode to reduce VRAM usage...\n"}
+,{"stream_name":"stderr","time":458.422426291,"data":"2026-11-26 12:26:39.575 | DEBUG    | acestep.core.generation.handler.memory_utils:_get_auto_decode_chunk_size:108 - [_get_auto_decode_chunk_size] Effective free VRAM: 4.89 GB\n"}
+,{"stream_name":"stderr","time":458.423143249,"data":"2026-11-26 12:26:39.576 | DEBUG    | acestep.core.generation.handler.memory_utils:_should_offload_wav_to_cpu:131 - [_should_offload_wav_to_cpu] Effective free VRAM: 4.89 GB\n"}
+,{"stream_name":"stderr","time":458.423223712,"data":"2026-11-26 12:26:39.576 | INFO     | acestep.core.generation.handler.vae_decode:tiled_decode:56 - [tiled_decode] chunk_size=128, offload_wav_to_cpu=True, latents_shape=torch.Size([1, 64, 2200])\n"}
+,{"stream_name":"stderr","time":458.423272411,"data":"2026-11-26 12:26:39.576 | WARNING  | acestep.core.generation.handler.vae_decode_chunks:_tiled_decode_inner:39 - [tiled_decode] Reduced overlap from 64 to 32 for chunk_size=128\n"}
+,{"stream_name":"stderr","time":462.213773937,"data":"2026-11-26 12:26:43.367 | DEBUG    | acestep.core.generation.handler.generate_music_decode:_decode_generate_music_pred_latents:193 - [generate_music] After VAE decode: allocated=9.53GB, max=13.63GB\n"}
+,{"stream_name":"stderr","time":462.672737469,"data":"2026-11-26 12:26:43.826 | INFO     | acestep.core.generation.handler.generate_music_payload:_build_generate_music_success_payload:38 - [generate_music] VAE decode completed. Preparing audio tensors...\n"}
+,{"stream_name":"stderr","time":462.672788396,"data":"2026-11-26 12:26:43.826 | INFO     | acestep.core.generation.handler.generate_music_payload:_build_generate_music_success_payload:50 - [generate_music] Done! Generated 1 audio tensors.\n"}
+,{"stream_name":"stderr","time":463.085595768,"data":"2026-11-26 12:26:44.238 | INFO     | acestep.inference:generate_music:1002 - [Normalization] Audio 0 BEFORE: Peak=1.0000, Target=-1.0dB\n"}
+,{"stream_name":"stderr","time":463.140841671,"data":"2026-11-26 12:26:44.294 | INFO     | acestep.inference:generate_music:1007 - [Normalization] Audio 0 AFTER: Peak=0.8913\n"}
+,{"stream_name":"stderr","time":463.175795427,"data":"2026-11-26 12:26:44.329 | DEBUG    | acestep.audio_utils:save_audio:319 - [AudioSaver] Saved audio to /kaggle/working/tmp/2e121e62-2f4f-a0d6-ac8f-6b6242093fd3.wav (wav, 48000Hz)\n"}
+,{"stream_name":"stdout","time":463.186526482,"data":"Using precomputed LM hints\n"}
+,{"stream_name":"stdout","time":463.186543157,"data":"Using precomputed LM hints\n"}
+,{"stream_name":"stdout","time":463.186549042,"data":"seed 47: 69.8s\n"}
+,{"stream_name":"stdout","time":463.186570787,"data":"total 340s\n"}
+,{"stream_name":"stdout","time":467.311055663,"data":"total 467s, inner exit 0\n"}
+,{"stream_name":"stderr","time":469.572899122,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":469.57293846,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":469.802213104,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":469.802238406,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":471.080601633,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":471.985398812,"data":"[NbConvertApp] Writing 295003 bytes to __results__.html\n"}
+]

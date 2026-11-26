@@ -1,12 +1,11 @@
 {
- "key": "32e4f5ed81d85d5e",
- "provider": "local:sd-turbo",
- "prompt": "close-up of coffee being poured from a black clay jebena in a thin stream into small white handleless cups on a wooden tray, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 108,
+ "key": "1de5859ad597970f",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "a middle-aged Ethiopian king with dark brown skin, a short greying beard, a white gold-embroidered robe, a deep red cape and a simple gold circlet surrounded at dusk by figures in hooded earth-coloured cloaks holding torches in a rocky clearing, faces hidden in shadow, no symbols, smoke and firelight, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 208,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

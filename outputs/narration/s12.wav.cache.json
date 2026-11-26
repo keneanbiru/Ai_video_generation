@@ -1,20 +1,14 @@
 {
- "key": "de8579b04f6c9557",
- "provider": "local:mms-tts",
- "text": "ቀስ በቀስ።",
+ "key": "6559ce7d1dd461a6",
+ "provider": "gemini-tts",
+ "text": "እናቴ ታሪኩን ስትጨርስ፣ ሀዘኔ ጠፋ። ውጤቴ አልተለወጠም፤ አመለካከቴ ግን ተለወጠ። ሁሉም ለበጎ ነው።",
  "params": {
-  "speaking_rate": 1.0,
-  "noise_scale": 0.6,
-  "uroman": true,
-  "input_chars": 7,
-  "prepared": "qase baqase",
-  "chunks": 1,
-  "pauses": {
-   "።": 0.55,
-   "?": 0.55,
-   "፦": 0.35,
-   "፣": 0.25,
-   "፤": 0.3
-  }
+  "model": "gemini-3.8-flash-lite-tts",
+  "voice": "Sulafat",
+  "style": "warm, emotionally expressive and reflective, natural and unhurried, never dramatic or formal; a young woman remembering the evening her mother told her a story",
+  "batch": true,
+  "batch_index": 10,
+  "batch_size": 11,
+  "split": "offline DP alignment (E22); restored after F16"
  }
 }

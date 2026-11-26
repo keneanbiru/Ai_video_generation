@@ -1,12 +1,11 @@
 {
- "key": "64c927651023941a",
- "provider": "local:sd-turbo",
- "prompt": "a small Ethiopian child in a faded yellow sweater, seen from behind, fidgeting and leaning toward an old woman roasting coffee in the background, grass-covered floor, morning light through a small window, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 105,
+ "key": "2244c1c756466450",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "a middle-aged Ethiopian king with dark brown skin, a short greying beard, a white gold-embroidered robe, a deep red cape and a simple gold circlet sitting on the dusty road after a fall, holding his arm in pain, a cloud of dust in the air, the white horse standing behind him, low angle, golden-hour light, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 205,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

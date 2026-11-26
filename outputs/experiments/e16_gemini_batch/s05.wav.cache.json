@@ -1,0 +1,13 @@
+{
+ "key": "experiment",
+ "provider": "gemini-tts",
+ "text": "እኔ ግን ሁልጊዜ ቸኩዬ ነበር። «እማማ፣ መቼ ነው የሚደርሰው?»",
+ "params": {
+  "voice": "Sulafat",
+  "style": "calm, warm, unhurried storyteller. Read each paragraph as a separate line of narration. Leave a long, clear silence of about two seconds between paragraphs.",
+  "batch": true,
+  "batch_index": 4,
+  "batch_size": 5,
+  "split_ratio": 0.84
+ }
+}

@@ -1,0 +1,79 @@
+{
+ "nvidia_smi": "name, memory.total [MiB], driver_version\nTesla T4, 15360 MiB, 580.178.04\nTesla T4, 15360 MiB, 580.178.04\n",
+ "torch": "2.11.0+cu130",
+ "cuda": "13.0",
+ "gpus": [
+  "Tesla T4",
+  "Tesla T4"
+ ],
+ "capability": [
+  [
+   7,
+   5
+  ],
+  [
+   7,
+   5
+  ]
+ ],
+ "bf16_supported": true,
+ "matmul_ms_4096": {
+  "fp16": 14.5,
+  "bf16": 53.42,
+  "fp32": 31.62
+ },
+ "pip_diffusers_main_s": 19.1,
+ "pip_tail": "",
+ "diffusers": "0.44.0.dev0",
+ "WanPipeline_call_params": [
+  "self",
+  "prompt",
+  "negative_prompt",
+  "height",
+  "width",
+  "num_frames",
+  "num_inference_steps",
+  "guidance_scale",
+  "guidance_scale_2",
+  "num_videos_per_prompt",
+  "generator",
+  "latents",
+  "prompt_embeds",
+  "negative_prompt_embeds",
+  "output_type",
+  "return_dict",
+  "attention_kwargs",
+  "callback_on_step_end",
+  "callback_on_step_end_tensor_inputs",
+  "max_sequence_length"
+ ],
+ "WanImageToVideoPipeline_call_params": [
+  "self",
+  "image",
+  "prompt",
+  "negative_prompt",
+  "height",
+  "width",
+  "num_frames",
+  "num_inference_steps",
+  "guidance_scale",
+  "guidance_scale_2",
+  "num_videos_per_prompt",
+  "generator",
+  "latents",
+  "prompt_embeds",
+  "negative_prompt_embeds",
+  "image_embeds",
+  "last_image",
+  "output_type",
+  "return_dict",
+  "attention_kwargs",
+  "callback_on_step_end",
+  "callback_on_step_end_tensor_inputs",
+  "max_sequence_length"
+ ],
+ "disk_free_gb": 20.9,
+ "ram_gb": 33.7,
+ "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+ "elapsed_s": 56.2
+}

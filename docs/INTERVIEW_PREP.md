@@ -28,3 +28,13 @@
 
 ## Numbers to remember
 Film 85.4 s · 12 shots · Amharic · −14.1 LUFS / −1.3 dBTP · ~1.4 words/s · MusicGen score seed 42 (E08b) · duck ~9 dB · keyframes 512 px, ~34 s each on CPU · full cold build 25 min, one-shot change ~3.5 min with 1 model call · 25 CPU-min total ≈ 3 T4-min ≈ $0.02 list price · $0 spent.
+
+---
+## Submitted film: ሁሉም ለበጎ ነው (know these cold)
+* **Pipeline:** storyboard.json → narration (Gemini 3.8 Flash-Lite TTS, voice Sulafat, ONE request for all 11 lines) → radio cut → FLUX.1 schnell keyframes (Cloudflare) → Wan 2.2 on Kaggle T4 (s01, s08) + Ken Burns → ACE-Step 1.5 score (seed 23 of 3) → FFmpeg assembly, 87.2 s, both ratios, −14.1 LUFS.
+* **Hardest problem:** TTS quota 10/day. The batch split failed (gaps between lines no longer than pauses inside them) and the fallback spent the quota (F15). Rescued offline by DP alignment, verified 7/7 by rhythm correlation (E22).
+* **Audience test 1:** positive; one "slightly slow". Kept: the voice is not slowed (2.06 words/s), the holds are deliberate.
+* **Audience test 2:** mother looked different in s02/s03 → s03 reuses s02's image (push-in); king not riding in s04 → re-staged. Plus focus-point framing (the 16:9 crop had cut the mother's head at the eyes) (E28).
+* **Wan:** 2 OOM failures → sequential offload fits in 2.25 GB; ~7–9 GPU-min per 2 s clip; 5 generated, 3 passed QC (ambient motion passes, physical actions hallucinate) (E27).
+* **Practice that helped:** several candidates + evidence (score E26, Wan QC E27). **Practice that didn't work as stated:** the reference sheet couldn't condition FLUX (no seed or reference, F11); consistency came from explicit character text + reusing images.
+* **Your personal input still needed:** mother's consent (ETHICS.md), testers' exact words (DESIGN.md §2–3), GitHub URL in the report.

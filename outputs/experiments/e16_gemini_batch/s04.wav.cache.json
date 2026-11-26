@@ -1,0 +1,13 @@
+{
+ "key": "experiment",
+ "provider": "gemini-tts",
+ "text": "ቡናው በምጣዱ ላይ ሲቆላ፣ ጭሱ ቤቱን በሙሉ ይሞላል።",
+ "params": {
+  "voice": "Sulafat",
+  "style": "calm, warm, unhurried storyteller. Read each paragraph as a separate line of narration. Leave a long, clear silence of about two seconds between paragraphs.",
+  "batch": true,
+  "batch_index": 3,
+  "batch_size": 5,
+  "split_ratio": 1.03
+ }
+}

@@ -1,14 +1,11 @@
 {
- "key": "ea0f94381e240515",
- "provider": "local:sd-turbo",
- "prompt": "an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair, smiling warmly and looking down at someone off frame, soft smoke in the air, warm window light on her face, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 106,
+ "key": "07611984e9045a5c",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "a lean young Ethiopian servant with dark brown skin, a shaved head, an off-white cotton gabi wrapped over a plain tunic, barefoot kneeling on the road beside the fallen king, calm gentle face, speaking softly, golden-hour backlight, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 206,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "img2img",
-  "strength": 0.8,
-  "ref": "emama.png"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

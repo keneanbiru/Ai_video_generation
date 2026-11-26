@@ -1,20 +1,14 @@
 {
- "key": "9d2e690591fe4cbc",
- "provider": "local:mms-tts",
- "text": "እኔ ግን ሁልጊዜ ቸኩዬ ነበር። «እማማ፣ መቼ ነው የሚደርሰው?»",
+ "key": "28990a2c4b745bbb",
+ "provider": "gemini-tts",
+ "text": "ፈረሱ እግሩን ጉድጓድ ውስጥ ገብቶ ሲወድቅ፣ ንጉሡም ወድቆ እጁንና እግሩን ቆሰለ።",
  "params": {
-  "speaking_rate": 1.0,
-  "noise_scale": 0.6,
-  "uroman": true,
-  "input_chars": 40,
-  "prepared": "enee gene hulegizee chakuyee nabare | emaamaa | machee nawe yamidaresawe",
-  "chunks": 3,
-  "pauses": {
-   "።": 0.55,
-   "?": 0.55,
-   "፦": 0.35,
-   "፣": 0.25,
-   "፤": 0.3
-  }
+  "model": "gemini-3.8-flash-lite-tts",
+  "voice": "Sulafat",
+  "style": "warm, emotionally expressive and reflective, natural and unhurried, never dramatic or formal; a young woman remembering the evening her mother told her a story",
+  "batch": true,
+  "batch_index": 3,
+  "batch_size": 11,
+  "split": "offline DP alignment (E22); restored after F16"
  }
 }

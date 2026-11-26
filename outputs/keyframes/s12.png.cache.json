@@ -1,12 +1,11 @@
 {
- "key": "186449801f8813d7",
- "provider": "local:sd-turbo",
- "prompt": "close-up of a tiny white porcelain coffee cup without a handle, full of black coffee with steam, on a wooden windowsill at sunrise, green hills far away, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 312,
+ "key": "9b0d83d9f8798b1a",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "close-up of a young Ethiopian woman, a university student of about twenty, with dark brown skin, shoulder-length black braids and a mustard yellow cardigan by a window in soft morning light, a faint calm smile, her mother's hand resting on her shoulder, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 212,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

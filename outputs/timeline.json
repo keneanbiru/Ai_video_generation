@@ -3,104 +3,104 @@
   {
    "id": "s01",
    "start": 0.0,
-   "duration": 7.0,
+   "duration": 6.792,
    "narration_start": 0.4,
-   "narration_s": 5.543,
-   "subtitle_en": "When I was a child, at my grandmother's house, mornings began with the smell of coffee."
+   "narration_s": 3.816,
+   "subtitle_en": "I failed an exam I was sure I would pass, and came home deeply sad."
   },
   {
    "id": "s02",
-   "start": 7.0,
-   "duration": 6.5,
-   "narration_start": 7.4,
-   "narration_s": 3.617,
-   "subtitle_en": "Emama spread fresh grass and set out the jebena."
+   "start": 6.792,
+   "duration": 8.375,
+   "narration_start": 7.192,
+   "narration_s": 7.08,
+   "subtitle_en": "My mother saw my face: \"My child, what's wrong?\" When I told her what happened, she told me a story."
   },
   {
    "id": "s03",
-   "start": 13.5,
-   "duration": 5.5,
-   "narration_start": 13.9,
-   "narration_s": 2.986,
-   "subtitle_en": "She washed the green beans slowly, by hand."
+   "start": 15.167,
+   "duration": 5.0,
+   "narration_start": null,
+   "narration_s": 0.0,
+   "subtitle_en": ""
   },
   {
    "id": "s04",
-   "start": 19.0,
-   "duration": 6.042,
-   "narration_start": 19.4,
-   "narration_s": 4.725,
-   "subtitle_en": "As the beans roasted in the pan, the smoke filled the whole house."
+   "start": 20.167,
+   "duration": 6.0,
+   "narration_start": 20.567,
+   "narration_s": 4.11,
+   "subtitle_en": "Long ago, a king was travelling to a ceremony with his faithful servant."
   },
   {
    "id": "s05",
-   "start": 25.042,
-   "duration": 7.583,
-   "narration_start": 25.442,
-   "narration_s": 6.269,
-   "subtitle_en": "But I was always in a hurry. \"Emama, when will it be ready?\""
+   "start": 26.167,
+   "duration": 6.25,
+   "narration_start": 26.567,
+   "narration_s": 4.971,
+   "subtitle_en": "His horse stepped into a hole and fell. The king was thrown off, hurting his hand and leg."
   },
   {
    "id": "s06",
-   "start": 32.625,
-   "duration": 7.917,
-   "narration_start": 33.225,
-   "narration_s": 6.409,
-   "subtitle_en": "She would smile and answer: \"Slowly, slowly, an egg will walk on its own legs.\""
+   "start": 32.417,
+   "duration": 4.75,
+   "narration_start": 32.817,
+   "narration_s": 3.43,
+   "subtitle_en": "But the servant calmly said, \"Everything is for the good.\""
   },
   {
    "id": "s07",
-   "start": 40.542,
-   "duration": 5.708,
-   "narration_start": 40.942,
-   "narration_s": 4.396,
-   "subtitle_en": "She pounded the beans in the mortar, and the incense smoked."
+   "start": 37.167,
+   "duration": 5.792,
+   "narration_start": 37.567,
+   "narration_s": 2.737,
+   "subtitle_en": "Furious, the king threw the servant into a pit and rode on alone."
   },
   {
    "id": "s08",
-   "start": 46.25,
-   "duration": 7.958,
-   "narration_start": 46.65,
-   "narration_s": 6.655,
-   "subtitle_en": "Abol, tona, bereka. Three rounds, three lessons in patience."
+   "start": 42.958,
+   "duration": 6.208,
+   "narration_start": 43.358,
+   "narration_s": 4.89,
+   "subtitle_en": "People seeking someone with no blemish on their body, to offer as a sacrifice, seized the king."
   },
   {
    "id": "s09",
-   "start": 54.208,
-   "duration": 9.167,
-   "narration_start": 54.608,
-   "narration_s": 7.855,
-   "subtitle_en": "The neighbours gathered. News, laughter, blessings. No one was in a hurry."
+   "start": 49.167,
+   "duration": 6.792,
+   "narration_start": 49.567,
+   "narration_s": 4.351,
+   "subtitle_en": "But they saw his wounds and let him go. And the king remembered his servant's words."
   },
   {
    "id": "s10",
-   "start": 63.375,
-   "duration": 6.0,
-   "narration_start": 63.775,
-   "narration_s": 4.576,
-   "subtitle_en": "Today I live in a faraway city. Everything is fast."
+   "start": 55.958,
+   "duration": 7.75,
+   "narration_start": 56.358,
+   "narration_s": 6.448,
+   "subtitle_en": "The king went back, pulled the servant out and told him everything. The servant said, \"Everything is for the good.\""
   },
   {
    "id": "s11",
-   "start": 69.375,
-   "duration": 6.0,
-   "narration_start": 69.775,
-   "narration_s": 3.636,
-   "subtitle_en": "But when I roast coffee, I hear Emama's voice."
+   "start": 63.708,
+   "duration": 9.0,
+   "narration_start": 64.208,
+   "narration_s": 6.876,
+   "subtitle_en": "\"How was throwing you into the pit good?\" \"If I had gone with you, they would have sacrificed me.\""
   },
   {
    "id": "s12",
-   "start": 75.375,
-   "duration": 6.0,
-   "narration_start": 76.575,
-   "narration_s": 0.944,
-   "subtitle_en": "Slowly, slowly."
+   "start": 72.708,
+   "duration": 10.5,
+   "narration_start": 73.308,
+   "narration_s": 7.985,
+   "subtitle_en": "When she finished, my sadness was gone. My result hadn't changed, but my outlook had. Everything is for the good."
   }
  ],
  "end_card": {
-  "start": 81.375,
+  "start": 83.208,
   "duration": 4
  },
- "total_s": 85.375,
+ "total_s": 87.208,
  "fps": 24
 }

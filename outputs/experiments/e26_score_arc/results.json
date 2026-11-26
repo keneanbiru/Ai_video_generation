@@ -1,0 +1,83 @@
+{
+ "11": {
+  "sad 0-17": {
+   "rms_db": -23.8,
+   "centroid_hz": 1892,
+   "low_share": 0.077
+  },
+  "transition": {
+   "rms_db": -19.9,
+   "centroid_hz": 1882,
+   "low_share": 0.548
+  },
+  "tension": {
+   "rms_db": -19.1,
+   "centroid_hz": 2427,
+   "low_share": 0.649
+  },
+  "surprise": {
+   "rms_db": -19.2,
+   "centroid_hz": 2805,
+   "low_share": 0.66
+  },
+  "realisation+comfort": {
+   "rms_db": -19.8,
+   "centroid_hz": 2721,
+   "low_share": 0.755
+  }
+ },
+ "23": {
+  "sad 0-17": {
+   "rms_db": -23.3,
+   "centroid_hz": 1024,
+   "low_share": 0.115
+  },
+  "transition": {
+   "rms_db": -22.8,
+   "centroid_hz": 1653,
+   "low_share": 0.171
+  },
+  "tension": {
+   "rms_db": -22.2,
+   "centroid_hz": 1067,
+   "low_share": 0.402
+  },
+  "surprise": {
+   "rms_db": -19.6,
+   "centroid_hz": 1726,
+   "low_share": 0.45
+  },
+  "realisation+comfort": {
+   "rms_db": -23.5,
+   "centroid_hz": 1877,
+   "low_share": 0.384
+  }
+ },
+ "47": {
+  "sad 0-17": {
+   "rms_db": -23.0,
+   "centroid_hz": 989,
+   "low_share": 0.45
+  },
+  "transition": {
+   "rms_db": -25.1,
+   "centroid_hz": 1170,
+   "low_share": 0.657
+  },
+  "tension": {
+   "rms_db": -21.1,
+   "centroid_hz": 1327,
+   "low_share": 0.45
+  },
+  "surprise": {
+   "rms_db": -26.2,
+   "centroid_hz": 1287,
+   "low_share": 0.742
+  },
+  "realisation+comfort": {
+   "rms_db": -26.1,
+   "centroid_hz": 1347,
+   "low_share": 0.702
+  }
+ }
+}

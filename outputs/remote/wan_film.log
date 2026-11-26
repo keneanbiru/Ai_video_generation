@@ -1,0 +1,26 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (78 > 77). Running this sequence through the model will result in indexing errors
+[15:13:10]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+[15:13:10]   references/student: cached
+[15:13:10]   references/mother: cached
+[15:13:10]   references/king: cached
+[15:13:10]   references/servant: cached
+[15:13:10]   keyframes/s01: cached
+[15:13:10]   keyframes/s02: cached
+[15:13:10]   keyframes/s03: cached
+[15:13:10]   keyframes/s04: cached
+[15:13:10]   keyframes/s05: cached
+[15:13:10]   keyframes/s06: cached
+[15:13:10]   keyframes/s07: cached
+[15:13:10]   keyframes/s08: cached
+[15:13:10]   keyframes/s09: cached
+[15:13:10]   keyframes/s10: cached
+[15:13:10]   keyframes/s11: cached
+[15:13:10]   keyframes/s12: cached
+[15:13:27]   [remote] pushing private kernel keneanbiru/heritage-wan1 (T4 x2)
+[15:13:27]   [remote] pushing private kernel keneanbiru/heritage-wan2 (T4 x2)
+[15:14:04]   [remote] wan2: FAILED in 38s (queue Nones); output -> outputs/remote/results/wan2
+[15:14:04]   [remote] a wan job failed: RuntimeError('Kaggle job wan2 failed: keneanbiru/heritage-wan2 has status "KernelWorkerStatus.CANCEL_ACKNOWLEDGED"\n(no log downloaded)')
+[15:14:05]   [remote] wan1: FAILED in 38s (queue Nones); output -> outputs/remote/results/wan1
+[15:14:05]   [remote] a wan job failed: RuntimeError('Kaggle job wan1 failed: keneanbiru/heritage-wan1 has status "KernelWorkerStatus.CANCEL_ACKNOWLEDGED"\n(no log downloaded)')
+[15:14:05]   [remote] wan: imported 0/5 clips into outputs/clips_wan/
+EXIT 0

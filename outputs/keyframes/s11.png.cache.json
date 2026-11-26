@@ -1,12 +1,11 @@
 {
- "key": "d1a8f9560004a166",
- "provider": "local:sd-turbo",
- "prompt": "close-up of young hands roasting coffee beans in a small pan on a modern gas stove in a city kitchen, curling smoke, warm light returning, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 111,
+ "key": "94152481341a3630",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "a lean young Ethiopian servant with dark brown skin, a shaved head, an off-white cotton gabi wrapped over a plain tunic, barefoot and a middle-aged Ethiopian king with dark brown skin, a short greying beard, a white gold-embroidered robe, a deep red cape and a simple gold circlet sitting side by side on the ground at sunrise, the servant speaking with a gentle smile, the king listening with humility, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 211,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

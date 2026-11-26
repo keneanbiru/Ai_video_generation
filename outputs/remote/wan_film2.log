@@ -1,0 +1,25 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (78 > 77). Running this sequence through the model will result in indexing errors
+[15:17:48]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+[15:17:48]   references/student: cached
+[15:17:48]   references/mother: cached
+[15:17:48]   references/king: cached
+[15:17:48]   references/servant: cached
+[15:17:48]   keyframes/s01: cached
+[15:17:48]   keyframes/s02: cached
+[15:17:48]   keyframes/s03: cached
+[15:17:48]   keyframes/s04: cached
+[15:17:48]   keyframes/s05: cached
+[15:17:48]   keyframes/s06: cached
+[15:17:48]   keyframes/s07: cached
+[15:17:48]   keyframes/s08: cached
+[15:17:48]   keyframes/s09: cached
+[15:17:48]   keyframes/s10: cached
+[15:17:48]   keyframes/s11: cached
+[15:17:48]   keyframes/s12: cached
+[15:18:04]   [remote] pushing private kernel keneanbiru/heritage-wan (T4 x2)
+[15:18:40]   [remote]  "KernelWorkerStatus.QUEUED"
+[15:25:10]   [remote] running after 426s in queue
+[15:25:10]   [remote]  "KernelWorkerStatus.RUNNING"
+[16:08:02]   [remote] wan: complete in 2999s (queue 426s); output -> outputs/remote/results/wan
+[16:08:02]   [remote] wan: imported 5/5 clips into outputs/clips_wan/
+EXIT 0

@@ -11,6 +11,7 @@ Providers (storyboard.providers.keyframes, tried in order):
 from __future__ import annotations
 
 import argparse
+import json
 import base64
 import io
 import os
@@ -20,7 +21,7 @@ from pathlib import Path
 from PIL import Image
 
 from .common import (
-    ProviderUnavailable, cache_hit, cache_key, cache_write, device_name, expand_prompt,
+    ProviderUnavailable, require_online, cache_hit, cache_key, cache_write, device_name, expand_prompt,
     file_hash, load_storyboard, model_path, log, log_call, retry, run_chain, stage_paths,
 )
 from . import prices
@@ -87,38 +88,85 @@ def gen_local(name: str, prompt: str, seed: int, ref: Path | None, item: str, ou
     return params
 
 
-def gen_cloudflare(name: str, prompt: str, seed: int, ref: Path | None, item: str, out: Path, ck: str,
-                   strength: float | None = None) -> dict:
+FLUX_SIZE = int(os.environ.get("FLUX_SIZE", "1024"))  # FLUX's native resolution; cost is per 512px tile
+FLUX_STEPS = int(os.environ.get("FLUX_STEPS", "4"))
+# FLUX.2 klein multipart field names are not documented on the model page (checked 26 Nov 2026);
+# confirmed by a probe call and overridable here (FAILURES F11).
+KLEIN_FIELDS = json.loads(os.environ.get("KLEIN_FIELDS", '{"prompt": "prompt", "width": "width", "height": "height", '
+                                         '"steps": "steps", "seed": "seed", "image": "input_image_0"}'))
+
+
+def _cf_post(model: str, purpose: str, neurons: float, **kw):
+    require_online("cloudflare")
     acct, token = os.environ.get("CLOUDFLARE_ACCOUNT_ID"), os.environ.get("CLOUDFLARE_API_TOKEN")
     if not (acct and token):
         raise ProviderUnavailable("CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set")
     import requests
 
-    model = name.split(":", 1)[1]
-    params = {"steps": 4, "seed": seed, "note": "reference conditioning not used on this endpoint" if ref else ""}
+    from .quota import cf_guard
 
-    @retry(times=3, base_delay=4)
+    cf_guard(model, neurons, purpose)
+
+    @retry(times=3, base_delay=5, retry_on=(RuntimeError, requests.RequestException))
     def call():
         r = requests.post(f"https://api.cloudflare.com/client/v4/accounts/{acct}/ai/run/{model}",
-                          headers={"Authorization": f"Bearer {token}"},
-                          json={"prompt": prompt, "steps": 4, "seed": seed}, timeout=120)
-        if r.status_code == 429:
-            raise RuntimeError("429 rate limited / daily allowance used")
-        r.raise_for_status()
-        return r.json()
+                          headers={"Authorization": f"Bearer {token}"}, timeout=180, **kw)
+        if r.status_code == 429 or r.status_code >= 500:
+            raise RuntimeError(f"{r.status_code} {r.text[:200]}")
+        if r.status_code >= 400:
+            raise ProviderUnavailable(f"{model}: {r.status_code} {r.text[:300]}")
+        ctype = r.headers.get("content-type", "")
+        if ctype.startswith("image/"):
+            return r.content
+        d = r.json()
+        res = d.get("result", d)
+        return base64.b64decode(res["image"])
 
+    return call()
+
+
+def gen_cloudflare(name: str, prompt: str, seed: int, ref: Path | None, item: str, out: Path, ck: str,
+                   strength: float | None = None) -> dict:
+    """cloudflare:@cf/black-forest-labs/flux-1-schnell (JSON) or ...flux-2-klein-4b (multipart, reference)."""
+    from .quota import cf_cost
+
+    model = name.split(":", 1)[1]
+    purpose = "experiment" if ck == "experiment" else "film"
+    klein = "flux-2-klein" in model
     t0 = time.time()
+    if klein:
+        ref_tiles = 4 if ref else 0  # a 1024px reference = 4 input tiles
+        neurons = cf_cost(model, FLUX_SIZE, FLUX_SIZE, FLUX_STEPS, ref_tiles)
+        f = KLEIN_FIELDS
+        data = {f["prompt"]: prompt, f["width"]: str(FLUX_SIZE), f["height"]: str(FLUX_SIZE),
+                f["seed"]: str(seed), f["steps"]: str(FLUX_STEPS)}
+        files = {k: (None, v) for k, v in data.items()}
+        if ref:
+            buf = io.BytesIO()
+            Image.open(ref).convert("RGB").resize((FLUX_SIZE, FLUX_SIZE)).save(buf, "PNG")
+            files[f["image"]] = ("reference.png", buf.getvalue(), "image/png")
+        params = {"size": FLUX_SIZE, "steps": FLUX_STEPS, "reference": ref.name if ref else None, "neurons": neurons}
+        kw = {"files": files}
+    else:
+        neurons = cf_cost(model, 1024, 1024, FLUX_STEPS)  # schnell has no size parameter; output is 1024
+        params = {"steps": FLUX_STEPS, "neurons": neurons,
+                  "note": "schnell takes no reference image; identity comes from the character text" if ref else ""}
+        kw = {"json": {"prompt": prompt, "steps": FLUX_STEPS}}  # schnell rejects "seed" (400, E17): not reproducible
     try:
-        data = call()
-        b64 = data["result"]["image"]
+        img_bytes = _cf_post(model, purpose, neurons, **kw)
+        img = Image.open(io.BytesIO(img_bytes)).convert("RGB")
     except Exception as e:
         log_call(stage="keyframes", item=item, provider="cloudflare", model=model, params=params, seed=seed,
-                 latency_s=round(time.time() - t0, 2), status="error", cache_key=ck, error=repr(e))
+                 latency_s=round(time.time() - t0, 2), device="hosted", status="error", cache_key=ck,
+                 error=repr(e)[:400])
         raise
-    Image.open(io.BytesIO(base64.b64decode(b64))).convert("RGB").resize((SIZE, SIZE), Image.LANCZOS).save(out)
-    log_call(stage="keyframes", item=item, provider="cloudflare", model=model, params=params, seed=seed,
-             latency_s=round(time.time() - t0, 2), device="hosted", cost_usd=0.0,
-             list_price_usd=prices.image_equivalent("cloudflare"), cache_key=ck,
+    native = img.size
+    side = min(img.size)  # centre-square (both aspect ratios are cropped from a square)
+    img = img.crop(((img.width - side) // 2, (img.height - side) // 2, (img.width + side) // 2, (img.height + side) // 2))
+    img.save(out)
+    log_call(stage="keyframes", item=item, provider="cloudflare", model=model, params={**params, "native": native},
+             seed=seed, latency_s=round(time.time() - t0, 2), device="hosted", cost_usd=0.0, neurons=neurons,
+             list_price_usd=round(neurons / 1000 * 0.011, 5), cache_key=ck,
              output=str(out.relative_to(out.parents[1])), prompt=prompt)
     return params
 
@@ -166,15 +214,25 @@ def references(sb: dict, force: bool = False) -> dict[str, Path]:
 
 
 def keyframes(sb: dict, only: set[str] | None = None, force: bool = False) -> dict[str, Path]:
-    if any(p.startswith("local:sd-turbo") for p in sb["providers"]["keyframes"]):
-        check_prompt_lengths(sb)
+    chain = sb["providers"]["keyframes"]
+    if chain and chain[0].startswith("local:sd-turbo"):
+        check_prompt_lengths(sb)  # primary provider truncates at 77 tokens: fail early (F08)
+    elif any(p.startswith("local:sd-turbo") for p in chain):
+        try:  # FLUX reads up to 512 tokens; only the fallback would truncate, so warn instead of failing
+            check_prompt_lengths(sb)
+        except Exception as e:
+            log(f"  [keyframes] warning for the SD-Turbo fallback only: {e}")
     refs = references(sb)
     d = stage_paths("keyframes")
     out = {}
+    import shutil
+
     for shot in sb["shots"]:
         sid = shot["id"]
         path = d / f"{sid}.png"
         out[sid] = path
+        if shot.get("keyframe_from"):
+            continue  # filled after the source shot exists
         prompt = expand_prompt(sb, shot)
         strength = shot.get("ref_strength", REF_STRENGTH)
         ref = refs[shot["characters"][0]] if shot["characters"] and strength is not None else None
@@ -186,10 +244,19 @@ def keyframes(sb: dict, only: set[str] | None = None, force: bool = False) -> di
         if not force and cache_hit(path, ck):
             log(f"  keyframes/{sid}: cached")
             continue
-        log(f"  keyframes/{sid}: generating ({'img2img on ' + ref.name if ref else 'txt2img'})")
+        log(f"  keyframes/{sid}: generating" + (f" (reference {ref.name}: used by SD-Turbo img2img only; FLUX ignores it)" if ref else ""))
         prov, params = run_chain("keyframes", sb["providers"]["keyframes"], IMPLS, prompt, shot["seed"], ref, sid,
                                  path, ck, strength if ref else None)
         cache_write(path, ck, provider=prov, prompt=prompt, seed=shot["seed"], params=params)
+    for shot in sb["shots"]:  # reuse: same picture, same person by construction (test 2 feedback)
+        if shot.get("keyframe_from"):
+            src = out[shot["keyframe_from"]]
+            dst = out[shot["id"]]
+            ck = cache_key(stage="keyframe_from", src=file_hash(src))
+            if force or not cache_hit(dst, ck):
+                shutil.copy(src, dst)
+                cache_write(dst, ck, provider="reuse", source=shot["keyframe_from"])
+                log(f"  keyframes/{shot['id']}: reused from {shot['keyframe_from']} (no model call)")
     return out
 
 

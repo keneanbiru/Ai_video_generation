@@ -1,37 +1,48 @@
 {
   "version": 1,
   "film": {
-    "title": "Slowly, Slowly",
-    "title_native": "ቀስ በቀስ",
-    "logline": "A grandmother's coffee ceremony, and the proverb she repeated to an impatient child, follow that child into a fast city life.",
+    "title": "Everything Is for the Good",
+    "title_native": "ሁሉም ለበጎ ነው",
+    "logline": "A student who has just failed an exam is comforted by their mother's folktale of a king whose painful fall, and a servant thrown into a pit, turned out to save both their lives.",
     "language": "amh",
     "language_name": "Amharic",
-    "audience": "Young Ethiopians aged 18-35 at home and in the diaspora, who grew up around the buna ceremony and now live fast city lives; watched on a phone, vertical, in a feed or forwarded on Telegram.",
-    "intent": "When it ends, the viewer should feel the warmth of being made to wait as a child, and want to slow down and call an elder this week.",
-    "target_duration_s": 78
+    "audience": "Ethiopian students and young adults facing academic failure or other setbacks; secondarily Ethiopian families who pass wisdom to children through stories. Watched on a phone, vertical, often muted.",
+    "intent": "Move the viewer from sadness to curiosity, tension, surprise and a second realisation, and leave them comforted: a setback may have a purpose we cannot see yet. ሁሉም ለበጎ ነው.",
+    "target_duration_s": 85,
+    "line_tail_s": 0.9
+  },
+  "voice": {
+    "style": "warm, emotionally expressive and reflective, natural and unhurried, never dramatic or formal; a young woman remembering the evening her mother told her a story",
+    "gemini_voice": "Sulafat"
   },
   "style": {
-    "style_block": "warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
-    "negative_prompt": "text, letters, watermark, logo, photo, photorealistic, extra fingers, deformed hands, blurry, harsh contrast"
+    "style_block": "cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+    "negative_prompt": "text, letters, watermark, cartoon, anime, illustration, blood, gore, weapons, religious symbols, extra fingers, deformed hands"
   },
   "characters": {
-    "emama": {
-      "description": "an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair",
+    "student": {
+      "description": "a young Ethiopian woman, a university student of about twenty, with dark brown skin, shoulder-length black braids and a mustard yellow cardigan",
       "real_person": false,
-      "reference_prompt": "portrait of an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair, gentle smile, plain warm background",
-      "reference_seed": 1101
+      "reference_prompt": "portrait of a young Ethiopian woman, a university student of about twenty, with dark brown skin, shoulder-length black braids and a mustard yellow cardigan, neutral expression, soft window light, plain warm background",
+      "reference_seed": 2101
     },
-    "child": {
-      "description": "a small Ethiopian child in a faded yellow sweater, seen from behind",
+    "mother": {
+      "description": "an Ethiopian mother in her fifties with dark brown skin, kind eyes, a white cotton shash scarf over her hair and a simple green dress",
       "real_person": false,
-      "reference_prompt": "a small Ethiopian child of about seven in a faded yellow sweater, sitting cross-legged on a grass-covered floor, seen from behind, plain warm background",
-      "reference_seed": 1102
+      "reference_prompt": "portrait of an Ethiopian mother in her fifties with dark brown skin, kind eyes, a white cotton shash scarf over her hair and a simple green dress, gentle expression, warm lamp light, plain background",
+      "reference_seed": 2102
     },
-    "adult": {
-      "description": "a young Ethiopian adult in a grey hoodie, face in shadow",
+    "king": {
+      "description": "a middle-aged Ethiopian king with dark brown skin, a short greying beard, a white gold-embroidered robe, a deep red cape and a simple gold circlet",
       "real_person": false,
-      "reference_prompt": "a young Ethiopian adult in a dark grey hoodie in profile, face mostly in shadow, plain cool background",
-      "reference_seed": 1103
+      "reference_prompt": "portrait of a middle-aged Ethiopian king with dark brown skin, a short greying beard, a white gold-embroidered robe, a deep red cape and a simple gold circlet, proud expression, golden-hour light, highland background",
+      "reference_seed": 2103
+    },
+    "servant": {
+      "description": "a lean young Ethiopian servant with dark brown skin, a shaved head, an off-white cotton gabi wrapped over a plain tunic, barefoot",
+      "real_person": false,
+      "reference_prompt": "portrait of a lean young Ethiopian servant with dark brown skin, a shaved head and an off-white cotton gabi wrapped over a plain tunic, calm expression, golden-hour light, highland background",
+      "reference_seed": 2104
     }
   },
   "providers": {
@@ -54,40 +65,40 @@
     ]
   },
   "music": {
-    "caption": "gentle slow Ethiopian-inspired instrumental underscore, soft plucked lyre strings, warm breathy bamboo flute, quiet low drone, calm nostalgic tender mood, sparse, no drums, no vocals",
+    "caption": "cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme",
     "candidates": [
-      7,
-      21,
-      42
+      11,
+      23,
+      47
     ],
-    "chosen": 42,
-    "chosen_reason": "EXPERIMENTS.md E08b: most tonal MusicGen candidate (flatness 0.018), energy below 1.5 kHz leaving the 2-4 kHz consonant band clear; seed 7 drops out mid-track (LRA 44.5 dB), seed 21 holds a steady 3-4 kHz tone and a noise floor over the voice.",
-    "segment_s": 26,
+    "chosen": 23,
+    "chosen_reason": "EXPERIMENTS E26: the only candidate that follows the arc. Quiet and dark for the sadness (-23.3 dB, 1.0 kHz centroid), low drums building through the tension, loudest exactly at the surprise (-19.6 dB), then quieter but brighter for the comfort ending (-23.5 dB, 1.9 kHz). Seed 11 stays loud and bass-heavy to the end; seed 47 ends dark and quiet.",
+    "segment_s": 88,
     "cues": [
       {
         "at_shot": "s01",
         "action": "start",
-        "note": "fade in under the dawn; texture only"
+        "note": "sparse, sad; room for the voice"
       },
       {
-        "at_shot": "s05",
-        "action": "dip",
-        "note": "pull back for the child's impatience so the question lands"
-      },
-      {
-        "at_shot": "s09",
+        "at_shot": "s04",
         "action": "swell",
-        "note": "warmth of the gathering"
+        "note": "the tale opens: the landscape breathes"
       },
       {
-        "at_shot": "s10",
+        "at_shot": "s07",
         "action": "dip",
-        "note": "the city: thinner, lonelier"
+        "note": "the pit: thin, lonely"
+      },
+      {
+        "at_shot": "s08",
+        "action": "swell",
+        "note": "torches: suspense peaks"
       },
       {
         "at_shot": "s12",
         "action": "out",
-        "note": "theme returns, then fade with the end card"
+        "note": "warm theme returns, fade with the end card"
       }
     ],
     "duck": {
@@ -101,234 +112,313 @@
   "shots": [
     {
       "id": "s01",
-      "reason": "Establishing shot: tells the viewer where and when (highland town, dawn) before any person appears.",
-      "shot_size": "extreme-wide",
-      "characters": [],
-      "image_prompt": "extreme wide view of misty green Ethiopian highland hills at dawn, a small house with a tin roof among eucalyptus trees, thin smoke rising from the house, sun just rising",
-      "seed": 101,
-      "motion_prompt": "slow push-in, mist drifting, smoke rising gently, fixed horizon",
+      "reason": "Opens on the feeling the audience knows: coming home after failing. Sadness and empathy before any story.",
+      "shot_size": "medium",
+      "characters": [
+        "student"
+      ],
+      "image_prompt": "{student} standing just inside the front door of a modest Addis Ababa apartment at dusk, holding a folded exam paper, eyes wet, head lowered, cool blue light from a window",
+      "seed": 201,
+      "motion_prompt": "she slowly lowers her head, the paper trembles slightly, camera fixed",
       "kenburns": {
         "zoom_from": 1.0,
-        "zoom_to": 1.15,
+        "zoom_to": 1.12,
         "pan": "none"
       },
-      "narration": "በልጅነቴ፣ በአያቴ ቤት፣ ጠዋት በቡና ሽታ ይጀምር ነበር።",
-      "subtitle_en": "When I was a child, at my grandmother's house, mornings began with the smell of coffee.",
-      "min_duration_s": 7
+      "animate": true,
+      "narration": "አልፋለሁ ብዬ ያሰብኩትን ፈተና ወድቄ፣ በጣም አዝኜ ቤት ገባሁ።",
+      "subtitle_en": "I failed an exam I was sure I would pass, and came home deeply sad.",
+      "min_duration_s": 6.8,
+      "wan_qc": "pass: subtle head and light movement, identity stable over all 49 frames",
+      "focus": {
+        "x": 0.57,
+        "y": 0.36
+      }
     },
     {
       "id": "s02",
-      "ref_strength": null,
-      "reason": "Introduces Emama and the ritual space (grass, charcoal, jebena) in one medium shot.",
+      "reason": "The mother notices and asks; her care turns sadness toward curiosity, and she begins the story.",
       "shot_size": "medium",
       "characters": [
-        "emama"
+        "mother"
       ],
-      "image_prompt": "{emama} sitting on a low wooden stool, spreading fresh green grass on the floor, a black clay jebena coffee pot beside a small charcoal stove, inside a simple mud-walled room",
-      "seed": 102,
-      "motion_prompt": "she slowly scatters grass with one hand, camera fixed",
+      "image_prompt": "{mother} sitting on a sofa in a warm lamp-lit living room, looking up with concern toward someone off frame; on the low table a traditional Ethiopian jebena: a round black clay coffee pot with a long narrow neck and a straw stopper, beside small white cups",
+      "seed": 202,
+      "motion_prompt": "she leans forward gently, camera fixed",
       "kenburns": {
         "zoom_from": 1.1,
         "zoom_to": 1.0,
         "pan": "right"
       },
-      "narration": "እማማ ሳር ጎዝጉዘው ጀበናውን ያዘጋጃሉ።",
-      "subtitle_en": "Emama spread fresh grass and set out the jebena.",
-      "min_duration_s": 6.5
+      "animate": false,
+      "narration": "እናቴ ፊቴን አይታ፣ «ልጄ፣ ምን ሆነሽ?» አለችኝ። የሆነውን ስነግራት፣ አንድ ታሪክ ነገረችኝ።",
+      "subtitle_en": "My mother saw my face: \"My child, what's wrong?\" When I told her what happened, she told me a story.",
+      "min_duration_s": 6.5,
+      "focus": {
+        "x": 0.6,
+        "y": 0.33
+      }
     },
     {
       "id": "s03",
-      "reason": "Close detail of her hands: the care and slowness of the work, without needing a consistent face.",
-      "shot_size": "extreme-close-up",
-      "characters": [],
-      "image_prompt": "extreme close-up of an elderly woman's wrinkled dark brown hands washing green coffee beans in a small wooden bowl of water",
-      "seed": 103,
-      "motion_prompt": "hands gently stir the beans, small ripples, camera fixed",
+      "reason": "A five-second, music-only push-in from the living room onto the mother's face (built from s02's own image, so she is the same woman), then a dissolve into the tale: the cinematic bridge between the two worlds.",
+      "shot_size": "close-up",
+      "characters": [
+        "mother"
+      ],
+      "image_prompt": "close-up of {mother} beginning to tell an old story, a soft nostalgic half-smile, eyes looking gently away into the distance as if remembering, warm lamp light on one side of her face, soft dark background",
+      "seed": 203,
+      "motion_prompt": "very slow push-in, her eyes look into the distance",
       "kenburns": {
-        "zoom_from": 1.0,
-        "zoom_to": 1.12,
-        "pan": "down"
+        "zoom_from": 1.3,
+        "zoom_to": 1.6,
+        "pan": "none"
       },
-      "narration": "አረንጓዴውን ቡና በእጃቸው ቀስ ብለው ያጥባሉ።",
-      "subtitle_en": "She washed the green beans slowly, by hand.",
-      "min_duration_s": 5.5
+      "animate": false,
+      "narration": "",
+      "subtitle_en": "",
+      "music_only": true,
+      "min_duration_s": 5.0,
+      "transition_in": "dissolve",
+      "transition_s": 0.8,
+      "focus": {
+        "x": 0.6,
+        "y": 0.22
+      },
+      "keyframe_from": "s02"
     },
     {
       "id": "s04",
-      "reason": "The roast is the sensory core of the memory (smell, smoke), so it gets its own close-up.",
-      "shot_size": "close-up",
-      "characters": [],
-      "image_prompt": "close-up of coffee beans turning dark brown in a flat iron roasting pan over glowing charcoal, curling white smoke",
-      "seed": 104,
-      "motion_prompt": "smoke curls upward, beans shift slightly, slow push-in",
+      "reason": "Establishes the folktale world in one wide image: highland road, golden hour, king on horseback, servant on foot.",
+      "shot_size": "extreme-wide",
+      "characters": [
+        "king",
+        "servant"
+      ],
+      "image_prompt": "extreme wide view of a dusty road across green Ethiopian highlands at golden hour: {king} sits mounted in the saddle on the back of a white horse, riding forward, while {servant} walks on foot beside the horse; acacia trees and distant flat-topped mountains",
+      "seed": 2041,
+      "motion_prompt": "the horse walks forward slowly, dust drifts, slow pan following them",
       "kenburns": {
-        "zoom_from": 1.05,
-        "zoom_to": 1.2,
-        "pan": "up"
+        "zoom_from": 1.15,
+        "zoom_to": 1.0,
+        "pan": "right"
       },
-      "narration": "ቡናው በምጣዱ ላይ ሲቆላ፣ ጭሱ ቤቱን በሙሉ ይሞላል።",
-      "subtitle_en": "As the beans roasted in the pan, the smoke filled the whole house.",
-      "min_duration_s": 6
+      "animate": true,
+      "narration": "ድሮ፣ አንድ ንጉሥ ከታማኝ አገልጋዩ ጋር ወደ አንድ ሥነ ሥርዓት ይጓዝ ነበር።",
+      "subtitle_en": "Long ago, a king was travelling to a ceremony with his faithful servant.",
+      "min_duration_s": 6,
+      "transition_in": "dissolve",
+      "transition_s": 1.5,
+      "wan_qc": "reject: the clip was made from the old keyframe (king not riding); no time for a new Wan run before the deadline",
+      "focus": {
+        "x": 0.58,
+        "y": 0.5
+      }
     },
     {
       "id": "s05",
-      "ref_strength": null,
-      "reason": "Introduces the conflict: the child's impatience. Seen from behind so identity drift does not matter.",
+      "reason": "The accident, shown after the fact so it stays non-graphic: dust in the air, the king on the ground holding his arm.",
       "shot_size": "medium",
       "characters": [
-        "child"
+        "king"
       ],
-      "image_prompt": "{child}, fidgeting and leaning toward an old woman roasting coffee in the background, grass-covered floor, morning light through a small window",
-      "seed": 105,
-      "motion_prompt": "the child rocks impatiently, camera fixed",
+      "image_prompt": "{king} sitting on the dusty road after a fall, holding his arm in pain, a cloud of dust in the air, the white horse standing behind him, low angle, golden-hour light",
+      "seed": 205,
+      "motion_prompt": "dust settles slowly, the horse shakes its head, camera fixed",
       "kenburns": {
-        "zoom_from": 1.15,
-        "zoom_to": 1.05,
-        "pan": "left"
+        "zoom_from": 1.0,
+        "zoom_to": 1.15,
+        "pan": "up"
       },
-      "narration": "እኔ ግን ሁልጊዜ ቸኩዬ ነበር። «እማማ፣ መቼ ነው የሚደርሰው?»",
-      "subtitle_en": "But I was always in a hurry. \"Emama, when will it be ready?\"",
-      "min_duration_s": 6
+      "animate": true,
+      "narration": "ፈረሱ እግሩን ጉድጓድ ውስጥ ገብቶ ሲወድቅ፣ ንጉሡም ወድቆ እጁንና እግሩን ቆሰለ።",
+      "subtitle_en": "His horse stepped into a hole and fell. The king was thrown off, hurting his hand and leg.",
+      "min_duration_s": 4.5,
+      "wan_qc": "reject: a glowing flame-like object materialises in the foreground from about frame 20",
+      "focus": {
+        "x": 0.53,
+        "y": 0.42
+      }
     },
     {
       "id": "s06",
-      "ref_strength": 0.8,
-      "reason": "The emotional peak and the title: her face and the proverb. Generated against the golden reference.",
+      "reason": "First time the central line is spoken, by the calm servant: the film's thesis, before anyone understands it.",
       "shot_size": "medium-close-up",
       "characters": [
-        "emama"
+        "servant"
       ],
-      "image_prompt": "{emama}, smiling warmly and looking down at someone off frame, soft smoke in the air, warm window light on her face",
-      "seed": 106,
-      "motion_prompt": "she smiles and slightly tilts her head, very slow push-in",
+      "image_prompt": "{servant} kneeling on the road beside the fallen king, calm gentle face, speaking softly, golden-hour backlight",
+      "seed": 206,
+      "motion_prompt": "he speaks softly and nods, camera fixed",
       "kenburns": {
         "zoom_from": 1.0,
         "zoom_to": 1.18,
         "pan": "none"
       },
-      "narration": "እሳቸውም ፈገግ ብለው ይመልሳሉ፦ «ቀስ በቀስ፣ እንቁላል በእግሩ ይሄዳል።»",
-      "subtitle_en": "She would smile and answer: \"Slowly, slowly, an egg will walk on its own legs.\"",
-      "narration_delay_s": 0.6,
-      "min_duration_s": 7.5
+      "animate": false,
+      "narration": "አገልጋዩ ግን ተረጋግቶ፣ «ሁሉም ለበጎ ነው» አለ።",
+      "subtitle_en": "But the servant calmly said, \"Everything is for the good.\"",
+      "min_duration_s": 4.5,
+      "focus": {
+        "x": 0.48,
+        "y": 0.35
+      }
     },
     {
       "id": "s07",
-      "reason": "Insert of mortar and incense: the ritual continues regardless of the child, which is the point of the proverb.",
-      "shot_size": "insert",
-      "characters": [],
-      "image_prompt": "close-up of a wooden mortar and iron pestle crushing roasted coffee beans, a small clay incense burner with fragrant smoke beside it on fresh grass",
-      "seed": 107,
-      "motion_prompt": "pestle moves down slowly, incense smoke drifts, camera fixed",
-      "kenburns": {
-        "zoom_from": 1.12,
-        "zoom_to": 1.0,
-        "pan": "right"
-      },
-      "narration": "ቡናውን በሙቀጫ ይወቅጣሉ፤ ዕጣኑም ይጨሳል።",
-      "subtitle_en": "She pounded the beans in the mortar, and the incense smoked.",
-      "min_duration_s": 5.5
-    },
-    {
-      "id": "s08",
-      "reason": "The pour names the three rounds, turning the ritual into the film's lesson about patience.",
-      "shot_size": "close-up",
-      "characters": [],
-      "image_prompt": "close-up of coffee being poured from a black clay jebena in a thin stream into small white handleless cups on a wooden tray",
-      "seed": 108,
-      "motion_prompt": "thin stream of coffee pours, steam rises, camera fixed",
-      "kenburns": {
-        "zoom_from": 1.0,
-        "zoom_to": 1.1,
-        "pan": "left"
-      },
-      "narration": "አቦል፣ ቶና፣ በረካ። ሶስት ዙር፣ ሶስት ጊዜ ትዕግስት።",
-      "subtitle_en": "Abol, tona, bereka. Three rounds, three lessons in patience.",
-      "min_duration_s": 6.5
-    },
-    {
-      "id": "s09",
-      "ref_strength": null,
-      "reason": "Wide shot of the community: the reward for waiting is togetherness; the music swells here.",
+      "reason": "The injustice: a high angle down into the pit makes the servant small and alone; tension rises.",
       "shot_size": "wide",
       "characters": [
-        "emama"
+        "servant"
       ],
-      "image_prompt": "wide view of a warm mud-walled room, neighbours sitting on low stools around a coffee ceremony, laughing together, {emama} at the centre pouring coffee, golden light",
-      "seed": 109,
-      "motion_prompt": "people laugh gently, slow pan across the room",
-      "kenburns": {
-        "zoom_from": 1.15,
-        "zoom_to": 1.0,
-        "pan": "right"
-      },
-      "narration": "ጎረቤቶች ይሰበሰባሉ። ወሬ፣ ሳቅ፣ ምርቃት። ማንም አይቸኩልም።",
-      "subtitle_en": "The neighbours gathered. News, laughter, blessings. No one was in a hurry.",
-      "min_duration_s": 7
-    },
-    {
-      "id": "s10",
-      "ref_strength": null,
-      "reason": "Time jump to the present: cool palette and solitude contrast with the warm crowded room before it.",
-      "shot_size": "wide",
-      "characters": [
-        "adult"
-      ],
-      "image_prompt": "{adult} sitting alone by the window of a small city apartment at night, phone glowing in hand, city lights outside, cool blue light mixed with one warm lamp",
-      "seed": 110,
-      "motion_prompt": "city lights flicker softly, camera fixed",
-      "kenburns": {
-        "zoom_from": 1.0,
-        "zoom_to": 1.12,
-        "pan": "left"
-      },
-      "narration": "ዛሬ ሩቅ ከተማ ውስጥ እኖራለሁ። ሁሉም ነገር ፈጣን ነው።",
-      "subtitle_en": "Today I live in a faraway city. Everything is fast.",
-      "min_duration_s": 6
-    },
-    {
-      "id": "s11",
-      "ref_strength": null,
-      "reason": "Match to s04: the same roasting action in the new life shows the habit was inherited.",
-      "shot_size": "close-up",
-      "characters": [
-        "adult"
-      ],
-      "image_prompt": "close-up of young hands roasting coffee beans in a small pan on a modern gas stove in a city kitchen, curling smoke, warm light returning",
-      "seed": 111,
-      "motion_prompt": "smoke curls upward, hands shake the pan gently, slow push-in",
-      "kenburns": {
-        "zoom_from": 1.05,
-        "zoom_to": 1.2,
-        "pan": "up"
-      },
-      "narration": "ግን ቡና ስቆላ፣ የእማማን ድምፅ እሰማለሁ።",
-      "subtitle_en": "But when I roast coffee, I hear Emama's voice.",
-      "min_duration_s": 6
-    },
-    {
-      "id": "s12",
-      "reason": "Closing image and the proverb's echo; the theme returns and the film breathes before the end card.",
-      "shot_size": "close-up",
-      "characters": [],
-      "image_prompt": "close-up of a tiny white porcelain coffee cup without a handle, full of black coffee with steam, on a wooden windowsill at sunrise, green hills far away",
-      "seed": 312,
-      "motion_prompt": "steam rises slowly, very slow pull-back",
+      "image_prompt": "high angle looking down into a deep earthen pit, {servant} at the bottom looking up toward the light, steep rocky walls, a shaft of evening light",
+      "seed": 207,
+      "motion_prompt": "slow pull-back upward, dust falls into the pit",
       "kenburns": {
         "zoom_from": 1.2,
         "zoom_to": 1.0,
         "pan": "none"
       },
-      "narration": "ቀስ በቀስ።",
-      "subtitle_en": "Slowly, slowly.",
-      "narration_delay_s": 1.2,
-      "min_duration_s": 6
+      "animate": false,
+      "narration": "ንጉሡ ተናዶ፣ አገልጋዩን ጉድጓድ ውስጥ ጥሎት ሄደ።",
+      "subtitle_en": "Furious, the king threw the servant into a pit and rode on alone.",
+      "min_duration_s": 5.8,
+      "focus": {
+        "x": 0.5,
+        "y": 0.35
+      }
+    },
+    {
+      "id": "s08",
+      "reason": "Peak tension: the king surrounded by an invented, hooded group with torches; danger through shadow, not violence.",
+      "shot_size": "wide",
+      "characters": [
+        "king"
+      ],
+      "image_prompt": "{king} surrounded at dusk by figures in hooded earth-coloured cloaks holding torches in a rocky clearing, faces hidden in shadow, no symbols, smoke and firelight",
+      "seed": 208,
+      "motion_prompt": "torch flames flicker, the hooded figures step closer slowly, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.15,
+        "pan": "left"
+      },
+      "animate": true,
+      "narration": "አካሉ ላይ እንከን የሌለበትን ሰው ለመሥዋዕትነት የሚፈልጉ ሰዎች ንጉሡን ያዙት።",
+      "subtitle_en": "People seeking someone with no blemish on their body, to offer as a sacrifice, seized the king.",
+      "min_duration_s": 6,
+      "wan_qc": "pass: torches flicker, hooded figures and the king stable",
+      "focus": {
+        "x": 0.25,
+        "y": 0.42
+      }
+    },
+    {
+      "id": "s09",
+      "reason": "The surprise: the wound that hurt him saves him; the realisation lands on his face in torchlight.",
+      "shot_size": "close-up",
+      "characters": [
+        "king"
+      ],
+      "image_prompt": "close-up of {king}, wearing only a thin simple gold circlet (no large crown), lit by warm torchlight, a quiet expression of dawning realisation, eyes slightly widened and glistening, a cloth bandage wrapped around his hand, dark background",
+      "seed": 2091,
+      "motion_prompt": "his eyes widen slowly, torchlight flickers on his face, very slow push-in",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.2,
+        "pan": "none"
+      },
+      "animate": false,
+      "narration": "ቁስሉን አይተው ግን ለቀቁት። ንጉሡም የአገልጋዩን ቃል አስታወሰ።",
+      "subtitle_en": "But they saw his wounds and let him go. And the king remembered his servant's words.",
+      "min_duration_s": 6.8,
+      "focus": {
+        "x": 0.45,
+        "y": 0.4
+      }
+    },
+    {
+      "id": "s10",
+      "reason": "Reconciliation, shown in one symbolic close-up of clasped hands over the pit (two-person staging merged the characters in a first attempt); the line is spoken a second time.",
+      "shot_size": "medium",
+      "characters": [],
+      "image_prompt": "close-up of two dark brown-skinned Ethiopian hands clasping over the dark mouth of an earthen pit at dawn: from above, a king's dark brown hand with a gold ring and a deep red sleeve grips and pulls up a servant's dark brown hand in an off-white cotton sleeve, soft golden morning light, dust in the air",
+      "seed": 210,
+      "motion_prompt": "the upper hand slowly pulls the lower hand upward, dust drifts in the light, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.12,
+        "zoom_to": 1.0,
+        "pan": "up"
+      },
+      "animate": true,
+      "narration": "ንጉሡ ተመልሶ አገልጋዩን አውጥቶ የሆነውን ሁሉ ነገረው። አገልጋዩም «ሁሉም ለበጎ ነው» አለ።",
+      "subtitle_en": "The king went back, pulled the servant out and told him everything. The servant said, \"Everything is for the good.\"",
+      "min_duration_s": 6,
+      "wan_qc": "reject: sparkle noise from about frame 20, full colour melt by frame 48",
+      "focus": {
+        "x": 0.5,
+        "y": 0.42
+      }
+    },
+    {
+      "id": "s11",
+      "reason": "The second realisation, in one exchange: the pit saved the servant too. A quiet two-shot lets the answer land.",
+      "shot_size": "medium-close-up",
+      "characters": [
+        "servant",
+        "king"
+      ],
+      "image_prompt": "{servant} and {king} sitting side by side on the ground at sunrise, the servant speaking with a gentle smile, the king listening with humility",
+      "seed": 211,
+      "motion_prompt": "the servant smiles softly, the king nods, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.12,
+        "pan": "none"
+      },
+      "animate": false,
+      "narration": "«አንተን ጉድጓድ ውስጥ መጣሌ እንዴት ለበጎ ሆነ?» ሲለው፣ «ካንተ ጋር ብሄድ ኖሮ፣ እኔን ይሠዉኝ ነበር» አለ።",
+      "subtitle_en": "\"How was throwing you into the pit good?\" \"If I had gone with you, they would have sacrificed me.\"",
+      "narration_delay_s": 0.5,
+      "min_duration_s": 9.0,
+      "focus": {
+        "x": 0.51,
+        "y": 0.45
+      }
+    },
+    {
+      "id": "s12",
+      "reason": "Back to the present in morning light: the result is the same, the student is not. The line a third time, now as their own.",
+      "shot_size": "close-up",
+      "characters": [
+        "student"
+      ],
+      "image_prompt": "close-up of {student} by a window in soft morning light, a faint calm smile, her mother's hand resting on her shoulder",
+      "seed": 212,
+      "motion_prompt": "a faint smile forms, morning light brightens, very slow push-in",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.15,
+        "pan": "none"
+      },
+      "animate": false,
+      "narration": "እናቴ ታሪኩን ስትጨርስ፣ ሀዘኔ ጠፋ። ውጤቴ አልተለወጠም፤ አመለካከቴ ግን ተለወጠ። ሁሉም ለበጎ ነው።",
+      "subtitle_en": "When she finished, my sadness was gone. My result hadn't changed, but my outlook had. Everything is for the good.",
+      "narration_delay_s": 0.6,
+      "min_duration_s": 10.5,
+      "transition_in": "dissolve",
+      "transition_s": 1.5,
+      "focus": {
+        "x": 0.6,
+        "y": 0.38
+      }
     }
   ],
   "end_card": {
     "lines": [
-      "ቀስ በቀስ · Slowly, Slowly",
+      "ሁሉም ለበጎ ነው · Everything Is for the Good",
       "Made with AI",
-      "Images, voice and music were generated by AI models.",
+      "Images, voice and music were generated by AI models. Based on a folktale my mother told me.",
       "Story and direction: Kenean Biru"
     ],
     "duration_s": 4

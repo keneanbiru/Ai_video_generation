@@ -1,34 +1,35 @@
-# Walkthrough video script (≤ 5 min)
+# Walkthrough video (≤ 5 min): script and exact commands
 
-Record your screen (e.g. OBS, or `Ctrl+Alt+Shift+R` on GNOME for the built-in recorder) with a terminal and an editor. Talk in your own words; the bullets are prompts, not a script to read.
+Record the screen (GNOME: Ctrl+Alt+Shift+R, or OBS). Speak in your own words; the bullets are prompts.
 
-## 0:00–0:30 · The film in one breath
-* Play the first 10 s of `outputs/film_9x16.mp4`.
-* "This is *ቀስ በቀስ*, 85 seconds in Amharic about a grandmother's coffee ceremony and the proverb she repeated to me as a child. Nobody edited it by hand. A pipeline made it from one JSON file."
+## 0:00–0:30 · The film
+Play the first ~20 s of `outputs/cuts/final_9x16.mp4` (through the dissolve into the folktale).
+"This is *ሁሉም ለበጎ ነው*, my mother's folktale, made from one JSON file by a pipeline of free models."
 
-## 0:30–1:45 · Architecture
-* Open `storyboard.json`. Scroll: `film` (audience, intent), `style.style_block`, `characters`, `providers`, `music.cues`, then one shot with `reason`, `image_prompt`, `seed`, `narration`, `subtitle_en`.
-* "This file is the contract. Every stage reads it and none of them writes to it." Show `schema/storyboard.schema.json` briefly, then run `make validate`.
-* Show the diagram at the top of `ARCHITECTURE.md`: narration → timeline → radio cut → keyframes → shots → music → assemble.
-* "Narration runs first because picture is cut to the voice: each shot lasts as long as its line plus a breath."
+## 0:30–1:40 · Architecture
+* Open `storyboard.json`: `film`, `voice`, `characters` (skin tone stated), `providers` (hosted first, local fallback), one shot (`reason`, `image_prompt`, `motion_prompt`, `narration`, `subtitle_en`, `focus`, `wan_qc`).
+* `make validate` (schema + semantic checks).
+* `ARCHITECTURE.md` diagram: script → narration → timeline → radio cut → keyframes → shots → music → assemble. "Picture is cut to the voice; every output is cached by a hash of its inputs."
 
-## 1:45–2:45 · One hard decision (pick ONE)
-* **Option A: Amharic pauses (E04).** "The TTS vocabulary has no punctuation at all, so `።` produced no pause. I proved it by tokenising with and without punctuation: identical ids. The fix splits lines at Ethiopic punctuation and inserts silences." Show `split_for_pauses` in `pipeline/narration.py`.
-* **Option B: no GPU, 200 KB/s internet (F01/F03).** Provider chains with fallbacks: show `providers` in the storyboard and `run_chain` in `common.py`. The Kaggle scripts and the stale-clip guard.
-* **Option C: ducking (E09).** "My first test changed two settings at once and gave a nonsense result; one variable at a time showed attack and release pulling in opposite directions."
+## 1:40–2:40 · One hard decision (pick one)
+* **Narration quota (E16/E22/F15):** 10 TTS requests a day. One request for the whole film, then an offline alignment rescued the take when the automatic split failed. Show `align_cuts` in `pipeline/narration.py` and `python -m pipeline.quota`.
+* **Wan QC (E27):** 5 clips, 3 passed; show the `wan_qc` verdicts in the storyboard.
 
-## 2:45–4:30 · Live: change one shot, only that shot regenerates
+## 2:40–4:30 · Live: change one shot, only that shot regenerates
 ```bash
-make film                                  # warm cache → "model calls this run: 0"
+cd ~/heritage-short-v2
+export PATH=$PWD/.venv/bin:$PATH
+python -m pipeline.quota                 # show Cloudflare has neurons left (needs ~58)
+make film                                # warm cache: ends with "model calls this run: 0"
 ```
-Edit `storyboard.json`, shot **s07**, `image_prompt`, e.g. add "…, a small bowl of popcorn beside it" (popcorn is traditionally served with buna). Save.
+Edit `storyboard.json`, shot **s07**, `image_prompt`: change "a shaft of evening light" to "a shaft of cold moonlight". Save.
 ```bash
-make film
+make film 2>&1 | grep -E "generating|model calls"
+tail -n 1 runs.jsonl | python -m json.tool  # the single new call: stage keyframes, item s07, model flux-1-schnell, latency, neurons
 ```
-* Point at the log: `keyframes/s07: generating`, every other keyframe `cached`, and the summary line `model calls this run: 1 {"keyframes/s07": "ok"}`.
-* `tail -n 1 runs.jsonl | python -m json.tool`: stage, item s07, model sd-turbo, seed 107, latency.
-* Open `outputs/keyframes/s07.png` to show the new image. (You can pause the recording while it runs. On this laptop one keyframe takes about 10–20 s on CPU and the full re-assembly about 1–2 min.)
-* Alternative: change the narration of s05 → `narration/s05: generating`, one TTS call.
+Expected: `keyframes/s07: generating`, every other stage cached, `model calls this run: 1 {"keyframes/s07": "ok"}`. FFmpeg then re-renders s07's two clips and re-assembles (≈ 6 min; you may pause the recording). Open `outputs/keyframes/s07.png`.
+**Do not change a narration line on camera before 11:00 EAT on 27 Nov:** today's Gemini TTS quota is used up (the pipeline would refuse). If you want to show narration regeneration later, change one line and run `make radio` (1 request).
+To restore afterwards: undo the edit and run `make film` again (≈ 1 new image call; FLUX has no seed, so it will be a new image unless you restore the cached file: keep a copy of `outputs/keyframes/s07.png` and its `.cache.json` before the demo).
 
 ## 4:30–5:00 · What I learned
-* One sentence, e.g. "Measure before you trust: the TTS dropped punctuation, the free image endpoint swapped models silently, and my first ducking test lied to me because I changed two things at once."
+e.g. "The audience caught what no metric did: two shots of the mother were two different women, and the king wasn't riding his horse."

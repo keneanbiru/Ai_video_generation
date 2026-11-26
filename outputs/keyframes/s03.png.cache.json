@@ -1,12 +1,5 @@
 {
- "key": "d435bb65f8946baa",
- "provider": "local:sd-turbo",
- "prompt": "extreme close-up of an elderly woman's wrinkled dark brown hands washing green coffee beans in a small wooden bowl of water, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 103,
- "params": {
-  "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
- }
+ "key": "772da5db6188723f",
+ "provider": "reuse",
+ "source": "s02"
 }

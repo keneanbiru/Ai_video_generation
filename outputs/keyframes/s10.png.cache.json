@@ -1,12 +1,11 @@
 {
- "key": "f94059ddb0e756ca",
- "provider": "local:sd-turbo",
- "prompt": "a young Ethiopian adult in a grey hoodie, face in shadow sitting alone by the window of a small city apartment at night, phone glowing in hand, city lights outside, cool blue light mixed with one warm lamp, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 110,
+ "key": "fbd907663b35f142",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "close-up of two dark brown-skinned Ethiopian hands clasping over the dark mouth of an earthen pit at dawn: from above, a king's dark brown hand with a gold ring and a deep red sleeve grips and pulls up a servant's dark brown hand in an off-white cotton sleeve, soft golden morning light, dust in the air, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 210,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": ""
  }
 }

@@ -1,0 +1,36 @@
+{
+ "loudness": {
+  "pass1": {
+   "input_i": "-18.31",
+   "input_tp": "-4.91",
+   "input_lra": "9.20"
+  },
+  "final": {
+   "integrated_lufs": -14.1,
+   "lra_lu": 6.1,
+   "true_peak_dbtp": -1.5
+  }
+ },
+ "exports": {
+  "16x9": {
+   "file": "film_16x9.mp4",
+   "duration_s": 85.375,
+   "loudness": {
+    "integrated_lufs": -14.1,
+    "lra_lu": 6.1,
+    "true_peak_dbtp": -1.3
+   },
+   "size_mb": 61.57
+  },
+  "9x16": {
+   "file": "film_9x16.mp4",
+   "duration_s": 85.375,
+   "loudness": {
+    "integrated_lufs": -14.1,
+    "lra_lu": 6.1,
+    "true_peak_dbtp": -1.3
+   },
+   "size_mb": 60.78
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "key": "3d5c05c6248385b6",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "portrait of a young Ethiopian woman, a university student of about twenty, with dark brown skin, shoulder-length black braids and a mustard yellow cardigan, neutral expression, soft window light, plain warm background, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 2101,
+ "params": {
+  "steps": 4,
+  "neurons": 57.6,
+  "note": ""
+ }
+}

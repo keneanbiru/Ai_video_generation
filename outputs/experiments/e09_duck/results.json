@@ -1,0 +1,32 @@
+{
+ "none_bed-10": {
+  "music_db_during_speech": -30.13,
+  "music_db_in_gaps": -31.91,
+  "duck_depth_db": -1.78
+ },
+ "brief_default": {
+  "music_db_during_speech": -41.31,
+  "music_db_in_gaps": -33.24,
+  "duck_depth_db": 8.07
+ },
+ "faster_attack": {
+  "music_db_during_speech": -40.2,
+  "music_db_in_gaps": -32.46,
+  "duck_depth_db": 7.74
+ },
+ "attack80_only": {
+  "music_db_during_speech": -43.46,
+  "music_db_in_gaps": -34.13,
+  "duck_depth_db": 9.33
+ },
+ "release800_only": {
+  "music_db_during_speech": -38.37,
+  "music_db_in_gaps": -32.19,
+  "duck_depth_db": 6.18
+ },
+ "hard": {
+  "music_db_during_speech": -49.87,
+  "music_db_in_gaps": -36.56,
+  "duck_depth_db": 13.31
+ }
+}

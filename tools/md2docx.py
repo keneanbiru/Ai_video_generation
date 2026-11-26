@@ -13,7 +13,7 @@ def add_runs(par, text):
         if part.startswith("**"):
             par.add_run(part[2:-2]).bold = True
         elif part.startswith("`"):
-            r = par.add_run(part[1:-1]); r.font.name = "Consolas"; r.font.size = Pt(9.5)
+            r = par.add_run(part[1:-1]); r.font.name = "Times New Roman"; r.italic = True
         elif part.startswith("*") and len(part) > 2:
             par.add_run(part[1:-1]).italic = True
         else:
@@ -22,7 +22,14 @@ def add_runs(par, text):
 
 def convert(src, dst):
     doc = Document()
-    st = doc.styles["Normal"]; st.font.name = "Calibri"; st.font.size = Pt(11)
+    from docx.oxml.ns import qn
+
+    for name in ("Normal", "Title", "Heading 1", "Heading 2", "Heading 3", "List Bullet", "List Number"):
+        st = doc.styles[name]
+        st.font.name = "Times New Roman"
+        st.font.color.rgb = RGBColor(0, 0, 0)
+        st.element.rPr.rFonts.set(qn("w:eastAsia"), "Times New Roman")
+    doc.styles["Normal"].font.size = Pt(12)
     for line in open(src, encoding="utf-8").read().splitlines():
         s = line.rstrip()
         if not s:
@@ -36,8 +43,7 @@ def convert(src, dst):
             add_runs(doc.add_paragraph(style="List Number"), re.sub(r"^\s*\d+\. ", "", s))
         elif s.startswith(">"):
             p = doc.add_paragraph(); add_runs(p, s.lstrip("> "))
-            for r in p.runs:
-                r.font.color.rgb = RGBColor(0xB0, 0x30, 0x20)
+            pass
         else:
             add_runs(doc.add_paragraph(), s)
     doc.save(dst)

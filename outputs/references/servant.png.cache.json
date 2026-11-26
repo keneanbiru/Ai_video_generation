@@ -1,0 +1,11 @@
+{
+ "key": "e1d7870debb16bdb",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "portrait of a lean young Ethiopian servant with dark brown skin, a shaved head and an off-white cotton gabi wrapped over a plain tunic, calm expression, golden-hour light, highland background, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 2104,
+ "params": {
+  "steps": 4,
+  "neurons": 57.6,
+  "note": ""
+ }
+}

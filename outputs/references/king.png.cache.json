@@ -1,0 +1,11 @@
+{
+ "key": "e85ebc26513f1fdc",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "portrait of a middle-aged Ethiopian king with dark brown skin, a short greying beard, a white gold-embroidered robe, a deep red cape and a simple gold circlet, proud expression, golden-hour light, highland background, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 2103,
+ "params": {
+  "steps": 4,
+  "neurons": 57.6,
+  "note": ""
+ }
+}

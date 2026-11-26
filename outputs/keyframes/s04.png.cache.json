@@ -1,12 +1,11 @@
 {
- "key": "91a1f1b84f1f0ff6",
- "provider": "local:sd-turbo",
- "prompt": "close-up of coffee beans turning dark brown in a flat iron roasting pan over glowing charcoal, curling white smoke, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 104,
+ "key": "7f62157b3313e34b",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "extreme wide view of a dusty road across green Ethiopian highlands at golden hour: a middle-aged Ethiopian king with dark brown skin, a short greying beard, a white gold-embroidered robe, a deep red cape and a simple gold circlet sits mounted in the saddle on the back of a white horse, riding forward, while a lean young Ethiopian servant with dark brown skin, a shaved head, an off-white cotton gabi wrapped over a plain tunic, barefoot walks on foot beside the horse; acacia trees and distant flat-topped mountains, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 2041,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

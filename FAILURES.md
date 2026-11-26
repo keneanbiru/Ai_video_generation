@@ -47,3 +47,52 @@ Entries are in the order they happened. Times are EAT on 26 Nov 2026 (the build 
 * **Measured:** style block alone = 38 tokens. 6 of 12 shot prompts were over the limit (s02 = 103, s09 = 100, s10 = 92, s06 = 91, s05 = 86), plus Emama's reference prompt (80). Consistency was being broken silently for half the film.
 * **Fix:** compressed the style block to 20 tokens and the character descriptions to 12–18 tokens (same meaning, fewer words: commit "F08"). Added `keyframes.check_prompt_lengths()`, which runs before any generation and fails the stage with the offending shot ids, plus a test. Every prompt now fits.
 * **Lesson:** a warning buried in library output can be the most important line of a run. The style-block practice from the brief is only as good as the token budget it lives in.
+
+---
+## v2 (upgrading to the recommended providers)
+
+### F09: Gemini TTS changed API, and the free tier allows 10 requests a day
+* **Symptom 1:** v1's Gemini provider used the old `generateContent` request shape and the model id `gemini-2.5-flash-preview-tts`. The current docs (checked 26 Nov 2026) use the **Interactions API** (`POST /v1beta/interactions`, style as a `speech_metadata` annotation, base64 WAV in `steps[].content[].data`) and the id `gemini-3.8-flash-tts`. The v1 path was never executed (no key), so it would have failed on first use. Rewritten and verified with a live call (HTTP 200, 4.4 s).
+* **Symptom 2:** during E15 the API returned `429 … limit: 3 requests per minute on Free Tier`, then `limit: 10 requests per day`. My `@retry` waited 5/10/20 s, too short for the per-minute limit and pointless for the daily one: four wasted retries.
+* **Fix:** (1) parse the server's "Please retry in 58s / 23h4m31s". Wait exactly that long for per-minute limits; for a daily limit raise `ProviderUnavailable` immediately, with no retries. (2) **Batch narration (E16):** one request per film instead of one per line. (3) Documented that `gemini-3.8-flash-lite-tts` has a separate quota as a same-provider backup.
+
+### F10: Gemini text model overloaded; quota invisible until you hit it
+* **Symptom:** `gemini-3.8-flash` (text) answered **503 "currently experiencing high demand"** twice in a row, at 2.4 s and 11.1 s. `gemini-3.5-flash-lite` answered the same structured-JSON request in 1.5 s.
+* **Fix:** the script stage uses a text-model chain (`gemini-3.8-flash` → `gemini-3.5-flash-lite`). 429/5xx retry with backoff, then the next model.
+* **Quota visibility:** there is no API to read the remaining free-tier quota, and the docs' rate-limit page lists no free-tier numbers. I spent the whole day's Flash-TTS quota (10/day, resets **11:00 EAT**, i.e. after the 23:59 deadline) on experiment E15 before seeing the limit. **Fix:** `pipeline/quota.py` keeps a ledger from `runs.jsonl` per model per Pacific-time quota day. `tts_gemini` and the script stage call `guard()` before every request; **experiments are refused** while a model is at or below a reserve kept for the film (`GEMINI_TTS_RESERVE`, default 8), and production stops hard only at limits the API itself stated. One unlogged probe call is recorded in `outputs/quota_adjust.json` so the ledger matches reality.
+* **Consequence for the film:** today's narration must use `gemini-3.8-flash-lite-tts` (separate quota, Amharic supported). With one-request batch narration (E16) that is ~8 full takes.
+* **Update (dashboard check, 12:10 EAT):** the AI Studio dashboard confirmed the daily limits: Flash TTS 10, Flash-Lite TTS 10, Flash text 20, Flash-Lite text 500. It also showed how requests are counted: our ledger matched it exactly once **503 errors were counted and 429 rejections were not**. `pipeline/quota.py` now uses these confirmed limits and that counting rule.
+
+### F11: Cloudflare FLUX: the seed is rejected, and the reference field is undocumented
+* **Symptom 1:** FLUX.1 schnell answered **400 `Additional or unevaluated properties '/seed' … not allowed`**. The docs page's own curl example sends `seed`, but the model's input schema (fetched from `/ai/models/schema`) allows only `prompt` and `steps`.
+* **Fix:** the request no longer sends `seed`. Consequence: hosted keyframes are not reproducible from the storyboard; the cached PNG + sidecar is the record (E17).
+* **Symptom 2:** FLUX.2 klein-4b takes an untyped multipart body. Its docs, schema, changelog and blog list no field names. Two guessed reference fields gave no effect measurable above klein's own run-to-run noise.
+* **Decision:** timeboxed after two attempts (~95 neurons). The reference path is **not used and not claimed**; identity comes from explicit character text. `KLEIN_FIELDS` is an env override, so the correct names can be dropped in later without code changes.
+
+### F12: ACE-Step 1.5 will not install on Kaggle's Python
+* **Symptom:** first Kaggle run failed in 13 s: `ERROR: Package 'ace-step' requires a different Python: 3.13.16 not in '<3.13,>=3.11'`. Kaggle's image had moved to Python 3.13; the GPU probe a few minutes earlier had shown torch 2.11 on that image.
+* **Fix:** follow the repo's own install path. The job pip-installs `uv`, runs `uv sync` in the cloned repo (it builds `.venv` with the pinned Python and CUDA torch), then re-executes itself inside that venv (`--inner`). I also switched the language model from 0.6B to **1.7B**: 0.6B is not in the main checkpoint download, and 1.7B is the docs' recommendation for 12–16 GB GPUs. Checkpoints are fetched explicitly with `snapshot_download`.
+* **Observed in passing:** this job ran **while the Wan job was running**, so the free tier allows two GPU sessions at once and the runner can overlap music and video.
+
+### F13: Wan 2.2 on two T4s: GPU OOM plus host-RAM kill (details in EXPERIMENTS E20)
+* GPU OOM came from the untiled fp32 VAE decode (6.31 GiB request); the host-RAM kill (exit −9) came from running two model copies for two GPUs. Fixed: VAE tiling, one worker process. The local poller also lost DNS for `api.kaggle.com` during this job. The poll loop tolerated it (status calls do not raise), but the logged wall time (4,548 s) includes the outage; the Kaggle-side time was 756 s.
+
+### F14: The Gemini text API was overloaded when the film's storyboard was due
+* **Symptom (14:23–14:25 EAT):** `pipeline.script draft` failed twice: `gemini-3.8-flash` and `gemini-3.5-flash-lite` both answered **503 "experiencing high demand"** on every retry, 16 requests in all. The same Flash-Lite model had answered a small JSON request in 1.5 s two hours earlier. The draft prompt is large (story + full JSON schema), which may matter.
+* **A second bug found:** the quota ledger logged one line per model per stage call, not one per HTTP attempt. Since the dashboard counts 503s, retries were undercounted. **Fixed:** every 5xx attempt is now logged (`item: "<stage>:attempt"`), and the 4 missed attempts of the first failed draft were back-filled and marked as such.
+* **Decision:** stop spending quota on retries (Flash text left: 11/20). The agent (Claude Code) drafted the storyboard directly, as the brief allows ("have your agent draft storyboard.json"), with the provenance recorded in DESIGN.md. Gemini Flash-Lite is kept for a cheap independent back-translation check of the Amharic narration once the service recovers.
+
+### F15: A fallback spent the narration quota it could not finish with
+* **What happened (14:39 EAT):** the batch split of the film's narration failed its plausibility check, and the code fell back to one request per line, with **7 requests left for 11 lines**. It voiced s01–s08 and then hit the daily limit: Flash-Lite TTS 10/10, with no TTS left before the deadline (Flash TTS was already exhausted, F09).
+* **Root causes:** (1) the splitter assumed the model would honour "two seconds between paragraphs"; it left 0.4–1.0 s. (2) The fallback did not ask whether it could finish before starting to spend.
+* **Recovery:** the batch take contained all 11 lines. It was split offline by length alignment and verified against the per-line takes (EXPERIMENTS E22): **no line is missing and no quota was needed.**
+* **Fixes in code:** `align_cuts` (length-aligned DP) replaces "longest pauses". The per-line fallback now refuses to start unless the remaining quota covers every line, and otherwise keeps the take for an offline split. Regression test added. Also, while archiving prototype assets I moved `outputs/clips_wan/` during a running Wan job, which made that job's final copy fail. The clip was recovered from the downloaded results, and lesson noted: don't move directories a background job writes to.
+
+### F16: An offline test overwrote the film's Gemini narration with the fallback voice
+* **What happened (15:13 EAT):** to test transitions without spending quota, I ran the stages with `HERITAGE_OFFLINE=1`. Narration then picked MMS (first *available* provider), found no MMS cache for the new lines, and regenerated all 11, **overwriting the Gemini lines** in place (11 real MMS calls, logged).
+* **Recovery:** the Gemini batch take and the alignment plan were untouched, and the split is deterministic. The 11 lines were rebuilt exactly (56.69 s vs 56.7 s before). No quota was needed.
+* **Fix:** on a cache miss, the narration stage now first looks for a cached take of the **same text from a better provider earlier in the chain** and keeps it ("would be a downgrade"). Regression test added; verified on the real files (11/11 kept offline).
+
+### F17: Kaggle cancelled two parallel Wan kernels
+* **What happened:** `pipeline.remote wan --jobs 2` pushed two kernels while the ACE-Step kernel was still queued. Both Wan kernels went to `CANCEL_ACKNOWLEDGED` after 38 s with no log. Two concurrent sessions had worked earlier (E19/E20); three did not.
+* **Decision:** one Wan kernel at a time next to ACE-Step, shots ordered by narrative importance (s04, s08, s10, s01, s05) so a partial run still delivers the most valuable clips. The runner already logs delivered vs requested clips (`wan:clips`).

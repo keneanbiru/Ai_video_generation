@@ -1,0 +1,91 @@
+.venv/bin/python -m pipeline.run
+[16:08:38] === run 20261126T160838-43ea58 ===
+[16:08:38] [1/8] storyboard valid: 12 shots, language=amh
+[16:08:38] [2/8] narration
+[16:08:38]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+[16:08:38]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[16:08:38] [3/8] timeline
+[16:08:38]   total 87.21s (target 85s)
+[16:08:38] [4/8] radio cut
+[16:08:54]   radio cut: outputs/radio_cut/radio_cut.mp4 (86.9s, {'integrated_lufs': -14.0, 'lra_lu': 6.6, 'true_peak_dbtp': -1.5})
+[16:08:54] [5/8] keyframes (reference sheet first)
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (78 > 77). Running this sequence through the model will result in indexing errors
+[16:08:55]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+[16:08:55]   references/student: cached
+[16:08:55]   references/mother: cached
+[16:08:55]   references/king: cached
+[16:08:55]   references/servant: cached
+[16:08:55]   keyframes/s01: cached
+[16:08:55]   keyframes/s02: cached
+[16:08:55]   keyframes/s03: cached
+[16:08:55]   keyframes/s04: cached
+[16:08:55]   keyframes/s05: cached
+[16:08:55]   keyframes/s06: cached
+[16:08:55]   keyframes/s07: cached
+[16:08:55]   keyframes/s08: cached
+[16:08:55]   keyframes/s09: cached
+[16:08:55]   keyframes/s10: cached
+[16:08:55]   keyframes/s11: cached
+[16:08:55]   keyframes/s12: cached
+[16:08:55] [6/8] shots
+[16:08:57]   shots/16x9/s01: rendered with wan22:kaggle (6.79s)
+[16:08:57]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:09:03]   shots/16x9/s02: rendered with kenburns (9.18s)
+[16:09:03]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:09:10]   shots/16x9/s03: rendered with kenburns (6.50s)
+[16:09:14]   shots/16x9/s04: rendered with wan22:kaggle (6.00s)
+[16:09:14]   [shots] provider wan22:kaggle unavailable: Wan clip for s05 rejected in QC (reject: a glowing flame-like object materialises in the foreground from about frame 20)
+[16:09:21]   shots/16x9/s05: rendered with kenburns (6.25s)
+[16:09:21]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:09:28]   shots/16x9/s06: rendered with kenburns (4.75s)
+[16:09:28]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:09:36]   shots/16x9/s07: rendered with kenburns (5.79s)
+[16:09:40]   shots/16x9/s08: rendered with wan22:kaggle (6.21s)
+[16:09:40]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:09:49]   shots/16x9/s09: rendered with kenburns (6.79s)
+[16:09:49]   [shots] provider wan22:kaggle unavailable: Wan clip for s10 rejected in QC (reject: sparkle noise from about frame 20, full colour melt by frame 48)
+[16:10:01]   shots/16x9/s10: rendered with kenburns (7.75s)
+[16:10:01]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:10:13]   shots/16x9/s11: rendered with kenburns (10.50s)
+[16:10:13]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:10:26]   shots/16x9/s12: rendered with kenburns (10.50s)
+[16:10:30]   shots/9x16/s01: rendered with wan22:kaggle (6.79s)
+[16:10:30]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:10:41]   shots/9x16/s02: rendered with kenburns (9.18s)
+[16:10:41]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:10:47]   shots/9x16/s03: rendered with kenburns (6.50s)
+[16:10:51]   shots/9x16/s04: rendered with wan22:kaggle (6.00s)
+[16:10:51]   [shots] provider wan22:kaggle unavailable: Wan clip for s05 rejected in QC (reject: a glowing flame-like object materialises in the foreground from about frame 20)
+[16:10:59]   shots/9x16/s05: rendered with kenburns (6.25s)
+[16:10:59]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:11:05]   shots/9x16/s06: rendered with kenburns (4.75s)
+[16:11:05]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:11:13]   shots/9x16/s07: rendered with kenburns (5.79s)
+[16:11:16]   shots/9x16/s08: rendered with wan22:kaggle (6.21s)
+[16:11:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:11:24]   shots/9x16/s09: rendered with kenburns (6.79s)
+[16:11:24]   [shots] provider wan22:kaggle unavailable: Wan clip for s10 rejected in QC (reject: sparkle noise from about frame 20, full colour melt by frame 48)
+[16:11:35]   shots/9x16/s10: rendered with kenburns (7.75s)
+[16:11:35]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:11:48]   shots/9x16/s11: rendered with kenburns (10.50s)
+[16:11:48]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+[16:11:59]   shots/9x16/s12: rendered with kenburns (10.50s)
+[16:11:59] [7/8] music
+[16:12:00]   music/seed11: cached
+[16:12:00]   music/seed23: cached
+[16:12:00]   music/seed47: cached
+[16:12:00]   music/bed: cached
+[16:12:00] [8/8] assemble
+[16:14:42]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 53.02}
+[16:17:07]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 49.94}
+[16:17:07] === done in 509.0s; model calls this run: 3 {"shots/s01": "ok", "shots/s04": "ok", "shots/s08": "ok"} ===

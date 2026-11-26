@@ -1,0 +1,24 @@
+{
+ "caption": "cinematic Ethiopian-inspired instrumental score, krar and masinko strings, breathy washint flute, soft kebero hand drum, minor tizita mode; begins sparse and sad, builds slow suspense with low drums, then resolves into a warm hopeful theme",
+ "model": "ACE-Step-1.5 acestep-v15-turbo + lm-1.7B",
+ "params": {
+  "duration": 88,
+  "instrumental": true,
+  "shift": 3.0,
+  "seed": 47
+ },
+ "latency_s": 69.8,
+ "device": "Tesla T4",
+ "time_costs": {
+  "lm_phase1_time": 7.020183563232422,
+  "lm_phase2_time": 54.43241786956787,
+  "lm_total_time": 61.45260143280029,
+  "dit_encoder_time_cost": 0.033367156982421875,
+  "dit_diffusion_time_cost": 2.8254072666168213,
+  "dit_diffusion_per_step_time_cost": 0.35317590832710266,
+  "dit_total_time_cost": 7.113374710083008,
+  "dit_offload_time_cost": 0.0,
+  "dit_vae_decode_time_cost": 4.254600286483765,
+  "pipeline_total_time": 68.5659761428833
+ }
+}

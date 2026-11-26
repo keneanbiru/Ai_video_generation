@@ -1,12 +1,11 @@
 {
- "key": "eda36f442763b8f6",
- "provider": "local:sd-turbo",
- "prompt": "extreme wide view of misty green Ethiopian highland hills at dawn, a small house with a tin roof among eucalyptus trees, thin smoke rising from the house, sun just rising, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
- "seed": 101,
+ "key": "aee25b3e89f731ce",
+ "provider": "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+ "prompt": "a young Ethiopian woman, a university student of about twenty, with dark brown skin, shoulder-length black braids and a mustard yellow cardigan standing just inside the front door of a modest Addis Ababa apartment at dusk, holding a folded exam paper, eyes wet, head lowered, cool blue light from a window, cinematic realistic film still, 35mm film grain, natural light, shallow depth of field, rich earth tones, subject centred in frame",
+ "seed": 201,
  "params": {
   "steps": 4,
-  "size": 512,
-  "guidance_scale": 0.0,
-  "mode": "txt2img"
+  "neurons": 57.6,
+  "note": "schnell takes no reference image; identity comes from the character text"
  }
 }

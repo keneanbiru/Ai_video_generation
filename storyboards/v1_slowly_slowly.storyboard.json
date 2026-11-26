@@ -1,0 +1,336 @@
+{
+  "version": 1,
+  "film": {
+    "title": "Slowly, Slowly",
+    "title_native": "ቀስ በቀስ",
+    "logline": "A grandmother's coffee ceremony, and the proverb she repeated to an impatient child, follow that child into a fast city life.",
+    "language": "amh",
+    "language_name": "Amharic",
+    "audience": "Young Ethiopians aged 18-35 at home and in the diaspora, who grew up around the buna ceremony and now live fast city lives; watched on a phone, vertical, in a feed or forwarded on Telegram.",
+    "intent": "When it ends, the viewer should feel the warmth of being made to wait as a child, and want to slow down and call an elder this week.",
+    "target_duration_s": 78
+  },
+  "style": {
+    "style_block": "warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
+    "negative_prompt": "text, letters, watermark, logo, photo, photorealistic, extra fingers, deformed hands, blurry, harsh contrast"
+  },
+  "characters": {
+    "emama": {
+      "description": "an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair",
+      "real_person": false,
+      "reference_prompt": "portrait of an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair, gentle smile, plain warm background",
+      "reference_seed": 1101
+    },
+    "child": {
+      "description": "a small Ethiopian child in a faded yellow sweater, seen from behind",
+      "real_person": false,
+      "reference_prompt": "a small Ethiopian child of about seven in a faded yellow sweater, sitting cross-legged on a grass-covered floor, seen from behind, plain warm background",
+      "reference_seed": 1102
+    },
+    "adult": {
+      "description": "a young Ethiopian adult in a grey hoodie, face in shadow",
+      "real_person": false,
+      "reference_prompt": "a young Ethiopian adult in a dark grey hoodie in profile, face mostly in shadow, plain cool background",
+      "reference_seed": 1103
+    }
+  },
+  "providers": {
+    "keyframes": [
+      "cloudflare:@cf/black-forest-labs/flux-1-schnell",
+      "local:sd-turbo"
+    ],
+    "shots": [
+      "wan22:kaggle",
+      "kenburns"
+    ],
+    "music": [
+      "acestep:kaggle",
+      "local:musicgen-small",
+      "local:procedural"
+    ],
+    "narration": [
+      "gemini-tts",
+      "local:mms-tts"
+    ]
+  },
+  "music": {
+    "caption": "gentle slow Ethiopian-inspired instrumental underscore, soft plucked lyre strings, warm breathy bamboo flute, quiet low drone, calm nostalgic tender mood, sparse, no drums, no vocals",
+    "candidates": [
+      7,
+      21,
+      42
+    ],
+    "chosen": 42,
+    "chosen_reason": "EXPERIMENTS.md E08b: most tonal MusicGen candidate (flatness 0.018), energy below 1.5 kHz leaving the 2-4 kHz consonant band clear; seed 7 drops out mid-track (LRA 44.5 dB), seed 21 holds a steady 3-4 kHz tone and a noise floor over the voice.",
+    "segment_s": 26,
+    "cues": [
+      {
+        "at_shot": "s01",
+        "action": "start",
+        "note": "fade in under the dawn; texture only"
+      },
+      {
+        "at_shot": "s05",
+        "action": "dip",
+        "note": "pull back for the child's impatience so the question lands"
+      },
+      {
+        "at_shot": "s09",
+        "action": "swell",
+        "note": "warmth of the gathering"
+      },
+      {
+        "at_shot": "s10",
+        "action": "dip",
+        "note": "the city: thinner, lonelier"
+      },
+      {
+        "at_shot": "s12",
+        "action": "out",
+        "note": "theme returns, then fade with the end card"
+      }
+    ],
+    "duck": {
+      "threshold": 0.02,
+      "ratio": 6,
+      "attack_ms": 80,
+      "release_ms": 1500,
+      "bed_gain_db": -10
+    }
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "reason": "Establishing shot: tells the viewer where and when (highland town, dawn) before any person appears.",
+      "shot_size": "extreme-wide",
+      "characters": [],
+      "image_prompt": "extreme wide view of misty green Ethiopian highland hills at dawn, a small house with a tin roof among eucalyptus trees, thin smoke rising from the house, sun just rising",
+      "seed": 101,
+      "motion_prompt": "slow push-in, mist drifting, smoke rising gently, fixed horizon",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.15,
+        "pan": "none"
+      },
+      "narration": "በልጅነቴ፣ በአያቴ ቤት፣ ጠዋት በቡና ሽታ ይጀምር ነበር።",
+      "subtitle_en": "When I was a child, at my grandmother's house, mornings began with the smell of coffee.",
+      "min_duration_s": 7
+    },
+    {
+      "id": "s02",
+      "ref_strength": null,
+      "reason": "Introduces Emama and the ritual space (grass, charcoal, jebena) in one medium shot.",
+      "shot_size": "medium",
+      "characters": [
+        "emama"
+      ],
+      "image_prompt": "{emama} sitting on a low wooden stool, spreading fresh green grass on the floor, a black clay jebena coffee pot beside a small charcoal stove, inside a simple mud-walled room",
+      "seed": 102,
+      "motion_prompt": "she slowly scatters grass with one hand, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.1,
+        "zoom_to": 1.0,
+        "pan": "right"
+      },
+      "narration": "እማማ ሳር ጎዝጉዘው ጀበናውን ያዘጋጃሉ።",
+      "subtitle_en": "Emama spread fresh grass and set out the jebena.",
+      "min_duration_s": 6.5
+    },
+    {
+      "id": "s03",
+      "reason": "Close detail of her hands: the care and slowness of the work, without needing a consistent face.",
+      "shot_size": "extreme-close-up",
+      "characters": [],
+      "image_prompt": "extreme close-up of an elderly woman's wrinkled dark brown hands washing green coffee beans in a small wooden bowl of water",
+      "seed": 103,
+      "motion_prompt": "hands gently stir the beans, small ripples, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.12,
+        "pan": "down"
+      },
+      "narration": "አረንጓዴውን ቡና በእጃቸው ቀስ ብለው ያጥባሉ።",
+      "subtitle_en": "She washed the green beans slowly, by hand.",
+      "min_duration_s": 5.5
+    },
+    {
+      "id": "s04",
+      "reason": "The roast is the sensory core of the memory (smell, smoke), so it gets its own close-up.",
+      "shot_size": "close-up",
+      "characters": [],
+      "image_prompt": "close-up of coffee beans turning dark brown in a flat iron roasting pan over glowing charcoal, curling white smoke",
+      "seed": 104,
+      "motion_prompt": "smoke curls upward, beans shift slightly, slow push-in",
+      "kenburns": {
+        "zoom_from": 1.05,
+        "zoom_to": 1.2,
+        "pan": "up"
+      },
+      "narration": "ቡናው በምጣዱ ላይ ሲቆላ፣ ጭሱ ቤቱን በሙሉ ይሞላል።",
+      "subtitle_en": "As the beans roasted in the pan, the smoke filled the whole house.",
+      "min_duration_s": 6
+    },
+    {
+      "id": "s05",
+      "ref_strength": null,
+      "reason": "Introduces the conflict: the child's impatience. Seen from behind so identity drift does not matter.",
+      "shot_size": "medium",
+      "characters": [
+        "child"
+      ],
+      "image_prompt": "{child}, fidgeting and leaning toward an old woman roasting coffee in the background, grass-covered floor, morning light through a small window",
+      "seed": 105,
+      "motion_prompt": "the child rocks impatiently, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.15,
+        "zoom_to": 1.05,
+        "pan": "left"
+      },
+      "narration": "እኔ ግን ሁልጊዜ ቸኩዬ ነበር። «እማማ፣ መቼ ነው የሚደርሰው?»",
+      "subtitle_en": "But I was always in a hurry. \"Emama, when will it be ready?\"",
+      "min_duration_s": 6
+    },
+    {
+      "id": "s06",
+      "ref_strength": 0.8,
+      "reason": "The emotional peak and the title: her face and the proverb. Generated against the golden reference.",
+      "shot_size": "medium-close-up",
+      "characters": [
+        "emama"
+      ],
+      "image_prompt": "{emama}, smiling warmly and looking down at someone off frame, soft smoke in the air, warm window light on her face",
+      "seed": 106,
+      "motion_prompt": "she smiles and slightly tilts her head, very slow push-in",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.18,
+        "pan": "none"
+      },
+      "narration": "እሳቸውም ፈገግ ብለው ይመልሳሉ፦ «ቀስ በቀስ፣ እንቁላል በእግሩ ይሄዳል።»",
+      "subtitle_en": "She would smile and answer: \"Slowly, slowly, an egg will walk on its own legs.\"",
+      "narration_delay_s": 0.6,
+      "min_duration_s": 7.5
+    },
+    {
+      "id": "s07",
+      "reason": "Insert of mortar and incense: the ritual continues regardless of the child, which is the point of the proverb.",
+      "shot_size": "insert",
+      "characters": [],
+      "image_prompt": "close-up of a wooden mortar and iron pestle crushing roasted coffee beans, a small clay incense burner with fragrant smoke beside it on fresh grass",
+      "seed": 107,
+      "motion_prompt": "pestle moves down slowly, incense smoke drifts, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.12,
+        "zoom_to": 1.0,
+        "pan": "right"
+      },
+      "narration": "ቡናውን በሙቀጫ ይወቅጣሉ፤ ዕጣኑም ይጨሳል።",
+      "subtitle_en": "She pounded the beans in the mortar, and the incense smoked.",
+      "min_duration_s": 5.5
+    },
+    {
+      "id": "s08",
+      "reason": "The pour names the three rounds, turning the ritual into the film's lesson about patience.",
+      "shot_size": "close-up",
+      "characters": [],
+      "image_prompt": "close-up of coffee being poured from a black clay jebena in a thin stream into small white handleless cups on a wooden tray",
+      "seed": 108,
+      "motion_prompt": "thin stream of coffee pours, steam rises, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.1,
+        "pan": "left"
+      },
+      "narration": "አቦል፣ ቶና፣ በረካ። ሶስት ዙር፣ ሶስት ጊዜ ትዕግስት።",
+      "subtitle_en": "Abol, tona, bereka. Three rounds, three lessons in patience.",
+      "min_duration_s": 6.5
+    },
+    {
+      "id": "s09",
+      "ref_strength": null,
+      "reason": "Wide shot of the community: the reward for waiting is togetherness; the music swells here.",
+      "shot_size": "wide",
+      "characters": [
+        "emama"
+      ],
+      "image_prompt": "wide view of a warm mud-walled room, neighbours sitting on low stools around a coffee ceremony, laughing together, {emama} at the centre pouring coffee, golden light",
+      "seed": 109,
+      "motion_prompt": "people laugh gently, slow pan across the room",
+      "kenburns": {
+        "zoom_from": 1.15,
+        "zoom_to": 1.0,
+        "pan": "right"
+      },
+      "narration": "ጎረቤቶች ይሰበሰባሉ። ወሬ፣ ሳቅ፣ ምርቃት። ማንም አይቸኩልም።",
+      "subtitle_en": "The neighbours gathered. News, laughter, blessings. No one was in a hurry.",
+      "min_duration_s": 7
+    },
+    {
+      "id": "s10",
+      "ref_strength": null,
+      "reason": "Time jump to the present: cool palette and solitude contrast with the warm crowded room before it.",
+      "shot_size": "wide",
+      "characters": [
+        "adult"
+      ],
+      "image_prompt": "{adult} sitting alone by the window of a small city apartment at night, phone glowing in hand, city lights outside, cool blue light mixed with one warm lamp",
+      "seed": 110,
+      "motion_prompt": "city lights flicker softly, camera fixed",
+      "kenburns": {
+        "zoom_from": 1.0,
+        "zoom_to": 1.12,
+        "pan": "left"
+      },
+      "narration": "ዛሬ ሩቅ ከተማ ውስጥ እኖራለሁ። ሁሉም ነገር ፈጣን ነው።",
+      "subtitle_en": "Today I live in a faraway city. Everything is fast.",
+      "min_duration_s": 6
+    },
+    {
+      "id": "s11",
+      "ref_strength": null,
+      "reason": "Match to s04: the same roasting action in the new life shows the habit was inherited.",
+      "shot_size": "close-up",
+      "characters": [
+        "adult"
+      ],
+      "image_prompt": "close-up of young hands roasting coffee beans in a small pan on a modern gas stove in a city kitchen, curling smoke, warm light returning",
+      "seed": 111,
+      "motion_prompt": "smoke curls upward, hands shake the pan gently, slow push-in",
+      "kenburns": {
+        "zoom_from": 1.05,
+        "zoom_to": 1.2,
+        "pan": "up"
+      },
+      "narration": "ግን ቡና ስቆላ፣ የእማማን ድምፅ እሰማለሁ።",
+      "subtitle_en": "But when I roast coffee, I hear Emama's voice.",
+      "min_duration_s": 6
+    },
+    {
+      "id": "s12",
+      "reason": "Closing image and the proverb's echo; the theme returns and the film breathes before the end card.",
+      "shot_size": "close-up",
+      "characters": [],
+      "image_prompt": "close-up of a tiny white porcelain coffee cup without a handle, full of black coffee with steam, on a wooden windowsill at sunrise, green hills far away",
+      "seed": 312,
+      "motion_prompt": "steam rises slowly, very slow pull-back",
+      "kenburns": {
+        "zoom_from": 1.2,
+        "zoom_to": 1.0,
+        "pan": "none"
+      },
+      "narration": "ቀስ በቀስ።",
+      "subtitle_en": "Slowly, slowly.",
+      "narration_delay_s": 1.2,
+      "min_duration_s": 6
+    }
+  ],
+  "end_card": {
+    "lines": [
+      "ቀስ በቀስ · Slowly, Slowly",
+      "Made with AI",
+      "Images, voice and music were generated by AI models.",
+      "Story and direction: Kenean Biru"
+    ],
+    "duration_s": 4
+  }
+}

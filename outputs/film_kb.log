@@ -1,0 +1,49 @@
+.venv/bin/python -m pipeline.run
+[15:29:16] === run 20261126T152916-85abae ===
+[15:29:16] [1/8] storyboard valid: 12 shots, language=amh
+[15:29:16] [2/8] narration
+[15:29:16]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+[15:29:16]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:29:16] [3/8] timeline
+[15:29:16]   total 87.21s (target 85s)
+[15:29:16] [4/8] radio cut
+[15:29:32]   radio cut: outputs/radio_cut/radio_cut.mp4 (87.0s, {'integrated_lufs': -14.0, 'lra_lu': 6.6, 'true_peak_dbtp': -1.5})
+[15:29:32] [5/8] keyframes (reference sheet first)
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (78 > 77). Running this sequence through the model will result in indexing errors
+[15:29:33]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+[15:29:33]   references/student: cached
+[15:29:33]   references/mother: cached
+[15:29:33]   references/king: cached
+[15:29:33]   references/servant: cached
+[15:29:33]   keyframes/s01: cached
+[15:29:33]   keyframes/s02: cached
+[15:29:33]   keyframes/s03: cached
+[15:29:33]   keyframes/s04: cached
+[15:29:33]   keyframes/s05: cached
+[15:29:33]   keyframes/s06: cached
+[15:29:33]   keyframes/s07: cached
+[15:29:33]   keyframes/s08: cached
+[15:29:33]   keyframes/s09: cached
+[15:29:33]   keyframes/s10: cached
+[15:29:33]   keyframes/s11: cached
+[15:29:33]   keyframes/s12: cached
+[15:29:33] [6/8] shots
+[15:29:33] [7/8] music
+[15:29:33]   music/seed11: cached
+[15:29:33]   music/seed23: cached
+[15:29:33]   music/seed47: cached
+[15:29:34]   music/bed: built from seed 23 (1 loops, 87.2s)
+[15:29:34] [8/8] assemble
+[15:32:08]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 59.72}
+[15:34:46]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 58.24}
+[15:34:46] === done in 330.0s; model calls this run: 0 (everything came from cache) ===

@@ -1,0 +1,13 @@
+{
+ "key": "experiment",
+ "provider": "gemini-tts",
+ "text": "በልጅነቴ፣ በአያቴ ቤት፣ ጠዋት በቡና ሽታ ይጀምር ነበር።",
+ "params": {
+  "voice": "Sulafat",
+  "style": "calm, warm, unhurried storyteller. Read each paragraph as a separate line of narration. Leave a long, clear silence of about two seconds between paragraphs.",
+  "batch": true,
+  "batch_index": 0,
+  "batch_size": 5,
+  "split_ratio": 1.0
+ }
+}

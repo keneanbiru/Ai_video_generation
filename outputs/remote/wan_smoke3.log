@@ -1,0 +1,35 @@
+[14:08:56]   references/emama: cached
+[14:08:56]   references/child: cached
+[14:08:56]   references/adult: cached
+[14:08:56]   keyframes/s01: cached
+[14:08:56]   keyframes/s02: cached
+[14:08:56]   keyframes/s03: cached
+[14:08:56]   keyframes/s04: cached
+[14:08:56]   keyframes/s05: cached
+[14:08:56]   keyframes/s06: cached
+[14:08:56]   keyframes/s07: cached
+[14:08:56]   keyframes/s08: cached
+[14:08:56]   keyframes/s09: cached
+[14:08:56]   keyframes/s10: cached
+[14:08:56]   keyframes/s11: cached
+[14:08:56]   keyframes/s12: cached
+[14:09:11]   [remote] pushing private kernel keneanbiru/heritage-wan (T4 x2)
+[14:09:46]   [remote]  "KernelWorkerStatus.QUEUED"
+[14:27:47]   [remote] running after 1116s in queue
+[14:27:47]   [remote]  "KernelWorkerStatus.RUNNING"
+[14:40:43]   [remote] wan: complete in 1891s (queue 1116s); output -> outputs/remote/results/wan
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/kenean/heritage-short-v2/pipeline/remote.py", line 193, in <module>
+    main()
+  File "/home/kenean/heritage-short-v2/pipeline/remote.py", line 184, in main
+    wan(a.only, a.size, a.frames, a.steps)
+  File "/home/kenean/heritage-short-v2/pipeline/remote.py", line 152, in wan
+    shutil.copy(p, clips / p.name)
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/shutil.py", line 431, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/kenean/micromamba/envs/heritage/lib/python3.11/shutil.py", line 258, in copyfile
+    with open(dst, 'wb') as fdst:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/kenean/heritage-short-v2/outputs/clips_wan/s04.mp4'

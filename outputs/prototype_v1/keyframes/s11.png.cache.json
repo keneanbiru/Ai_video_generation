@@ -1,0 +1,12 @@
+{
+ "key": "d1a8f9560004a166",
+ "provider": "local:sd-turbo",
+ "prompt": "close-up of young hands roasting coffee beans in a small pan on a modern gas stove in a city kitchen, curling smoke, warm light returning, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
+ "seed": 111,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

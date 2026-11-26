@@ -1,66 +1,85 @@
 1
-00:00:00,400 --> 00:00:03,064
-When I was a child, at my grandmother's
+00:00:00,400 --> 00:00:04,616
+I failed an exam I was sure I would
+pass, and came home deeply sad.
 
 2
-00:00:03,064 --> 00:00:06,343
-house, mornings began with the smell of
-coffee.
+00:00:07,192 --> 00:00:10,819
+My mother saw my face: "My child, what's
+wrong?"
 
 3
-00:00:07,400 --> 00:00:11,417
-Emama spread fresh grass and set out the
-jebena.
+00:00:10,819 --> 00:00:14,672
+When I told her what happened, she told
+me a story.
 
 4
-00:00:13,900 --> 00:00:17,286
-She washed the green beans slowly, by
-hand.
+00:00:20,567 --> 00:00:25,077
+Long ago, a king was travelling to a
+ceremony with his faithful servant.
 
 5
-00:00:19,400 --> 00:00:24,525
-As the beans roasted in the pan, the
-smoke filled the whole house.
+00:00:26,567 --> 00:00:28,921
+His horse stepped into a hole and fell.
 
 6
-00:00:25,442 --> 00:00:32,111
-But I was always in a hurry. "Emama,
-when will it be ready?"
+00:00:28,921 --> 00:00:31,938
+The king was thrown off, hurting his
+hand and leg.
 
 7
-00:00:33,225 --> 00:00:36,328
-She would smile and answer: "Slowly,
+00:00:32,817 --> 00:00:36,647
+But the servant calmly said, "Everything
+is for the good."
 
 8
-00:00:36,328 --> 00:00:40,034
-slowly, an egg will walk on its own
-legs."
+00:00:37,567 --> 00:00:40,704
+Furious, the king threw the servant into
+a pit and rode on alone.
 
 9
-00:00:40,942 --> 00:00:45,738
-She pounded the beans in the mortar, and
-the incense smoked.
+00:00:43,358 --> 00:00:47,748
+People seeking someone with no blemish
+on their body, to offer as a sacrifice,
 
 10
-00:00:46,650 --> 00:00:53,705
-Abol, tona, bereka. Three rounds, three
-lessons in patience.
+00:00:47,748 --> 00:00:48,648
+seized the king.
 
 11
-00:00:54,608 --> 00:01:02,863
-The neighbours gathered. News, laughter,
-blessings. No one was in a hurry.
+00:00:49,567 --> 00:00:51,799
+But they saw his wounds and let him go.
 
 12
-00:01:03,775 --> 00:01:08,751
-Today I live in a faraway city.
-Everything is fast.
+00:00:51,799 --> 00:00:54,318
+And the king remembered his servant's
+words.
 
 13
-00:01:09,775 --> 00:01:13,811
-But when I roast coffee, I hear Emama's
-voice.
+00:00:56,358 --> 00:01:00,383
+The king went back, pulled the servant
+out and told him everything.
 
 14
-00:01:16,575 --> 00:01:17,919
-Slowly, slowly.
+00:01:00,383 --> 00:01:03,206
+The servant said, "Everything is for the
+good."
+
+15
+00:01:04,208 --> 00:01:07,283
+"How was throwing you into the pit
+good?"
+
+16
+00:01:07,283 --> 00:01:11,484
+"If I had gone with you, they would have
+sacrificed me."
+
+17
+00:01:13,308 --> 00:01:16,228
+When she finished, my sadness was gone.
+
+18
+00:01:16,228 --> 00:01:21,693
+My result hadn't changed, but my outlook
+had. Everything is for the good.

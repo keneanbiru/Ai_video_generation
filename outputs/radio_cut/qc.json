@@ -1,14 +1,14 @@
 {
- "duration_s": 85.375,
+ "duration_s": 85.845,
  "loudness": {
   "pass1": {
-   "input_i": "-17.97",
+   "input_i": "-18.72",
    "input_tp": "-5.00",
-   "input_lra": "7.20"
+   "input_lra": "6.40"
   },
   "final": {
    "integrated_lufs": -14.0,
-   "lra_lu": 6.4,
+   "lra_lu": 6.6,
    "true_peak_dbtp": -1.5
   }
  }

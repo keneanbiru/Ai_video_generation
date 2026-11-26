@@ -1,0 +1,61 @@
+[15:55:57]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+[15:55:57]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[15:55:57]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (78 > 77). Running this sequence through the model will result in indexing errors
+[15:55:58]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+[15:55:58]   references/student: cached
+[15:55:58]   references/mother: cached
+[15:55:58]   references/king: cached
+[15:55:58]   references/servant: cached
+[15:55:58]   keyframes/s01: cached
+[15:55:58]   keyframes/s02: cached
+[15:55:58]   keyframes/s03: cached
+[15:55:58]   keyframes/s04: cached
+[15:55:58]   keyframes/s05: cached
+[15:55:58]   keyframes/s06: cached
+[15:55:58]   keyframes/s07: cached
+[15:55:58]   keyframes/s08: cached
+[15:55:58]   keyframes/s09: cached
+[15:55:58]   keyframes/s10: cached
+[15:55:58]   keyframes/s11: cached
+[15:55:58]   keyframes/s12: cached
+[15:56:03]   shots/16x9/s01: rendered with kenburns (6.79s)
+[15:56:09]   shots/16x9/s02: rendered with kenburns (9.18s)
+[15:56:14]   shots/16x9/s03: rendered with kenburns (6.50s)
+[15:56:20]   shots/16x9/s04: rendered with kenburns (6.00s)
+[15:56:28]   shots/16x9/s05: rendered with kenburns (6.25s)
+[15:56:34]   shots/16x9/s06: rendered with kenburns (4.75s)
+[15:56:42]   shots/16x9/s07: rendered with kenburns (5.79s)
+[15:56:49]   shots/16x9/s08: rendered with kenburns (6.21s)
+[15:56:58]   shots/16x9/s09: rendered with kenburns (6.79s)
+[15:57:08]   shots/16x9/s10: rendered with kenburns (7.75s)
+[15:57:20]   shots/16x9/s11: rendered with kenburns (10.50s)
+[15:57:34]   shots/16x9/s12: rendered with kenburns (10.50s)
+[15:57:44]   shots/9x16/s01: rendered with kenburns (6.79s)
+[15:57:56]   shots/9x16/s02: rendered with kenburns (9.18s)
+[15:58:03]   shots/9x16/s03: rendered with kenburns (6.50s)
+[15:58:10]   shots/9x16/s04: rendered with kenburns (6.00s)
+[15:58:18]   shots/9x16/s05: rendered with kenburns (6.25s)
+[15:58:25]   shots/9x16/s06: rendered with kenburns (4.75s)
+[15:58:33]   shots/9x16/s07: rendered with kenburns (5.79s)
+[15:58:41]   shots/9x16/s08: rendered with kenburns (6.21s)
+[15:58:49]   shots/9x16/s09: rendered with kenburns (6.79s)
+[15:59:01]   shots/9x16/s10: rendered with kenburns (7.75s)
+[15:59:17]   shots/9x16/s11: rendered with kenburns (10.50s)
+[15:59:30]   shots/9x16/s12: rendered with kenburns (10.50s)
+[15:59:31]   music/seed11: cached
+[15:59:31]   music/seed23: cached
+[15:59:31]   music/seed47: cached
+[15:59:31]   music/bed: cached
+[16:02:32]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 59.71}
+[16:05:13]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 57.67}
+done {'16x9': '/home/kenean/heritage-short-v2/outputs/film_16x9.mp4', '9x16': '/home/kenean/heritage-short-v2/outputs/film_9x16.mp4'}

@@ -1,0 +1,12 @@
+{
+ "key": "21d2ab16225b1a56",
+ "provider": "local:sd-turbo",
+ "prompt": "an old Ethiopian grandmother with a kind wrinkled face, white netela shawl over grey hair sitting on a low wooden stool, spreading fresh green grass on the floor, a black clay jebena coffee pot beside a small charcoal stove, inside a simple mud-walled room, warm gouache storybook painting, paper grain, golden light, ochre, terracotta and deep green palette",
+ "seed": 102,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

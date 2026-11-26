@@ -1,0 +1,20 @@
+{
+ "key": "de8579b04f6c9557",
+ "provider": "local:mms-tts",
+ "text": "ቀስ በቀስ።",
+ "params": {
+  "speaking_rate": 1.0,
+  "noise_scale": 0.6,
+  "uroman": true,
+  "input_chars": 7,
+  "prepared": "qase baqase",
+  "chunks": 1,
+  "pauses": {
+   "።": 0.55,
+   "?": 0.55,
+   "፦": 0.35,
+   "፣": 0.25,
+   "፤": 0.3
+  }
+ }
+}

@@ -76,23 +76,47 @@ def _ts(t: float) -> str:
     return f"{int(h):02d}:{int(m):02d}:{int(s):02d},{int(round((s - int(s)) * 1000)):03d}"
 
 
-def srt(timeline: dict, out: Path) -> Path:
+def _cards(text: str, width: int = 40) -> list[str]:
+    """Split a subtitle into cards of at most 2 lines x `width` chars, breaking at sentence ends
+    first (". ? !" and closing quotes), so a card never ends mid-phrase like 'what's / wrong?'."""
+    import re
+
+    sentences = [x.strip() for x in re.findall(r'[^.?!]*[.?!]+["\u201d]?|[^.?!]+$', text.strip()) if x.strip()]
+    cards, cur = [], ""
+    for snt in sentences:
+        cand = f"{cur} {snt}".strip()
+        if len(textwrap.wrap(cand, width)) <= 2:
+            cur = cand
+            continue
+        if cur:
+            cards.append(cur)
+        if len(textwrap.wrap(snt, width)) <= 2:
+            cur = snt
+        else:  # a single long sentence: fall back to two-line chunks
+            lines = textwrap.wrap(snt, width)
+            for i in range(0, len(lines) - 2, 2):
+                cards.append(" ".join(lines[i:i + 2]))
+            cur = " ".join(lines[(len(lines) - 1) // 2 * 2:])
+    if cur:
+        cards.append(cur)
+    return ["\n".join(textwrap.wrap(c, width)) for c in cards]
+
+
+def srt(timeline: dict, out: Path, width: int = 40) -> Path:
     blocks = []
     n = 0
     for t in timeline["shots"]:
         if t["narration_start"] is None or not t["subtitle_en"]:
             continue
-        n += 1
         start, end = t["narration_start"], t["narration_start"] + t["narration_s"] + 0.4
-        lines = textwrap.wrap(t["subtitle_en"], 40)
-        if len(lines) > 2:  # keep to two lines: split into two timed cards
-            half = len(lines) // 2
-            mid = start + (end - start) * (len(" ".join(lines[:half])) / len(t["subtitle_en"]))
-            blocks.append(f"{n}\n{_ts(start)} --> {_ts(mid)}\n" + "\n".join(lines[:half]))
+        cards = _cards(t["subtitle_en"], width)
+        total = sum(len(c) for c in cards)
+        cur = start
+        for c in cards:
+            stop = cur + (end - start) * len(c) / total
             n += 1
-            blocks.append(f"{n}\n{_ts(mid)} --> {_ts(end)}\n" + "\n".join(lines[half:]))
-        else:
-            blocks.append(f"{n}\n{_ts(start)} --> {_ts(end)}\n" + "\n".join(lines))
+            blocks.append(f"{n}\n{_ts(cur)} --> {_ts(stop)}\n{c}")
+            cur = stop
     out.write_text("\n\n".join(blocks) + "\n", encoding="utf-8")
     return out
 
@@ -142,6 +166,34 @@ def end_card(sb: dict, ratio: str, out: Path) -> Path:
     return out
 
 
+def join_with_transitions(sb: dict, timeline: dict, clips: list[Path], end_card_clip: Path, out: Path) -> Path:
+    """Shots joined by cuts or cross-dissolves (storyboard shots[].transition_in), then the end card.
+    The outgoing clip of a dissolve was rendered longer by the dissolve (shots stage), so every shot
+    still starts exactly at its timeline time."""
+    if not any(s.get("transition_in") == "dissolve" for s in sb["shots"]):
+        return concat(clips + [end_card_clip], out)
+    inputs, parts = [], []
+    for i, c in enumerate(clips + [end_card_clip]):
+        inputs += ["-i", str(c)]
+        # xfade needs identical timebase/fps/format on both inputs
+        parts.append(f"[{i}:v]settb=AVTB,setpts=PTS-STARTPTS,fps={FPS},format=yuv420p[n{i}]")
+    cur, t = "[n0]", timeline["shots"][0]["duration"]
+    for i, shot in enumerate(sb["shots"][1:], start=1):
+        lab = f"[j{i}]"
+        if shot.get("transition_in") == "dissolve":
+            dd = shot.get("transition_s", 1.0)
+            parts.append(f"{cur}[n{i}]xfade=transition=fade:duration={dd}:offset={t:.3f},settb=AVTB,fps={FPS}{lab}")
+        else:
+            parts.append(f"{cur}[n{i}]concat=n=2:v=1:a=0,settb=AVTB,fps={FPS}{lab}")
+        cur = lab
+        t += timeline["shots"][i]["duration"]
+    n = len(clips)
+    parts.append(f"{cur}[n{n}]concat=n=2:v=1:a=0,fps={FPS},format=yuv420p[out]")
+    ffmpeg(*inputs, "-filter_complex", ";".join(parts), "-map", "[out]", "-c:v", "libx264", "-preset", "medium",
+           "-crf", "18", "-an", str(out))
+    return out
+
+
 def concat(clips: list[Path], out: Path) -> Path:
     lst = out.with_suffix(".txt")
     lst.write_text("".join(f"file '{c.resolve()}'\n" for c in clips))
@@ -170,12 +222,14 @@ def final(sb: dict, timeline: dict, narr: dict[str, Path], shot_clips: dict[str,
     d = stage_paths("final")
     nar = narration_track(timeline, narr, d / "narration.wav")
     loud = mix(music_bed, nar, sb["music"]["duck"], d / "mix.wav")
-    sub = srt(timeline, d / "subtitles_en.srt")
+    sub_h = srt(timeline, d / "subtitles_en.srt")  # 16:9 and the separate subtitle file
+    sub_v = srt(timeline, d / "subtitles_en_9x16.srt", width=30)  # narrower lines: never re-wrapped to 3 lines
     outs, qc = {}, {"loudness": loud, "exports": {}}
     for ratio in RATIOS:
+        sub = sub_v if ratio == "9x16" else sub_h
         ec = end_card(sb, ratio, d / f"endcard_{ratio}.mp4")
-        clips = [shot_clips[ratio][s["id"]] for s in sb["shots"]] + [ec]
-        pic = concat(clips, d / f"picture_{ratio}.mp4")
+        clips = [shot_clips[ratio][s["id"]] for s in sb["shots"]]
+        pic = join_with_transitions(sb, timeline, clips, ec, d / f"picture_{ratio}.mp4")
         out = OUT / f"film_{ratio}.mp4"
         total = timeline["total_s"]
         vf = (f"fade=t=in:d=1.0,subtitles={sub}:force_style='{_sub_style(ratio)}',format=yuv420p")

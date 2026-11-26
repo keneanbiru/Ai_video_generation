@@ -1,337 +1,1001 @@
-20261126T054832-f31368 [05:48:32] === run 20261126T054832-f31368 ===
-20261126T054832-f31368 [05:48:32] [1/8] storyboard valid: 12 shots, language=amh
-20261126T054929-e03a94 [05:49:29] === run 20261126T054929-e03a94 ===
-20261126T054929-e03a94 [05:49:29] [1/8] storyboard valid: 12 shots, language=amh
-20261126T054929-e03a94 [05:49:29] [2/8] narration
-20261126T054929-e03a94 [05:49:29]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
-20261126T054929-e03a94 [05:49:29]   narration/s01: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:35]   narration/s02: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:37]   narration/s03: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:38]   narration/s04: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:39]   narration/s05: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:40]   narration/s06: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:42]   narration/s07: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:43]   narration/s08: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:44]   narration/s09: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:46]   narration/s10: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:47]   narration/s11: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:48]   narration/s12: generating with local:mms-tts
-20261126T054929-e03a94 [05:49:48] [3/8] timeline
-20261126T054929-e03a94 [05:49:48]   total 96.08s (target 78s)
-20261126T054929-e03a94 [05:49:48]   WARNING: film length 96.1s is outside 60-90s
-20261126T054929-e03a94 [05:49:48] [4/8] radio cut
-20261126T054929-e03a94 [05:49:58]   radio cut: outputs/radio_cut/radio_cut.mp4 (95.4s, {'integrated_lufs': -14.0, 'lra_lu': 6.4, 'true_peak_dbtp': -1.3})
-20261126T054929-e03a94 [05:49:58] === done in 28.9s; model calls this run: 12 {"narration/s01": "ok", "narration/s02": "ok", "narration/s03": "ok", "narration/s04": "ok", "narration/s05": "ok", "narration/s06": "ok", "narration/s07": "ok", "narration/s08": "ok", "narration/s09": "ok", "narration/s10": "ok", "narration/s11": "ok", "narration/s12": "ok"} ===
-20261126T055125-a0cfdb [05:51:25] === run 20261126T055125-a0cfdb ===
-20261126T055125-a0cfdb [05:51:25] [1/8] storyboard valid: 12 shots, language=amh
-20261126T055125-a0cfdb [05:51:25] [2/8] narration
-20261126T055125-a0cfdb [05:51:25]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
-20261126T055125-a0cfdb [05:51:25]   narration/s01: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:31]   narration/s02: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:32]   narration/s03: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:32]   narration/s04: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:33]   narration/s05: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:35]   narration/s06: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:36]   narration/s07: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:37]   narration/s08: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:38]   narration/s09: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:40]   narration/s10: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:41]   narration/s11: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:42]   narration/s12: generating with local:mms-tts
-20261126T055125-a0cfdb [05:51:42] [3/8] timeline
-20261126T055125-a0cfdb [05:51:42]   total 85.38s (target 78s)
-20261126T055125-a0cfdb [05:51:42] [4/8] radio cut
-20261126T055125-a0cfdb [05:51:50]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.0s, {'integrated_lufs': -14.0, 'lra_lu': 6.8, 'true_peak_dbtp': -1.0})
-20261126T055125-a0cfdb [05:51:50] === done in 25.0s; model calls this run: 12 {"narration/s01": "ok", "narration/s02": "ok", "narration/s03": "ok", "narration/s04": "ok", "narration/s05": "ok", "narration/s06": "ok", "narration/s07": "ok", "narration/s08": "ok", "narration/s09": "ok", "narration/s10": "ok", "narration/s11": "ok", "narration/s12": "ok"} ===
-20261126T055214-17e879 [05:52:14]   music/seed7: generating 26s
-20261126T055214-17e879 [05:52:14]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed7.wav not found (render it with kaggle/acestep_score.py)
-20261126T055214-17e879 [05:52:14]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
-20261126T055214-17e879 [05:52:16]   music/seed21: generating 26s
-20261126T055214-17e879 [05:52:16]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed21.wav not found (render it with kaggle/acestep_score.py)
-20261126T055214-17e879 [05:52:16]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
-20261126T055214-17e879 [05:52:17]   music/seed42: generating 26s
-20261126T055214-17e879 [05:52:17]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed42.wav not found (render it with kaggle/acestep_score.py)
-20261126T055214-17e879 [05:52:17]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
-20261126T055219-11d2f6 [05:52:19]   music/seed7: cached
-20261126T055219-11d2f6 [05:52:19]   music/seed21: cached
-20261126T055219-11d2f6 [05:52:19]   music/seed42: cached
-20261126T055252-90f5f5 [05:52:52]   music/seed7: generating 26s
-20261126T055252-90f5f5 [05:52:52]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed7.wav not found (render it with kaggle/acestep_score.py)
-20261126T055252-90f5f5 [05:52:52]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
-20261126T055252-90f5f5 [05:52:54]   music/seed21: generating 26s
-20261126T055252-90f5f5 [05:52:54]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed21.wav not found (render it with kaggle/acestep_score.py)
-20261126T055252-90f5f5 [05:52:54]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
-20261126T055252-90f5f5 [05:52:55]   music/seed42: generating 26s
-20261126T055252-90f5f5 [05:52:55]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed42.wav not found (render it with kaggle/acestep_score.py)
-20261126T055252-90f5f5 [05:52:55]   [music] provider local:musicgen-small unavailable: musicgen-small weights not downloaded yet (tools/fetch_models.sh); set ALLOW_HF_DOWNLOAD=1 to let transformers fetch 2.4 GB
-20261126T055306-481a43 [05:53:06]   music/seed7: cached
-20261126T055306-481a43 [05:53:06]   music/seed21: cached
-20261126T055306-481a43 [05:53:06]   music/seed42: cached
-20261126T055306-481a43 [05:53:06]   music/bed: built from seed 21 (4 loops, 85.4s)
-20261126T055307-31c8a4 [05:53:07]   music/seed7: cached
-20261126T055307-31c8a4 [05:53:07]   music/seed21: cached
-20261126T055307-31c8a4 [05:53:07]   music/seed42: cached
-20261126T095715-789556 [09:57:16]   references/emama: generating
-20261126T095715-789556 [09:57:16]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T095715-789556 [09:57:53]   references/child: generating
-20261126T095715-789556 [09:57:53]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T095715-789556 [09:58:21]   references/adult: generating
-20261126T095715-789556 [09:58:21]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100431-12d7cc [10:04:31] === run 20261126T100431-12d7cc ===
-20261126T100431-12d7cc [10:04:31] [1/8] storyboard valid: 12 shots, language=amh
-20261126T100436-3a35e9 [10:04:36] === run 20261126T100436-3a35e9 ===
-20261126T100436-3a35e9 [10:04:36] [1/8] storyboard valid: 12 shots, language=amh
-20261126T100436-3a35e9 [10:04:36] [2/8] narration
-20261126T100436-3a35e9 [10:04:36]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
-20261126T100436-3a35e9 [10:04:36]   narration/s01: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s02: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s03: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s04: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s05: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s06: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s07: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s08: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s09: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s10: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s11: cached
-20261126T100436-3a35e9 [10:04:36]   narration/s12: cached
-20261126T100436-3a35e9 [10:04:36] [3/8] timeline
-20261126T100436-3a35e9 [10:04:37]   total 85.38s (target 78s)
-20261126T100436-3a35e9 [10:04:37] [4/8] radio cut
-20261126T100436-3a35e9 [10:04:48]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.7s, {'integrated_lufs': -14.0, 'lra_lu': 6.8, 'true_peak_dbtp': -1.0})
-20261126T100436-3a35e9 [10:04:48] [5/8] keyframes (reference sheet first)
-20261126T100436-3a35e9 [10:04:48]   references/emama: cached
-20261126T100436-3a35e9 [10:04:48]   references/child: cached
-20261126T100436-3a35e9 [10:04:48]   references/adult: cached
-20261126T100436-3a35e9 [10:04:48]   keyframes/s01: generating (txt2img)
-20261126T100436-3a35e9 [10:04:48]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100436-3a35e9 [10:05:21]   keyframes/s02: generating (txt2img)
-20261126T100436-3a35e9 [10:05:21]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100436-3a35e9 [10:05:47]   keyframes/s03: generating (txt2img)
-20261126T100436-3a35e9 [10:05:47]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:06:20] === run 20261126T100620-c2fd65 ===
-20261126T100620-c2fd65 [10:06:20] [1/8] storyboard valid: 12 shots, language=amh
-20261126T100620-c2fd65 [10:06:20] [2/8] narration
-20261126T100620-c2fd65 [10:06:20]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
-20261126T100620-c2fd65 [10:06:20]   narration/s01: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s02: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s03: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s04: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s05: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s06: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s07: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s08: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s09: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s10: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s11: cached
-20261126T100620-c2fd65 [10:06:20]   narration/s12: cached
-20261126T100620-c2fd65 [10:06:20] [3/8] timeline
-20261126T100620-c2fd65 [10:06:20]   total 85.38s (target 78s)
-20261126T100620-c2fd65 [10:06:20] [4/8] radio cut
-20261126T100620-c2fd65 [10:06:32]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.4s, {'integrated_lufs': -14.0, 'lra_lu': 6.8, 'true_peak_dbtp': -1.0})
-20261126T100620-c2fd65 [10:06:32] [5/8] keyframes (reference sheet first)
-20261126T100620-c2fd65 [10:06:33]   references/emama: generating
-20261126T100620-c2fd65 [10:06:33]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:07:04]   references/child: generating
-20261126T100620-c2fd65 [10:07:04]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:07:29]   references/adult: generating
-20261126T100620-c2fd65 [10:07:29]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:07:55]   keyframes/s01: generating (txt2img)
-20261126T100620-c2fd65 [10:07:55]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:08:25]   keyframes/s02: generating (txt2img)
-20261126T100620-c2fd65 [10:08:25]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:08:50]   keyframes/s03: generating (txt2img)
-20261126T100620-c2fd65 [10:08:50]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:09:15]   keyframes/s04: generating (txt2img)
-20261126T100620-c2fd65 [10:09:15]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:09:44]   keyframes/s05: generating (txt2img)
-20261126T100620-c2fd65 [10:09:44]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:10:25]   keyframes/s06: generating (img2img on emama.png)
-20261126T100620-c2fd65 [10:10:25]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:11:08]   keyframes/s07: generating (txt2img)
-20261126T100620-c2fd65 [10:11:08]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:11:47]   keyframes/s08: generating (txt2img)
-20261126T100620-c2fd65 [10:11:47]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:12:32]   keyframes/s09: generating (txt2img)
-20261126T100620-c2fd65 [10:12:32]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:13:10]   keyframes/s10: generating (txt2img)
-20261126T100620-c2fd65 [10:13:10]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:13:48]   keyframes/s11: generating (txt2img)
-20261126T100620-c2fd65 [10:13:48]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:14:26]   keyframes/s12: generating (txt2img)
-20261126T100620-c2fd65 [10:14:26]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T100620-c2fd65 [10:15:04] [6/8] shots
-20261126T100620-c2fd65 [10:15:04]   [shots] provider wan22:kaggle unavailable: no Wan clip for s01 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:15:10]   shots/16x9/s01: rendered with kenburns (7.00s)
-20261126T100620-c2fd65 [10:15:10]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:15:16]   shots/16x9/s02: rendered with kenburns (6.50s)
-20261126T100620-c2fd65 [10:15:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:15:20]   shots/16x9/s03: rendered with kenburns (5.50s)
-20261126T100620-c2fd65 [10:15:20]   [shots] provider wan22:kaggle unavailable: no Wan clip for s04 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:15:25]   shots/16x9/s04: rendered with kenburns (6.04s)
-20261126T100620-c2fd65 [10:15:25]   [shots] provider wan22:kaggle unavailable: no Wan clip for s05 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:15:33]   shots/16x9/s05: rendered with kenburns (7.58s)
-20261126T100620-c2fd65 [10:15:33]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:15:40]   shots/16x9/s06: rendered with kenburns (7.92s)
-20261126T100620-c2fd65 [10:15:40]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:15:45]   shots/16x9/s07: rendered with kenburns (5.71s)
-20261126T100620-c2fd65 [10:15:45]   [shots] provider wan22:kaggle unavailable: no Wan clip for s08 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:15:53]   shots/16x9/s08: rendered with kenburns (7.96s)
-20261126T100620-c2fd65 [10:15:53]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:01]   shots/16x9/s09: rendered with kenburns (9.17s)
-20261126T100620-c2fd65 [10:16:01]   [shots] provider wan22:kaggle unavailable: no Wan clip for s10 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:06]   shots/16x9/s10: rendered with kenburns (6.00s)
-20261126T100620-c2fd65 [10:16:06]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:12]   shots/16x9/s11: rendered with kenburns (6.00s)
-20261126T100620-c2fd65 [10:16:12]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:16]   shots/16x9/s12: rendered with kenburns (6.00s)
-20261126T100620-c2fd65 [10:16:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s01 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:23]   shots/9x16/s01: rendered with kenburns (7.00s)
-20261126T100620-c2fd65 [10:16:23]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:28]   shots/9x16/s02: rendered with kenburns (6.50s)
-20261126T100620-c2fd65 [10:16:28]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:33]   shots/9x16/s03: rendered with kenburns (5.50s)
-20261126T100620-c2fd65 [10:16:33]   [shots] provider wan22:kaggle unavailable: no Wan clip for s04 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:37]   shots/9x16/s04: rendered with kenburns (6.04s)
-20261126T100620-c2fd65 [10:16:37]   [shots] provider wan22:kaggle unavailable: no Wan clip for s05 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:46]   shots/9x16/s05: rendered with kenburns (7.58s)
-20261126T100620-c2fd65 [10:16:46]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:52]   shots/9x16/s06: rendered with kenburns (7.92s)
-20261126T100620-c2fd65 [10:16:52]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:16:57]   shots/9x16/s07: rendered with kenburns (5.71s)
-20261126T100620-c2fd65 [10:16:57]   [shots] provider wan22:kaggle unavailable: no Wan clip for s08 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:17:07]   shots/9x16/s08: rendered with kenburns (7.96s)
-20261126T100620-c2fd65 [10:17:07]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:17:16]   shots/9x16/s09: rendered with kenburns (9.17s)
-20261126T100620-c2fd65 [10:17:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s10 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:17:21]   shots/9x16/s10: rendered with kenburns (6.00s)
-20261126T100620-c2fd65 [10:17:21]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:17:27]   shots/9x16/s11: rendered with kenburns (6.00s)
-20261126T100620-c2fd65 [10:17:27]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T100620-c2fd65 [10:17:32]   shots/9x16/s12: rendered with kenburns (6.00s)
-20261126T100620-c2fd65 [10:17:32] [7/8] music
-20261126T100620-c2fd65 [10:17:32]   music/seed7: generating 26s
-20261126T100620-c2fd65 [10:17:32]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed7.wav not found (render it with kaggle/acestep_score.py)
-20261126T100620-c2fd65 [10:21:29]   music/seed21: generating 26s
-20261126T100620-c2fd65 [10:21:29]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed21.wav not found (render it with kaggle/acestep_score.py)
-20261126T100620-c2fd65 [10:25:32]   music/seed42: generating 26s
-20261126T100620-c2fd65 [10:25:32]   [music] provider acestep:kaggle unavailable: outputs/music_acestep/seed42.wav not found (render it with kaggle/acestep_score.py)
-20261126T100620-c2fd65 [10:29:19]   music/bed: built from seed 21 (4 loops, 85.4s)
-20261126T100620-c2fd65 [10:29:19] [8/8] assemble
-20261126T100620-c2fd65 [10:30:31]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.8, 'true_peak_dbtp': -0.8}, 'size_mb': 60.17}
-20261126T100620-c2fd65 [10:31:34]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.8, 'true_peak_dbtp': -0.8}, 'size_mb': 59.63}
-20261126T100620-c2fd65 [10:31:34] === done in 1513.5s; model calls this run: 18 {"keyframes/ref:emama": "ok", "keyframes/ref:child": "ok", "keyframes/ref:adult": "ok", "keyframes/s01": "ok", "keyframes/s02": "ok", "keyframes/s03": "ok", "keyframes/s04": "ok", "keyframes/s05": "ok", "keyframes/s06": "ok", "keyframes/s07": "ok", "keyframes/s08": "ok", "keyframes/s09": "ok", "keyframes/s10": "ok", "keyframes/s11": "ok", "keyframes/s12": "ok", "music/seed7": "ok", "music/seed21": "ok", "music/seed42": "ok"} ===
-20261126T103143-b83092 [10:31:44]   music/seed7: cached
-20261126T103143-b83092 [10:31:44]   music/seed21: cached
-20261126T103143-b83092 [10:31:44]   music/seed42: cached
-20261126T103229-915658 [10:32:29] === run 20261126T103229-915658 ===
-20261126T103229-915658 [10:32:29] [1/8] storyboard valid: 12 shots, language=amh
-20261126T103229-0a60b5 [10:32:29] === run 20261126T103229-0a60b5 ===
-20261126T103229-0a60b5 [10:32:29] [1/8] storyboard valid: 12 shots, language=amh
-20261126T103229-0a60b5 [10:32:29] [2/8] narration
-20261126T103229-0a60b5 [10:32:29]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
-20261126T103229-0a60b5 [10:32:29]   narration/s01: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s02: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s03: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s04: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s05: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s06: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s07: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s08: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s09: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s10: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s11: cached
-20261126T103229-0a60b5 [10:32:29]   narration/s12: cached
-20261126T103229-0a60b5 [10:32:29] [3/8] timeline
-20261126T103229-0a60b5 [10:32:30]   total 85.38s (target 78s)
-20261126T103229-0a60b5 [10:32:30] [4/8] radio cut
-20261126T103229-0a60b5 [10:32:44]   radio cut: outputs/radio_cut/radio_cut.mp4 (84.5s, {'integrated_lufs': -14.0, 'lra_lu': 6.4, 'true_peak_dbtp': -1.5})
-20261126T103229-0a60b5 [10:32:44] [5/8] keyframes (reference sheet first)
-20261126T103229-0a60b5 [10:32:45]   references/emama: cached
-20261126T103229-0a60b5 [10:32:45]   references/child: cached
-20261126T103229-0a60b5 [10:32:45]   references/adult: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s01: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s02: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s03: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s04: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s05: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s06: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s07: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s08: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s09: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s10: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s11: cached
-20261126T103229-0a60b5 [10:32:45]   keyframes/s12: generating (txt2img)
-20261126T103229-0a60b5 [10:32:45]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T103229-0a60b5 [10:33:29] [6/8] shots
-20261126T103229-0a60b5 [10:33:29]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T103229-0a60b5 [10:33:34]   shots/16x9/s12: rendered with kenburns (6.00s)
-20261126T103229-0a60b5 [10:33:34]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T103229-0a60b5 [10:33:39]   shots/9x16/s12: rendered with kenburns (6.00s)
-20261126T103229-0a60b5 [10:33:39] [7/8] music
-20261126T103229-0a60b5 [10:33:39]   music/seed7: cached
-20261126T103229-0a60b5 [10:33:39]   music/seed21: cached
-20261126T103229-0a60b5 [10:33:39]   music/seed42: cached
-20261126T103229-0a60b5 [10:33:39]   music/bed: built from seed 42 (4 loops, 85.4s)
-20261126T103229-0a60b5 [10:33:39] [8/8] assemble
-20261126T103229-0a60b5 [10:34:55]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.0, 'true_peak_dbtp': -1.3}, 'size_mb': 60.22}
-20261126T103229-0a60b5 [10:35:59]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.0, 'true_peak_dbtp': -1.3}, 'size_mb': 59.63}
-20261126T103229-0a60b5 [10:35:59] === done in 209.6s; model calls this run: 1 {"keyframes/s12": "ok"} ===
-20261126T103936-213489 [10:39:36] === run 20261126T103936-213489 ===
-20261126T103936-213489 [10:39:36] [1/8] storyboard valid: 12 shots, language=amh
-20261126T103936-213489 [10:39:36] [2/8] narration
-20261126T103936-213489 [10:39:36]   [narration] gemini-tts unavailable: GEMINI_API_KEY not set
-20261126T103936-213489 [10:39:36]   narration/s01: cached
-20261126T103936-213489 [10:39:36]   narration/s02: cached
-20261126T103936-213489 [10:39:36]   narration/s03: cached
-20261126T103936-213489 [10:39:36]   narration/s04: cached
-20261126T103936-213489 [10:39:36]   narration/s05: cached
-20261126T103936-213489 [10:39:36]   narration/s06: cached
-20261126T103936-213489 [10:39:36]   narration/s07: cached
-20261126T103936-213489 [10:39:36]   narration/s08: cached
-20261126T103936-213489 [10:39:36]   narration/s09: cached
-20261126T103936-213489 [10:39:36]   narration/s10: cached
-20261126T103936-213489 [10:39:36]   narration/s11: cached
-20261126T103936-213489 [10:39:36]   narration/s12: cached
-20261126T103936-213489 [10:39:36] [3/8] timeline
-20261126T103936-213489 [10:39:36]   total 85.38s (target 78s)
-20261126T103936-213489 [10:39:36] [4/8] radio cut
-20261126T103936-213489 [10:39:52]   radio cut: outputs/radio_cut/radio_cut.mp4 (85.4s, {'integrated_lufs': -14.0, 'lra_lu': 6.4, 'true_peak_dbtp': -1.5})
-20261126T103936-213489 [10:39:52] [5/8] keyframes (reference sheet first)
-20261126T103936-213489 [10:39:53]   references/emama: cached
-20261126T103936-213489 [10:39:53]   references/child: cached
-20261126T103936-213489 [10:39:53]   references/adult: cached
-20261126T103936-213489 [10:39:53]   keyframes/s01: cached
-20261126T103936-213489 [10:39:53]   keyframes/s02: cached
-20261126T103936-213489 [10:39:53]   keyframes/s03: cached
-20261126T103936-213489 [10:39:53]   keyframes/s04: cached
-20261126T103936-213489 [10:39:53]   keyframes/s05: cached
-20261126T103936-213489 [10:39:53]   keyframes/s06: cached
-20261126T103936-213489 [10:39:53]   keyframes/s07: cached
-20261126T103936-213489 [10:39:53]   keyframes/s08: cached
-20261126T103936-213489 [10:39:53]   keyframes/s09: cached
-20261126T103936-213489 [10:39:53]   keyframes/s10: cached
-20261126T103936-213489 [10:39:53]   keyframes/s11: cached
-20261126T103936-213489 [10:39:53]   keyframes/s12: generating (txt2img)
-20261126T103936-213489 [10:39:53]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T103936-213489 [10:40:38] [6/8] shots
-20261126T103936-213489 [10:40:38]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T103936-213489 [10:40:45]   shots/16x9/s12: rendered with kenburns (6.00s)
-20261126T103936-213489 [10:40:45]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
-20261126T103936-213489 [10:40:53]   shots/9x16/s12: rendered with kenburns (6.00s)
-20261126T103936-213489 [10:40:53] [7/8] music
-20261126T103936-213489 [10:40:53]   music/seed7: cached
-20261126T103936-213489 [10:40:53]   music/seed21: cached
-20261126T103936-213489 [10:40:53]   music/seed42: cached
-20261126T103936-213489 [10:40:53]   music/bed: cached
-20261126T103936-213489 [10:40:53] [8/8] assemble
-20261126T103936-213489 [10:42:16]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.1, 'true_peak_dbtp': -1.3}, 'size_mb': 61.58}
-20261126T103936-213489 [10:43:29]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 85.375, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.1, 'true_peak_dbtp': -1.3}, 'size_mb': 60.79}
-20261126T103936-213489 [10:43:29] === done in 232.7s; model calls this run: 1 {"keyframes/s12": "ok"} ===
-20261126T104339-faef03 [10:45:00]   ffmpeg                       ok (0.0s)
-20261126T104339-faef03 [10:45:00]   gemini-tts                   unavailable: GEMINI_API_KEY not set
-20261126T104339-faef03 [10:45:00]   local:mms-tts                ok (8.8s)
-20261126T104339-faef03 [10:45:00]   cloudflare                   unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
-20261126T104339-faef03 [10:45:00]   local:sd-turbo               ok (44.7s)
-20261126T104339-faef03 [10:45:00]   local:musicgen-small         ok (27.9s)
-20261126T104339-faef03 [10:45:00]   kaggle-gpu (wan22/acestep)   unavailable: runs only inside a Kaggle notebook; see kaggle/README.md
+20261126T143931-5fe305 [14:39:31]   [script] accepted draft -> storyboard.json (previous kept at outputs/script/storyboard.before-accept.20261126T143931.json)
+20261126T143931-cf02ec [14:39:31] === run 20261126T143931-cf02ec ===
+20261126T143931-cf02ec [14:39:31] [1/8] storyboard valid: 12 shots, language=amh
+20261126T143931-cf02ec [14:39:31] [2/8] narration
+20261126T143931-cf02ec [14:39:31]   narration: 11 lines in ONE Gemini request (free tier is ~10 requests/day)
+20261126T143931-cf02ec [14:39:53]   [gemini-tts] batch split: implausible segment lengths (ratio [2.8, 0.67, 0.99, 0.65, 0.83, 1.49, 0.28, 0.51, 2.3, 0.87, 0.14]); falling back to one request per line
+20261126T143931-cf02ec [14:39:53]   narration/s01: generating with gemini-tts
+20261126T143931-cf02ec [14:40:06]   narration/s02: generating with gemini-tts
+20261126T143931-cf02ec [14:40:13]   narration/s04: generating with gemini-tts
+20261126T143931-cf02ec [14:40:18]   narration/s05: generating with gemini-tts
+20261126T143931-cf02ec [14:40:24]   narration/s06: generating with gemini-tts
+20261126T143931-cf02ec [14:40:24]   [gemini-tts] per-minute limit; waiting 35s as the server asks
+20261126T140855-dc2819 [14:40:43]   [remote] wan: complete in 1891s (queue 1116s); output -> outputs/remote/results/wan
+20261126T143931-cf02ec [14:41:00]   retry 1/3 for call after error: RuntimeError('429 per-minute limit'); sleeping 5s
+20261126T143931-cf02ec [14:41:10]   narration/s07: generating with gemini-tts
+20261126T143931-cf02ec [14:41:10]   [quota] gemini-3.8-flash-lite-tts: only ~2 requests left today
+20261126T143931-cf02ec [14:41:14]   narration/s08: generating with gemini-tts
+20261126T143931-cf02ec [14:41:14]   [quota] gemini-3.8-flash-lite-tts: only ~1 requests left today
+20261126T143931-cf02ec [14:41:20]   narration/s09: generating with gemini-tts
+20261126T144228-4e8171 [14:42:28] === run 20261126T144228-4e8171 ===
+20261126T144228-4e8171 [14:42:28] [1/8] storyboard valid: 12 shots, language=amh
+20261126T144228-4e8171 [14:42:28] [2/8] narration
+20261126T144228-4e8171 [14:42:28]   narration/s01: cached
+20261126T144228-4e8171 [14:42:28]   narration/s02: cached
+20261126T144228-4e8171 [14:42:28]   narration/s04: cached
+20261126T144228-4e8171 [14:42:28]   narration/s05: cached
+20261126T144228-4e8171 [14:42:28]   narration/s06: cached
+20261126T144228-4e8171 [14:42:28]   narration/s07: cached
+20261126T144228-4e8171 [14:42:28]   narration/s08: cached
+20261126T144228-4e8171 [14:42:28]   narration/s09: cached
+20261126T144228-4e8171 [14:42:28]   narration/s10: cached
+20261126T144228-4e8171 [14:42:28]   narration/s11: cached
+20261126T144228-4e8171 [14:42:28]   narration/s12: cached
+20261126T144228-4e8171 [14:42:28] [3/8] timeline
+20261126T144228-4e8171 [14:42:28]   total 79.71s (target 85s)
+20261126T144228-4e8171 [14:42:28] [4/8] radio cut
+20261126T144228-4e8171 [14:42:38]   radio cut: outputs/radio_cut/radio_cut.mp4 (79.1s, {'integrated_lufs': -14.0, 'lra_lu': 5.8, 'true_peak_dbtp': -1.5})
+20261126T144228-4e8171 [14:42:38] === done in 10.1s; model calls this run: 0 (everything came from cache) ===
+20261126T144251-effb2b [14:42:51] === run 20261126T144251-effb2b ===
+20261126T144251-effb2b [14:42:51] [1/8] storyboard valid: 12 shots, language=amh
+20261126T144251-effb2b [14:42:51] [2/8] narration
+20261126T144251-effb2b [14:42:51]   narration/s01: cached
+20261126T144251-effb2b [14:42:51]   narration/s02: cached
+20261126T144251-effb2b [14:42:51]   narration/s04: cached
+20261126T144251-effb2b [14:42:51]   narration/s05: cached
+20261126T144251-effb2b [14:42:51]   narration/s06: cached
+20261126T144251-effb2b [14:42:51]   narration/s07: cached
+20261126T144251-effb2b [14:42:51]   narration/s08: cached
+20261126T144251-effb2b [14:42:51]   narration/s09: cached
+20261126T144251-effb2b [14:42:51]   narration/s10: cached
+20261126T144251-effb2b [14:42:51]   narration/s11: cached
+20261126T144251-effb2b [14:42:51]   narration/s12: cached
+20261126T144251-effb2b [14:42:51] [3/8] timeline
+20261126T144251-effb2b [14:42:51]   total 87.21s (target 85s)
+20261126T144251-effb2b [14:42:51] [4/8] radio cut
+20261126T144251-effb2b [14:43:01]   radio cut: outputs/radio_cut/radio_cut.mp4 (87.0s, {'integrated_lufs': -14.0, 'lra_lu': 6.6, 'true_peak_dbtp': -1.5})
+20261126T144251-effb2b [14:43:01] === done in 10.7s; model calls this run: 0 (everything came from cache) ===
+20261126T144317-2564b0 [14:43:18]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T144317-2564b0 [14:43:18]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T144322-344f37 [14:43:23]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T144322-344f37 [14:43:23]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T144334-511399 [14:43:35]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T144334-511399 [14:43:35]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T144338-61cfd1 [14:43:38]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T144338-61cfd1 [14:43:38]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T144345-b0234a [14:43:46]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T144345-b0234a [14:43:46]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T144345-b0234a [14:43:46]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T144345-b0234a [14:43:46]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T144357-9ec524 [14:43:57]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T144357-9ec524 [14:43:57]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T144357-9ec524 [14:43:57]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T144357-9ec524 [14:43:57]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T144357-9ec524 [14:43:58]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T144459-560a0f [14:45:00]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T144459-560a0f [14:45:00]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T144459-560a0f [14:45:00]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T144459-560a0f [14:45:00]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T144459-560a0f [14:45:01]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T144501-eb0591 [14:45:01] === run 20261126T144501-eb0591 ===
+20261126T144501-eb0591 [14:45:01] [1/8] storyboard valid: 12 shots, language=amh
+20261126T144501-eb0591 [14:45:01] [2/8] narration
+20261126T144501-eb0591 [14:45:01]   narration/s01: cached
+20261126T144501-eb0591 [14:45:01]   narration/s02: cached
+20261126T144501-eb0591 [14:45:01]   narration/s04: cached
+20261126T144501-eb0591 [14:45:01]   narration/s05: cached
+20261126T144501-eb0591 [14:45:01]   narration/s06: cached
+20261126T144501-eb0591 [14:45:01]   narration/s07: cached
+20261126T144501-eb0591 [14:45:01]   narration/s08: cached
+20261126T144501-eb0591 [14:45:01]   narration/s09: cached
+20261126T144501-eb0591 [14:45:01]   narration/s10: cached
+20261126T144501-eb0591 [14:45:01]   narration/s11: cached
+20261126T144501-eb0591 [14:45:01]   narration/s12: cached
+20261126T144501-eb0591 [14:45:01] [3/8] timeline
+20261126T144501-eb0591 [14:45:01]   total 87.21s (target 85s)
+20261126T144501-eb0591 [14:45:01] [4/8] radio cut
+20261126T144516-e5e8a6 [14:45:16]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T144516-e5e8a6 [14:45:16]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T144516-e5e8a6 [14:45:16]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T144516-e5e8a6 [14:45:16]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T144516-e5e8a6 [14:45:17]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T144517-5d4839 [14:45:17] === run 20261126T144517-5d4839 ===
+20261126T144517-5d4839 [14:45:17] [1/8] storyboard valid: 12 shots, language=amh
+20261126T144517-5d4839 [14:45:17] [2/8] narration
+20261126T144517-5d4839 [14:45:17]   narration/s01: cached
+20261126T144517-5d4839 [14:45:17]   narration/s02: cached
+20261126T144517-5d4839 [14:45:17]   narration/s04: cached
+20261126T144517-5d4839 [14:45:17]   narration/s05: cached
+20261126T144517-5d4839 [14:45:17]   narration/s06: cached
+20261126T144517-5d4839 [14:45:17]   narration/s07: cached
+20261126T144517-5d4839 [14:45:17]   narration/s08: cached
+20261126T144517-5d4839 [14:45:17]   narration/s09: cached
+20261126T144517-5d4839 [14:45:17]   narration/s10: cached
+20261126T144517-5d4839 [14:45:17]   narration/s11: cached
+20261126T144517-5d4839 [14:45:17]   narration/s12: cached
+20261126T144517-5d4839 [14:45:17] [3/8] timeline
+20261126T144517-5d4839 [14:45:17]   total 87.21s (target 85s)
+20261126T144517-5d4839 [14:45:17] [4/8] radio cut
+20261126T144517-5d4839 [14:45:33]   radio cut: outputs/radio_cut/radio_cut.mp4 (87.0s, {'integrated_lufs': -14.0, 'lra_lu': 6.6, 'true_peak_dbtp': -1.5})
+20261126T144517-5d4839 [14:45:33] === done in 15.9s; model calls this run: 0 (everything came from cache) ===
+20261126T145219-7d1556 [14:52:19]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T145219-7d1556 [14:52:19]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T145219-7d1556 [14:52:19]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T145219-7d1556 [14:52:19]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T145219-7d1556 [14:52:20]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T145300-5bd0f0 [14:53:00]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T145300-5bd0f0 [14:53:00]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T145300-5bd0f0 [14:53:00]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T145300-5bd0f0 [14:53:00]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T145300-5bd0f0 [14:53:01]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T151050-41315b [15:10:51]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=90, s03=88, s04=124, s05=102, s06=79, s07=86, s08=97, s09=90, s10=117, s11=116, s12=82
+20261126T151050-41315b [15:10:51]   references/student: generating
+20261126T151033-7212e5 [15:10:53]   [remote] pushing private kernel keneanbiru/heritage-acestep (T4 x2)
+20261126T151050-41315b [15:10:54]   references/mother: generating
+20261126T151050-41315b [15:10:56]   references/king: generating
+20261126T151050-41315b [15:10:59]   references/servant: generating
+20261126T151050-41315b [15:11:01]   keyframes/s01: generating (img2img on student.png)
+20261126T151050-41315b [15:11:04]   keyframes/s02: generating (img2img on mother.png)
+20261126T151050-41315b [15:11:07]   keyframes/s03: generating (img2img on mother.png)
+20261126T151050-41315b [15:11:10]   keyframes/s04: generating (img2img on king.png)
+20261126T151050-41315b [15:11:13]   keyframes/s05: generating (img2img on king.png)
+20261126T151050-41315b [15:11:16]   keyframes/s06: generating (img2img on servant.png)
+20261126T151050-41315b [15:11:19]   keyframes/s07: generating (img2img on servant.png)
+20261126T151050-41315b [15:11:22]   keyframes/s08: generating (img2img on king.png)
+20261126T151050-41315b [15:11:25]   keyframes/s09: generating (img2img on king.png)
+20261126T151033-7212e5 [15:11:27]   [remote]  "KernelWorkerStatus.QUEUED"
+20261126T151050-41315b [15:11:28]   keyframes/s10: generating (img2img on king.png)
+20261126T151050-41315b [15:11:32]   keyframes/s11: generating (img2img on servant.png)
+20261126T151050-41315b [15:11:35]   keyframes/s12: generating (img2img on student.png)
+20261126T151224-9c5aa7 [15:12:25]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=103, s10=90, s11=116, s12=82
+20261126T151224-9c5aa7 [15:12:25]   references/student: cached
+20261126T151224-9c5aa7 [15:12:25]   references/mother: cached
+20261126T151224-9c5aa7 [15:12:25]   references/king: cached
+20261126T151224-9c5aa7 [15:12:25]   references/servant: cached
+20261126T151224-9c5aa7 [15:12:25]   keyframes/s01: cached
+20261126T151224-9c5aa7 [15:12:25]   keyframes/s02: generating (reference mother.png: used by SD-Turbo img2img only; FLUX ignores it)
+20261126T151224-9c5aa7 [15:12:29]   keyframes/s03: generating (reference mother.png: used by SD-Turbo img2img only; FLUX ignores it)
+20261126T151224-9c5aa7 [15:12:32]   keyframes/s04: cached
+20261126T151224-9c5aa7 [15:12:32]   keyframes/s05: cached
+20261126T151224-9c5aa7 [15:12:32]   keyframes/s06: cached
+20261126T151224-9c5aa7 [15:12:32]   keyframes/s07: cached
+20261126T151224-9c5aa7 [15:12:32]   keyframes/s08: cached
+20261126T151224-9c5aa7 [15:12:32]   keyframes/s09: generating (reference king.png: used by SD-Turbo img2img only; FLUX ignores it)
+20261126T151224-9c5aa7 [15:12:36]   keyframes/s10: generating
+20261126T151224-9c5aa7 [15:12:39]   keyframes/s11: cached
+20261126T151224-9c5aa7 [15:12:39]   keyframes/s12: cached
+20261126T151251-2e5cad [15:12:52]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T151251-2e5cad [15:12:52]   references/student: cached
+20261126T151251-2e5cad [15:12:52]   references/mother: cached
+20261126T151251-2e5cad [15:12:52]   references/king: cached
+20261126T151251-2e5cad [15:12:52]   references/servant: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s01: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s02: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s03: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s04: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s05: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s06: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s07: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s08: cached
+20261126T151251-2e5cad [15:12:52]   keyframes/s09: generating (reference king.png: used by SD-Turbo img2img only; FLUX ignores it)
+20261126T151251-2e5cad [15:12:56]   keyframes/s10: generating
+20261126T151251-2e5cad [15:12:59]   keyframes/s11: cached
+20261126T151251-2e5cad [15:12:59]   keyframes/s12: cached
+20261126T151309-64e0b1 [15:13:10]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T151309-64e0b1 [15:13:10]   references/student: cached
+20261126T151309-64e0b1 [15:13:10]   references/mother: cached
+20261126T151309-64e0b1 [15:13:10]   references/king: cached
+20261126T151309-64e0b1 [15:13:10]   references/servant: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s01: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s02: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s03: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s04: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s05: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s06: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s07: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s08: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s09: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s10: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s11: cached
+20261126T151309-64e0b1 [15:13:10]   keyframes/s12: cached
+20261126T151309-64e0b1 [15:13:27]   [remote] pushing private kernel keneanbiru/heritage-wan2 (T4 x2)
+20261126T151309-64e0b1 [15:13:27]   [remote] pushing private kernel keneanbiru/heritage-wan1 (T4 x2)
+20261126T151351-37bde9 [15:13:51]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T151351-37bde9 [15:13:51]   narration/s01: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:00]   narration/s02: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:03]   narration/s04: generating with local:mms-tts
+20261126T151309-64e0b1 [15:14:04]   [remote] wan2: FAILED in 38s (queue Nones); output -> outputs/remote/results/wan2
+20261126T151309-64e0b1 [15:14:04]   [remote] a wan job failed: RuntimeError('Kaggle job wan2 failed: keneanbiru/heritage-wan2 has status "KernelWorkerStatus.CANCEL_ACKNOWLEDGED"\n(no log downloaded)')
+20261126T151309-64e0b1 [15:14:05]   [remote] wan1: FAILED in 38s (queue Nones); output -> outputs/remote/results/wan1
+20261126T151309-64e0b1 [15:14:05]   [remote] a wan job failed: RuntimeError('Kaggle job wan1 failed: keneanbiru/heritage-wan1 has status "KernelWorkerStatus.CANCEL_ACKNOWLEDGED"\n(no log downloaded)')
+20261126T151309-64e0b1 [15:14:05]   [remote] wan: imported 0/5 clips into outputs/clips_wan/
+20261126T151351-37bde9 [15:14:05]   narration/s05: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:07]   narration/s06: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:08]   narration/s07: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:10]   narration/s08: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:11]   narration/s09: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:13]   narration/s10: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:15]   narration/s11: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:18]   narration/s12: generating with local:mms-tts
+20261126T151351-37bde9 [15:14:21]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T151351-37bde9 [15:14:21]   references/student: cached
+20261126T151351-37bde9 [15:14:21]   references/mother: cached
+20261126T151351-37bde9 [15:14:21]   references/king: cached
+20261126T151351-37bde9 [15:14:21]   references/servant: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s01: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s02: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s03: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s04: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s05: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s06: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s07: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s08: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s09: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s10: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s11: cached
+20261126T151351-37bde9 [15:14:21]   keyframes/s12: cached
+20261126T151351-37bde9 [15:14:21]   [shots] provider wan22:kaggle unavailable: no Wan clip for s01 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:14:26]   shots/16x9/s01: rendered with kenburns (6.79s)
+20261126T151351-37bde9 [15:14:26]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:14:35]   shots/16x9/s02: rendered with kenburns (12.43s)
+20261126T151351-37bde9 [15:14:35]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:14:39]   shots/16x9/s03: rendered with kenburns (6.50s)
+20261126T151351-37bde9 [15:14:39]   [shots] provider wan22:kaggle unavailable: no Wan clip for s04 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:14:44]   shots/16x9/s04: rendered with kenburns (6.46s)
+20261126T151351-37bde9 [15:14:44]   [shots] provider wan22:kaggle unavailable: no Wan clip for s05 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:14:49]   shots/16x9/s05: rendered with kenburns (8.08s)
+20261126T151351-37bde9 [15:14:49]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:14:54]   shots/16x9/s06: rendered with kenburns (5.33s)
+20261126T151351-37bde9 [15:14:54]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:14:59]   shots/16x9/s07: rendered with kenburns (5.79s)
+20261126T151351-37bde9 [15:14:59]   [shots] provider wan22:kaggle unavailable: no Wan clip for s08 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:15:04]   shots/16x9/s08: rendered with kenburns (6.92s)
+20261126T151351-37bde9 [15:15:04]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:15:10]   shots/16x9/s09: rendered with kenburns (6.79s)
+20261126T151351-37bde9 [15:15:10]   [shots] provider wan22:kaggle unavailable: no Wan clip for s10 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:15:19]   shots/16x9/s10: rendered with kenburns (8.50s)
+20261126T151351-37bde9 [15:15:19]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:15:27]   shots/16x9/s11: rendered with kenburns (12.04s)
+20261126T151351-37bde9 [15:15:27]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:15:36]   shots/16x9/s12: rendered with kenburns (12.88s)
+20261126T151351-37bde9 [15:15:36]   [shots] provider wan22:kaggle unavailable: no Wan clip for s01 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:15:42]   shots/9x16/s01: rendered with kenburns (6.79s)
+20261126T151351-37bde9 [15:15:42]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:15:51]   shots/9x16/s02: rendered with kenburns (12.43s)
+20261126T151351-37bde9 [15:15:51]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:15:55]   shots/9x16/s03: rendered with kenburns (6.50s)
+20261126T151351-37bde9 [15:15:55]   [shots] provider wan22:kaggle unavailable: no Wan clip for s04 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:00]   shots/9x16/s04: rendered with kenburns (6.46s)
+20261126T151351-37bde9 [15:16:00]   [shots] provider wan22:kaggle unavailable: no Wan clip for s05 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:06]   shots/9x16/s05: rendered with kenburns (8.08s)
+20261126T151351-37bde9 [15:16:06]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:10]   shots/9x16/s06: rendered with kenburns (5.33s)
+20261126T151351-37bde9 [15:16:10]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:15]   shots/9x16/s07: rendered with kenburns (5.79s)
+20261126T151351-37bde9 [15:16:15]   [shots] provider wan22:kaggle unavailable: no Wan clip for s08 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:19]   shots/9x16/s08: rendered with kenburns (6.92s)
+20261126T151351-37bde9 [15:16:19]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:24]   shots/9x16/s09: rendered with kenburns (6.79s)
+20261126T151351-37bde9 [15:16:24]   [shots] provider wan22:kaggle unavailable: no Wan clip for s10 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:31]   shots/9x16/s10: rendered with kenburns (8.50s)
+20261126T151351-37bde9 [15:16:31]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:39]   shots/9x16/s11: rendered with kenburns (12.04s)
+20261126T151351-37bde9 [15:16:39]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151351-37bde9 [15:16:49]   shots/9x16/s12: rendered with kenburns (12.88s)
+20261126T151721-a2c5ab [15:17:21]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T151721-a2c5ab [15:17:21]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T151721-a2c5ab [15:17:21]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T151721-a2c5ab [15:17:21]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T151721-a2c5ab [15:17:22]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T151721-a2c5ab [15:17:22]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T151721-a2c5ab [15:17:22]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151721-a2c5ab [15:17:22]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T151722-3ee360 [15:17:22]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151722-3ee360 [15:17:22]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151747-6232b1 [15:17:48]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T151747-6232b1 [15:17:48]   references/student: cached
+20261126T151747-6232b1 [15:17:48]   references/mother: cached
+20261126T151747-6232b1 [15:17:48]   references/king: cached
+20261126T151747-6232b1 [15:17:48]   references/servant: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s01: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s02: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s03: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s04: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s05: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s06: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s07: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s08: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s09: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s10: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s11: cached
+20261126T151747-6232b1 [15:17:48]   keyframes/s12: cached
+20261126T151759-8aef7c [15:17:59]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T151759-8aef7c [15:17:59]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:17:59]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T151759-8aef7c [15:18:01]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T151759-8aef7c [15:18:01]   references/student: cached
+20261126T151759-8aef7c [15:18:01]   references/mother: cached
+20261126T151759-8aef7c [15:18:01]   references/king: cached
+20261126T151759-8aef7c [15:18:01]   references/servant: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s01: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s02: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s03: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s04: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s05: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s06: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s07: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s08: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s09: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s10: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s11: cached
+20261126T151759-8aef7c [15:18:01]   keyframes/s12: cached
+20261126T151759-8aef7c [15:18:01]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151747-6232b1 [15:18:04]   [remote] pushing private kernel keneanbiru/heritage-wan (T4 x2)
+20261126T151759-8aef7c [15:18:07]   shots/16x9/s02: rendered with kenburns (9.18s)
+20261126T151759-8aef7c [15:18:07]   [shots] provider wan22:kaggle unavailable: no Wan clip for s04 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:18:11]   shots/16x9/s04: rendered with kenburns (6.00s)
+20261126T151759-8aef7c [15:18:11]   [shots] provider wan22:kaggle unavailable: no Wan clip for s05 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:18:16]   shots/16x9/s05: rendered with kenburns (6.25s)
+20261126T151759-8aef7c [15:18:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:18:23]   shots/16x9/s06: rendered with kenburns (4.75s)
+20261126T151759-8aef7c [15:18:23]   [shots] provider wan22:kaggle unavailable: no Wan clip for s08 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:18:30]   shots/16x9/s08: rendered with kenburns (6.21s)
+20261126T151759-8aef7c [15:18:30]   [shots] provider wan22:kaggle unavailable: no Wan clip for s10 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151747-6232b1 [15:18:40]   [remote]  "KernelWorkerStatus.QUEUED"
+20261126T151759-8aef7c [15:18:42]   shots/16x9/s10: rendered with kenburns (7.75s)
+20261126T151759-8aef7c [15:18:42]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:18:56]   shots/16x9/s11: rendered with kenburns (10.50s)
+20261126T151759-8aef7c [15:18:56]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151033-7212e5 [15:18:57]   [remote] running after 485s in queue
+20261126T151033-7212e5 [15:18:57]   [remote]  "KernelWorkerStatus.RUNNING"
+20261126T151759-8aef7c [15:19:08]   shots/16x9/s12: rendered with kenburns (10.50s)
+20261126T151759-8aef7c [15:19:08]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:19:19]   shots/9x16/s02: rendered with kenburns (9.18s)
+20261126T151759-8aef7c [15:19:19]   [shots] provider wan22:kaggle unavailable: no Wan clip for s04 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:19:26]   shots/9x16/s04: rendered with kenburns (6.00s)
+20261126T151759-8aef7c [15:19:26]   [shots] provider wan22:kaggle unavailable: no Wan clip for s05 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:19:33]   shots/9x16/s05: rendered with kenburns (6.25s)
+20261126T151759-8aef7c [15:19:33]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:19:39]   shots/9x16/s06: rendered with kenburns (4.75s)
+20261126T151759-8aef7c [15:19:39]   [shots] provider wan22:kaggle unavailable: no Wan clip for s08 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:19:46]   shots/9x16/s08: rendered with kenburns (6.21s)
+20261126T151759-8aef7c [15:19:46]   [shots] provider wan22:kaggle unavailable: no Wan clip for s10 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:19:56]   shots/9x16/s10: rendered with kenburns (7.75s)
+20261126T151759-8aef7c [15:19:56]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:20:09]   shots/9x16/s11: rendered with kenburns (10.50s)
+20261126T151759-8aef7c [15:20:09]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T151759-8aef7c [15:20:20]   shots/9x16/s12: rendered with kenburns (10.50s)
+20261126T152035-5cf952 [15:20:35]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T152035-5cf952 [15:20:35]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:35]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152035-5cf952 [15:20:37]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T152035-5cf952 [15:20:37]   references/student: cached
+20261126T152035-5cf952 [15:20:37]   references/mother: cached
+20261126T152035-5cf952 [15:20:37]   references/king: cached
+20261126T152035-5cf952 [15:20:37]   references/servant: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s01: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s02: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s03: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s04: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s05: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s06: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s07: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s08: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s09: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s10: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s11: cached
+20261126T152035-5cf952 [15:20:37]   keyframes/s12: cached
+20261126T152048-65a5f1 [15:20:48]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T152048-65a5f1 [15:20:48]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:48]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152048-65a5f1 [15:20:49]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T152048-65a5f1 [15:20:49]   references/student: cached
+20261126T152048-65a5f1 [15:20:49]   references/mother: cached
+20261126T152048-65a5f1 [15:20:49]   references/king: cached
+20261126T152048-65a5f1 [15:20:49]   references/servant: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s01: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s02: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s03: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s04: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s05: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s06: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s07: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s08: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s09: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s10: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s11: cached
+20261126T152048-65a5f1 [15:20:49]   keyframes/s12: cached
+20261126T152103-71995e [15:21:03]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T152103-71995e [15:21:03]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:03]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152103-71995e [15:21:04]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T152103-71995e [15:21:04]   references/student: cached
+20261126T152103-71995e [15:21:04]   references/mother: cached
+20261126T152103-71995e [15:21:04]   references/king: cached
+20261126T152103-71995e [15:21:04]   references/servant: cached
+20261126T152103-71995e [15:21:04]   keyframes/s01: cached
+20261126T152103-71995e [15:21:04]   keyframes/s02: cached
+20261126T152103-71995e [15:21:04]   keyframes/s03: cached
+20261126T152103-71995e [15:21:04]   keyframes/s04: cached
+20261126T152103-71995e [15:21:04]   keyframes/s05: cached
+20261126T152103-71995e [15:21:04]   keyframes/s06: cached
+20261126T152103-71995e [15:21:04]   keyframes/s07: cached
+20261126T152103-71995e [15:21:04]   keyframes/s08: cached
+20261126T152103-71995e [15:21:04]   keyframes/s09: cached
+20261126T152103-71995e [15:21:04]   keyframes/s10: cached
+20261126T152103-71995e [15:21:04]   keyframes/s11: cached
+20261126T152103-71995e [15:21:04]   keyframes/s12: cached
+20261126T151747-6232b1 [15:25:10]   [remote] running after 426s in queue
+20261126T151747-6232b1 [15:25:10]   [remote]  "KernelWorkerStatus.RUNNING"
+20261126T151033-7212e5 [15:27:56]   [remote] acestep: complete in 1023s (queue 485s); output -> outputs/remote/results/acestep
+20261126T151033-7212e5 [15:27:56]   [remote] acestep: imported 3/3 candidates
+20261126T152812-b8f289 [15:28:13]   music/seed11: generating 88s
+20261126T152812-b8f289 [15:28:16]   music/seed23: generating 88s
+20261126T152812-b8f289 [15:28:20]   music/seed47: generating 88s
+20261126T152916-85abae [15:29:16] === run 20261126T152916-85abae ===
+20261126T152916-85abae [15:29:16] [1/8] storyboard valid: 12 shots, language=amh
+20261126T152916-85abae [15:29:16] [2/8] narration
+20261126T152916-85abae [15:29:16]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T152916-85abae [15:29:16]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T152916-85abae [15:29:16] [3/8] timeline
+20261126T152916-85abae [15:29:16]   total 87.21s (target 85s)
+20261126T152916-85abae [15:29:16] [4/8] radio cut
+20261126T152916-85abae [15:29:32]   radio cut: outputs/radio_cut/radio_cut.mp4 (87.0s, {'integrated_lufs': -14.0, 'lra_lu': 6.6, 'true_peak_dbtp': -1.5})
+20261126T152916-85abae [15:29:32] [5/8] keyframes (reference sheet first)
+20261126T152916-85abae [15:29:33]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T152916-85abae [15:29:33]   references/student: cached
+20261126T152916-85abae [15:29:33]   references/mother: cached
+20261126T152916-85abae [15:29:33]   references/king: cached
+20261126T152916-85abae [15:29:33]   references/servant: cached
+20261126T152916-85abae [15:29:33]   keyframes/s01: cached
+20261126T152916-85abae [15:29:33]   keyframes/s02: cached
+20261126T152916-85abae [15:29:33]   keyframes/s03: cached
+20261126T152916-85abae [15:29:33]   keyframes/s04: cached
+20261126T152916-85abae [15:29:33]   keyframes/s05: cached
+20261126T152916-85abae [15:29:33]   keyframes/s06: cached
+20261126T152916-85abae [15:29:33]   keyframes/s07: cached
+20261126T152916-85abae [15:29:33]   keyframes/s08: cached
+20261126T152916-85abae [15:29:33]   keyframes/s09: cached
+20261126T152916-85abae [15:29:33]   keyframes/s10: cached
+20261126T152916-85abae [15:29:33]   keyframes/s11: cached
+20261126T152916-85abae [15:29:33]   keyframes/s12: cached
+20261126T152916-85abae [15:29:33] [6/8] shots
+20261126T152916-85abae [15:29:33] [7/8] music
+20261126T152916-85abae [15:29:33]   music/seed11: cached
+20261126T152916-85abae [15:29:33]   music/seed23: cached
+20261126T152916-85abae [15:29:33]   music/seed47: cached
+20261126T152916-85abae [15:29:34]   music/bed: built from seed 23 (1 loops, 87.2s)
+20261126T152916-85abae [15:29:34] [8/8] assemble
+20261126T152916-85abae [15:32:08]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 59.72}
+20261126T152916-85abae [15:34:46]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 58.24}
+20261126T152916-85abae [15:34:46] === done in 330.0s; model calls this run: 0 (everything came from cache) ===
+20261126T153510-d4c970 [15:35:11]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T153510-d4c970 [15:35:11]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T153510-d4c970 [15:35:11]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T153510-d4c970 [15:35:11]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T153510-d4c970 [15:35:11]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T153510-d4c970 [15:35:11]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T153510-d4c970 [15:35:11]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T153510-d4c970 [15:35:11]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T155557-34f2de [15:55:57]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:57]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T155557-34f2de [15:55:58]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T155557-34f2de [15:55:58]   references/student: cached
+20261126T155557-34f2de [15:55:58]   references/mother: cached
+20261126T155557-34f2de [15:55:58]   references/king: cached
+20261126T155557-34f2de [15:55:58]   references/servant: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s01: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s02: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s03: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s04: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s05: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s06: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s07: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s08: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s09: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s10: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s11: cached
+20261126T155557-34f2de [15:55:58]   keyframes/s12: cached
+20261126T155557-34f2de [15:56:03]   shots/16x9/s01: rendered with kenburns (6.79s)
+20261126T155557-34f2de [15:56:09]   shots/16x9/s02: rendered with kenburns (9.18s)
+20261126T155557-34f2de [15:56:14]   shots/16x9/s03: rendered with kenburns (6.50s)
+20261126T155557-34f2de [15:56:20]   shots/16x9/s04: rendered with kenburns (6.00s)
+20261126T155557-34f2de [15:56:28]   shots/16x9/s05: rendered with kenburns (6.25s)
+20261126T155557-34f2de [15:56:34]   shots/16x9/s06: rendered with kenburns (4.75s)
+20261126T155557-34f2de [15:56:42]   shots/16x9/s07: rendered with kenburns (5.79s)
+20261126T155557-34f2de [15:56:49]   shots/16x9/s08: rendered with kenburns (6.21s)
+20261126T155557-34f2de [15:56:58]   shots/16x9/s09: rendered with kenburns (6.79s)
+20261126T155557-34f2de [15:57:08]   shots/16x9/s10: rendered with kenburns (7.75s)
+20261126T155557-34f2de [15:57:20]   shots/16x9/s11: rendered with kenburns (10.50s)
+20261126T155557-34f2de [15:57:34]   shots/16x9/s12: rendered with kenburns (10.50s)
+20261126T155557-34f2de [15:57:44]   shots/9x16/s01: rendered with kenburns (6.79s)
+20261126T155557-34f2de [15:57:56]   shots/9x16/s02: rendered with kenburns (9.18s)
+20261126T155557-34f2de [15:58:03]   shots/9x16/s03: rendered with kenburns (6.50s)
+20261126T155557-34f2de [15:58:10]   shots/9x16/s04: rendered with kenburns (6.00s)
+20261126T155557-34f2de [15:58:18]   shots/9x16/s05: rendered with kenburns (6.25s)
+20261126T155557-34f2de [15:58:25]   shots/9x16/s06: rendered with kenburns (4.75s)
+20261126T155557-34f2de [15:58:33]   shots/9x16/s07: rendered with kenburns (5.79s)
+20261126T155557-34f2de [15:58:41]   shots/9x16/s08: rendered with kenburns (6.21s)
+20261126T155557-34f2de [15:58:49]   shots/9x16/s09: rendered with kenburns (6.79s)
+20261126T155557-34f2de [15:59:01]   shots/9x16/s10: rendered with kenburns (7.75s)
+20261126T155557-34f2de [15:59:17]   shots/9x16/s11: rendered with kenburns (10.50s)
+20261126T155557-34f2de [15:59:30]   shots/9x16/s12: rendered with kenburns (10.50s)
+20261126T155557-34f2de [15:59:31]   music/seed11: cached
+20261126T155557-34f2de [15:59:31]   music/seed23: cached
+20261126T155557-34f2de [15:59:31]   music/seed47: cached
+20261126T155557-34f2de [15:59:31]   music/bed: cached
+20261126T155557-34f2de [16:02:32]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 59.71}
+20261126T155557-34f2de [16:05:13]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 57.67}
+20261126T151747-6232b1 [16:08:02]   [remote] wan: complete in 2999s (queue 426s); output -> outputs/remote/results/wan
+20261126T151747-6232b1 [16:08:02]   [remote] wan: imported 5/5 clips into outputs/clips_wan/
+20261126T160838-43ea58 [16:08:38] === run 20261126T160838-43ea58 ===
+20261126T160838-43ea58 [16:08:38] [1/8] storyboard valid: 12 shots, language=amh
+20261126T160838-43ea58 [16:08:38] [2/8] narration
+20261126T160838-43ea58 [16:08:38]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T160838-43ea58 [16:08:38]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T160838-43ea58 [16:08:38] [3/8] timeline
+20261126T160838-43ea58 [16:08:38]   total 87.21s (target 85s)
+20261126T160838-43ea58 [16:08:38] [4/8] radio cut
+20261126T160838-43ea58 [16:08:54]   radio cut: outputs/radio_cut/radio_cut.mp4 (86.9s, {'integrated_lufs': -14.0, 'lra_lu': 6.6, 'true_peak_dbtp': -1.5})
+20261126T160838-43ea58 [16:08:54] [5/8] keyframes (reference sheet first)
+20261126T160838-43ea58 [16:08:55]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T160838-43ea58 [16:08:55]   references/student: cached
+20261126T160838-43ea58 [16:08:55]   references/mother: cached
+20261126T160838-43ea58 [16:08:55]   references/king: cached
+20261126T160838-43ea58 [16:08:55]   references/servant: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s01: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s02: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s03: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s04: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s05: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s06: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s07: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s08: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s09: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s10: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s11: cached
+20261126T160838-43ea58 [16:08:55]   keyframes/s12: cached
+20261126T160838-43ea58 [16:08:55] [6/8] shots
+20261126T160838-43ea58 [16:08:57]   shots/16x9/s01: rendered with wan22:kaggle (6.79s)
+20261126T160838-43ea58 [16:08:57]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:09:03]   shots/16x9/s02: rendered with kenburns (9.18s)
+20261126T160838-43ea58 [16:09:03]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:09:10]   shots/16x9/s03: rendered with kenburns (6.50s)
+20261126T160838-43ea58 [16:09:14]   shots/16x9/s04: rendered with wan22:kaggle (6.00s)
+20261126T160838-43ea58 [16:09:14]   [shots] provider wan22:kaggle unavailable: Wan clip for s05 rejected in QC (reject: a glowing flame-like object materialises in the foreground from about frame 20)
+20261126T160838-43ea58 [16:09:21]   shots/16x9/s05: rendered with kenburns (6.25s)
+20261126T160838-43ea58 [16:09:21]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:09:28]   shots/16x9/s06: rendered with kenburns (4.75s)
+20261126T160838-43ea58 [16:09:28]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:09:36]   shots/16x9/s07: rendered with kenburns (5.79s)
+20261126T160838-43ea58 [16:09:40]   shots/16x9/s08: rendered with wan22:kaggle (6.21s)
+20261126T160838-43ea58 [16:09:40]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:09:49]   shots/16x9/s09: rendered with kenburns (6.79s)
+20261126T160838-43ea58 [16:09:49]   [shots] provider wan22:kaggle unavailable: Wan clip for s10 rejected in QC (reject: sparkle noise from about frame 20, full colour melt by frame 48)
+20261126T160838-43ea58 [16:10:01]   shots/16x9/s10: rendered with kenburns (7.75s)
+20261126T160838-43ea58 [16:10:01]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:10:13]   shots/16x9/s11: rendered with kenburns (10.50s)
+20261126T160838-43ea58 [16:10:13]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:10:26]   shots/16x9/s12: rendered with kenburns (10.50s)
+20261126T160838-43ea58 [16:10:30]   shots/9x16/s01: rendered with wan22:kaggle (6.79s)
+20261126T160838-43ea58 [16:10:30]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:10:41]   shots/9x16/s02: rendered with kenburns (9.18s)
+20261126T160838-43ea58 [16:10:41]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:10:47]   shots/9x16/s03: rendered with kenburns (6.50s)
+20261126T160838-43ea58 [16:10:51]   shots/9x16/s04: rendered with wan22:kaggle (6.00s)
+20261126T160838-43ea58 [16:10:51]   [shots] provider wan22:kaggle unavailable: Wan clip for s05 rejected in QC (reject: a glowing flame-like object materialises in the foreground from about frame 20)
+20261126T160838-43ea58 [16:10:59]   shots/9x16/s05: rendered with kenburns (6.25s)
+20261126T160838-43ea58 [16:10:59]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:11:05]   shots/9x16/s06: rendered with kenburns (4.75s)
+20261126T160838-43ea58 [16:11:05]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:11:13]   shots/9x16/s07: rendered with kenburns (5.79s)
+20261126T160838-43ea58 [16:11:16]   shots/9x16/s08: rendered with wan22:kaggle (6.21s)
+20261126T160838-43ea58 [16:11:16]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:11:24]   shots/9x16/s09: rendered with kenburns (6.79s)
+20261126T160838-43ea58 [16:11:24]   [shots] provider wan22:kaggle unavailable: Wan clip for s10 rejected in QC (reject: sparkle noise from about frame 20, full colour melt by frame 48)
+20261126T160838-43ea58 [16:11:35]   shots/9x16/s10: rendered with kenburns (7.75s)
+20261126T160838-43ea58 [16:11:35]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:11:48]   shots/9x16/s11: rendered with kenburns (10.50s)
+20261126T160838-43ea58 [16:11:48]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T160838-43ea58 [16:11:59]   shots/9x16/s12: rendered with kenburns (10.50s)
+20261126T160838-43ea58 [16:11:59] [7/8] music
+20261126T160838-43ea58 [16:12:00]   music/seed11: cached
+20261126T160838-43ea58 [16:12:00]   music/seed23: cached
+20261126T160838-43ea58 [16:12:00]   music/seed47: cached
+20261126T160838-43ea58 [16:12:00]   music/bed: cached
+20261126T160838-43ea58 [16:12:00] [8/8] assemble
+20261126T160838-43ea58 [16:14:42]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 53.02}
+20261126T160838-43ea58 [16:17:07]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 49.94}
+20261126T160838-43ea58 [16:17:07] === done in 509.0s; model calls this run: 3 {"shots/s01": "ok", "shots/s04": "ok", "shots/s08": "ok"} ===
+20261126T161752-b01260 [16:17:52] === run 20261126T161752-b01260 ===
+20261126T161752-b01260 [16:17:52] [1/8] storyboard valid: 12 shots, language=amh
+20261126T161752-b01260 [16:17:52] [2/8] narration
+20261126T161752-b01260 [16:17:52]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T161752-b01260 [16:17:52]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T161752-b01260 [16:17:52] [3/8] timeline
+20261126T161752-b01260 [16:17:53]   total 87.21s (target 85s)
+20261126T161752-b01260 [16:17:53] [4/8] radio cut
+20261126T161752-b01260 [16:18:08]   radio cut: outputs/radio_cut/radio_cut.mp4 (86.3s, {'integrated_lufs': -14.0, 'lra_lu': 6.6, 'true_peak_dbtp': -1.5})
+20261126T161752-b01260 [16:18:08] [5/8] keyframes (reference sheet first)
+20261126T161752-b01260 [16:18:09]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=124, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T161752-b01260 [16:18:09]   references/student: cached
+20261126T161752-b01260 [16:18:09]   references/mother: cached
+20261126T161752-b01260 [16:18:09]   references/king: cached
+20261126T161752-b01260 [16:18:09]   references/servant: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s01: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s02: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s03: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s04: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s05: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s06: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s07: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s08: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s09: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s10: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s11: cached
+20261126T161752-b01260 [16:18:09]   keyframes/s12: cached
+20261126T161752-b01260 [16:18:09] [6/8] shots
+20261126T161752-b01260 [16:18:12]   shots/16x9/s01: rendered with wan22:kaggle (6.79s)
+20261126T161752-b01260 [16:18:12]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:18:19]   shots/16x9/s02: rendered with kenburns (9.18s)
+20261126T161752-b01260 [16:18:19]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:18:27]   shots/16x9/s03: rendered with kenburns (6.50s)
+20261126T161752-b01260 [16:18:32]   shots/16x9/s04: rendered with wan22:kaggle (6.00s)
+20261126T161752-b01260 [16:18:32]   [shots] provider wan22:kaggle unavailable: Wan clip for s05 rejected in QC (reject: a glowing flame-like object materialises in the foreground from about frame 20)
+20261126T161752-b01260 [16:18:39]   shots/16x9/s05: rendered with kenburns (6.25s)
+20261126T161752-b01260 [16:18:39]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:18:46]   shots/16x9/s06: rendered with kenburns (4.75s)
+20261126T161752-b01260 [16:18:46]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:18:54]   shots/16x9/s07: rendered with kenburns (5.79s)
+20261126T161752-b01260 [16:18:58]   shots/16x9/s08: rendered with wan22:kaggle (6.21s)
+20261126T161752-b01260 [16:18:58]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:19:07]   shots/16x9/s09: rendered with kenburns (6.79s)
+20261126T161752-b01260 [16:19:07]   [shots] provider wan22:kaggle unavailable: Wan clip for s10 rejected in QC (reject: sparkle noise from about frame 20, full colour melt by frame 48)
+20261126T161752-b01260 [16:19:18]   shots/16x9/s10: rendered with kenburns (7.75s)
+20261126T161752-b01260 [16:19:18]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:19:30]   shots/16x9/s11: rendered with kenburns (10.50s)
+20261126T161752-b01260 [16:19:30]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:19:43]   shots/16x9/s12: rendered with kenburns (10.50s)
+20261126T161752-b01260 [16:19:47]   shots/9x16/s01: rendered with wan22:kaggle (6.79s)
+20261126T161752-b01260 [16:19:47]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:19:59]   shots/9x16/s02: rendered with kenburns (9.18s)
+20261126T161752-b01260 [16:19:59]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:20:05]   shots/9x16/s03: rendered with kenburns (6.50s)
+20261126T161752-b01260 [16:20:09]   shots/9x16/s04: rendered with wan22:kaggle (6.00s)
+20261126T161752-b01260 [16:20:09]   [shots] provider wan22:kaggle unavailable: Wan clip for s05 rejected in QC (reject: a glowing flame-like object materialises in the foreground from about frame 20)
+20261126T161752-b01260 [16:20:17]   shots/9x16/s05: rendered with kenburns (6.25s)
+20261126T161752-b01260 [16:20:17]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:20:23]   shots/9x16/s06: rendered with kenburns (4.75s)
+20261126T161752-b01260 [16:20:23]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:20:31]   shots/9x16/s07: rendered with kenburns (5.79s)
+20261126T161752-b01260 [16:20:35]   shots/9x16/s08: rendered with wan22:kaggle (6.21s)
+20261126T161752-b01260 [16:20:35]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:20:44]   shots/9x16/s09: rendered with kenburns (6.79s)
+20261126T161752-b01260 [16:20:44]   [shots] provider wan22:kaggle unavailable: Wan clip for s10 rejected in QC (reject: sparkle noise from about frame 20, full colour melt by frame 48)
+20261126T161752-b01260 [16:20:54]   shots/9x16/s10: rendered with kenburns (7.75s)
+20261126T161752-b01260 [16:20:54]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:21:07]   shots/9x16/s11: rendered with kenburns (10.50s)
+20261126T161752-b01260 [16:21:07]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T161752-b01260 [16:21:18]   shots/9x16/s12: rendered with kenburns (10.50s)
+20261126T161752-b01260 [16:21:18] [7/8] music
+20261126T161752-b01260 [16:21:19]   music/seed11: cached
+20261126T161752-b01260 [16:21:19]   music/seed23: cached
+20261126T161752-b01260 [16:21:19]   music/seed47: cached
+20261126T161752-b01260 [16:21:19]   music/bed: cached
+20261126T161752-b01260 [16:21:19] [8/8] assemble
+20261126T161752-b01260 [16:23:53]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 53.19}
+20261126T161752-b01260 [16:26:09]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 50.1}
+20261126T161752-b01260 [16:26:09] === done in 497.2s; model calls this run: 3 {"shots/s01": "ok", "shots/s04": "ok", "shots/s08": "ok"} ===
+20261126T162640-92e538 [16:26:40]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T162640-92e538 [16:26:40]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T162640-92e538 [16:26:40]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T162640-92e538 [16:26:40]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T162640-92e538 [16:26:41]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T162640-92e538 [16:26:41]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T162640-92e538 [16:26:41]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T162640-92e538 [16:26:41]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172529-40ab7f [17:25:29]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=139, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T172529-40ab7f [17:25:29]   references/student: cached
+20261126T172529-40ab7f [17:25:29]   references/mother: cached
+20261126T172529-40ab7f [17:25:29]   references/king: cached
+20261126T172529-40ab7f [17:25:29]   references/servant: cached
+20261126T172529-40ab7f [17:25:29]   keyframes/s01: cached
+20261126T172529-40ab7f [17:25:29]   keyframes/s02: cached
+20261126T172529-40ab7f [17:25:29]   keyframes/s04: generating (reference king.png: used by SD-Turbo img2img only; FLUX ignores it)
+20261126T172529-40ab7f [17:25:35]   keyframes/s05: cached
+20261126T172529-40ab7f [17:25:35]   keyframes/s06: cached
+20261126T172529-40ab7f [17:25:35]   keyframes/s07: cached
+20261126T172529-40ab7f [17:25:35]   keyframes/s08: cached
+20261126T172529-40ab7f [17:25:35]   keyframes/s09: cached
+20261126T172529-40ab7f [17:25:35]   keyframes/s10: cached
+20261126T172529-40ab7f [17:25:35]   keyframes/s11: cached
+20261126T172529-40ab7f [17:25:35]   keyframes/s12: cached
+20261126T172529-40ab7f [17:25:35]   keyframes/s03: reused from s02 (no model call)
+20261126T172544-223976 [17:25:44] === run 20261126T172544-223976 ===
+20261126T172544-223976 [17:25:44] [1/8] storyboard valid: 12 shots, language=amh
+20261126T172544-223976 [17:25:44] [2/8] narration
+20261126T172544-223976 [17:25:44]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T172544-223976 [17:25:44]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T172544-223976 [17:25:44] [3/8] timeline
+20261126T172544-223976 [17:25:44]   total 87.21s (target 85s)
+20261126T172544-223976 [17:25:44] [4/8] radio cut
+20261126T172544-223976 [17:25:54]   radio cut: outputs/radio_cut/radio_cut.mp4 (85.8s, {'integrated_lufs': -14.0, 'lra_lu': 6.6, 'true_peak_dbtp': -1.5})
+20261126T172544-223976 [17:25:54] [5/8] keyframes (reference sheet first)
+20261126T172544-223976 [17:25:55]   [keyframes] warning for the SD-Turbo fallback only: prompts longer than 77 CLIP tokens (would be truncated): ref:king=78, s01=91, s02=111, s03=101, s04=139, s05=102, s06=79, s07=86, s08=97, s09=118, s10=100, s11=116, s12=82
+20261126T172544-223976 [17:25:55]   references/student: cached
+20261126T172544-223976 [17:25:55]   references/mother: cached
+20261126T172544-223976 [17:25:55]   references/king: cached
+20261126T172544-223976 [17:25:55]   references/servant: cached
+20261126T172544-223976 [17:25:55]   keyframes/s01: cached
+20261126T172544-223976 [17:25:55]   keyframes/s02: cached
+20261126T172544-223976 [17:25:55]   keyframes/s04: cached
+20261126T172544-223976 [17:25:55]   keyframes/s05: cached
+20261126T172544-223976 [17:25:55]   keyframes/s06: cached
+20261126T172544-223976 [17:25:55]   keyframes/s07: cached
+20261126T172544-223976 [17:25:55]   keyframes/s08: cached
+20261126T172544-223976 [17:25:55]   keyframes/s09: cached
+20261126T172544-223976 [17:25:55]   keyframes/s10: cached
+20261126T172544-223976 [17:25:55]   keyframes/s11: cached
+20261126T172544-223976 [17:25:55]   keyframes/s12: cached
+20261126T172544-223976 [17:25:55] [6/8] shots
+20261126T172544-223976 [17:25:57]   shots/16x9/s01: rendered with wan22:kaggle (6.79s)
+20261126T172544-223976 [17:25:57]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:26:02]   shots/16x9/s02: rendered with kenburns (9.18s)
+20261126T172544-223976 [17:26:02]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:26:05]   shots/16x9/s03: rendered with kenburns (6.50s)
+20261126T172544-223976 [17:26:05]   [shots] provider wan22:kaggle unavailable: Wan clip for s04 rejected in QC (reject: the clip was made from the old keyframe (king not riding); no time for a new Wan run before the deadline)
+20261126T172544-223976 [17:26:09]   shots/16x9/s04: rendered with kenburns (6.00s)
+20261126T172544-223976 [17:26:09]   [shots] provider wan22:kaggle unavailable: Wan clip for s05 rejected in QC (reject: a glowing flame-like object materialises in the foreground from about frame 20)
+20261126T172544-223976 [17:26:14]   shots/16x9/s05: rendered with kenburns (6.25s)
+20261126T172544-223976 [17:26:14]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:26:17]   shots/16x9/s06: rendered with kenburns (4.75s)
+20261126T172544-223976 [17:26:17]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:26:22]   shots/16x9/s07: rendered with kenburns (5.79s)
+20261126T172544-223976 [17:26:24]   shots/16x9/s08: rendered with wan22:kaggle (6.21s)
+20261126T172544-223976 [17:26:24]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:26:29]   shots/16x9/s09: rendered with kenburns (6.79s)
+20261126T172544-223976 [17:26:29]   [shots] provider wan22:kaggle unavailable: Wan clip for s10 rejected in QC (reject: sparkle noise from about frame 20, full colour melt by frame 48)
+20261126T172544-223976 [17:26:35]   shots/16x9/s10: rendered with kenburns (7.75s)
+20261126T172544-223976 [17:26:35]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:26:43]   shots/16x9/s11: rendered with kenburns (10.50s)
+20261126T172544-223976 [17:26:43]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:26:50]   shots/16x9/s12: rendered with kenburns (10.50s)
+20261126T172544-223976 [17:26:52]   shots/9x16/s01: rendered with wan22:kaggle (6.79s)
+20261126T172544-223976 [17:26:52]   [shots] provider wan22:kaggle unavailable: no Wan clip for s02 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:26:58]   shots/9x16/s02: rendered with kenburns (9.18s)
+20261126T172544-223976 [17:26:58]   [shots] provider wan22:kaggle unavailable: no Wan clip for s03 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:27:03]   shots/9x16/s03: rendered with kenburns (6.50s)
+20261126T172544-223976 [17:27:03]   [shots] provider wan22:kaggle unavailable: Wan clip for s04 rejected in QC (reject: the clip was made from the old keyframe (king not riding); no time for a new Wan run before the deadline)
+20261126T172544-223976 [17:27:07]   shots/9x16/s04: rendered with kenburns (6.00s)
+20261126T172544-223976 [17:27:07]   [shots] provider wan22:kaggle unavailable: Wan clip for s05 rejected in QC (reject: a glowing flame-like object materialises in the foreground from about frame 20)
+20261126T172544-223976 [17:27:11]   shots/9x16/s05: rendered with kenburns (6.25s)
+20261126T172544-223976 [17:27:11]   [shots] provider wan22:kaggle unavailable: no Wan clip for s06 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:27:15]   shots/9x16/s06: rendered with kenburns (4.75s)
+20261126T172544-223976 [17:27:15]   [shots] provider wan22:kaggle unavailable: no Wan clip for s07 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:27:20]   shots/9x16/s07: rendered with kenburns (5.79s)
+20261126T172544-223976 [17:27:22]   shots/9x16/s08: rendered with wan22:kaggle (6.21s)
+20261126T172544-223976 [17:27:22]   [shots] provider wan22:kaggle unavailable: no Wan clip for s09 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:27:26]   shots/9x16/s09: rendered with kenburns (6.79s)
+20261126T172544-223976 [17:27:26]   [shots] provider wan22:kaggle unavailable: Wan clip for s10 rejected in QC (reject: sparkle noise from about frame 20, full colour melt by frame 48)
+20261126T172544-223976 [17:27:33]   shots/9x16/s10: rendered with kenburns (7.75s)
+20261126T172544-223976 [17:27:33]   [shots] provider wan22:kaggle unavailable: no Wan clip for s11 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:27:40]   shots/9x16/s11: rendered with kenburns (10.50s)
+20261126T172544-223976 [17:27:40]   [shots] provider wan22:kaggle unavailable: no Wan clip for s12 (render on Kaggle with kaggle/wan22_i2v.py)
+20261126T172544-223976 [17:27:47]   shots/9x16/s12: rendered with kenburns (10.50s)
+20261126T172544-223976 [17:27:47] [7/8] music
+20261126T172544-223976 [17:27:48]   music/seed11: cached
+20261126T172544-223976 [17:27:48]   music/seed23: cached
+20261126T172544-223976 [17:27:48]   music/seed47: cached
+20261126T172544-223976 [17:27:48]   music/bed: cached
+20261126T172544-223976 [17:27:48] [8/8] assemble
+20261126T172544-223976 [17:29:25]   final 16x9: outputs/film_16x9.mp4 {'file': 'film_16x9.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 56.35}
+20261126T172544-223976 [17:31:36]   final 9x16: outputs/film_9x16.mp4 {'file': 'film_9x16.mp4', 'duration_s': 87.208, 'loudness': {'integrated_lufs': -14.1, 'lra_lu': 6.9, 'true_peak_dbtp': -1.1}, 'size_mb': 53.54}
+20261126T172544-223976 [17:31:36] === done in 352.7s; model calls this run: 2 {"shots/s01": "ok", "shots/s08": "ok"} ===
+20261126T173208-9cdb3c [17:32:08]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T173208-9cdb3c [17:32:08]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T173208-9cdb3c [17:32:08]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T173208-9cdb3c [17:32:08]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T173208-9cdb3c [17:32:09]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T173208-9cdb3c [17:32:09]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T173208-9cdb3c [17:32:09]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T173208-9cdb3c [17:32:09]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:50]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T174450-eba3b2 [17:44:50]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T174450-eba3b2 [17:44:50]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T174450-eba3b2 [17:44:50]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T174450-eba3b2 [17:44:51]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T174450-eba3b2 [17:44:51]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T174450-eba3b2 [17:44:51]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174450-eba3b2 [17:44:51]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T174451-c81458 [17:44:51] === run 20261126T174451-c81458 ===
+20261126T174451-c81458 [17:44:51] [1/8] storyboard valid: 12 shots, language=amh
+20261126T180920-d1b12d [18:09:20]   [gemini-tts] 1 request -> 3 lines; length/text ratios [1.0, 1.01, 1.0]
+20261126T180920-d1b12d [18:09:21]   [script] draft invalid, asking for a repair:
+storyboard.json failed schema validation:
+  - shots/0: 'seed' is a required property
+20261126T180920-d1b12d [18:09:21]   [script] draft valid (mock-flash, attempt 2): 12 shots -> draft.json
+20261126T180920-d1b12d [18:09:21]   [remote] wan: every requested clip is up to date; no GPU job submitted
+20261126T180920-d1b12d [18:09:21]   [gemini-tts] 1 request -> 3 lines; length/text ratios [0.99, 0.83, 1.06]
+20261126T180920-d1b12d [18:09:21]   [narration] gemini-tts unavailable: HERITAGE_OFFLINE=1
+20261126T180920-d1b12d [18:09:21]   narration/s01: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s02: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s04: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s05: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s06: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s07: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s08: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s09: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s10: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s11: keeping cached gemini-tts take (local:mms-tts would be a downgrade)
+20261126T180920-d1b12d [18:09:21]   narration/s12: keeping cached gemini-tts take (local:mms-tts would be a downgrade)

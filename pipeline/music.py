@@ -70,12 +70,15 @@ def gen_acestep_import(name: str, caption: str, seed: int, seconds: float, out: 
     m = json.loads(meta.read_text()) if meta.exists() else {}
     if m.get("caption") != caption:
         raise ProviderUnavailable("imported ACE-Step track was rendered from a different caption")
-    ffmpeg("-i", str(src), "-af", "loudnorm=I=-20:TP=-3:LRA=11", "-ar", "48000", "-ac", "2", str(out))
+    # ACE-Step tracks end with ~1.5-2 s of silence (E19); looping them would drop the score out every
+    # loop, so trim trailing silence before normalising.
+    ffmpeg("-i", str(src), "-af", "areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
+           "loudnorm=I=-20:TP=-3:LRA=11", "-ar", "48000", "-ac", "2", str(out))
     # The GPU call itself was logged on Kaggle; merge its runs line here so runs.jsonl stays complete.
     log_call(stage="music", item=f"seed{seed}", provider="acestep:kaggle", model=m.get("model", "ACE-Step-1.5"),
              params=m.get("params", {}), seed=seed, latency_s=m.get("latency_s"), device=m.get("device", "kaggle"),
              compute_s=m.get("latency_s"), cache_key=ck, output=str(out.relative_to(OUT.parent)), imported=True)
-    return {"imported": True, **m.get("params", {})}
+    return {"imported": True, "trim": "trailing silence", **m.get("params", {})}
 
 
 def gen_procedural(name: str, caption: str, seed: int, seconds: float, out: Path, ck: str) -> dict:
@@ -180,28 +183,37 @@ def bed(sb: dict, timeline: dict, force: bool = False) -> Path:
     from .common import file_hash
 
     ck = cache_key(stage="bed", src=file_hash(src), total=round(total, 2), cues=sb["music"]["cues"],
-                   starts=[(t["id"], t["start"]) for t in timeline["shots"]])
+                   starts=[(t["id"], t["start"]) for t in timeline["shots"]], v=2)
     if not force and cache_hit(path, ck):
         log("  music/bed: cached")
         return path
     seg = duration_s(src)
     xf = 3.0
-    n = 1
-    while n * seg - (n - 1) * xf < total + 1:
-        n += 1
     inputs, chain, last = [], [], "[0:a]"
-    for i in range(n):
-        inputs += ["-i", str(src)]
-    for i in range(1, n):
-        lab = f"[x{i}]"
-        chain.append(f"{last}[{i}:a]acrossfade=d={xf}:c1=tri:c2=tri{lab}")
-        last = lab
+    if seg >= 0.85 * total:
+        # E26: a full-length candidate carries the film's whole emotional arc; looping it would restart the
+        # sad intro under the ending. Stretch the tempo instead (<= 15 %, pitch preserved) to fit exactly.
+        n = 1
+        tempo = max(0.85, min(1.0, seg / (total + 0.5)))
+        inputs = ["-i", str(src)]
+        chain.append(f"[0:a]atempo={tempo:.4f}[x0]")
+        last = "[x0]"
+    else:
+        n = 1
+        while n * seg - (n - 1) * xf < total + 1:
+            n += 1
+        for i in range(n):
+            inputs += ["-i", str(src)]
+        for i in range(1, n):
+            lab = f"[x{i}]"
+            chain.append(f"{last}[{i}:a]acrossfade=d={xf}:c1=tri:c2=tri{lab}")
+            last = lab
     env = cue_envelope(sb, timeline, total)
     fade_out_at = max(0.0, total - 4.0)
     chain.append(f"{last}atrim=0:{total:.3f},asetpts=PTS-STARTPTS,volume='{env}':eval=frame,"
                  f"afade=t=in:d=2.5,afade=t=out:st={fade_out_at:.3f}:d=4[out]")
     ffmpeg(*inputs, "-filter_complex", ";".join(chain), "-map", "[out]", "-ar", "48000", "-ac", "2", str(path))
-    cache_write(path, ck, source=src.name, loops=n)
+    cache_write(path, ck, source=src.name, loops=n, stretched=seg >= 0.85 * total)
     log(f"  music/bed: built from seed {sb['music']['chosen']} ({n} loops, {total:.1f}s)")
     return path
 
