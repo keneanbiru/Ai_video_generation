@@ -1,0 +1,18 @@
+# secrets
+.env
+*.key
+kaggle.json
+
+# environments / caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# heavy intermediates (regenerated deterministically by FFmpeg from cached model outputs)
+outputs/shots/
+outputs/final/picture_*.mp4
+outputs/final/*.txt
+outputs/radio_cut/*.wav
+outputs/final/*.wav
+outputs/experiments/**/*.mp4
