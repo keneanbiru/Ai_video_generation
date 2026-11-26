@@ -1,0 +1,12 @@
+{
+ "key": "9e51a818b57e7b9c",
+ "provider": "local:sd-turbo",
+ "prompt": "a small Ethiopian child of about seven in a faded yellow sweater, sitting cross-legged on a grass-covered floor, seen from behind, plain warm background, warm hand-painted gouache illustration, soft paper grain, golden morning light, earthy ochre, terracotta and deep green palette, gentle soft shadows, storybook painting, Ethiopian highland home",
+ "seed": 1102,
+ "params": {
+  "steps": 4,
+  "size": 512,
+  "guidance_scale": 0.0,
+  "mode": "txt2img"
+ }
+}

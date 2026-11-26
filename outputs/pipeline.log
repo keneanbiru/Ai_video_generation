@@ -71,3 +71,11 @@
 20261126T055307-31c8a4 [05:53:07]   music/seed7: cached
 20261126T055307-31c8a4 [05:53:07]   music/seed21: cached
 20261126T055307-31c8a4 [05:53:07]   music/seed42: cached
+20261126T095715-789556 [09:57:16]   references/emama: generating
+20261126T095715-789556 [09:57:16]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T095715-789556 [09:57:53]   references/child: generating
+20261126T095715-789556 [09:57:53]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T095715-789556 [09:58:21]   references/adult: generating
+20261126T095715-789556 [09:58:21]   [keyframes] provider cloudflare:@cf/black-forest-labs/flux-1-schnell unavailable: CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set
+20261126T100431-12d7cc [10:04:31] === run 20261126T100431-12d7cc ===
+20261126T100431-12d7cc [10:04:31] [1/8] storyboard valid: 12 shots, language=amh

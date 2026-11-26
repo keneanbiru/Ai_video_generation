@@ -1,0 +1,50 @@
+{
+ "s02_txt2img": {
+  "latency_s": 27.0,
+  "colour_similarity_to_ref": 0.411
+ },
+ "s02_img2img0.6": {
+  "latency_s": 22.0,
+  "colour_similarity_to_ref": 0.797
+ },
+ "s02_img2img0.8": {
+  "latency_s": 25.7,
+  "colour_similarity_to_ref": 0.673
+ },
+ "s02_img2img0.9": {
+  "latency_s": 25.97,
+  "colour_similarity_to_ref": 0.673
+ },
+ "s06_txt2img": {
+  "latency_s": 26.19,
+  "colour_similarity_to_ref": 0.643
+ },
+ "s06_img2img0.6": {
+  "latency_s": 23.03,
+  "colour_similarity_to_ref": 0.746
+ },
+ "s06_img2img0.8": {
+  "latency_s": 27.24,
+  "colour_similarity_to_ref": 0.583
+ },
+ "s06_img2img0.9": {
+  "latency_s": 24.76,
+  "colour_similarity_to_ref": 0.583
+ },
+ "s09_txt2img": {
+  "latency_s": 27.97,
+  "colour_similarity_to_ref": 0.405
+ },
+ "s09_img2img0.6": {
+  "latency_s": 23.46,
+  "colour_similarity_to_ref": 0.676
+ },
+ "s09_img2img0.8": {
+  "latency_s": 27.93,
+  "colour_similarity_to_ref": 0.466
+ },
+ "s09_img2img0.9": {
+  "latency_s": 27.3,
+  "colour_similarity_to_ref": 0.466
+ }
+}

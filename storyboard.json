@@ -71,6 +71,7 @@
     },
     {
       "id": "s02",
+      "ref_strength": null,
       "reason": "Introduces Emama and the ritual space (grass, charcoal, jebena) in one medium shot.",
       "shot_size": "medium",
       "characters": ["emama"],
@@ -110,6 +111,7 @@
     },
     {
       "id": "s05",
+      "ref_strength": null,
       "reason": "Introduces the conflict: the child's impatience. Seen from behind so identity drift does not matter.",
       "shot_size": "medium",
       "characters": ["child"],
@@ -123,6 +125,7 @@
     },
     {
       "id": "s06",
+      "ref_strength": 0.8,
       "reason": "The emotional peak and the title: her face and the proverb. Generated against the golden reference.",
       "shot_size": "medium-close-up",
       "characters": ["emama"],
@@ -163,6 +166,7 @@
     },
     {
       "id": "s09",
+      "ref_strength": null,
       "reason": "Wide shot of the community: the reward for waiting is togetherness; the music swells here.",
       "shot_size": "wide",
       "characters": ["emama"],
@@ -176,6 +180,7 @@
     },
     {
       "id": "s10",
+      "ref_strength": null,
       "reason": "Time jump to the present: cool palette and solitude contrast with the warm crowded room before it.",
       "shot_size": "wide",
       "characters": ["adult"],
@@ -189,6 +194,7 @@
     },
     {
       "id": "s11",
+      "ref_strength": null,
       "reason": "Match to s04: the same roasting action in the new life shows the habit was inherited.",
       "shot_size": "close-up",
       "characters": ["adult"],

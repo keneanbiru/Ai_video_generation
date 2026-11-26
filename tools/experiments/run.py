@@ -214,10 +214,10 @@ def e07_consistency():
             g = torch.Generator("cpu").manual_seed(shot["seed"])
             t0 = time.time()
             if mode == "txt2img":
-                img = kf._sd_turbo(False)(prompt=prompt, num_inference_steps=4, guidance_scale=0.0, width=640,
-                                         height=640, generator=g).images[0]
+                img = kf._sd_turbo(False)(prompt=prompt, num_inference_steps=4, guidance_scale=0.0, width=kf.SIZE,
+                                         height=kf.SIZE, generator=g).images[0]
             else:
-                init = Image.open(ref).convert("RGB").resize((640, 640))
+                init = Image.open(ref).convert("RGB").resize((kf.SIZE, kf.SIZE))
                 img = kf._sd_turbo(True)(prompt=prompt, image=init, num_inference_steps=4, strength=strength,
                                         guidance_scale=0.0, generator=g).images[0]
             dt = time.time() - t0

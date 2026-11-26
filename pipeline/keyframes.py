@@ -25,7 +25,7 @@ from .common import (
 )
 from . import prices
 
-SIZE = int(os.environ.get("KEYFRAME_SIZE", "640"))  # square; both aspect ratios are cropped from it
+SIZE = int(os.environ.get("KEYFRAME_SIZE", "512"))  # square; both aspect ratios are cropped from it
 STEPS = int(os.environ.get("KEYFRAME_STEPS", "4"))
 REF_STRENGTH = float(os.environ.get("KEYFRAME_REF_STRENGTH", "0.8"))
 
@@ -50,7 +50,9 @@ def _sd_turbo(img2img: bool):
     return _pipes[key]
 
 
-def gen_local(name: str, prompt: str, seed: int, ref: Path | None, item: str, out: Path, ck: str) -> dict:
+def gen_local(name: str, prompt: str, seed: int, ref: Path | None, item: str, out: Path, ck: str,
+              strength: float | None = None) -> dict:
+    strength = strength or REF_STRENGTH
     if model_path("stabilityai/sd-turbo") == "stabilityai/sd-turbo" and not os.environ.get("ALLOW_HF_DOWNLOAD"):
         raise ProviderUnavailable("sd-turbo weights not downloaded yet (tools/fetch_models.sh); "
                                   "set ALLOW_HF_DOWNLOAD=1 to let diffusers fetch 2.6 GB")
@@ -63,8 +65,8 @@ def gen_local(name: str, prompt: str, seed: int, ref: Path | None, item: str, ou
         if ref is not None:
             pipe = _sd_turbo(img2img=True)
             init = Image.open(ref).convert("RGB").resize((SIZE, SIZE))
-            params.update({"mode": "img2img", "strength": REF_STRENGTH, "ref": ref.name})
-            img = pipe(prompt=prompt, image=init, num_inference_steps=STEPS, strength=REF_STRENGTH,
+            params.update({"mode": "img2img", "strength": strength, "ref": ref.name})
+            img = pipe(prompt=prompt, image=init, num_inference_steps=STEPS, strength=strength,
                        guidance_scale=0.0, generator=g).images[0]
         else:
             pipe = _sd_turbo(img2img=False)
@@ -85,7 +87,8 @@ def gen_local(name: str, prompt: str, seed: int, ref: Path | None, item: str, ou
     return params
 
 
-def gen_cloudflare(name: str, prompt: str, seed: int, ref: Path | None, item: str, out: Path, ck: str) -> dict:
+def gen_cloudflare(name: str, prompt: str, seed: int, ref: Path | None, item: str, out: Path, ck: str,
+                   strength: float | None = None) -> dict:
     acct, token = os.environ.get("CLOUDFLARE_ACCOUNT_ID"), os.environ.get("CLOUDFLARE_API_TOKEN")
     if not (acct and token):
         raise ProviderUnavailable("CLOUDFLARE_ACCOUNT_ID / CLOUDFLARE_API_TOKEN not set")
@@ -152,10 +155,11 @@ def keyframes(sb: dict, only: set[str] | None = None, force: bool = False) -> di
         path = d / f"{sid}.png"
         out[sid] = path
         prompt = expand_prompt(sb, shot)
-        ref = refs[shot["characters"][0]] if shot["characters"] else None
+        strength = shot.get("ref_strength", REF_STRENGTH)
+        ref = refs[shot["characters"][0]] if shot["characters"] and strength is not None else None
         ck = cache_key(stage="keyframe", prompt=prompt, seed=shot["seed"], chain=sb["providers"]["keyframes"],
                        size=SIZE, steps=STEPS, ref=file_hash(ref) if ref else None,
-                       ref_strength=REF_STRENGTH if ref else None)
+                       ref_strength=strength if ref else None)
         if only and sid not in only and path.exists():
             continue
         if not force and cache_hit(path, ck):
@@ -163,7 +167,7 @@ def keyframes(sb: dict, only: set[str] | None = None, force: bool = False) -> di
             continue
         log(f"  keyframes/{sid}: generating ({'img2img on ' + ref.name if ref else 'txt2img'})")
         prov, params = run_chain("keyframes", sb["providers"]["keyframes"], IMPLS, prompt, shot["seed"], ref, sid,
-                                 path, ck)
+                                 path, ck, strength if ref else None)
         cache_write(path, ck, provider=prov, prompt=prompt, seed=shot["seed"], params=params)
     return out
 

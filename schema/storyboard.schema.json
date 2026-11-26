@@ -5,31 +5,86 @@
   "description": "The single contract between every pipeline stage. Every stage reads this file; none of them write to it.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["version", "film", "style", "characters", "providers", "music", "shots", "end_card"],
+  "required": [
+    "version",
+    "film",
+    "style",
+    "characters",
+    "providers",
+    "music",
+    "shots",
+    "end_card"
+  ],
   "properties": {
-    "version": {"type": "integer", "const": 1},
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
     "film": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title", "title_native", "logline", "language", "language_name", "audience", "intent", "target_duration_s"],
+      "required": [
+        "title",
+        "title_native",
+        "logline",
+        "language",
+        "language_name",
+        "audience",
+        "intent",
+        "target_duration_s"
+      ],
       "properties": {
-        "title": {"type": "string", "minLength": 1},
-        "title_native": {"type": "string", "minLength": 1},
-        "logline": {"type": "string", "minLength": 10},
-        "language": {"type": "string", "pattern": "^[a-z]{3}$", "description": "ISO 639-3 code of the narration language"},
-        "language_name": {"type": "string"},
-        "audience": {"type": "string", "minLength": 10},
-        "intent": {"type": "string", "minLength": 10},
-        "target_duration_s": {"type": "number", "minimum": 60, "maximum": 90}
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title_native": {
+          "type": "string",
+          "minLength": 1
+        },
+        "logline": {
+          "type": "string",
+          "minLength": 10
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{3}$",
+          "description": "ISO 639-3 code of the narration language"
+        },
+        "language_name": {
+          "type": "string"
+        },
+        "audience": {
+          "type": "string",
+          "minLength": 10
+        },
+        "intent": {
+          "type": "string",
+          "minLength": 10
+        },
+        "target_duration_s": {
+          "type": "number",
+          "minimum": 60,
+          "maximum": 90
+        }
       }
     },
     "style": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["style_block", "negative_prompt"],
+      "required": [
+        "style_block",
+        "negative_prompt"
+      ],
       "properties": {
-        "style_block": {"type": "string", "minLength": 10, "description": "Appended to every image prompt, unchanged, to stop style drift"},
-        "negative_prompt": {"type": "string"}
+        "style_block": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Appended to every image prompt, unchanged, to stop style drift"
+        },
+        "negative_prompt": {
+          "type": "string"
+        }
       }
     },
     "characters": {
@@ -38,64 +93,174 @@
       "additionalProperties": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["description", "real_person", "reference_prompt", "reference_seed"],
+        "required": [
+          "description",
+          "real_person",
+          "reference_prompt",
+          "reference_seed"
+        ],
         "properties": {
-          "description": {"type": "string", "minLength": 10, "description": "Fixed character text injected into every prompt that names this character"},
-          "real_person": {"type": "boolean", "description": "true if this depicts a real, identifiable person; requires a consent_ref"},
-          "consent_ref": {"type": "string", "description": "Anchor in ETHICS.md recording consent"},
-          "reference_prompt": {"type": "string"},
-          "reference_seed": {"type": "integer", "minimum": 0}
+          "description": {
+            "type": "string",
+            "minLength": 10,
+            "description": "Fixed character text injected into every prompt that names this character"
+          },
+          "real_person": {
+            "type": "boolean",
+            "description": "true if this depicts a real, identifiable person; requires a consent_ref"
+          },
+          "consent_ref": {
+            "type": "string",
+            "description": "Anchor in ETHICS.md recording consent"
+          },
+          "reference_prompt": {
+            "type": "string"
+          },
+          "reference_seed": {
+            "type": "integer",
+            "minimum": 0
+          }
         },
-        "if": {"properties": {"real_person": {"const": true}}},
-        "then": {"required": ["consent_ref"]}
+        "if": {
+          "properties": {
+            "real_person": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "consent_ref"
+          ]
+        }
       }
     },
     "providers": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["keyframes", "shots", "music", "narration"],
+      "required": [
+        "keyframes",
+        "shots",
+        "music",
+        "narration"
+      ],
       "description": "Ordered fallback chain per stage. The first provider that is available and succeeds wins.",
       "properties": {
-        "keyframes": {"$ref": "#/$defs/chain"},
-        "shots": {"$ref": "#/$defs/chain"},
-        "music": {"$ref": "#/$defs/chain"},
-        "narration": {"$ref": "#/$defs/chain"}
+        "keyframes": {
+          "$ref": "#/$defs/chain"
+        },
+        "shots": {
+          "$ref": "#/$defs/chain"
+        },
+        "music": {
+          "$ref": "#/$defs/chain"
+        },
+        "narration": {
+          "$ref": "#/$defs/chain"
+        }
       }
     },
     "music": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["caption", "candidates", "chosen", "segment_s", "cues", "duck"],
+      "required": [
+        "caption",
+        "candidates",
+        "chosen",
+        "segment_s",
+        "cues",
+        "duck"
+      ],
       "properties": {
-        "caption": {"type": "string", "minLength": 10},
-        "candidates": {"type": "array", "minItems": 1, "maxItems": 8, "items": {"type": "integer", "minimum": 0}, "description": "Seeds; one audio candidate per seed"},
-        "chosen": {"type": "integer", "minimum": 0, "description": "Seed of the chosen candidate; must appear in candidates"},
-        "chosen_reason": {"type": "string"},
-        "segment_s": {"type": "number", "minimum": 5, "maximum": 30},
+        "caption": {
+          "type": "string",
+          "minLength": 10
+        },
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "description": "Seeds; one audio candidate per seed"
+        },
+        "chosen": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Seed of the chosen candidate; must appear in candidates"
+        },
+        "chosen_reason": {
+          "type": "string"
+        },
+        "segment_s": {
+          "type": "number",
+          "minimum": 5,
+          "maximum": 30
+        },
         "cues": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["at_shot", "action", "note"],
+            "required": [
+              "at_shot",
+              "action",
+              "note"
+            ],
             "properties": {
-              "at_shot": {"type": "string"},
-              "action": {"enum": ["start", "swell", "dip", "out"]},
-              "note": {"type": "string"}
+              "at_shot": {
+                "type": "string"
+              },
+              "action": {
+                "enum": [
+                  "start",
+                  "swell",
+                  "dip",
+                  "out"
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
             }
           }
         },
         "duck": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["threshold", "ratio", "attack_ms", "release_ms", "bed_gain_db"],
+          "required": [
+            "threshold",
+            "ratio",
+            "attack_ms",
+            "release_ms",
+            "bed_gain_db"
+          ],
           "properties": {
-            "threshold": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
-            "ratio": {"type": "number", "minimum": 1, "maximum": 20},
-            "attack_ms": {"type": "number", "minimum": 1},
-            "release_ms": {"type": "number", "minimum": 1},
-            "bed_gain_db": {"type": "number", "maximum": 0}
+            "threshold": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1
+            },
+            "ratio": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 20
+            },
+            "attack_ms": {
+              "type": "number",
+              "minimum": 1
+            },
+            "release_ms": {
+              "type": "number",
+              "minimum": 1
+            },
+            "bed_gain_db": {
+              "type": "number",
+              "maximum": 0
+            }
           }
         }
       }
@@ -107,44 +272,152 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "reason", "shot_size", "characters", "image_prompt", "seed", "motion_prompt", "kenburns", "narration", "subtitle_en", "min_duration_s"],
+        "required": [
+          "id",
+          "reason",
+          "shot_size",
+          "characters",
+          "image_prompt",
+          "seed",
+          "motion_prompt",
+          "kenburns",
+          "narration",
+          "subtitle_en",
+          "min_duration_s"
+        ],
         "properties": {
-          "id": {"type": "string", "pattern": "^s[0-9]{2}$"},
-          "reason": {"type": "string", "minLength": 10, "description": "Why this shot exists, in one sentence"},
-          "shot_size": {"enum": ["extreme-wide", "wide", "medium", "medium-close-up", "close-up", "extreme-close-up", "insert"]},
-          "characters": {"type": "array", "items": {"type": "string"}},
-          "image_prompt": {"type": "string", "minLength": 10},
-          "seed": {"type": "integer", "minimum": 0},
-          "motion_prompt": {"type": "string", "description": "Motion and camera only, for image-to-video"},
+          "id": {
+            "type": "string",
+            "pattern": "^s[0-9]{2}$"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 10,
+            "description": "Why this shot exists, in one sentence"
+          },
+          "shot_size": {
+            "enum": [
+              "extreme-wide",
+              "wide",
+              "medium",
+              "medium-close-up",
+              "close-up",
+              "extreme-close-up",
+              "insert"
+            ]
+          },
+          "characters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "image_prompt": {
+            "type": "string",
+            "minLength": 10
+          },
+          "seed": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "motion_prompt": {
+            "type": "string",
+            "description": "Motion and camera only, for image-to-video"
+          },
           "kenburns": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["zoom_from", "zoom_to", "pan"],
+            "required": [
+              "zoom_from",
+              "zoom_to",
+              "pan"
+            ],
             "properties": {
-              "zoom_from": {"type": "number", "minimum": 1, "maximum": 1.6},
-              "zoom_to": {"type": "number", "minimum": 1, "maximum": 1.6},
-              "pan": {"enum": ["none", "left", "right", "up", "down"]}
+              "zoom_from": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1.6
+              },
+              "zoom_to": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 1.6
+              },
+              "pan": {
+                "enum": [
+                  "none",
+                  "left",
+                  "right",
+                  "up",
+                  "down"
+                ]
+              }
             }
           },
-          "narration": {"type": "string", "description": "Narration in the film language; may be empty for a silent beat"},
-          "subtitle_en": {"type": "string"},
-          "narration_delay_s": {"type": "number", "minimum": 0, "maximum": 3, "default": 0.4},
-          "min_duration_s": {"type": "number", "minimum": 2, "maximum": 15},
-          "music_only": {"type": "boolean", "default": false}
+          "narration": {
+            "type": "string",
+            "description": "Narration in the film language; may be empty for a silent beat"
+          },
+          "subtitle_en": {
+            "type": "string"
+          },
+          "narration_delay_s": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 3,
+            "default": 0.4
+          },
+          "min_duration_s": {
+            "type": "number",
+            "minimum": 2,
+            "maximum": 15
+          },
+          "music_only": {
+            "type": "boolean",
+            "default": false
+          },
+          "ref_strength": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0.5,
+            "maximum": 1.0,
+            "description": "img2img strength on the first character's reference image; null = txt2img (prompt decides composition). See EXPERIMENTS.md E07."
+          }
         }
       }
     },
     "end_card": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["lines", "duration_s"],
+      "required": [
+        "lines",
+        "duration_s"
+      ],
       "properties": {
-        "lines": {"type": "array", "minItems": 1, "items": {"type": "string"}},
-        "duration_s": {"type": "number", "minimum": 2, "maximum": 6}
+        "lines": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "duration_s": {
+          "type": "number",
+          "minimum": 2,
+          "maximum": 6
+        }
       }
     }
   },
   "$defs": {
-    "chain": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+    "chain": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    }
   }
 }
